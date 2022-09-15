@@ -1,7 +1,6 @@
 init: clean
 	@echo "Initialized folder structure!"
 	@mkdir vscode
-	@touch vscode/extensions
 
 clean:
 	@rm -rf ./vscode
@@ -27,6 +26,14 @@ update_nvim_settings:
 	@rm -rf ./nvim
 	@cp -r ~/.config/nvim .
 	@echo "Updated nvim settings!"
+
+update_vscode_settings:
+	@rm -rf ./vscode/
+	@mkdir vscode
+	@cp ~/.config/Code/User/keybindings.json ./vscode/
+	@cp ~/.config/Code/User/settings.json ./vscode/
+	@code --list-extensions > ./vscode/extensions
+	@echo "Updated vscode settings!"
 
 # set_files:
 # 	@echo "Setting dotfiles files..."
