@@ -8,6 +8,31 @@ if not tokyonight_ok then
 	return
 end
 
+local gruvbox_ok, gruvbox = pcall(require, "gruvbox")
+if not gruvbox_ok then
+	print("something went wrong")
+	return
+end
+
+gruvbox.setup({
+	undercurl = true,
+	underline = true,
+	bold = true,
+	italic = false,
+	strikethrough = true,
+	invert_selection = true,
+	invert_signs = false,
+	invert_tabline = false,
+	invert_intend_guides = false,
+	inverse = true, -- invert background for search, diffs, statuslines and errors
+	contrast = "hard", -- can be "hard", "soft" or empty string
+	overrides = {
+		SignColumn = { bg = "#ff9900" },
+	},
+	dim_inactive = false,
+	transparent_mode = false,
+})
+
 tokyonight.setup({
 	-- your configuration comes here
 	-- or leave it empty to use the default settings
@@ -41,11 +66,9 @@ tokyonight.setup({
 	on_highlights = function(highlights, colors) end,
 })
 
-function SetupTokyonight()
+function Setup()
 	vim.opt.background = "dark"
-	vim.cmd("colorscheme tokyonight")
-	-- Inverse selection colors
-	--vim.cmd("hi Visual cterm=inverse gui=inverse")
+	vim.cmd("colorscheme gruvbox")
 
 	hl("SignColumn", {
 		bg = "none",
@@ -69,4 +92,4 @@ function SetupTokyonight()
 	})
 end
 
-SetupTokyonight()
+Setup()

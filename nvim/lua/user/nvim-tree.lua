@@ -1,4 +1,8 @@
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
+
 if not status_ok then
 	return
 end
@@ -12,7 +16,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
 	filters = {
-		custom = { "node_modules$", "obj$", "bin$", ".git$", ".vscode$" },
+		custom = { "^node_modules$", "^obj$", "^bin$", "^.git$", "^.vscode$" },
 	},
 	update_focused_file = {
 		enable = true,
