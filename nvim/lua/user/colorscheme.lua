@@ -1,4 +1,4 @@
-local colorscheme = "gruvbox"
+_G.myColorscheme = "gruvbox"
 
 local hl = function(thing, opts)
 	vim.api.nvim_set_hl(0, thing, opts)
@@ -6,7 +6,6 @@ end
 
 local tokyonight = require("tokyonight")
 local gruvbox = require("gruvbox")
-local gruvboxColors = require("gruvbox.palette")
 
 gruvbox.setup({
 	undercurl = true,
@@ -14,7 +13,7 @@ gruvbox.setup({
 	bold = true,
 	italic = false,
 	strikethrough = true,
-	invert_selection = true,
+	invert_selection = false,
 	invert_signs = false,
 	invert_tabline = false,
 	invert_intend_guides = false,
@@ -66,7 +65,7 @@ tokyonight.setup({
 
 function Setup()
 	vim.opt.background = "dark"
-	vim.cmd("colorscheme " .. colorscheme)
+	vim.cmd("colorscheme " .. myColorscheme)
 
 	hl("SignColumn", {
 		bg = "none",
