@@ -7,6 +7,9 @@ cursor:
         blinking: Always
     blink_interval: 400
 
+window:
+    decorations: None
+
 font:
     size: 13
     normal:
