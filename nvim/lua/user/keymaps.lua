@@ -52,6 +52,9 @@ keymap("n", "[h", ":Gitsigns prev_hunk<CR>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- remove empty lines in `visual_mode`
+keymap("v", "<leader>el", ":g/^$/d<CR>:nohl<CR>", opts)
+
 -- Clipboard copy&paste
 keymap("v", "<leader>y", '"+y', opts)
 keymap("n", "<leader>y", '"+y', opts)
