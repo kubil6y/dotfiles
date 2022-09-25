@@ -21,6 +21,9 @@ telescope.setup({
 				["<C-k>"] = actions.move_selection_previous,
 				["<C-u>"] = false, -- clears input
 			},
+			n = {
+				["x"] = "delete_buffer",
+			},
 		},
 	},
 })

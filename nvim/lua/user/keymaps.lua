@@ -5,8 +5,8 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
 --Remap space as leader key
-vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 --[[
 -- MODES
@@ -58,10 +58,13 @@ keymap("v", "<leader>el", ":g/^$/d<CR>:nohl<CR>", opts)
 -- Clipboard copy&paste
 keymap("v", "<leader>y", '"+y', opts)
 keymap("n", "<leader>y", '"+y', opts)
+-- copy while file to clipboard
+keymap("n", "<leader>ay", 'gg"+yG', opts)
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts) -- find with preview
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts) -- live grep
+
 -- quick find files (minimal)
 keymap(
 	"n",
@@ -72,7 +75,7 @@ keymap(
 -- quick find buffers (minimal)
 keymap(
 	"n",
-	"<C-b>",
+	"<C-f>",
 	"<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 	opts
 )
@@ -83,6 +86,8 @@ keymap("n", "zz", "zt", opts)
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 
 -- Terminal 'W' to 'w'
-vim.cmd("command! -nargs=* W w") -- save with :W
-vim.cmd("command! Wq wq")
-vim.cmd("command! Wa wa")
+--vim.cmd("command! -nargs=* W w") -- save with :W
+--vim.cmd("command! Wq wq")
+--vim.cmd("command! Wa wa")
+vim.cmd("cmap W w")
+vim.cmd("cmap E e")
