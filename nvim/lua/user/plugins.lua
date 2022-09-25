@@ -53,6 +53,7 @@ return packer.startup(function(use)
 
 	-- Treesitter
 	use("nvim-treesitter/nvim-treesitter")
+	use("nvim-treesitter/nvim-treesitter-context")
 
 	-- Statusbar
 	use("nvim-lualine/lualine.nvim")

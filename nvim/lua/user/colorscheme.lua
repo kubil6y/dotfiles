@@ -1,4 +1,5 @@
-_G.myColorscheme = "gruvbox"
+-- current_colorscheme controls colorscheme and lualine theme
+_G.current_colorscheme = "gruvbox"
 
 local hl = function(thing, opts)
 	vim.api.nvim_set_hl(0, thing, opts)
@@ -65,7 +66,7 @@ tokyonight.setup({
 
 function Setup()
 	vim.opt.background = "dark"
-	vim.cmd("colorscheme " .. myColorscheme)
+	vim.cmd("colorscheme " .. current_colorscheme)
 
 	hl("SignColumn", {
 		bg = "none",
