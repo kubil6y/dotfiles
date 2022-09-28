@@ -1,12 +1,6 @@
-local opts = { noremap = true, silent = true }
-
---local term_opts = { silent = true }
-
-local keymap = vim.keymap.set
-
 --Remap space as leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 
 --[[
 -- MODES
@@ -18,8 +12,8 @@ vim.g.maplocalleader = " "
   command_mode = "c",
 ]]
 
--- just in case shit
-keymap("n", "<leader>df", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
+local opts = { noremap = true, silent = true }
+local keymap = vim.keymap.set
 
 -- Normal --
 -- Better window navigation
@@ -55,10 +49,13 @@ keymap("v", ">", ">gv", opts)
 -- remove empty lines in `visual_mode`
 keymap("v", "<leader>el", ":g/^$/d<CR>:nohl<CR>", opts)
 
+-- format document
+keymap("n", "<leader>df", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
+
 -- Clipboard copy&paste
 keymap("v", "<leader>y", '"+y', opts)
 keymap("n", "<leader>y", '"+y', opts)
--- copy while file to clipboard
+-- copy whole file to clipboard
 keymap("n", "<leader>ay", 'gg"+yG', opts)
 
 -- Telescope
@@ -87,10 +84,3 @@ keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 
 keymap("n", "<C-u>", "10k", opts)
 keymap("n", "<C-d>", "10j", opts)
-
--- Terminal 'W' to 'w'
---vim.cmd("command! -nargs=* W w") -- save with :W
---vim.cmd("command! Wq wq")
---vim.cmd("command! Wa wa")
-vim.cmd("cmap W w")
-vim.cmd("cmap E e")

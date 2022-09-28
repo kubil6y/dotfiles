@@ -23,5 +23,7 @@ autocmd({ "BufWinEnter" }, {
 	end,
 })
 
--- Format on Save (old fashion way, check null-ls.lua)
---vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+-- Terminal 'W' to 'w'
+vim.cmd("command! -nargs=* W w") -- save with :W
+vim.cmd("command! Wq wq")
+vim.cmd("command! Wa wa")
