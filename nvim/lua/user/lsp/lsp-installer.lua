@@ -20,6 +20,7 @@ local servers = {
 	"gopls",
 	"pyright",
 	"tailwindcss",
+	"rust_analyzer",
 }
 
 mason.setup({

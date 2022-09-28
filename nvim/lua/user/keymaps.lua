@@ -85,6 +85,9 @@ keymap("n", "zz", "zt", opts)
 -- NvimTree
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 
+keymap("n", "<C-u>", "10k", opts)
+keymap("n", "<C-d>", "10j", opts)
+
 -- Terminal 'W' to 'w'
 --vim.cmd("command! -nargs=* W w") -- save with :W
 --vim.cmd("command! Wq wq")
