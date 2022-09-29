@@ -4,7 +4,7 @@ local colorschemes = {
 }
 
 -- current_colorscheme controls colorscheme and lualine theme
-_G.current_colorscheme = colorschemes.gruvbox
+_G.current_colorscheme = colorschemes.tokyonight
 
 local hl = function(thing, opts)
 	vim.api.nvim_set_hl(0, thing, opts)
