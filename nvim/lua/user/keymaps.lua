@@ -52,11 +52,17 @@ keymap("v", "<leader>el", ":g/^$/d<CR>:nohl<CR>", opts)
 -- format document
 keymap("n", "<leader>df", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
 
--- Clipboard copy&paste
+-- Clipboard stuff
 keymap("v", "<leader>y", '"+y', opts)
 keymap("n", "<leader>y", '"+y', opts)
--- copy whole file to clipboard
-keymap("n", "<leader>ay", 'gg"+yG', opts)
+keymap("n", "<leader>ay", 'gg"+yG', opts) -- copy whole file to clipboard
+
+-- greatest remap ever
+keymap("x", "<leader>p", "\"_dP")
+keymap("v", "<leader>p", "\"_dP")
+-- delete without copying to clipboard (void register)
+keymap("x", "<leader>d", "\"_d")
+keymap("v", "<leader>d", "\"_d")
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts) -- find with preview

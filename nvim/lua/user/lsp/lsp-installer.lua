@@ -21,6 +21,7 @@ local servers = {
 	"pyright",
 	"tailwindcss",
 	"rust_analyzer",
+    "clangd",
 }
 
 mason.setup({

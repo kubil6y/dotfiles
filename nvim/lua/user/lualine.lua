@@ -30,7 +30,7 @@ local filetype = {
 
 local location = {
 	"location",
-	padding = 0,
+	padding = 1,
 }
 
 --local spaces = function()
@@ -41,7 +41,7 @@ lualine.setup({
 	options = {
 		globalstatus = true,
 		icons_enabled = true,
-		theme = current_colorscheme,
+		theme = "ayu_kubilay",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard" },
