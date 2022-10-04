@@ -2,11 +2,16 @@
 -- https://gist.github.com/shadmansaleh/000871c9a608a012721c6acc6d7a19b9
 -- stylua: ignore
 
+local themes = {
+    tokyonight = "#7aa2f7",
+    gruvbox = "#fb4934",
+}
+
 local colors = {
   color2   = "#0f1419",
   color4   = "#e6e1cf",
   color5   = "#ffffff00", -- orginal: #14191f
-  color10  = "#7aa2f7",
+  color10  = themes.gruvbox,
   color9   = "#565f89",
 }
 
