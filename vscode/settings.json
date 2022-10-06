@@ -28,7 +28,7 @@
     "go.toolsManagement.autoUpdate": true,
     // "omnisharp.enableImportCompletion": true,
     "omnisharp.organizeImportsOnFormat": true,
-    "omnisharp.useModernNet": true,
+    "omnisharp.useModernNet": false,
     "security.workspace.trust.enabled": false,
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.persistentSessionReviveProcess": "never",
@@ -37,25 +37,43 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 18,
     "workbench.sideBar.location": "right",
+    "editor.tokenColorCustomizations": {
+        "[Tokyo Night]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "comment",
+                        "meta.var.expr storage.type",
+                        "keyword.control.flow",
+                        "keyword.control.return",
+                        "meta.directive.vue punctuation.separator.key-value.html",
+                        "meta.directive.vue entity.other.attribute-name.html",
+                        "tag.decorator.js entity.name.tag.js",
+                        "tag.decorator.js punctuation.definition.tag.js",
+                        "storage.modifier"
+                    ],
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        }
+    },
     "workbench.colorCustomizations": {
-        "editorError.foreground": "#e88",
-        "editorLineNumber.foreground": "#885858",
-        // "statusBar.background": "#2c2525" /* monokai pro ristretto */,
-        // "tab.activeBorder": "#1C00ff00" /* transparent active border */,
-        // "tab.activeBorder": "#ffd866" /* monokai pro yellow color */,
-        // "editorSuggestWidget.focusHighlightForeground": "#78dce8" /*menu highlight color*/,
-
-        /* monokai pro theme settings */
-        // "statusBar.background": "#2d2a2e",
-        // "editorGroup.emptyBackground": "#2d2a2e",
-        // "editorHoverWidget.highlightForeground": "#ffd866" /* func param color */
-
-        /* Dark (Visual Studio) theme overrides */
-        "statusBar.background": "#1e1e1e",
-        "statusBar.foreground": "#858585",
-        "tab.activeBorderTop": "#007ACC",
-        "tab.inactiveBackground": "#252526",
-        "editorOverviewRuler.border": "#252526"
+        "[Tokyo Night]": {
+            "editorLineNumber.foreground": "#5eacd3",
+            "editorLineNumber.activeForeground": "#5eacd3",
+            "editorError.foreground": "#e88"
+        },
+        "[Default Dark+]": {
+            "statusBar.background": "#1e1e1e",
+            "statusBar.foreground": "#858585",
+            "tab.activeBorderTop": "#007ACC",
+            "tab.inactiveBackground": "#252526",
+            "editorOverviewRuler.border": "#252526",
+            "editorLineNumber.foreground": "#5eacd3",
+            "editorLineNumber.activeForeground": "#5eacd3"
+        }
     },
     "vim.leader": ",",
     "vim.statusBarColorControl": false,
@@ -202,7 +220,6 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "breadcrumbs.enabled": false,
     "editor.bracketPairColorization.enabled": false,
-    "editor.minimap.enabled": false,
     "csharpextensions.useThisForCtorAssignments": false,
     "html.autoCreateQuotes": false,
     "csharpextensions.useFileScopedNamespace": true,
@@ -210,12 +227,17 @@
     "pixelbyte.love2d.path": "/usr/bin/love",
     "prettier.tabWidth": 4,
     "window.menuBarVisibility": "toggle",
-    "workbench.activityBar.visible": false,
     "editor.lineNumbers": "relative",
     "terminal.integrated.fontSize": 16,
     "editor.suggestOnTriggerCharacters": false,
     "editor.quickSuggestions": {
         "other": "off"
     },
-    "editor.inlineSuggest.enabled": false
+    "editor.inlineSuggest.enabled": false,
+    "omnisharp.monoPath": "/usr/bin/mono",
+    "omnisharp.enableAsyncCompletion": true,
+    "editor.wordWrap": "on",
+    "workbench.activityBar.visible": false,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Tokyo Night"
 }

@@ -3,7 +3,7 @@
 -- stylua: ignore
 
 local themes = {
-    tokyonight = "#7aa2f7",
+    tokyonight = "#5a4a78",
     gruvbox = "#fb4934",
 }
 
@@ -11,7 +11,7 @@ local colors = {
   color2   = "#0f1419",
   color4   = "#e6e1cf",
   color5   = "#ffffff00", -- orginal: #14191f
-  color10  = themes.gruvbox,
+  color10  = themes.tokyonight,
   color9   = "#565f89",
 }
 
