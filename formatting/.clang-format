@@ -1,0 +1,6 @@
+BasedOnStyle: LLVM
+BreakBeforeBraces: Stroustrup
+IndentWidth: 4
+TabWidth: 4
+AccessModifierOffset: -4
+AlignConsecutiveAssignments: Consecutive

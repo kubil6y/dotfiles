@@ -28,6 +28,9 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
+-- select all
+keymap("n", "<leader>va", "ggVG", opts)
+
 -- Navigate buffers
 -- Keyboard Shortcuts Switch windows of an application = Disabled (Ubuntu 20.04)
 keymap("n", "<A-`>", ":b#<CR>", opts)
