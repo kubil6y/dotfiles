@@ -9,6 +9,11 @@ kakumei.ts-debug
 kleber-swf.unity-code-snippets
 kreativ-software.csharpextensions
 ms-dotnettools.csharp
+ms-vscode.cmake-tools
+ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cpptools-themes
+ms-vscode.makefile-tools
 patcx.vscode-nuget-gallery
 pixelbyte-studios.pixelbyte-love2d
 PKief.material-icon-theme
@@ -17,5 +22,6 @@ rhalaly.scope-to-this
 ricardoerikson.vscode-go-impl-methods
 ritwickdey.LiveServer
 sumneko.lua
+twxs.cmake
 vscodevim.vim
 Zignd.html-css-class-completion

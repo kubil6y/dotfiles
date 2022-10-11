@@ -5,7 +5,6 @@
     "editor.fontFamily": "MonoLisa",
     "editor.suggestSelection": "first",
     "editor.lightbulb.enabled": false,
-    "editor.formatOnSave": true,
     "editor.renderLineHighlight": "none",
     "editor.fontSize": 18,
     "editor.acceptSuggestionOnCommitCharacter": false,
@@ -229,15 +228,10 @@
     "window.menuBarVisibility": "toggle",
     "editor.lineNumbers": "relative",
     "terminal.integrated.fontSize": 16,
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.quickSuggestions": {
-        "other": "off"
-    },
     "editor.inlineSuggest.enabled": false,
     "omnisharp.monoPath": "/usr/bin/mono",
     "omnisharp.enableAsyncCompletion": true,
     "editor.wordWrap": "on",
-    "workbench.activityBar.visible": false,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Tokyo Night"
+    "workbench.activityBar.visible": false,
 }

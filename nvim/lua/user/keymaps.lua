@@ -91,5 +91,5 @@ keymap("n", "zz", "zt", opts)
 -- NvimTree
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 
-keymap("n", "<C-u>", "10k", opts)
-keymap("n", "<C-d>", "10j", opts)
+keymap("n", "<C-u>", "12k", opts)
+keymap("n", "<C-d>", "12j", opts)
