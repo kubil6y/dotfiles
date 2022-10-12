@@ -22,6 +22,13 @@ get_files: init
 	@code --list-extensions > ./vscode/extensions
 	@echo "Copying files done!"
 
+set_colors:
+	@echo "Updating nvim/tmux/lualine..."
+	@cp ./ayu_kubilay.lua /home/kubilay/.local/share/nvim/site/pack/packer/start/lualine.nvim/lua/lualine/themes/ayu_kubilay.lua
+	@cp ./.tmux.conf ~/.tmux.conf
+	@cp ./nvim/lua/user/colorscheme.lua /home/kubilay/.config/nvim/lua/user/colorscheme.lua
+	@echo "Done!"
+
 update_nvim_settings:
 	@rm -rf ./nvim
 	@cp -r ~/.config/nvim .

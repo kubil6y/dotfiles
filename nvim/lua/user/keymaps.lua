@@ -50,7 +50,7 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- remove empty lines in `visual_mode`
-keymap("v", "<leader>el", ":g/^$/d<CR>:nohl<CR>", opts)
+keymap("v", "<leader>el", ":g/^\\s*$/d<CR>:nohl<CR>", opts)
 
 -- format document
 keymap("n", "<leader>df", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
