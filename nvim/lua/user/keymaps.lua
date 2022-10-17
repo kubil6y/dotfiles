@@ -53,7 +53,7 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<leader>el", ":g/^\\s*$/d<CR>:nohl<CR>", opts)
 
 -- format document
-keymap("n", "<leader>df", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
+keymap("n", "<leader>df", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
 
 -- Clipboard stuff
 keymap("v", "<leader>y", '"+y', opts)

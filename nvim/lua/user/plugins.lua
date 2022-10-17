@@ -52,10 +52,12 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope.nvim")
 
 	-- Treesitter
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		commit = "addc129a4f272aba0834bd0a7b6bd4ad5d8c801b",
-	})
+	--use({
+		--"nvim-treesitter/nvim-treesitter",
+		--commit = "addc129a4f272aba0834bd0a7b6bd4ad5d8c801b",
+	--})
+
+	use("nvim-treesitter/nvim-treesitter")
 	use("nvim-treesitter/nvim-treesitter-context")
 
 	-- Statusbar
