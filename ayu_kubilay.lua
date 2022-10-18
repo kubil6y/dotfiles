@@ -4,15 +4,15 @@
 
 local themes = {
     tokyonight = "#5a4a78",
-    gruvbox = "#fb4934",
     dark_red = "#942C2C",
+    darkplus = "#264F78"
 }
 
 local colors = {
   color2   = "#0f1419",
   color4   = "#e6e1cf",
   color5   = "#ffffff00", -- orginal: #14191f
-  color10  = themes.dark_red,
+  color10  = themes.darkplus,
   color9   = "#565f89",
 }
 

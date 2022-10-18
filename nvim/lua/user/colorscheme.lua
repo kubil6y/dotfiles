@@ -1,4 +1,4 @@
-local current_colorscheme = "gruvbox"
+local current_colorscheme = "darkplus"
 
 local hl = function(thing, opts)
 	vim.api.nvim_set_hl(0, thing, opts)
