@@ -28,6 +28,9 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
+-- copy file full path to system clipboard
+keymap("n", "<leader>fp", ":let @+ = expand('%:p')<CR>")
+
 -- select all
 keymap("n", "<leader>va", "ggVG", opts)
 
@@ -81,7 +84,7 @@ keymap(
 -- quick find buffers (minimal)
 keymap(
 	"n",
-	"<C-f>",
+	"<A-p>",
 	"<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 	opts
 )

@@ -16,7 +16,7 @@ configs.setup({
 	autotag = {
 		enable = true,
 	},
-	indent = { enable = true, disable = { "python", "css" } },
+	indent = { enable = false, disable = { "python", "css" } }, -- fucking shit
 })
 
 local context_ok, context = pcall(require, "treesitter-context")

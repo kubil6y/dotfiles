@@ -25,6 +25,7 @@ get_files: init
 set_colors:
 	@echo "Updating nvim/tmux/lualine..."
 	@cp ./ayu_kubilay.lua /home/kubilay/.local/share/nvim/site/pack/packer/start/lualine.nvim/lua/lualine/themes/ayu_kubilay.lua
+	@cp ./ayu_transparent.lua /home/kubilay/.local/share/nvim/site/pack/packer/start/lualine.nvim/lua/lualine/themes/ayu_transparent.lua
 	@cp ./.tmux.conf ~/.tmux.conf
 	@cp ./nvim/lua/user/colorscheme.lua /home/kubilay/.config/nvim/lua/user/colorscheme.lua
 	@echo "Done!"
