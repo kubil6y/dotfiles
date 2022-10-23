@@ -5,7 +5,7 @@ cursor:
     style:
         shape: Block
         blinking: Always
-    blink_interval: 400
+    blink_interval: 275
 
 window:
     decorations: None
@@ -35,6 +35,9 @@ key_bindings:
 colors:
     name: vscode (dark)
     author: senpai-10
+    cursor:
+      text: '0x000000'
+      cursor: '#D4D4D4'
     primary:
         background: "#1E1E1E"
         foreground: "#D4D4D4"

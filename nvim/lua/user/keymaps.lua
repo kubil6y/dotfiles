@@ -84,7 +84,7 @@ keymap(
 -- quick find buffers (minimal)
 keymap(
 	"n",
-	"<A-p>",
+	"<C-f>",
 	"<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 	opts
 )
@@ -94,5 +94,5 @@ keymap("n", "zz", "zt", opts)
 -- NvimTree
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 
-keymap("n", "<C-u>", "12k", opts)
-keymap("n", "<C-d>", "12j", opts)
+keymap("n", "<C-u>", "13k", opts)
+keymap("n", "<C-d>", "13j", opts)
