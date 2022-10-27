@@ -31,6 +31,9 @@ local options = {
 	signcolumn = "yes",
 	scrolloff = 8, -- is one of my fav
 	sidescrolloff = 8,
+    foldenable = false, -- disable folding at start
+	foldmethod = "expr",
+	foldexpr = "nvim_treesitter#foldexpr()",
 }
 
 -- fixes press enter issues with long messages (ex: nvim-tree)

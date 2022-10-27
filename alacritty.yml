@@ -5,7 +5,7 @@ cursor:
     style:
         shape: Block
         blinking: Always
-    blink_interval: 275
+    blink_interval: 400
 
 window:
     decorations: None
@@ -37,7 +37,10 @@ colors:
     author: senpai-10
     cursor:
       text: '0x000000'
-      cursor: '#D4D4D4'
+      # AEAFAD,21202E,D4D4D4,E0DEF4
+      cursor: '#AEAFAD'
+#
+
     primary:
         background: "#1E1E1E"
         foreground: "#D4D4D4"
