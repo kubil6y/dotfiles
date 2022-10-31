@@ -52,13 +52,9 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope.nvim")
 
 	-- Treesitter
-	--use({
-	--"nvim-treesitter/nvim-treesitter",
-	--commit = "addc129a4f272aba0834bd0a7b6bd4ad5d8c801b",
-	--})
-
-	use("nvim-treesitter/nvim-treesitter")
+	use({ "nvim-treesitter/nvim-treesitter"})
 	use("nvim-treesitter/nvim-treesitter-context")
+	use("nvim-treesitter/playground")
 
 	-- Statusbar
 	use("nvim-lualine/lualine.nvim")
@@ -69,10 +65,7 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use("folke/tokyonight.nvim")
 	use("ellisonleao/gruvbox.nvim")
-	use({
-		"LunarVim/darkplus.nvim",
-		commit = "f20cba5d690bc34398a3a8372ee7bbbc7b6609fa",
-	})
+	use({ "Mofiqul/vscode.nvim" })
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip") --snippet engine

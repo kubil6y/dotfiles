@@ -9,7 +9,7 @@ local themes = {
 }
 
 local colors = {
-  color2   = "#0f1419",
+  color2   = "#ebdbb2",
   color4   = "#e6e1cf",
   color5   = "#ffffff00", -- orginal: #14191f
   color10  = themes.darkplus,

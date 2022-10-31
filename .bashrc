@@ -120,15 +120,15 @@ fi
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/kubilay/.cargo/bin
 export FZF_DEFAULT_COMMAND='rg --files'
-alias init_csharpier='cp ~/Documents/misc/csharpier_config/.csharpierrc.json .'
+alias init_clang_format='cp ~/dotfiles/formatting/.clang-format .'
+alias init_csharpier='cp ~/dotfiles/formatting/.csharpierrc.json .'
+alias init_cpp_boilerplate='cp -r ~/Documents/repos/cpp_boilerplate/ .'
 # https://www.freecodecamp.org/news/how-to-use-git-aliases/
 
-PROMPT_DIRTRIM=1
-PS1="🦅 \[\033[01;34m\]\w\[\033[00m\]$ "
+#PROMPT_DIRTRIM=1
+PS1="🦅:\[\033[01;34m\]\W\[\033[00m\]$ "
 alias open='xdg-open'
 alias vim='nvim'
 alias vi='nvim'
-#alias dsk='cd ~/Desktop'
-#alias docs='cd ~/Documents'
-#alias dls='cd ~/Downloads'
-#alias pg='cd ~/Documents/pg'
+alias luv="love/src/love --console ."
+. "$HOME/.cargo/env"
