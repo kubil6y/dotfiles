@@ -14,7 +14,8 @@ autocmd("TextYankPost", {
 	end,
 })
 
-vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
+-- dunno what is this
+--vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
 
 -- Fixes Autocomment
 autocmd({ "BufWinEnter" }, {

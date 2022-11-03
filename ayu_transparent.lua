@@ -1,5 +1,5 @@
 local colors = {
-    white = "#ebdbb2",
+    white = "#f2e5bc",
     transparent = "#ffffff00"
 }
 

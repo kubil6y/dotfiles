@@ -46,7 +46,6 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp-signature-help")
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("Hoffs/omnisharp-extended-lsp.nvim")
-	--use("RRethy/vim-illuminate") -- highlights current word
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -63,9 +62,7 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim")
 
 	-- Colorschemes
-	use("folke/tokyonight.nvim")
 	use("ellisonleao/gruvbox.nvim")
-	use({ "Mofiqul/vscode.nvim" })
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
