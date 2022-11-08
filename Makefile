@@ -22,9 +22,17 @@ get_files: init
 	@code --list-extensions > ./vscode/extensions
 	@echo "Copying files done!"
 
+update_colors:
+	@echo "Updating nvim/tmux/lualine..."
+	@cp ~/.config/alacritty/alacritty.yml ./alacritty.yml 
+	@cp /home/kubilay/.local/share/nvim/site/pack/packer/start/lualine.nvim/lua/lualine/themes/ayu_transparent.lua ./ayu_transparent.lua
+	@cp ~/.tmux.conf ./.tmux.conf 
+	@cp /home/kubilay/.config/nvim/lua/user/colorscheme.lua ./nvim/lua/user/colorscheme.lua
+	@echo "Done!"
+
 set_colors:
 	@echo "Updating nvim/tmux/lualine..."
-	@cp ./ayu_kubilay.lua /home/kubilay/.local/share/nvim/site/pack/packer/start/lualine.nvim/lua/lualine/themes/ayu_kubilay.lua
+	@cp ./alacritty.yml ~/.config/alacritty/alacritty.yml
 	@cp ./ayu_transparent.lua /home/kubilay/.local/share/nvim/site/pack/packer/start/lualine.nvim/lua/lualine/themes/ayu_transparent.lua
 	@cp ./.tmux.conf ~/.tmux.conf
 	@cp ./nvim/lua/user/colorscheme.lua /home/kubilay/.config/nvim/lua/user/colorscheme.lua

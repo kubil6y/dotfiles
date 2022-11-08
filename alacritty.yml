@@ -42,8 +42,8 @@ colors:
 
     primary:
         #soft:"#32302f",mid: "#282828",hard: "#1d2021"
-        background: "#32302f"
-        foreground: "#f2e5bc"
+        background: "#282828"
+        foreground: "#ebdbb2"
 
     # Normal colors
     normal:

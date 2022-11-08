@@ -234,4 +234,5 @@
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Gruvbox Dark Medium",
 }
