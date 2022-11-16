@@ -22,6 +22,9 @@ nvim_tree.setup({
 		enable = true,
 		update_cwd = true,
 	},
+    notify = {
+        threshold = vim.log.levels.ERROR,
+    },
 	renderer = {
 		root_folder_modifier = ":t",
 		icons = {

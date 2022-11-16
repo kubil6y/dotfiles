@@ -99,8 +99,21 @@ cmp.setup({
 			-- Kind icons
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+			if entry.source.name == "cmp_tabnine" then
+				local detail = (entry.completion_item.data or {}).detail
+				vim_item.kind = ""
+				if detail and detail:find(".*%%.*") then
+					vim_item.kind = vim_item.kind .. " " .. detail
+				end
+
+				if (entry.completion_item.data or {}).multiline then
+					vim_item.kind = vim_item.kind .. " " .. "[ML]"
+				end
+			end
+
 			vim_item.menu = ({
 				nvim_lsp = "[LSP]",
+				cmp_tabnine = "[TN]",
 				luasnip = "[Snippet]",
 				buffer = "[Buffer]",
 				path = "[Path]",
@@ -109,8 +122,9 @@ cmp.setup({
 		end,
 	},
 	sources = {
-		{ name = "nvim_lsp_signature_help" },
+		{ name = "cmp_tabnine" },
 		{ name = "nvim_lsp" },
+		{ name = "nvim_lsp_signature_help" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
@@ -120,10 +134,10 @@ cmp.setup({
 		select = false,
 	},
 	window = {
-         --documentation = false,
-        documentation = {
-            border = "none" -- rounded
-        },
+		--documentation = false,
+		documentation = {
+			border = "none", -- rounded
+		},
 	},
 	experimental = {
 		ghost_text = false,
