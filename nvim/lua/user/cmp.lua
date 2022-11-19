@@ -99,6 +99,8 @@ cmp.setup({
 			-- Kind icons
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+
+            --[[
 			if entry.source.name == "cmp_tabnine" then
 				local detail = (entry.completion_item.data or {}).detail
 				vim_item.kind = ""
@@ -110,10 +112,10 @@ cmp.setup({
 					vim_item.kind = vim_item.kind .. " " .. "[ML]"
 				end
 			end
-
+            ]]
 			vim_item.menu = ({
+				--cmp_tabnine = "[TN]",
 				nvim_lsp = "[LSP]",
-				cmp_tabnine = "[TN]",
 				luasnip = "[Snippet]",
 				buffer = "[Buffer]",
 				path = "[Path]",

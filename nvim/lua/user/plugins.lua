@@ -38,7 +38,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path") -- path completions
 	use("hrsh7th/cmp-nvim-lsp")
 	use("saadparwaiz1/cmp_luasnip")
-	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
+	--use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- enable LSP
@@ -64,6 +64,7 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim")
+    --use("folke/tokyonight.nvim")
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip") --snippet engine

@@ -24,20 +24,19 @@ require("gruvbox").setup({
 vim.cmd([[ colorscheme gruvbox ]])
 
 --[[
-local current_colorscheme = "gruvbox"
+local current_colorscheme = "tokyonight"
 
 local hl = function(thing, opts)
 	vim.api.nvim_set_hl(0, thing, opts)
 end
 
-
 function Setup()
 	vim.cmd("colorscheme " .. current_colorscheme)
-    vim.opt.background = "dark"
-    hl("SignColumn", { bg = "none" })
-    hl("LineNr", { fg = "#5eacd3" }) -- "#5eacd3","#458588"
-    hl("CursorLineNR", { bg = "None" })
-    hl("Normal", { bg = "none" })
+	vim.opt.background = "dark"
+	hl("SignColumn", { bg = "none" })
+	hl("LineNr", { fg = "#5eacd3" }) -- "#5eacd3","#458588"
+	hl("CursorLineNR", { bg = "None" })
+	hl("Normal", { bg = "none" })
 end
 
 Setup()

@@ -6,7 +6,7 @@
     "editor.suggestSelection": "first",
     "editor.lightbulb.enabled": false,
     "editor.renderLineHighlight": "none",
-    "editor.fontSize": 18,
+    "editor.fontSize": 17,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.scrollbar.vertical": "hidden",
@@ -21,7 +21,6 @@
         "*.html": "html"
     },
     "files.exclude": {
-        "**/bin": true,
         "**/obj": true
     },
     "go.toolsManagement.autoUpdate": true,
@@ -233,6 +232,12 @@
     "omnisharp.enableAsyncCompletion": true,
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": false,
+    "vssolution.netcoreIgnore": [
+        "node_modules",
+        "obj",
+        ".ds_store",
+        ".vs"
+    ],
     "workbench.colorTheme": "Gruvbox Dark Medium",
+    "window.zoomLevel": 0,
 }
