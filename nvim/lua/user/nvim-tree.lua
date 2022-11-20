@@ -18,13 +18,13 @@ nvim_tree.setup({
 	filters = {
 		custom = { "^node_modules$", "^obj$", "^bin$", "^.git$", "^.vscode$" },
 	},
-	update_focused_file = {
-		enable = true,
-		update_cwd = true,
+	--update_focused_file = {
+	--enable = true,
+	--update_cwd = false,
+	--},
+	notify = {
+		threshold = vim.log.levels.ERROR,
 	},
-    notify = {
-        threshold = vim.log.levels.ERROR,
-    },
 	renderer = {
 		root_folder_modifier = ":t",
 		icons = {
@@ -64,7 +64,7 @@ nvim_tree.setup({
 		},
 	},
 	view = {
-		side = "left",
+        side = "left",
 		mappings = {
 			list = {
 				{ key = "<C-c>", action = "cd" },
