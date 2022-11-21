@@ -64,7 +64,6 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim")
-    --use("folke/tokyonight.nvim")
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip") --snippet engine

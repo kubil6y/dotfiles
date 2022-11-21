@@ -5,7 +5,7 @@ cursor:
     style:
         shape: Block
         blinking: Always
-    blink_interval: 400
+    blink_interval: 500
 
 window:
     decorations: None
@@ -38,7 +38,7 @@ colors:
     cursor:
       text: '0x000000'
       # AEAFAD,21202E,D4D4D4,E0DEF4,ebdbb2,f2e5bc
-      cursor: "#f2e5bc"
+      cursor: "#ebdbb2"
 
     primary:
         #soft:"#32302f",mid: "#282828",hard: "#1d2021"

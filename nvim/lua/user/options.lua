@@ -29,10 +29,10 @@ local options = {
 	relativenumber = true, -- set relative numbered lines
 	numberwidth = 4, -- set number column width to 2 {default 4}
 	signcolumn = "yes",
-	scrolloff = 8, -- is one of my fav
-	sidescrolloff = 8,
-    foldenable = false, -- disable folding at start
-    foldnestmax = 2,
+	scrolloff = 7, -- is one of my fav
+	sidescrolloff = 7,
+	foldenable = false, -- disable folding at start
+	foldnestmax = 2,
 	foldmethod = "expr",
 	foldexpr = "nvim_treesitter#foldexpr()",
 }

@@ -28,6 +28,9 @@ nvim_tree.setup({
 	renderer = {
 		root_folder_modifier = ":t",
 		icons = {
+			show = {
+				git = false,
+			},
 			glyphs = {
 				default = "",
 				symlink = "",
@@ -41,15 +44,15 @@ nvim_tree.setup({
 					symlink = "",
 					symlink_open = "",
 				},
-				git = {
-					unstaged = "",
-					staged = "S",
-					unmerged = "",
-					renamed = "➜",
-					untracked = "U",
-					deleted = "",
-					ignored = "◌",
-				},
+				--git = {
+					--unstaged = "",
+					--staged = "S",
+					--unmerged = "",
+					--renamed = "➜",
+					--untracked = "U",
+					--deleted = "",
+					--ignored = "◌",
+				--},
 			},
 		},
 	},
@@ -64,7 +67,7 @@ nvim_tree.setup({
 		},
 	},
 	view = {
-        side = "left",
+		side = "left",
 		mappings = {
 			list = {
 				{ key = "<C-c>", action = "cd" },
