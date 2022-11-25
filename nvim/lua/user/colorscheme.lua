@@ -9,7 +9,7 @@ require("gruvbox").setup({
 	invert_tabline = false,
 	invert_intend_guides = false,
 	inverse = true,
-	contrast = "",
+	contrast = "soft",
 	overrides = {
 		SignColumn = { bg = "NONE" },
 		GruvboxRedSign = { bg = "NONE" },

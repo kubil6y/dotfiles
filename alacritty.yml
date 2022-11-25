@@ -37,13 +37,13 @@ colors:
 
     cursor:
       text: '0x000000'
-      # AEAFAD,21202E,D4D4D4,E0DEF4,ebdbb2,f2e5bc
-      cursor: "#ebdbb2"
+      # ebdbb2,f2e5bc
+      cursor: "#f2e5bc"
 
     primary:
         #soft:"#32302f",mid: "#282828",hard: "#1d2021"
-        background: "#282828"
-        foreground: "#ebdbb2"
+        background: "#32302f"
+        foreground: "#f2e5bc"
 
     # Normal colors
     normal:
