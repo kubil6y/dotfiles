@@ -6,7 +6,7 @@
     "editor.suggestSelection": "first",
     "editor.lightbulb.enabled": false,
     "editor.renderLineHighlight": "none",
-    "editor.fontSize": 17,
+    "editor.fontSize": 14,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.scrollbar.vertical": "hidden",
@@ -34,7 +34,7 @@
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 18,
-    "workbench.sideBar.location": "right",
+    "workbench.sideBar.location": "left",
     "editor.tokenColorCustomizations": {
         "[Tokyo Night]": {
             "textMateRules": [
@@ -239,5 +239,5 @@
         ".vs"
     ],
     "workbench.colorTheme": "Gruvbox Dark Medium",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
 }
