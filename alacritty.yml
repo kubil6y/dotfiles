@@ -38,12 +38,12 @@ colors:
     cursor:
       text: '0x000000'
       # ebdbb2,f2e5bc
-      cursor: "#f2e5bc"
+      cursor: "#ebdbb2"
 
     primary:
         #soft:"#32302f",mid: "#282828",hard: "#1d2021"
         background: "#282828"
-        foreground: "#f2e5bc"
+        foreground: "#ebdbb2"
 
     # Normal colors
     normal:

@@ -226,7 +226,7 @@
     "prettier.tabWidth": 4,
     "window.menuBarVisibility": "toggle",
     "editor.lineNumbers": "relative",
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontSize": 14,
     "editor.inlineSuggest.enabled": false,
     "omnisharp.monoPath": "/usr/bin/mono",
     "omnisharp.enableAsyncCompletion": true,
