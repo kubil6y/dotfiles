@@ -9,7 +9,7 @@ require("gruvbox").setup({
 	invert_tabline = false,
 	invert_intend_guides = false,
 	inverse = true,
-	contrast = "",
+	contrast = "hard",
 	overrides = {
 		SignColumn = { bg = "NONE" },
 		GruvboxRedSign = { bg = "NONE" },
@@ -21,7 +21,7 @@ require("gruvbox").setup({
 	transparent_mode = false,
 })
 
-vim.cmd([[ colorscheme gruvbox ]])
+vim.cmd("colorscheme gruvbox")
 
 --[[
 local current_colorscheme = "tokyonight"

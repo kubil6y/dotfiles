@@ -17,6 +17,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 nvim_tree.setup({
 	filters = {
 		custom = { "^node_modules$", "^obj$", "^bin$", "^.git$", "^.vscode$" },
+        dotfiles = true,
 	},
 	--update_focused_file = {
 	--enable = true,

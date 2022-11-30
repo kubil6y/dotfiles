@@ -32,7 +32,7 @@ local options = {
 	scrolloff = 7, -- is one of my fav
 	sidescrolloff = 7,
 	foldenable = false, -- disable folding at start
-	foldnestmax = 2,
+	foldnestmax = 1,
 	foldmethod = "expr",
 	foldexpr = "nvim_treesitter#foldexpr()",
 }
