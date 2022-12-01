@@ -33,7 +33,6 @@
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 18,
-    "workbench.sideBar.location": "left",
     "editor.tokenColorCustomizations": {
         "[Tokyo Night]": {
             "textMateRules": [
@@ -59,12 +58,8 @@
             "textMateRules": [
                 {
                     "scope": [
-                        "entity.name",
-                        "entity.static",
                         "entity.name.class.static.function",
-                        "entity.name.function",
-                        "entity.name.class",
-                        "entity.name.type"
+                        "entity.name.function"
                     ],
                     "settings": {
                         "fontStyle": "bold"
@@ -74,6 +69,13 @@
         }
     },
     "workbench.colorCustomizations": {
+        "[Gruvbox Dark Hard]": {
+            "editorInlayHint.foreground": "#868686f0",
+            "editorInlayHint.background": "#18181800",
+            // Overrides for specific kinds of inlay hints
+            "editorInlayHint.typeForeground": "#486148f0",
+            "editorInlayHint.parameterForeground": "#486148f0"
+        },
         "[Tokyo Night]": {
             "editorLineNumber.foreground": "#5eacd3",
             "editorLineNumber.activeForeground": "#5eacd3",
