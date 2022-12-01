@@ -6,7 +6,6 @@
     "editor.suggestSelection": "first",
     "editor.lightbulb.enabled": false,
     "editor.renderLineHighlight": "none",
-    "editor.fontSize": 14,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.scrollbar.vertical": "hidden",
@@ -52,6 +51,23 @@
                     ],
                     "settings": {
                         "fontStyle": ""
+                    }
+                }
+            ]
+        },
+        "[Gruvbox Dark Hard]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "entity.name",
+                        "entity.static",
+                        "entity.name.class.static.function",
+                        "entity.name.function",
+                        "entity.name.class",
+                        "entity.name.type"
+                    ],
+                    "settings": {
+                        "fontStyle": "bold"
                     }
                 }
             ]
@@ -226,18 +242,17 @@
     "prettier.tabWidth": 4,
     "window.menuBarVisibility": "toggle",
     "editor.lineNumbers": "relative",
-    "terminal.integrated.fontSize": 14,
     "editor.inlineSuggest.enabled": false,
     "omnisharp.monoPath": "/usr/bin/mono",
     "omnisharp.enableAsyncCompletion": true,
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
-    "vssolution.netcoreIgnore": [
-        "node_modules",
-        "obj",
-        ".ds_store",
-        ".vs"
-    ],
-    "workbench.colorTheme": "Gruvbox Dark Medium",
-    "window.zoomLevel": 1,
+    "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "window.zoomLevel": 0,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+    "workbench.activityBar.visible": false,
+    "terminal.integrated.fontSize": 17,
+    "editor.fontSize": 17
 }
