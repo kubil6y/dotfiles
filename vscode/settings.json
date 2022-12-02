@@ -64,6 +64,12 @@
                     "settings": {
                         "fontStyle": "bold"
                     }
+                },
+                {
+                    "scope": ["comment", "punctuation.definition.comment"],
+                    "settings": {
+                        "fontStyle": ""
+                    }
                 }
             ]
         }
@@ -127,7 +133,7 @@
             "silent": true
         },
         {
-            "before": ["<leader>", "t", "o"],
+            "before": ["<leader>", "t", "l"],
             "commands": ["workbench.view.extension.todo-tree-container"],
             "silent": true
         },
@@ -250,11 +256,20 @@
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
-    "workbench.colorTheme": "Gruvbox Dark Hard",
     "window.zoomLevel": 0,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
-    "workbench.activityBar.visible": false,
     "terminal.integrated.fontSize": 17,
-    "editor.fontSize": 17
+    "editor.fontSize": 17,
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.activityBar.visible": false,
+
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "alert",
+        "type": "text",
+        "foreground": "black",
+        "background": "orange",
+        "opacity": 50,
+        "iconColour": "green"
+    },
 }
