@@ -1,7 +1,4 @@
 {
-    "[csharp]": {
-        "editor.defaultFormatter": "ms-dotnettools.csharp"
-    },
     "editor.fontFamily": "MonoLisa",
     "editor.suggestSelection": "first",
     "editor.lightbulb.enabled": false,
@@ -20,41 +17,25 @@
         "*.html": "html"
     },
     "files.exclude": {
-        "**/obj": true
+        "**/obj": true,
+        "**/*.meta": true
     },
     "go.toolsManagement.autoUpdate": true,
     // "omnisharp.enableImportCompletion": true,
+    // "omnisharp.useEditorFormattingSettings": true,
     "omnisharp.organizeImportsOnFormat": true,
-    "omnisharp.useModernNet": false,
+    // .net:true, unity:false
+    "omnisharp.useModernNet": true,
+    "omnisharp.monoPath": "/usr/bin/mono",
+    "omnisharp.enableAsyncCompletion": true,
     "security.workspace.trust.enabled": false,
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "workbench.editor.restoreViewState": false,
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.tree.indent": 18,
     "editor.tokenColorCustomizations": {
-        "[Tokyo Night]": {
-            "textMateRules": [
-                {
-                    "scope": [
-                        "comment",
-                        "meta.var.expr storage.type",
-                        "keyword.control.flow",
-                        "keyword.control.return",
-                        "meta.directive.vue punctuation.separator.key-value.html",
-                        "meta.directive.vue entity.other.attribute-name.html",
-                        "tag.decorator.js entity.name.tag.js",
-                        "tag.decorator.js punctuation.definition.tag.js",
-                        "storage.modifier"
-                    ],
-                    "settings": {
-                        "fontStyle": ""
-                    }
-                }
-            ]
-        },
-        "[Gruvbox Dark Hard]": {
+        "[Gruvbox Dark (Hard)]": {
             "textMateRules": [
                 {
                     "scope": [
@@ -75,18 +56,6 @@
         }
     },
     "workbench.colorCustomizations": {
-        "[Gruvbox Dark Hard]": {
-            "editorInlayHint.foreground": "#868686f0",
-            "editorInlayHint.background": "#18181800",
-            // Overrides for specific kinds of inlay hints
-            "editorInlayHint.typeForeground": "#486148f0",
-            "editorInlayHint.parameterForeground": "#486148f0"
-        },
-        "[Tokyo Night]": {
-            "editorLineNumber.foreground": "#5eacd3",
-            "editorLineNumber.activeForeground": "#5eacd3",
-            "editorError.foreground": "#e88"
-        },
         "[Default Dark+]": {
             "statusBar.background": "#1e1e1e",
             "statusBar.foreground": "#858585",
@@ -95,6 +64,29 @@
             "editorOverviewRuler.border": "#252526",
             "editorLineNumber.foreground": "#5eacd3",
             "editorLineNumber.activeForeground": "#5eacd3"
+        },
+        "[Gruvbox Dark (Hard)]": {
+            "editorInlayHint.foreground": "#868686f0",
+            "editorInlayHint.background": "#18181800",
+            // Overrides for specific kinds of inlay hints
+            "editorInlayHint.typeForeground": "#486148f0",
+            "editorInlayHint.parameterForeground": "#486148f0",
+
+            // sticky scroll settings
+            // "editorStickyScroll.background": "#444",
+            // "editorStickyScrollHover.background": "#f00",
+            // "scrollbar.shadow": "#fff9", // with a little opacity for the dropShadow
+
+            "statusBar.background": "#1e1e1e",
+            "statusBar.foreground": "#858585",
+            "tab.activeBorder": "#d79921",
+            "tab.inactiveBackground": "#252526",
+            "editorOverviewRuler.border": "#252526",
+            // "editorLineNumber.foreground": "#5eacd3",
+            // "editorLineNumber.activeForeground": "#5eacd3",
+            "editor.inactiveSelectionBackground": "#689d6a20",
+            "editor.selectionBackground": "#689d6a40",
+            "editor.selectionHighlightBackground": "#fabd2f40"
         }
     },
     "vim.leader": ",",
@@ -173,6 +165,11 @@
             "silent": true
         },
         {
+            "before": ["g", "f"],
+            "commands": ["editor.action.revealDeclaration"],
+            "silent": true
+        },
+        {
             "before": ["<leader>", "c", "a"],
             "commands": ["workbench.action.closeEditorsInGroup"],
             "silent": true
@@ -213,6 +210,9 @@
         }
     ],
     "csharpextensions.privateMemberPrefix": "_",
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -246,30 +246,22 @@
     "html.autoCreateQuotes": false,
     "csharpextensions.useFileScopedNamespace": true,
     "Lua.telemetry.enable": false,
-    "pixelbyte.love2d.path": "/usr/bin/love",
     "prettier.tabWidth": 4,
     "window.menuBarVisibility": "toggle",
     "editor.lineNumbers": "relative",
     "editor.inlineSuggest.enabled": false,
-    "omnisharp.monoPath": "/usr/bin/mono",
-    "omnisharp.enableAsyncCompletion": true,
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
-    "window.zoomLevel": 0,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
-    "terminal.integrated.fontSize": 17,
-    "editor.fontSize": 17,
-    "workbench.colorTheme": "Gruvbox Dark Hard",
-    "workbench.activityBar.visible": false,
-
-    "todo-tree.highlights.defaultHighlight": {
-        "icon": "alert",
-        "type": "text",
-        "foreground": "black",
-        "background": "orange",
-        "opacity": 50,
-        "iconColour": "green"
-    },
+    "editor.insertSpaces": false,
+    "workbench.colorTheme": "Gruvbox Dark (Hard)",
+    "editor.cursorSurroundingLines": 8,
+    "editor.occurrencesHighlight": false,
+    "workbench.sideBar.location": "left",
+    "window.zoomLevel": 1,
+    "terminal.integrated.fontSize": 14,
+    "editor.fontSize": 14,
+    "workbench.tree.indent": 17
 }
