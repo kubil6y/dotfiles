@@ -1,8 +1,8 @@
 {
     "editor.fontFamily": "MonoLisa",
     "editor.suggestSelection": "first",
-    "editor.lightbulb.enabled": false,
     "editor.renderLineHighlight": "none",
+    "editor.lightbulb.enabled": false,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.scrollbar.vertical": "hidden",
@@ -25,7 +25,7 @@
     // "omnisharp.useEditorFormattingSettings": true,
     "omnisharp.organizeImportsOnFormat": true,
     // .net:true, unity:false
-    "omnisharp.useModernNet": true,
+    "omnisharp.useModernNet": false,
     "omnisharp.monoPath": "/usr/bin/mono",
     "omnisharp.enableAsyncCompletion": true,
     "security.workspace.trust.enabled": false,
@@ -35,7 +35,27 @@
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
     "editor.tokenColorCustomizations": {
-        "[Gruvbox Dark (Hard)]": {
+        "[Tokyo Night Storm]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "comment",
+                        "meta.var.expr storage.type",
+                        "keyword.control.flow",
+                        "keyword.control.return",
+                        "meta.directive.vue punctuation.separator.key-value.html",
+                        "meta.directive.vue entity.other.attribute-name.html",
+                        "tag.decorator.js entity.name.tag.js",
+                        "tag.decorator.js punctuation.definition.tag.js",
+                        "storage.modifier"
+                    ],
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        },
+        "[Gruvbox Dark (Medium)]": {
             "textMateRules": [
                 {
                     "scope": [
@@ -56,16 +76,18 @@
         }
     },
     "workbench.colorCustomizations": {
-        "[Default Dark+]": {
+        "[Visual Studio 2019 Dark]": {
+            "activityBar.background": "#1e1e1e",
             "statusBar.background": "#1e1e1e",
-            "statusBar.foreground": "#858585",
+            "statusBar.foreground": "#d4d4d4",
             "tab.activeBorderTop": "#007ACC",
             "tab.inactiveBackground": "#252526",
-            "editorOverviewRuler.border": "#252526",
-            "editorLineNumber.foreground": "#5eacd3",
-            "editorLineNumber.activeForeground": "#5eacd3"
+            "editorOverviewRuler.border": "#1e1e1e",
+            "editorLineNumber.foreground": "#858585",
+            "editorLineNumber.activeForeground": "#858585"
         },
-        "[Gruvbox Dark (Hard)]": {
+        "[Gruvbox Dark (Medium)]": {
+            // "editorError.foreground": "#d79921",
             "editorInlayHint.foreground": "#868686f0",
             "editorInlayHint.background": "#18181800",
             // Overrides for specific kinds of inlay hints
@@ -77,7 +99,7 @@
             // "editorStickyScrollHover.background": "#f00",
             // "scrollbar.shadow": "#fff9", // with a little opacity for the dropShadow
 
-            "statusBar.background": "#1e1e1e",
+            "statusBar.background": "#282828", //282828,1d2021
             "statusBar.foreground": "#858585",
             "tab.activeBorder": "#d79921",
             "tab.inactiveBackground": "#252526",
@@ -99,6 +121,14 @@
     "vim.cursorStylePerMode.visual": "block",
     "vim.cursorStylePerMode.visualline": "block",
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j"],
+            "commands": ["cursorDown"]
+        },
+        {
+            "before": ["k"],
+            "commands": ["cursorUp"]
+        },
         {
             "before": ["]", "g"],
             "commands": ["editor.action.marker.nextInFiles"],
@@ -248,7 +278,6 @@
     "Lua.telemetry.enable": false,
     "prettier.tabWidth": 4,
     "window.menuBarVisibility": "toggle",
-    "editor.lineNumbers": "relative",
     "editor.inlineSuggest.enabled": false,
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
@@ -256,12 +285,17 @@
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
     "editor.insertSpaces": false,
-    "workbench.colorTheme": "Gruvbox Dark (Hard)",
-    "editor.cursorSurroundingLines": 8,
+    "editor.cursorSurroundingLines": 7,
     "editor.occurrencesHighlight": false,
     "workbench.sideBar.location": "left",
-    "window.zoomLevel": 1,
-    "terminal.integrated.fontSize": 14,
-    "editor.fontSize": 14,
-    "workbench.tree.indent": 17
+    "terminal.integrated.fontSize": 17,
+    "editor.fontSize": 17,
+    "workbench.tree.indent": 12,
+    "scm.diffDecorationsGutterPattern": {
+        "added": true
+    },
+    "editor.lineNumbers": "relative",
+    "editor.folding": true,
+    "editor.foldingStrategy": "indentation",
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
 }
