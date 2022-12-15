@@ -35,6 +35,25 @@
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
     "editor.tokenColorCustomizations": {
+        "[Default Dark+]": {
+            // FFF1F3,D4D4D4
+            "variables": "#D4D4D4",
+            "textMateRules": [
+                {
+                    "scope": "keyword.preprocessor.cs",
+                    "settings": {
+                        "foreground": "#808080"
+                    }
+                },
+                {
+                    "scope": "support.type.property-name",
+                    "settings": {
+                        "foreground": "#D4D4D4"
+                    }
+                }
+            ]
+        },
+
         "[Tokyo Night Storm]": {
             "textMateRules": [
                 {
@@ -55,7 +74,71 @@
                 }
             ]
         },
-        "[Gruvbox Dark (Medium)]": {
+        "[Monokai Pro (Filter Ristretto)]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "storage.type",
+                        "variable.parameter",
+                        "parameters variable.function",
+                        "support.type",
+                        "storage.modifier",
+                        "entity.other.inherited-class",
+                        "entity.other.attribute-name",
+                        "comment",
+                        "punctuation.definition.comment",
+                        "invalid"
+                    ],
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        "comment.git-status.header.local",
+                        "constant.other.elm",
+                        "entity.name.type.class.templated",
+                        "entity.name.type.class.generic",
+                        "entity.name.type.namespace",
+                        "entity.name.function.preprocessor",
+                        "entity.name.class",
+                        "entity.other.inherited-class",
+                        "entity.name.type",
+                        "entity.name.type.class.reference",
+                        "entity.name.type.class.value",
+                        "entity.other.attribute-name",
+                        "entity.other.attribute-name.pseudo-class.css",
+                        "entity.other.pseudo-class.css",
+                        "entity.other.pseudo-element.css",
+                        "entity.name.type.rust",
+                        "keyword.other.fn.rust",
+                        "keyword.other.rust",
+                        "keyword.other.unsafe.rust",
+                        "keyword.other.where.rust",
+                        "storage.type",
+                        "storage.modifier.const.rust",
+                        "storage.modifier.dyn.rust",
+                        "storage.modifier.mut.rust",
+                        "storage.modifier.static.rust",
+                        "storage.type.rust",
+                        "storage.type.core.rust",
+                        "storage.class.std.rust",
+                        "string.other.link.description.title",
+                        "support.constant",
+                        "support.type",
+                        "entity.name.type.object.console",
+                        "support.variable",
+                        "support.class",
+                        "variable.other.class"
+                    ],
+                    "settings": {
+                        "foreground": "#4EC9B0",
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        },
+        "[Gruvbox Dark (Hard)]": {
             "textMateRules": [
                 {
                     "scope": [
@@ -76,17 +159,25 @@
         }
     },
     "workbench.colorCustomizations": {
-        "[Visual Studio 2019 Dark]": {
+        "[Default Dark+]": {
             "activityBar.background": "#1e1e1e",
             "statusBar.background": "#1e1e1e",
-            "statusBar.foreground": "#d4d4d4",
-            "tab.activeBorderTop": "#007ACC",
+            "tab.activeBorder": "#007ACC",
             "tab.inactiveBackground": "#252526",
             "editorOverviewRuler.border": "#1e1e1e",
             "editorLineNumber.foreground": "#858585",
             "editorLineNumber.activeForeground": "#858585"
         },
-        "[Gruvbox Dark (Medium)]": {
+        "[Monokai Pro (Filter Ristretto)]": {
+            // 2d2a2e for monokai pro
+            "statusBar.background": "#2c2525",
+            "editorGroup.emptyBackground": "#2c2525",
+            "tab.activeBorder": "#ffd866",
+            "editorHoverWidget.highlightForeground": "#ffd866",
+            "activityBar.background": "#2c2525",
+            "editorLineNumber.activeForeground": "#5b5353"
+        },
+        "[Gruvbox Dark (Hard)]": {
             // "editorError.foreground": "#d79921",
             "editorInlayHint.foreground": "#868686f0",
             "editorInlayHint.background": "#18181800",
@@ -94,21 +185,22 @@
             "editorInlayHint.typeForeground": "#486148f0",
             "editorInlayHint.parameterForeground": "#486148f0",
 
-            // sticky scroll settings
-            // "editorStickyScroll.background": "#444",
-            // "editorStickyScrollHover.background": "#f00",
-            // "scrollbar.shadow": "#fff9", // with a little opacity for the dropShadow
-
-            "statusBar.background": "#282828", //282828,1d2021
+            "activityBar.background": "#1d2021",
+            "statusBar.background": "#1d2021", //282828,1d2021
             "statusBar.foreground": "#858585",
             "tab.activeBorder": "#d79921",
             "tab.inactiveBackground": "#252526",
             "editorOverviewRuler.border": "#252526",
-            // "editorLineNumber.foreground": "#5eacd3",
-            // "editorLineNumber.activeForeground": "#5eacd3",
             "editor.inactiveSelectionBackground": "#689d6a20",
             "editor.selectionBackground": "#689d6a40",
-            "editor.selectionHighlightBackground": "#fabd2f40"
+            "editor.selectionHighlightBackground": "#fabd2f40",
+
+            "editorLineNumber.foreground": "#858585",
+            "editorLineNumber.activeForeground": "#858585"
+            // sticky scroll settings
+            // "editorStickyScroll.background": "#444",
+            // "editorStickyScrollHover.background": "#f00",
+            // "scrollbar.shadow": "#fff9", // with a little opacity for the dropShadow
         }
     },
     "vim.leader": ",",
@@ -121,14 +213,6 @@
     "vim.cursorStylePerMode.visual": "block",
     "vim.cursorStylePerMode.visualline": "block",
     "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["j"],
-            "commands": ["cursorDown"]
-        },
-        {
-            "before": ["k"],
-            "commands": ["cursorUp"]
-        },
         {
             "before": ["]", "g"],
             "commands": ["editor.action.marker.nextInFiles"],
@@ -280,7 +364,6 @@
     "window.menuBarVisibility": "toggle",
     "editor.inlineSuggest.enabled": false,
     "editor.wordWrap": "on",
-    "editor.minimap.enabled": false,
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
@@ -295,7 +378,9 @@
         "added": true
     },
     "editor.lineNumbers": "relative",
-    "editor.folding": true,
-    "editor.foldingStrategy": "indentation",
-    "workbench.colorTheme": "Visual Studio 2019 Dark",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": false
 }
