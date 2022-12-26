@@ -50,26 +50,11 @@
                     "settings": {
                         "foreground": "#D4D4D4"
                     }
-                }
-            ]
-        },
-
-        "[Tokyo Night Storm]": {
-            "textMateRules": [
+                },
                 {
-                    "scope": [
-                        "comment",
-                        "meta.var.expr storage.type",
-                        "keyword.control.flow",
-                        "keyword.control.return",
-                        "meta.directive.vue punctuation.separator.key-value.html",
-                        "meta.directive.vue entity.other.attribute-name.html",
-                        "tag.decorator.js entity.name.tag.js",
-                        "tag.decorator.js punctuation.definition.tag.js",
-                        "storage.modifier"
-                    ],
+                    "scope": "variable.other.enummember",
                     "settings": {
-                        "fontStyle": ""
+                        "foreground": "#D4D4D4"
                     }
                 }
             ]
@@ -284,11 +269,6 @@
             "silent": true
         },
         {
-            "before": ["<leader>", "c", "a"],
-            "commands": ["workbench.action.closeEditorsInGroup"],
-            "silent": true
-        },
-        {
             "before": ["<leader>", "m", "l"],
             "commands": ["workbench.action.moveActiveEditorGroupRight"],
             "silent": true
@@ -368,7 +348,7 @@
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
     "editor.insertSpaces": false,
-    "editor.cursorSurroundingLines": 7,
+    "editor.cursorSurroundingLines": 9,
     "editor.occurrencesHighlight": false,
     "workbench.sideBar.location": "left",
     "terminal.integrated.fontSize": 17,

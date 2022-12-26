@@ -32,26 +32,26 @@
         "key": "alt+q",
         "command": "workbench.action.closeEditorsInOtherGroups"
     },
-    {
-        "key": "alt+.",
-        "command": "editor.action.quickFix",
-        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+.",
-        "command": "-editor.action.quickFix",
-        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+.",
-        "command": "problems.action.showQuickFixes",
-        "when": "problemFocus"
-    },
-    {
-        "key": "ctrl+.",
-        "command": "-problems.action.showQuickFixes",
-        "when": "problemFocus"
-    },
+    // {
+    //     "key": "alt+.",
+    //     "command": "editor.action.quickFix",
+    //     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    // },
+    // {
+    //     "key": "ctrl+.",
+    //     "command": "-editor.action.quickFix",
+    //     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    // },
+    // {
+    //     "key": "ctrl+.",
+    //     "command": "problems.action.showQuickFixes",
+    //     "when": "problemFocus"
+    // },
+    // {
+    //     "key": "ctrl+.",
+    //     "command": "-problems.action.showQuickFixes",
+    //     "when": "problemFocus"
+    // },
     {
         "key": "ctrl+n",
         "command": "explorer.newFile",
@@ -117,5 +117,23 @@
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "when": "codeActionMenuVisible",
+        "command": "selectPrevCodeAction"
+    },
+    {
+        "key": "ctrl+j",
+        "when": "codeActionMenuVisible",
+        "command": "selectNextCodeAction"
+    },
+    {
+        "key": "alt+j",
+        "command": "cursorDown"
+    },
+    {
+        "key": "alt+k",
+        "command": "cursorUp"
     }
 ]

@@ -11,6 +11,9 @@ kleber-swf.unity-code-snippets
 kreativ-software.csharpextensions
 monokai.theme-monokai-pro-vscode
 ms-dotnettools.csharp
+ms-vscode.cmake-tools
+ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
 ms-vscode.makefile-tools
 patcx.vscode-nuget-gallery
 PKief.material-icon-theme
@@ -21,5 +24,6 @@ ritwickdey.LiveServer
 rust-lang.rust-analyzer
 sumneko.lua
 tomphilbin.gruvbox-themes
+twxs.cmake
 vscodevim.vim
 Zignd.html-css-class-completion
