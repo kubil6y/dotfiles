@@ -135,5 +135,9 @@
     {
         "key": "alt+k",
         "command": "cursorUp"
+    },
+    {
+        "key": "alt+shift+w",
+        "command": "settings.cycle.toggleMenuBar"
     }
 ]

@@ -147,7 +147,7 @@
         "[Default Dark+]": {
             "activityBar.background": "#1e1e1e",
             "statusBar.background": "#1e1e1e",
-            "tab.activeBorder": "#007ACC",
+            "tab.activeBorder": "#D4D4D4", // 4EC9B0,
             "tab.inactiveBackground": "#252526",
             "editorOverviewRuler.border": "#1e1e1e",
             "editorLineNumber.foreground": "#858585",
@@ -339,14 +339,10 @@
     "csharpextensions.useThisForCtorAssignments": false,
     "html.autoCreateQuotes": false,
     "csharpextensions.useFileScopedNamespace": true,
-    "Lua.telemetry.enable": false,
     "prettier.tabWidth": 4,
-    "window.menuBarVisibility": "toggle",
     "editor.inlineSuggest.enabled": false,
     "editor.wordWrap": "on",
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
-    "rust-analyzer.inlayHints.parameterHints.enable": false,
-    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
     "editor.insertSpaces": false,
     "editor.cursorSurroundingLines": 9,
     "editor.occurrencesHighlight": false,
@@ -362,5 +358,17 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.minimap.enabled": false,
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    "window.menuBarVisibility": "hidden",
+    "settings.cycle": [
+        {
+            "id": "toggleMenuBar",
+            "values": [
+                { "window.menuBarVisibility": "hidden" },
+                { "window.menuBarVisibility": "visible" }
+            ]
+        }
+    ],
     "workbench.activityBar.visible": false
 }
