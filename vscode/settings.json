@@ -36,8 +36,8 @@
     "workbench.iconTheme": "material-icon-theme",
     "editor.tokenColorCustomizations": {
         "[Default Dark+]": {
-            // FFF1F3,D4D4D4
-            "variables": "#D4D4D4",
+            // D4D4D4,FFF1F1F1
+            "variables": "#FFF1F1F1",
             "textMateRules": [
                 {
                     "scope": "keyword.preprocessor.cs",
@@ -48,13 +48,13 @@
                 {
                     "scope": "support.type.property-name",
                     "settings": {
-                        "foreground": "#D4D4D4"
+                        "foreground": "#FFF1F1F1"
                     }
                 },
                 {
                     "scope": "variable.other.enummember",
                     "settings": {
-                        "foreground": "#D4D4D4"
+                        "foreground": "#FFF1F1F1"
                     }
                 }
             ]
@@ -147,7 +147,7 @@
         "[Default Dark+]": {
             "activityBar.background": "#1e1e1e",
             "statusBar.background": "#1e1e1e",
-            "tab.activeBorder": "#D4D4D4", // 4EC9B0,
+            "tab.activeBorder": "#FFF1F1F1", // 4EC9B0,
             "tab.inactiveBackground": "#252526",
             "editorOverviewRuler.border": "#1e1e1e",
             "editorLineNumber.foreground": "#858585",
@@ -344,7 +344,7 @@
     "editor.wordWrap": "on",
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "editor.insertSpaces": false,
-    "editor.cursorSurroundingLines": 9,
+    "editor.cursorSurroundingLines": 8,
     "editor.occurrencesHighlight": false,
     "workbench.sideBar.location": "left",
     "terminal.integrated.fontSize": 17,
