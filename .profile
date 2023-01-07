@@ -29,5 +29,4 @@ fi
 export PATH=$PATH:/usr/local/go/bin
 
 # default values for xset r: 660(delay) 25(rate)
-# xset r rate 325 30
 xset r rate 300 33
