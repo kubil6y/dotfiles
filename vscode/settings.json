@@ -31,18 +31,25 @@
     "security.workspace.trust.enabled": false,
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.persistentSessionReviveProcess": "never",
+    // "workbench.editor.enablePreview": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.sideBar.location": "left",
+    "workbench.tree.indent": 12,
     "workbench.editor.restoreViewState": false,
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
     "editor.tokenColorCustomizations": {
         "[Default Dark+]": {
-            // D4D4D4,FFF1F1F1
-            "variables": "#FFF1F1F1",
+            // D4D4D4,FFF1F1F1,e2e2e2
+            "variables": "#e2e2e2",
             "textMateRules": [
                 {
-                    "scope": "variable.other.constant.object.ts",
+                    "scope": [
+                        "variable.other.constant.object.ts",
+                        "variable.other.constant.object.js"
+                    ],
                     "settings": {
-                        "foreground": "#FFF1F1F1"
+                        "foreground": "#e2e2e2"
                     }
                 },
                 {
@@ -54,13 +61,13 @@
                 {
                     "scope": "support.type.property-name",
                     "settings": {
-                        "foreground": "#FFF1F1F1"
+                        "foreground": "#e2e2e2"
                     }
                 },
                 {
                     "scope": "variable.other.enummember",
                     "settings": {
-                        "foreground": "#FFF1F1F1"
+                        "foreground": "#e2e2e2"
                     }
                 }
             ]
@@ -293,6 +300,14 @@
             "before": ["<leader>", "m", "k"],
             "commands": ["workbench.action.moveActiveEditorGroupUp"],
             "silent": true
+        },
+        {
+            "before": ["<C-u>"],
+            "after": ["1", "0", "k"]
+        },
+        {
+            "before": ["<C-d>"],
+            "after": ["1", "0", "j"]
         }
     ],
     "vim.commandLineModeKeyBindings": [
@@ -338,7 +353,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "keyboard.dispatch": "keyCode",
-    "workbench.layoutControl.enabled": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "breadcrumbs.enabled": false,
     "editor.bracketPairColorization.enabled": false,
@@ -352,10 +366,8 @@
     "editor.insertSpaces": false,
     "editor.cursorSurroundingLines": 8,
     "editor.occurrencesHighlight": false,
-    "workbench.sideBar.location": "left",
     "terminal.integrated.fontSize": 17,
     "editor.fontSize": 17,
-    "workbench.tree.indent": 12,
     "scm.diffDecorationsGutterPattern": {
         "added": true
     },
@@ -376,5 +388,6 @@
         }
     ],
     "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": false,
+    "liveServer.settings.donotShowInfoMsg": true
 }

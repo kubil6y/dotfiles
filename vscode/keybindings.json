@@ -29,30 +29,6 @@
         "command": "-workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "alt+q",
-        "command": "workbench.action.closeEditorsInOtherGroups"
-    },
-    // {
-    //     "key": "alt+.",
-    //     "command": "editor.action.quickFix",
-    //     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-    // },
-    // {
-    //     "key": "ctrl+.",
-    //     "command": "-editor.action.quickFix",
-    //     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-    // },
-    // {
-    //     "key": "ctrl+.",
-    //     "command": "problems.action.showQuickFixes",
-    //     "when": "problemFocus"
-    // },
-    // {
-    //     "key": "ctrl+.",
-    //     "command": "-problems.action.showQuickFixes",
-    //     "when": "problemFocus"
-    // },
-    {
         "key": "ctrl+n",
         "command": "explorer.newFile",
         "when": "explorerViewletFocus"
@@ -141,23 +117,31 @@
         "command": "settings.cycle.toggleMenuBar"
     },
     {
-        "key": "shift+alt+l",
+        "key": "ctrl+tab",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditor"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+alt+l",
         "command": "extension.vim_ctrl+pagedown",
-        "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
+        "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
-        "key": "ctrl+pagedown",
-        "command": "-extension.vim_ctrl+pagedown",
-        "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
-    },
-    {
-        "key": "shift+alt+h",
+        "key": "ctrl+alt+h",
         "command": "extension.vim_ctrl+pageup",
-        "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl"
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
     },
-    {
-        "key": "ctrl+pageup",
-        "command": "-extension.vim_ctrl+pageup",
-        "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl"
-    }
 ]
