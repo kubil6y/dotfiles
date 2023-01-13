@@ -117,18 +117,18 @@ if ! shopt -oq posix; then
 fi
 
 # ---------- custom settings ---------- #
+#export PATH=$PATH:/home/kubilay/.cargo/bin
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/kubilay/.cargo/bin
 export FZF_DEFAULT_COMMAND='rg --files'
-alias init_clang_format='cp ~/dotfiles/formatting/.clang-format .'
-alias init_csharpier='cp ~/dotfiles/formatting/.csharpierrc.json .'
-alias init_cpp_boilerplate='cp -r ~/Documents/repos/cpp_boilerplate/ .'
-# https://www.freecodecamp.org/news/how-to-use-git-aliases/
+alias init_clang_format='cp ~/Documents/dotfiles/formatting/.clang-format .'
+alias init_csharpier='cp ~/Documents/dotfiles/formatting/.csharpierrc.json .'
 
 #PROMPT_DIRTRIM=1
 PS1="🦅:\[\033[01;34m\]\W\[\033[00m\]$ "
 alias open='xdg-open'
-alias vim='nvim'
-alias vi='nvim'
-alias luv="love/src/love --console ."
-. "$HOME/.cargo/env"
+#alias vim='nvim'
+#alias vi='nvim'
+
+# keyboard settings
+# xset r rate 280 40
+xset r rate 190 20

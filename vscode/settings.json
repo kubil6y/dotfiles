@@ -46,7 +46,12 @@
                 {
                     "scope": [
                         "variable.other.constant.object.ts",
-                        "variable.other.constant.object.js"
+                        "variable.other.constant.object.js",
+                        "variable.other.constant.ts",
+                        "meta.definition.variable.ts",
+                        "meta.var-single-variable.expr.ts",
+                        "meta.var.expr.ts",
+                        "source.ts"
                     ],
                     "settings": {
                         "foreground": "#e2e2e2"
@@ -160,8 +165,6 @@
         "[Default Dark+]": {
             "activityBar.background": "#1e1e1e",
             "statusBar.background": "#1e1e1e",
-            "tab.activeBorder": "#D4D4D4", // 4EC9B0,
-            "tab.inactiveBackground": "#252526",
             "editorOverviewRuler.border": "#1e1e1e",
             "editorLineNumber.foreground": "#858585",
             "editorLineNumber.activeForeground": "#858585"
@@ -316,10 +319,6 @@
             "after": ["w"]
         },
         {
-            "before": ["E"],
-            "after": ["e"]
-        },
-        {
             "before": ["Q"],
             "after": ["q"]
         }
@@ -388,6 +387,5 @@
         }
     ],
     "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": false,
-    "liveServer.settings.donotShowInfoMsg": true
+    "workbench.activityBar.visible": false
 }
