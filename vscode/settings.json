@@ -39,6 +39,27 @@
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
     "editor.tokenColorCustomizations": {
+        "[Visual Studio Dark - C++]": {
+            "variables": "#e2e2e2",
+            "textMateRules": [
+                {
+                    "scope": [
+                        "variable.other.constant.object.ts",
+                        "variable.other.constant.object.js",
+                        "variable.other.constant.ts",
+                        "meta.definition.variable.ts",
+                        "meta.var-single-variable.expr.ts",
+                        "meta.var.expr.ts",
+                        "source.ts",
+                        "support.type.property-name",
+                        "variable.other.enummember"
+                    ],
+                    "settings": {
+                        "foreground": "#e2e2e2"
+                    }
+                }
+            ]
+        },
         "[Default Dark+]": {
             // D4D4D4,FFF1F1F1,e2e2e2
             "variables": "#e2e2e2",
@@ -51,7 +72,9 @@
                         "meta.definition.variable.ts",
                         "meta.var-single-variable.expr.ts",
                         "meta.var.expr.ts",
-                        "source.ts"
+                        "source.ts",
+                        "support.type.property-name",
+                        "variable.other.enummember"
                     ],
                     "settings": {
                         "foreground": "#e2e2e2"
@@ -61,18 +84,6 @@
                     "scope": "keyword.preprocessor.cs",
                     "settings": {
                         "foreground": "#808080"
-                    }
-                },
-                {
-                    "scope": "support.type.property-name",
-                    "settings": {
-                        "foreground": "#e2e2e2"
-                    }
-                },
-                {
-                    "scope": "variable.other.enummember",
-                    "settings": {
-                        "foreground": "#e2e2e2"
                     }
                 }
             ]
@@ -162,6 +173,13 @@
         }
     },
     "workbench.colorCustomizations": {
+        "[Visual Studio Dark - C++]": {
+            "activityBar.background": "#1e1e1e",
+            "statusBar.background": "#1e1e1e",
+            "editorOverviewRuler.border": "#1e1e1e"
+            // "editorLineNumber.foreground": "#858585",
+            // "editorLineNumber.activeForeground": "#858585"
+        },
         "[Default Dark+]": {
             "activityBar.background": "#1e1e1e",
             "statusBar.background": "#1e1e1e",
@@ -387,5 +405,6 @@
         }
     ],
     "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Visual Studio Dark - C++"
 }
