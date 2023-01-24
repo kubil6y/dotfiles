@@ -126,8 +126,8 @@ alias init_csharpier='cp ~/dotfiles/formatting/.csharpierrc.json .'
 #PROMPT_DIRTRIM=1
 PS1="🦅:\[\033[01;34m\]\W\[\033[00m\]$ "
 alias open='xdg-open'
-#alias vim='nvim'
-#alias vi='nvim'
+alias vim='nvim'
+alias vi='nvim'
 
 # keyboard settings
 # xset r rate 280 40
