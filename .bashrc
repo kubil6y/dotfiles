@@ -120,8 +120,8 @@ fi
 #export PATH=$PATH:/home/kubilay/.cargo/bin
 export PATH=$PATH:/usr/local/go/bin
 export FZF_DEFAULT_COMMAND='rg --files'
-alias init_clang_format='cp ~/Documents/dotfiles/formatting/.clang-format .'
-alias init_csharpier='cp ~/Documents/dotfiles/formatting/.csharpierrc.json .'
+alias init_clang_format='cp ~/dotfiles/formatting/.clang-format .'
+alias init_csharpier='cp ~/dotfiles/formatting/.csharpierrc.json .'
 
 #PROMPT_DIRTRIM=1
 PS1="🦅:\[\033[01;34m\]\W\[\033[00m\]$ "

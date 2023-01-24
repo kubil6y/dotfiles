@@ -7,6 +7,10 @@ hoovercj.vscode-settings-cycler
 kleber-swf.unity-code-snippets
 kreativ-software.csharpextensions
 ms-dotnettools.csharp
+ms-vscode.cmake-tools
+ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cpptools-themes
 patcx.vscode-nuget-gallery
 PKief.material-icon-theme
 Prisma.prisma
@@ -14,5 +18,6 @@ redguardtoo.matchit
 rhalaly.scope-to-this
 ritwickdey.LiveServer
 tomphilbin.gruvbox-themes
+twxs.cmake
 vscodevim.vim
 Zignd.html-css-class-completion
