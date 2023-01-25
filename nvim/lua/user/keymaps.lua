@@ -1,6 +1,18 @@
---Remap space as leader key
-vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+-- [[ Basic Keymaps ]]
+-- Set <space> as the leader key
+-- See `:help mapleader`
+-- NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
+
+-- Keymaps for better default experience
+-- See `:help vim.keymap.set()`
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 --[[
 -- MODES
@@ -70,27 +82,14 @@ keymap("v", "<leader>p", "\"_dP")
 keymap("x", "<leader>d", "\"_d")
 keymap("v", "<leader>d", "\"_d")
 
--- Telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts) -- find with preview
-keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts) -- live grep
-
--- quick find files (minimal)
-keymap(
-	"n",
-	"<C-p>",
-	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
-	opts
-)
--- quick find buffers (minimal)
-keymap(
-	"n",
-	"<C-f>",
-	"<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
-	opts
-)
-
 -- NvimTree
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 
 keymap("n", "<C-u>", "10k", opts)
 keymap("n", "<C-d>", "10j", opts)
+
+-- Diagnostic keymaps
+keymap('n', '[g', vim.diagnostic.goto_prev)
+keymap('n', ']g', vim.diagnostic.goto_next)
+keymap('n', '<leader>dt', vim.diagnostic.open_float)
+keymap('n', '<leader>dl', vim.diagnostic.setloclist)

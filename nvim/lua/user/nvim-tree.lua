@@ -1,5 +1,6 @@
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.nvim_tree_respect_buf_cwd = 1
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 
@@ -17,12 +18,16 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 nvim_tree.setup({
 	filters = {
 		custom = { "^node_modules$", "^obj$", "^bin$", "^.git$", "^.vscode$" },
-        dotfiles = true,
+		dotfiles = true,
 	},
-	--update_focused_file = {
-	--enable = true,
-	--update_cwd = false,
-	--},
+	actions = {
+		change_dir = {
+			global = true
+		}
+	},
+	update_focused_file = {
+		enable = true,
+	},
 	notify = {
 		threshold = vim.log.levels.ERROR,
 	},
@@ -30,7 +35,7 @@ nvim_tree.setup({
 		root_folder_modifier = ":t",
 		icons = {
 			show = {
-				git = false,
+				git = true,
 			},
 			glyphs = {
 				default = "",
@@ -45,15 +50,15 @@ nvim_tree.setup({
 					symlink = "",
 					symlink_open = "",
 				},
-				--git = {
-					--unstaged = "",
-					--staged = "S",
-					--unmerged = "",
-					--renamed = "➜",
-					--untracked = "U",
-					--deleted = "",
-					--ignored = "◌",
-				--},
+				git = {
+					unstaged = "",
+					staged = "S",
+					unmerged = "",
+					renamed = "➜",
+					untracked = "U",
+					deleted = "",
+					ignored = "◌",
+				},
 			},
 		},
 	},
