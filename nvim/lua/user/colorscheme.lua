@@ -15,21 +15,25 @@ require("gruvbox").setup({
 	bold = true,
 	italic = false,
 	strikethrough = true,
-	invert_selection = false,
+	invert_selection = true,
 	invert_signs = false,
 	invert_tabline = false,
 	invert_intend_guides = false,
-	inverse = true,
-	contrast = "hard",
+	inverse = true, -- invert background for search, diffs, statuslines and errors
+	contrast = "hard", -- can be "hard", "soft" or empty string
+	palette_overrides = {},
 	overrides = {
-		SignColumn = { bg = "NONE" },
-		GruvboxRedSign = { bg = "NONE" },
-		GruvboxYellowSign = { bg = "NONE" },
-		GruvboxBlueSign = { bg = "NONE" },
-		GruvboxAquaSign = { bg = "NONE" },
+        SignColumn = { bg = "NONE" },
+        GruvboxRedSign = { bg = "NONE" },
+        GruvboxYellowSign = { bg = "NONE" },
+        GruvboxBlueSign = { bg = "NONE" },
+        GruvboxAquaSign = { bg = "NONE" },
 	},
 	dim_inactive = false,
 	transparent_mode = false,
 })
 
-vim.cmd [[colorscheme vscode ]]
+vim.cmd [[ highlight GitSignsAdd guibg=NONE ]]
+vim.cmd [[ highlight GitSignsChange guibg=NONE ]]
+vim.cmd [[ highlight GitSignsDelete guibg=NONE ]]
+vim.cmd [[ colorscheme gruvbox ]]

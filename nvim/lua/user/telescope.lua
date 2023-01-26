@@ -4,6 +4,11 @@
 local actions = require("telescope.actions")
 require('telescope').setup {
   defaults = {
+    prompt_prefix = " ",
+    selection_caret = " ",
+    path_display = { "smart" },
+    file_ignore_patterns = { ".git/", "node_modules/", "obj/", "bin/", "dist/", "target/", "love/", "build/", ".cache/" }, -- TODO
+
     mappings = {
       i = {
 	["<Down>"] = actions.cycle_history_next,
@@ -26,11 +31,11 @@ pcall(require('telescope').load_extension, 'fzf')
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>/', function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
-  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
+	-- You can pass additional configuration to telescope to change theme, layout, etc.
+	require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+		winblend = 10,
+		previewer = false,
+	})
 end, { desc = '[/] Fuzzily search in current buffer]' })
 
 vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
@@ -55,4 +60,3 @@ vim.keymap.set(
 	"<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 	opts
 )
-
