@@ -1,6 +1,6 @@
--- change in .local/share
+-- change in .local/share, setup does not work
 -- hl(0, '@error', { fg = c.vscRed, bg = 'NONE' })
--- variables e2e2e2
+-- vscLightBlue e2e2e2
 require("vscode").setup({
 	transparent = true,
 	italic_comments = false,
