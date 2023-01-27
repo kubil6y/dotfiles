@@ -201,6 +201,11 @@ _G.packer_plugins = {
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  playground = {
+    loaded = true,
+    path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/plenary.nvim",

@@ -17,7 +17,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
 	filters = {
-		custom = { "^node_modules$", "^obj$", "^bin$", "^.git$", "^.vscode$" },
+		custom = { "^node_modules$", "^obj$", "^.git$", "^.vscode$" },
 		dotfiles = true,
 	},
 	actions = {
@@ -35,7 +35,7 @@ nvim_tree.setup({
 		root_folder_modifier = ":t",
 		icons = {
 			show = {
-				git = true,
+				git = false, -- TODO
 			},
 			glyphs = {
 				default = "",

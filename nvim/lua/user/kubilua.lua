@@ -5,7 +5,7 @@ M.theme = function(theme)
 	if theme == "gruvbox" then
 		fg = "#ebdbb2"
 	elseif theme == "vscode" then
-		fg = "#e2e2e2"
+		fg = "#d4d4d4"
 	end
 	local colors = {
 		fg = fg,

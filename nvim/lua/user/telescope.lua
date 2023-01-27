@@ -7,7 +7,7 @@ require('telescope').setup {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
-    file_ignore_patterns = { ".git/", "node_modules/", "obj/", "bin/", "dist/", "target/", "love/", "build/", ".cache/" }, -- TODO
+    file_ignore_patterns = { ".git/", "node_modules/", "obj/", "dist/", "target/", "love/", "build/", ".cache/" }, -- TODO
 
     mappings = {
       i = {
@@ -54,9 +54,9 @@ vim.keymap.set(
 	opts
 )
 -- quick find buffers (minimal)
-vim.keymap.set(
-	"n",
-	"<C-f>",
-	"<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
-	opts
-)
+--vim.keymap.set(
+	--"n",
+	--"<C-f>",
+	--"<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	--opts
+--)

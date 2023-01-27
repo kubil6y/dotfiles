@@ -1,3 +1,5 @@
+local my_colorscheme = "gruvbox"
+
 -- change in .local/share, setup does not work
 -- hl(0, '@error', { fg = c.vscRed, bg = 'NONE' })
 -- vscLightBlue e2e2e2
@@ -23,17 +25,29 @@ require("gruvbox").setup({
 	contrast = "hard", -- can be "hard", "soft" or empty string
 	palette_overrides = {},
 	overrides = {
-        SignColumn = { bg = "NONE" },
-        GruvboxRedSign = { bg = "NONE" },
-        GruvboxYellowSign = { bg = "NONE" },
-        GruvboxBlueSign = { bg = "NONE" },
-        GruvboxAquaSign = { bg = "NONE" },
+		SignColumn = { bg = "NONE" },
+		GruvboxRedSign = { bg = "NONE" },
+		GruvboxYellowSign = { bg = "NONE" },
+		GruvboxBlueSign = { bg = "NONE" },
+		GruvboxAquaSign = { bg = "NONE" },
+		DiagnosticFloatingError = { fg = "#ff7070" },
+		["@type.qualifier"] = { fg = "#fb4934" },
+
 	},
 	dim_inactive = false,
 	transparent_mode = false,
 })
 
-vim.cmd [[ highlight GitSignsAdd guibg=NONE ]]
-vim.cmd [[ highlight GitSignsChange guibg=NONE ]]
-vim.cmd [[ highlight GitSignsDelete guibg=NONE ]]
-vim.cmd [[ colorscheme gruvbox ]]
+vim.cmd [[ hi GitSignsAdd guibg=NONE ]]
+vim.cmd [[ hi GitSignsChange guibg=NONE ]]
+vim.cmd [[ hi GitSignsDelete guibg=NONE ]]
+vim.cmd("colorscheme " .. my_colorscheme)
+
+--if my_colorscheme == "gruvbox" then
+	--vim.cmd [[ hi Normal guibg=#282A36 ]]
+--end
+
+if my_colorscheme == "vscode" then
+	--vim.cmd [[ hi Visual gui=reverse ]]
+	vim.cmd [[ hi NvimTreeNormal guibg=#1E1E1E ]]
+end

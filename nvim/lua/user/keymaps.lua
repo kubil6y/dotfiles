@@ -43,7 +43,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- copy file full path to system clipboard
 keymap("n", "<leader>fp", ":let @+ = expand('%:p')<CR>")
 
--- select all
+-- select all file
 keymap("n", "<leader>va", "ggVG", opts)
 
 -- Navigate buffers
