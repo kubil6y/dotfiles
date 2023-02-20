@@ -22,20 +22,6 @@ get_files: init
 	@code --list-extensions > ./vscode/extensions
 	@echo "Copying files done!"
 
-update_colors:
-	@echo "Updating nvim/tmux/lualine..."
-	@cp ~/.config/alacritty/alacritty.yml ./alacritty.yml 
-	@cp /home/kubilay/.local/share/nvim/site/pack/packer/start/lualine.nvim/lua/lualine/themes/ayu_transparent.lua ./ayu_transparent.lua
-	@cp /home/kubilay/.config/nvim/lua/user/colorscheme.lua ./nvim/lua/user/colorscheme.lua
-	@echo "Done!"
-
-set_colors:
-	@echo "Updating nvim/tmux/lualine..."
-	@cp ./alacritty.yml ~/.config/alacritty/alacritty.yml
-	@cp ./ayu_transparent.lua /home/kubilay/.local/share/nvim/site/pack/packer/start/lualine.nvim/lua/lualine/themes/ayu_transparent.lua
-	@cp ./nvim/lua/user/colorscheme.lua /home/kubilay/.config/nvim/lua/user/colorscheme.lua
-	@echo "Done!"
-
 update_nvim_settings:
 	@rm -rf ./nvim
 	@cp -r ~/.config/nvim .
@@ -48,14 +34,3 @@ update_vscode_settings:
 	@cp ~/.config/Code/User/settings.json ./vscode/
 	@code --list-extensions > ./vscode/extensions
 	@echo "Updated vscode settings!"
-
-# set_files:
-# 	@echo "Setting dotfiles files..."
-# 	@cp ./.bashrc ~/.bashrc
-# 	@cp ./.tmux.conf ~/.tmux.conf
-# 	@cp ./alacritty.yml ~/.config/alacritty/alacritty.yml
-# 	@cp -r ./nvim ~/.config/
-# 	@cp ./.gitconfig ~/.gitconfig
-# 	@cp ./vscode/keybindings.json ~/.config/Code/User/keybindings.json
-# 	@cp ./vscode/settings.json ~/.config/Code/User/settings.json.json
-#  	@echo "Setting dotfiles files done!"

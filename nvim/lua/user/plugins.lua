@@ -32,6 +32,7 @@ use("hrsh7th/cmp-path") -- path completions
 use("hrsh7th/cmp-nvim-lsp")
 use("hrsh7th/cmp-nvim-lsp-signature-help")
 use("saadparwaiz1/cmp_luasnip")
+use("jose-elias-alvarez/null-ls.nvim")
 
 -- Snippets
 use("L3MON4D3/LuaSnip") --snippet engine
@@ -55,10 +56,7 @@ use 'tpope/vim-rhubarb'
 use 'lewis6991/gitsigns.nvim'
 
 -- Colorschemes
-use {
-    "Mofiqul/vscode.nvim",
-    commit = "fd92b55f75f1f6a2b94d34ed4f926bf5d032bdd4"
-}
+use("Mofiqul/vscode.nvim")
 use("ellisonleao/gruvbox.nvim")
 
 use 'nvim-lualine/lualine.nvim' -- Fancier statusline

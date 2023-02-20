@@ -32,22 +32,17 @@ require("gruvbox").setup({
 		GruvboxAquaSign = { bg = "NONE" },
 		DiagnosticFloatingError = { fg = "#ff7070" },
 		["@type.qualifier"] = { fg = "#fb4934" },
-
 	},
 	dim_inactive = false,
 	transparent_mode = false,
 })
 
-vim.cmd [[ hi GitSignsAdd guibg=NONE ]]
-vim.cmd [[ hi GitSignsChange guibg=NONE ]]
-vim.cmd [[ hi GitSignsDelete guibg=NONE ]]
+vim.cmd([[ hi GitSignsAdd guibg=NONE ]])
+vim.cmd([[ hi GitSignsChange guibg=NONE ]])
+vim.cmd([[ hi GitSignsDelete guibg=NONE ]])
 vim.cmd("colorscheme " .. my_colorscheme)
-
---if my_colorscheme == "gruvbox" then
-	--vim.cmd [[ hi Normal guibg=#282A36 ]]
---end
 
 if my_colorscheme == "vscode" then
 	--vim.cmd [[ hi Visual gui=reverse ]]
-	vim.cmd [[ hi NvimTreeNormal guibg=#1E1E1E ]]
+	vim.cmd([[ hi NvimTreeNormal guibg=#1E1E1E ]])
 end
