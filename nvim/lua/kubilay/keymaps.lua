@@ -29,10 +29,10 @@ local keymap = vim.keymap.set
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- keymap("n", "<C-h>", "<C-w>h", opts)
+-- keymap("n", "<C-j>", "<C-w>j", opts)
+-- keymap("n", "<C-k>", "<C-w>k", opts)
+-- keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -57,8 +57,8 @@ keymap("n", "q", "<nop>", opts) -- remove q for disabling recording macros
 keymap("n", "Q", "<nop>", opts) -- remove Q
 
 -- Gitsigns
-keymap("n", "]h", ":Gitsigns next_hunk<CR>", opts)
-keymap("n", "[h", ":Gitsigns prev_hunk<CR>", opts)
+-- keymap("n", "]h", ":Gitsigns next_hunk<CR>", opts)
+-- keymap("n", "[h", ":Gitsigns prev_hunk<CR>", opts)
 
 -- Stay in indent mode in `visual_mode`
 keymap("v", "<", "<gv", opts)
@@ -85,11 +85,9 @@ keymap("v", "<leader>d", "\"_d")
 -- NvimTree
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 
-keymap("n", "<C-u>", "10k", opts)
+--keymap("n", "<C-u>", "10k", opts)
 keymap("n", "<C-d>", "10j", opts)
-
--- Diagnostic keymaps
-keymap('n', '[g', vim.diagnostic.goto_prev)
-keymap('n', ']g', vim.diagnostic.goto_next)
-keymap('n', '<leader>dt', vim.diagnostic.open_float)
-keymap('n', '<leader>dl', vim.diagnostic.setloclist)
+keymap("n", "n", "nzzzv")
+keymap("n", "N", "Nzzzv")
+--keymap("i", "<C-u>", "<C-e><C-u>")
+--keymap("n", "<C-u>", "<C-e><C-u>")

@@ -1,3 +1,36 @@
+local function custom_theme(theme)
+    theme = theme or "rose-pine"
+	local fg = ""
+	if theme == "gruvbox" then
+		fg = "#ebdbb2"
+	elseif theme == "vscode" then
+		fg = "#d4d4d4"
+	elseif theme == "rose-pine" then
+		fg = "e0def4"
+	end
+	local colors = {
+		fg = fg,
+		bg = "#ffffff00",
+	}
+	local ab = {
+		a = { fg = colors.fg, bg = colors.bg, gui = "bold" },
+		b = { fg = colors.fg, bg = colors.bg },
+	}
+	local abc = {
+		a = { fg = colors.fg, bg = colors.bg, gui = "bold" },
+		b = { fg = colors.fg, bg = colors.bg },
+		c = { fg = colors.fg, bg = colors.bg },
+	}
+	return {
+		visual = ab,
+		replace = ab,
+		inactive = abc,
+		normal = abc,
+		insert = ab,
+	}
+end
+
+
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
 	return
@@ -26,7 +59,7 @@ lualine.setup({
 	options = {
 		globalstatus = true,
 		icons_enabled = true,
-		theme = require("user/kubilua").theme("rose-pine"),
+		theme = custom_theme(),
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard" },
