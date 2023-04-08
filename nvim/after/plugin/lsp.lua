@@ -3,20 +3,27 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    'tsserver',
-    'rust_analyzer',
+    "tsserver",
+    "rust_analyzer",
 })
 
 -- Fix Undefined global 'vim'
-lsp.configure('lua-language-server', {
+lsp.configure("lua-language-server", {
     settings = {
         Lua = {
             diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
+                globals = { "vim" },
+            },
+        },
+    },
 })
+
+require("lspconfig").gdscript.setup({
+    filetypes = { "gd", "gdscript", "gdscript3" },
+    root_dir = require("lspconfig.util").root_pattern("project.godot", ".git"),
+})
+
+--vim.lsp.start({ name = "godot", cmd = vim.lsp.rpc.connect("127.0.0.1", 6005) })
 
 local kind_icons = {
     Text = "",
@@ -46,31 +53,31 @@ local kind_icons = {
     TypeParameter = "",
 }
 
-local cmp = require('cmp')
+local cmp = require("cmp")
 local cmp_mappings = lsp.defaults.cmp_mappings({
-        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<CR>'] = cmp.mapping.confirm {
+    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<CR>"] = cmp.mapping.confirm({
         behavior = cmp.ConfirmBehavior.Replace,
         select = true,
-    },
-        ['<Tab>'] = cmp.mapping(function(fallback)
+    }),
+    ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
             cmp.select_next_item()
         else
             fallback()
         end
-    end, { 'i', 's' }),
-        ['<S-Tab>'] = cmp.mapping(function(fallback)
+    end, { "i", "s" }),
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
             cmp.select_prev_item()
         else
             fallback()
         end
-    end, { 'i', 's' }),
+    end, { "i", "s" }),
 })
-cmp_mappings['<C-u>'] = nil -- important!
+cmp_mappings["<C-u>"] = nil -- important!
 
 local cmp_formatting = {
     fields = { "kind", "abbr", "menu" },
@@ -78,38 +85,38 @@ local cmp_formatting = {
         -- Kind icons
         vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
         vim_item.menu = ({
-                nvim_lsp = "[LSP]",
-                luasnip = "[Snippet]",
-                buffer = "[Buffer]",
-                path = "[Path]",
-            })[entry.source.name]
-        vim_item.abbr = string.sub(vim_item.abbr, 1, 20) -- TODO
+            nvim_lsp = "[LSP]",
+            luasnip = "[Snippet]",
+            buffer = "[Buffer]",
+            path = "[Path]",
+        })[entry.source.name]
+        vim_item.abbr = string.sub(vim_item.abbr, 1, 30)
         return vim_item
     end,
 }
 
 local cmp_sources = {
-    { name = 'path' },
-    { name = 'nvim_lsp' },
+    { name = "path" },
+    { name = "nvim_lsp" },
     { name = "nvim_lsp_signature_help" },
-    { name = 'buffer',                 keyword_length = 3 },
-    { name = 'luasnip',                keyword_length = 2 },
+    { name = "buffer",                 keyword_length = 3 },
+    { name = "luasnip",                keyword_length = 2 },
 }
 
 lsp.setup_nvim_cmp({
     mapping = cmp_mappings,
     formatting = cmp_formatting,
-    sources = cmp_sources
+    sources = cmp_sources,
 })
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
-    }
+        error = "E",
+        warn = "W",
+        hint = "H",
+        info = "I",
+    },
 })
 
 local overridenFormattingSources = { "tsserver", "jsonls", "html" }
@@ -140,10 +147,9 @@ local null_ls = require("null-ls")
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.eslint,
-        --null_ls.builtins.formatting.prettier,
+        --null_ls.builtins.diagnostics.eslint,
         null_ls.builtins.formatting.prettier.with({
-            extra_args = { "--tab-width", "4" },
+            extra_args = { "--tab-width 4" },
         }),
     },
 })
@@ -151,5 +157,5 @@ null_ls.setup({
 lsp.setup()
 
 vim.diagnostic.config({
-    virtual_text = true
+    virtual_text = true,
 })

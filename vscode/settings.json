@@ -17,8 +17,10 @@
         "*.html": "html"
     },
     "files.exclude": {
-        "**/obj": true,
-        "**/*.meta": true
+        ".godot/": true,
+        "**/*.meta": true,
+        "**/*.o": true,
+        "**/obj": true
     },
     "go.toolsManagement.autoUpdate": true,
     // "omnisharp.enableImportCompletion": true,
@@ -37,9 +39,9 @@
     "workbench.tree.indent": 12,
     "workbench.editor.restoreViewState": false,
     "workbench.startupEditor": "none",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons",
     "editor.tokenColorCustomizations": {
-        "[Visual Studio Dark - C++]": {
+        "[Default Dark+ Experimental]": {
             "variables": "#e2e2e2",
             "textMateRules": [
                 {
@@ -173,19 +175,21 @@
         }
     },
     "workbench.colorCustomizations": {
-        "[Visual Studio Dark - C++]": {
-            "activityBar.background": "#1e1e1e",
-            "statusBar.background": "#1e1e1e",
-            "editorOverviewRuler.border": "#1e1e1e"
-            // "editorLineNumber.foreground": "#858585",
-            // "editorLineNumber.activeForeground": "#858585"
+        "[Default Dark+ Experimental]": {
+            "statusBar.background": "#1f1f1f",
+            "statusBar.border": "#1f1f1f",
+            "editorLineNumber.foreground": "#6e7681",
+            "editorLineNumber.activeForeground": "#6e7681"
         },
         "[Default Dark+]": {
             "activityBar.background": "#1e1e1e",
             "statusBar.background": "#1e1e1e",
             "editorOverviewRuler.border": "#1e1e1e",
-            "editorLineNumber.foreground": "#858585",
-            "editorLineNumber.activeForeground": "#858585"
+            "editorLineNumber.foreground": "#6e7681",
+            "editorLineNumber.activeForeground": "#6e7681",
+            "tab.inactiveBackground": "#1e1e1e",
+            "tab.activeBorderTop": "#0078d4",
+            "editorGroupHeader.tabsBackground": "#1e1e1e"
         },
         "[Monokai Pro (Filter Ristretto)]": {
             // 2d2a2e for monokai pro
@@ -195,6 +199,17 @@
             "editorHoverWidget.highlightForeground": "#ffd866",
             "activityBar.background": "#2c2525",
             "editorLineNumber.activeForeground": "#5b5353"
+        },
+        "[Rosé Pine (no italics)]": {
+            "list.highlightForeground": "#e0def4",
+            "list.focusHighlightForeground": "#e0def4",
+            "editorSuggestWidget.focusHighlightForeground": "#e0def4",
+            "editorSuggestWidget.highlightForeground": "#e0def4",
+            "editorLineNumber.activeForeground": "#908caa",
+            "editorCursor.background": "#191724",
+            "editorCursor.foreground": "#e0def4",
+            "terminal.ansiBrightBlue": "#31748f",
+            "tab.activeBorderTop": "#31748f"
         },
         "[Gruvbox Dark (Hard)]": {
             // "editorError.foreground": "#d79921",
@@ -207,7 +222,7 @@
             "activityBar.background": "#1d2021",
             "statusBar.background": "#1d2021", //282828,1d2021
             "statusBar.foreground": "#858585",
-            "tab.activeBorder": "#d79921",
+            "tab.activeBorderTop": "#d79921",
             "tab.inactiveBackground": "#252526",
             "editorOverviewRuler.border": "#252526",
             "editor.inactiveSelectionBackground": "#689d6a20",
@@ -298,7 +313,7 @@
             "silent": true
         },
         {
-            "before": ["g", "f"],
+            "before": ["<leader>", "r", "d"],
             "commands": ["editor.action.revealDeclaration"],
             "silent": true
         },
@@ -344,6 +359,7 @@
     "csharpextensions.privateMemberPrefix": "_",
     "[csharp]": {
         "editor.defaultFormatter": "ms-dotnettools.csharp"
+        // "editor.defaultFormatter": "csharpier.csharpier-vscode"
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -362,7 +378,7 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.renderFinalNewline": false,
+    "editor.renderFinalNewline": "off",
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -382,7 +398,6 @@
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "editor.insertSpaces": false,
     "editor.cursorSurroundingLines": 8,
-    "editor.occurrencesHighlight": false,
     "terminal.integrated.fontSize": 17,
     "editor.fontSize": 17,
     "scm.diffDecorationsGutterPattern": {
@@ -404,7 +419,14 @@
             ]
         }
     ],
+    "errorLens.scrollbarHackEnabled": true,
+    "gdscript_formatter.line_size": 80,
+    "terminal.integrated.inheritEnv": true,
+    "godot_tools.gdscript_lsp_server_port": 6005,
+    "errorLens.onSave": true,
+    "omnisharp.enableEditorConfigSupport": false,
+    "workbench.colorTheme": "Monokai Pro (Filter Ristretto)",
     "editor.minimap.enabled": false,
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Visual Studio Dark - C++"
+    "editor.occurrencesHighlight": false
 }

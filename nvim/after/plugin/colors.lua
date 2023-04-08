@@ -1,10 +1,10 @@
 require("rose-pine").setup({
-    --disable_background = true,
+    disable_background = true,
     disable_float_background = true,
     disable_italics = true,
     highlight_groups = {
         TelescopeMatching = { fg = "text", bold = true },
-            ["@type.qualifier"] = { fg = "love" },
+        ["@type.qualifier"] = { fg = "#31748f" },
     },
 })
 
@@ -12,7 +12,12 @@ require("gruvbox").setup({
     undercurl = true,
     underline = true,
     bold = true,
-    italic = false,
+    italic = {
+        strings = false,
+        comments = true,
+        operators = false,
+        folds = true,
+    },
     strikethrough = true,
     invert_selection = true,
     invert_signs = false,
@@ -36,9 +41,11 @@ require("gruvbox").setup({
     transparent_mode = true,
 })
 
-function Colors(color)
+function _G.set_colors(color)
     color = color or "rose-pine"
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
     vim.cmd.colorscheme(color)
 end
 
-Colors()
+set_colors()

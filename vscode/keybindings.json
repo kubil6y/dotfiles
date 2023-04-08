@@ -158,5 +158,15 @@
         "key": "ctrl+pagedown",
         "command": "-extension.vim_ctrl+pagedown",
         "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
-    }
+    },
+    // {
+    //     "key": "alt+.",
+    //     "command": "editor.action.quickFix",
+    //     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    // },
+    // {
+    //     "key": "ctrl+.",
+    //     "command": "-editor.action.quickFix",
+    //     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    // }
 ]
