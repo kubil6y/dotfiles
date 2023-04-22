@@ -1,8 +1,7 @@
 be5invis.toml
-csharpier.csharpier-vscode
+DavidAnson.vscode-markdownlint
 esbenp.prettier-vscode
 fernandoescolar.vscode-solution-explorer
-geequlim.godot-tools
 golang.go
 Gruntfuggly.todo-tree
 hoovercj.vscode-settings-cycler
@@ -14,10 +13,8 @@ mvllow.rose-pine
 patcx.vscode-nuget-gallery
 PKief.material-icon-theme
 Prisma.prisma
-Razoric.gdscript-toolkit-formatter
 redguardtoo.matchit
 rhalaly.scope-to-this
-ritwickdey.LiveServer
 rust-lang.rust-analyzer
 tomphilbin.gruvbox-themes
 usernamehw.errorlens

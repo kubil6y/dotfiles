@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "MonoLisa",
+    "editor.fontFamily": "MonoLisa Static",
     "editor.suggestSelection": "first",
     "editor.renderLineHighlight": "none",
     "editor.lightbulb.enabled": false,
@@ -39,10 +39,10 @@
     "workbench.tree.indent": 12,
     "workbench.editor.restoreViewState": false,
     "workbench.startupEditor": "none",
-    "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons",
+    "workbench.iconTheme": "material-icon-theme",
     "editor.tokenColorCustomizations": {
         "[Default Dark+ Experimental]": {
-            "variables": "#e2e2e2",
+            "variables": "#FFF1F1F1",
             "textMateRules": [
                 {
                     "scope": [
@@ -57,14 +57,20 @@
                         "variable.other.enummember"
                     ],
                     "settings": {
-                        "foreground": "#e2e2e2"
+                        "foreground": "#FFF1F1F1"
+                    }
+                },
+                {
+                    "scope": "emphasis",
+                    "settings": {
+                        "fontStyle": ""
                     }
                 }
             ]
         },
         "[Default Dark+]": {
             // D4D4D4,FFF1F1F1,e2e2e2
-            "variables": "#e2e2e2",
+            "variables": "#FFF1F1F1",
             "textMateRules": [
                 {
                     "scope": [
@@ -79,7 +85,7 @@
                         "variable.other.enummember"
                     ],
                     "settings": {
-                        "foreground": "#e2e2e2"
+                        "foreground": "#FFF1F1F1"
                     }
                 },
                 {
@@ -106,49 +112,6 @@
                         "invalid"
                     ],
                     "settings": {
-                        "fontStyle": ""
-                    }
-                },
-                {
-                    "scope": [
-                        "comment.git-status.header.local",
-                        "constant.other.elm",
-                        "entity.name.type.class.templated",
-                        "entity.name.type.class.generic",
-                        "entity.name.type.namespace",
-                        "entity.name.function.preprocessor",
-                        "entity.name.class",
-                        "entity.other.inherited-class",
-                        "entity.name.type",
-                        "entity.name.type.class.reference",
-                        "entity.name.type.class.value",
-                        "entity.other.attribute-name",
-                        "entity.other.attribute-name.pseudo-class.css",
-                        "entity.other.pseudo-class.css",
-                        "entity.other.pseudo-element.css",
-                        "entity.name.type.rust",
-                        "keyword.other.fn.rust",
-                        "keyword.other.rust",
-                        "keyword.other.unsafe.rust",
-                        "keyword.other.where.rust",
-                        "storage.type",
-                        "storage.modifier.const.rust",
-                        "storage.modifier.dyn.rust",
-                        "storage.modifier.mut.rust",
-                        "storage.modifier.static.rust",
-                        "storage.type.rust",
-                        "storage.type.core.rust",
-                        "storage.class.std.rust",
-                        "string.other.link.description.title",
-                        "support.constant",
-                        "support.type",
-                        "entity.name.type.object.console",
-                        "support.variable",
-                        "support.class",
-                        "variable.other.class"
-                    ],
-                    "settings": {
-                        "foreground": "#4EC9B0",
                         "fontStyle": ""
                     }
                 }
@@ -192,13 +155,19 @@
             "editorGroupHeader.tabsBackground": "#1e1e1e"
         },
         "[Monokai Pro (Filter Ristretto)]": {
-            // 2d2a2e for monokai pro
             "statusBar.background": "#2c2525",
             "editorGroup.emptyBackground": "#2c2525",
-            "tab.activeBorder": "#ffd866",
-            "editorHoverWidget.highlightForeground": "#ffd866",
             "activityBar.background": "#2c2525",
-            "editorLineNumber.activeForeground": "#5b5353"
+
+            "tab.activeBorderTop": "#f9cc6c",
+            "tab.activeBorder": "#2c2525",
+            "tab.unfocusedActiveBorder": "#2c2525",
+            "tab.unfocusedActiveBorderTop": "#948a8b",
+
+            "editorHoverWidget.highlightForeground": "#ffd866",
+            "editorLineNumber.activeForeground": "#5b5353",
+
+            "editorSuggestWidget.selectedBackground": "#505050"
         },
         "[Rosé Pine (no italics)]": {
             "list.highlightForeground": "#e0def4",
@@ -231,10 +200,6 @@
 
             "editorLineNumber.foreground": "#858585",
             "editorLineNumber.activeForeground": "#858585"
-            // sticky scroll settings
-            // "editorStickyScroll.background": "#444",
-            // "editorStickyScrollHover.background": "#f00",
-            // "scrollbar.shadow": "#fff9", // with a little opacity for the dropShadow
         }
     },
     "vim.leader": ",",
@@ -318,32 +283,17 @@
             "silent": true
         },
         {
-            "before": ["<leader>", "m", "l"],
-            "commands": ["workbench.action.moveActiveEditorGroupRight"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "m", "h"],
-            "commands": ["workbench.action.moveActiveEditorGroupLeft"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "m", "j"],
-            "commands": ["workbench.action.moveActiveEditorGroupDown"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "m", "k"],
-            "commands": ["workbench.action.moveActiveEditorGroupUp"],
-            "silent": true
-        },
-        {
             "before": ["<C-u>"],
             "after": ["1", "0", "k"]
         },
         {
             "before": ["<C-d>"],
             "after": ["1", "0", "j"]
+        },
+        {
+            "before": ["<leader>", "c", "a"],
+            "commands": ["workbench.action.closeEditorsInGroup"],
+            "silent": true
         }
     ],
     "vim.commandLineModeKeyBindings": [
@@ -420,13 +370,16 @@
         }
     ],
     "errorLens.scrollbarHackEnabled": true,
-    "gdscript_formatter.line_size": 80,
     "terminal.integrated.inheritEnv": true,
-    "godot_tools.gdscript_lsp_server_port": 6005,
+    // "gdscript_formatter.line_size": 80,
+    // "godot_tools.gdscript_lsp_server_port": 6005,
     "errorLens.onSave": true,
     "omnisharp.enableEditorConfigSupport": false,
-    "workbench.colorTheme": "Monokai Pro (Filter Ristretto)",
+    "editor.occurrencesHighlight": false,
     "editor.minimap.enabled": false,
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
     "workbench.activityBar.visible": false,
-    "editor.occurrencesHighlight": false
+    "workbench.colorTheme": "Default Dark+ Experimental"
 }
