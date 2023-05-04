@@ -20,6 +20,7 @@ return require("packer").startup(function(use)
         as = "rose-pine",
     })
     use("ellisonleao/gruvbox.nvim")
+    use("Mofiqul/vscode.nvim")
 
     use({
         "folke/trouble.nvim",

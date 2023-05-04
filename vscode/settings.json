@@ -2,11 +2,11 @@
     "editor.fontFamily": "MonoLisa Static",
     "editor.suggestSelection": "first",
     "editor.renderLineHighlight": "none",
+    "editor.codeLens": false,
     "editor.lightbulb.enabled": false,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.scrollbar.vertical": "hidden",
-    "editor.codeLens": false,
     "editor.guides.indentation": false,
     "editor.renderWhitespace": "none",
     "editor.matchBrackets": "near",
@@ -41,7 +41,7 @@
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
     "editor.tokenColorCustomizations": {
-        "[Default Dark+ Experimental]": {
+        "[Default Dark Modern]": {
             "variables": "#FFF1F1F1",
             "textMateRules": [
                 {
@@ -64,6 +64,12 @@
                     "scope": "emphasis",
                     "settings": {
                         "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": "keyword.preprocessor.cs",
+                    "settings": {
+                        "foreground": "#808080"
                     }
                 }
             ]
@@ -138,7 +144,7 @@
         }
     },
     "workbench.colorCustomizations": {
-        "[Default Dark+ Experimental]": {
+        "[Default Dark Modern]": {
             "statusBar.background": "#1f1f1f",
             "statusBar.border": "#1f1f1f",
             "editorLineNumber.foreground": "#6e7681",
@@ -184,6 +190,7 @@
             // "editorError.foreground": "#d79921",
             "editorInlayHint.foreground": "#868686f0",
             "editorInlayHint.background": "#18181800",
+
             // Overrides for specific kinds of inlay hints
             "editorInlayHint.typeForeground": "#486148f0",
             "editorInlayHint.parameterForeground": "#486148f0",
@@ -199,7 +206,15 @@
             "editor.selectionHighlightBackground": "#fabd2f40",
 
             "editorLineNumber.foreground": "#858585",
-            "editorLineNumber.activeForeground": "#858585"
+            "editorLineNumber.activeForeground": "#858585",
+
+            "editorSuggestWidget.foreground": "#ebdbb2",
+            "editorSuggestWidget.background": "#1d2021",
+            "editorSuggestWidget.border": "#3c3836",
+            "editorSuggestWidget.highlightForeground": "#689d6a",
+            "editorSuggestWidget.focusHighlightForeground": "#689d6a",
+            "editorSuggestWidget.selectedForeground": "#ebdbb2",
+            "editorSuggestWidget.selectedBackground": "#3c383660",
         }
     },
     "vim.leader": ",",
@@ -278,6 +293,27 @@
             "silent": true
         },
         {
+            "before": ["<leader>", "m", "l"],
+            "commands": ["workbench.action.moveActiveEditorGroupRight"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "m", "h"],
+            "commands": ["workbench.action.moveActiveEditorGroupLeft"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "m", "j"],
+            "commands": ["workbench.action.moveActiveEditorGroupDown"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "m", "k"],
+            "commands": ["workbench.action.moveActiveEditorGroupUp"],
+            "silent": true
+        },
+
+        {
             "before": ["<leader>", "r", "d"],
             "commands": ["editor.action.revealDeclaration"],
             "silent": true
@@ -293,6 +329,11 @@
         {
             "before": ["<leader>", "c", "a"],
             "commands": ["workbench.action.closeEditorsInGroup"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "c", "e"],
+            "commands": ["workbench.action.closeOtherEditors"],
             "silent": true
         }
     ],
@@ -381,5 +422,4 @@
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Default Dark+ Experimental"
 }

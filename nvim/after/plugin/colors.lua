@@ -8,15 +8,28 @@ require("rose-pine").setup({
     },
 })
 
+local c = require("vscode.colors").get_colors()
+require("vscode").setup({
+    transparent = true,
+    italic_comments = false,
+    disable_nvimtree_bg = true,
+    color_overrides = {
+        vscLightBlue = "#FFF1F1",
+    },
+    group_overrides = {
+        Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
+    },
+})
+
 require("gruvbox").setup({
     undercurl = true,
     underline = true,
     bold = true,
     italic = {
         strings = false,
-        comments = true,
+        comments = false,
         operators = false,
-        folds = true,
+        folds = false,
     },
     strikethrough = true,
     invert_selection = true,
@@ -35,7 +48,7 @@ require("gruvbox").setup({
         GruvboxBlueSign = { bg = "NONE" },
         GruvboxAquaSign = { bg = "NONE" },
         DiagnosticFloatingError = { fg = "#ff7070" },
-            ["@type.qualifier"] = { fg = "#fb4934" },
+        ["@type.qualifier"] = { fg = "#fb4934" },
     },
     dim_inactive = false,
     transparent_mode = true,
@@ -46,6 +59,12 @@ function _G.set_colors(color)
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
     vim.cmd.colorscheme(color)
+
+    if color == "vscode" then
+        vim.cmd([[ hi LineNr guifg=#6e7681 ]])
+        vim.cmd([[ hi @variable.builtin guifg=#C586C0 ]])
+        vim.cmd([[ hi @error guifg=NONE ]])
+    end
 end
 
-set_colors()
+set_colors("vscode")
