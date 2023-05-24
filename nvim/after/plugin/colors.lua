@@ -67,4 +67,4 @@ function _G.set_colors(color)
     end
 end
 
-set_colors("vscode")
+set_colors("gruvbox")

@@ -1,11 +1,11 @@
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
-require('nvim-treesitter.configs').setup {
+require("nvim-treesitter.configs").setup({
     -- Add languages to be installed here that you want installed for treesitter
     ensure_installed = { "help", "html", "javascript", "typescript", "c", "lua", "rust" },
     highlight = { enable = true },
-    autotag = { enable = true, },
-    indent = { enable = false, disable = { 'python' } }, -- fucking shit
+    autotag = { enable = true },
+    indent = { enable = true, disable = { "python" } }, -- fucking shit
     textobjects = {
         select = {
             enable = true,
@@ -13,12 +13,13 @@ require('nvim-treesitter.configs').setup {
             lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
             keymaps = {
                 -- You can use the capture groups defined in textobjects.scm
-                    ['aa'] = '@parameter.outer',
-                    ['ia'] = '@parameter.inner',
-                    ['af'] = '@function.outer',
-                    ['if'] = '@function.inner',
-                    ['at'] = '@class.outer',
-                    ['it'] = '@class.inner',
+                ["aa"] = "@parameter.outer",
+                ["ia"] = "@parameter.inner",
+                ["af"] = "@function.outer",
+                ["if"] = "@function.inner",
+                -- 'at'and 'it' conflict with dom element selections
+                --['at'] = '@class.outer',
+                --['it'] = '@class.inner',
             },
         },
         move = {
@@ -26,16 +27,16 @@ require('nvim-treesitter.configs').setup {
             disable = { "html", "css" },
             set_jumps = true, -- whether to set jumps in the jumplist
             goto_next_start = {
-                    [']f'] = '@function.outer',
-                    [']t'] = '@class.outer',
+                ["]f"] = "@function.outer",
+                ["]t"] = "@class.outer",
             },
             goto_previous_start = {
-                    ['[f'] = '@function.outer',
-                    ['[t'] = '@class.outer',
+                ["[f"] = "@function.outer",
+                ["[t"] = "@class.outer",
             },
         },
     },
-}
+})
 
 local context_ok, context = pcall(require, "treesitter-context")
 if not context_ok then
@@ -43,9 +44,9 @@ if not context_ok then
 end
 
 context.setup({
-    enable = true,         -- Enable this plugin (Can be enabled/disabled later via commands)
-    max_lines = 2,         -- How many lines the window should span. Values <= 0 mean no limit.
-    trim_scope = "outer",  -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
+    enable = true,      -- Enable this plugin (Can be enabled/disabled later via commands)
+    max_lines = 2,      -- How many lines the window should span. Values <= 0 mean no limit.
+    trim_scope = "outer", -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
     min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
     patterns = {
         -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
@@ -113,7 +114,7 @@ context.setup({
     -- [!] The options below are exposed but shouldn't require your attention,
     --     you can safely ignore them.
 
-    zindex = 20,     -- The Z-index of the context window
+    zindex = 20,  -- The Z-index of the context window
     mode = "cursor", -- Line used to calculate context. Choices: 'cursor', 'topline'
     -- Separator between context and content. Should be a single character string, like '-'.
     -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.

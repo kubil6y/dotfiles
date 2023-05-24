@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "MonoLisa Static",
+    "editor.fontFamily": "MonoLisa Static-Script",
     "editor.suggestSelection": "first",
     "editor.renderLineHighlight": "none",
     "editor.codeLens": false,
@@ -74,34 +74,6 @@
                 }
             ]
         },
-        "[Default Dark+]": {
-            // D4D4D4,FFF1F1F1,e2e2e2
-            "variables": "#FFF1F1F1",
-            "textMateRules": [
-                {
-                    "scope": [
-                        "variable.other.constant.object.ts",
-                        "variable.other.constant.object.js",
-                        "variable.other.constant.ts",
-                        "meta.definition.variable.ts",
-                        "meta.var-single-variable.expr.ts",
-                        "meta.var.expr.ts",
-                        "source.ts",
-                        "support.type.property-name",
-                        "variable.other.enummember"
-                    ],
-                    "settings": {
-                        "foreground": "#FFF1F1F1"
-                    }
-                },
-                {
-                    "scope": "keyword.preprocessor.cs",
-                    "settings": {
-                        "foreground": "#808080"
-                    }
-                }
-            ]
-        },
         "[Monokai Pro (Filter Ristretto)]": {
             "textMateRules": [
                 {
@@ -124,6 +96,8 @@
             ]
         },
         "[Gruvbox Dark (Hard)]": {
+            "variables": "#ebdbb2",
+
             "textMateRules": [
                 {
                     "scope": [
@@ -149,16 +123,6 @@
             "statusBar.border": "#1f1f1f",
             "editorLineNumber.foreground": "#6e7681",
             "editorLineNumber.activeForeground": "#6e7681"
-        },
-        "[Default Dark+]": {
-            "activityBar.background": "#1e1e1e",
-            "statusBar.background": "#1e1e1e",
-            "editorOverviewRuler.border": "#1e1e1e",
-            "editorLineNumber.foreground": "#6e7681",
-            "editorLineNumber.activeForeground": "#6e7681",
-            "tab.inactiveBackground": "#1e1e1e",
-            "tab.activeBorderTop": "#0078d4",
-            "editorGroupHeader.tabsBackground": "#1e1e1e"
         },
         "[Monokai Pro (Filter Ristretto)]": {
             "statusBar.background": "#2c2525",
@@ -208,13 +172,15 @@
             "editorLineNumber.foreground": "#858585",
             "editorLineNumber.activeForeground": "#858585",
 
+            "editorHoverWidget.highlightForeground": "#d79921",
+
             "editorSuggestWidget.foreground": "#ebdbb2",
             "editorSuggestWidget.background": "#1d2021",
             "editorSuggestWidget.border": "#3c3836",
             "editorSuggestWidget.highlightForeground": "#689d6a",
             "editorSuggestWidget.focusHighlightForeground": "#689d6a",
             "editorSuggestWidget.selectedForeground": "#ebdbb2",
-            "editorSuggestWidget.selectedBackground": "#3c383660",
+            "editorSuggestWidget.selectedBackground": "#3c383660"
         }
     },
     "vim.leader": ",",
@@ -417,9 +383,13 @@
     "errorLens.onSave": true,
     "omnisharp.enableEditorConfigSupport": false,
     "editor.occurrencesHighlight": false,
+    // "[markdown]": {
+    //     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    // },
+    "editor.cursorBlinking": "solid",
     "editor.minimap.enabled": false,
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    },
     "workbench.activityBar.visible": false,
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

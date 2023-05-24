@@ -18,13 +18,6 @@ lsp.configure("lua-language-server", {
     },
 })
 
-require("lspconfig").gdscript.setup({
-    filetypes = { "gd", "gdscript", "gdscript3" },
-    root_dir = require("lspconfig.util").root_pattern("project.godot", ".git"),
-})
-
---vim.lsp.start({ name = "godot", cmd = vim.lsp.rpc.connect("127.0.0.1", 6005) })
-
 local kind_icons = {
     Text = "",
     Method = "m",
