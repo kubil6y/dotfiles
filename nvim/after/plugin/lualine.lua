@@ -6,7 +6,9 @@ local function custom_theme(theme)
 	elseif theme == "vscode" then
 		fg = "#d4d4d4"
 	elseif theme == "rose-pine" then
-		fg = "e0def4"
+		fg = "#e0def4"
+	elseif theme == "gruvbuddy" then
+		fg = "#e0e0e0"
 	end
 	local colors = {
 		fg = fg,

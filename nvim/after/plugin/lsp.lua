@@ -112,7 +112,7 @@ lsp.set_preferences({
     },
 })
 
-local overridenFormattingSources = { "tsserver", "jsonls", "html" }
+local overridenFormattingSources = { "tsserver", "jsonls", "html", "prisma" }
 
 lsp.on_attach(function(client, bufnr)
     for _, src in ipairs(overridenFormattingSources) do
@@ -141,8 +141,11 @@ null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,
         --null_ls.builtins.diagnostics.eslint,
+        null_ls.builtins.formatting.prismaFmt.with({
+            extra_args = { "--tab-width", "2" },
+        }),
         null_ls.builtins.formatting.prettier.with({
-            extra_args = { "--tab-width 4" },
+            extra_args = { "--tab-width", "4" },
         }),
     },
 })

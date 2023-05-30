@@ -2,10 +2,11 @@
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup({
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { "help", "html", "javascript", "typescript", "c", "lua", "rust" },
+    ensure_installed = { "html", "javascript", "typescript", "c", "lua", "rust" },
+    ignore_install = { "vimdoc", "help" },
     highlight = { enable = true },
     autotag = { enable = true },
-    indent = { enable = true, disable = { "python" } }, -- fucking shit
+    indent = { enable = false, disable = { "python" } }, -- fucking shit
     textobjects = {
         select = {
             enable = true,
@@ -45,7 +46,7 @@ end
 
 context.setup({
     enable = true,      -- Enable this plugin (Can be enabled/disabled later via commands)
-    max_lines = 2,      -- How many lines the window should span. Values <= 0 mean no limit.
+    max_lines = 1,      -- How many lines the window should span. Values <= 0 mean no limit.
     trim_scope = "outer", -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
     min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
     patterns = {

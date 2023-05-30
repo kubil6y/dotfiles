@@ -169,6 +169,11 @@ _G.packer_plugins = {
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -232,7 +237,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\2C\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0" },
+    config = { "\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
@@ -262,7 +267,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\2C\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)

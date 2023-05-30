@@ -3,16 +3,16 @@
 -- See `:help mapleader`
 -- NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 
-vim.g.mapleader = ','
-vim.g.maplocalleader = ','
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 -- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 --[[
 -- MODES
@@ -51,10 +51,10 @@ keymap("n", "<leader>va", "ggVG", opts)
 keymap("n", "<A-`>", ":b#<CR>", opts)
 
 -- MISC
-keymap("n", "<leader>ds", ":nohl<CR>", opts) -- remove highlights
+keymap("n", "<leader>ds", ":nohl<CR>", opts)           -- remove highlights
 keymap("n", "<leader>ut", ":UndotreeToggle<CR>", opts) -- remove highlights
-keymap("n", "q", "<nop>", opts) -- remove q for disabling recording macros
-keymap("n", "Q", "<nop>", opts) -- remove Q
+keymap("n", "q", "<nop>", opts)                        -- remove q for disabling recording macros
+keymap("n", "Q", "<nop>", opts)                        -- remove Q
 
 -- Gitsigns
 -- keymap("n", "]h", ":Gitsigns next_hunk<CR>", opts)
@@ -76,11 +76,15 @@ keymap("n", "<leader>y", '"+y', opts)
 keymap("n", "<leader>ay", 'gg"+yG', opts) -- copy whole file to clipboard
 
 -- greatest remap ever
-keymap("x", "<leader>p", "\"_dP")
-keymap("v", "<leader>p", "\"_dP")
+keymap("x", "<leader>p", '"_dP')
+keymap("v", "<leader>p", '"_dP')
 -- delete without copying to clipboard (void register)
-keymap("x", "<leader>d", "\"_d")
-keymap("v", "<leader>d", "\"_d")
+keymap("x", "<leader>d", '"_d')
+keymap("v", "<leader>d", '"_d')
+
+-- for easy formatting with prismaFmt
+keymap("n", "<leader>wn", ":set sw=2<CR>") -- width narrow
+keymap("n", "<leader>wl", ":set sw=4<CR>") -- width large
 
 -- NvimTree
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)

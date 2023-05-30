@@ -56,6 +56,7 @@ return require("packer").startup(function(use)
     use("preservim/nerdcommenter") -- Commenting
     use("kyazdani42/nvim-web-devicons")
     use("kyazdani42/nvim-tree.lua")
+    use("norcalli/nvim-colorizer.lua")
 
     use({
         "VonHeikemen/lsp-zero.nvim",
@@ -77,8 +78,4 @@ return require("packer").startup(function(use)
             { "rafamadriz/friendly-snippets" },
         },
     })
-
-    --use('lommix/godot.nvim')
-    --   use("eandrju/cellular-automaton.nvim")
-    --   use("laytan/cloak.nvim")
 end)
