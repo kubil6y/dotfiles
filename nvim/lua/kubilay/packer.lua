@@ -21,6 +21,8 @@ return require("packer").startup(function(use)
     })
     use("ellisonleao/gruvbox.nvim")
     use("Mofiqul/vscode.nvim")
+    use("tjdevries/colorbuddy.nvim")
+    use("tjdevries/gruvbuddy.nvim")
 
     use({
         "folke/trouble.nvim",

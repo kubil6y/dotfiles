@@ -63,8 +63,6 @@ function _G.set_colors(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-	--vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-	--vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
 
 	if color == "vscode" then
 		vim.cmd([[ hi LineNr guifg=#6e7681 ]])
@@ -73,4 +71,4 @@ function _G.set_colors(color)
 	end
 end
 
-set_colors("gruvbox")
+--set_colors("gruvbox")
