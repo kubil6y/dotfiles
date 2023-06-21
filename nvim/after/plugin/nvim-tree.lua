@@ -14,7 +14,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 nvim_tree.setup({
     filters = {
         custom = { "^node_modules$", "^obj$", "^.git$", "^.vscode$" },
-        dotfiles = false,
+        dotfiles = true,
     },
     actions = {
         change_dir = {

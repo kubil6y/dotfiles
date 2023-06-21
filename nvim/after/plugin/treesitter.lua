@@ -6,7 +6,7 @@ require("nvim-treesitter.configs").setup({
     ignore_install = { "vimdoc", "help" },
     highlight = { enable = true },
     autotag = { enable = true },
-    indent = { enable = false, disable = { "python" } }, -- fucking shit
+    indent = { enable = true, disable = { "python" } }, -- fucking shit
     textobjects = {
         select = {
             enable = true,

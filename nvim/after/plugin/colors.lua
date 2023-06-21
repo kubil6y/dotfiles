@@ -69,6 +69,8 @@ function _G.set_colors(color)
 		vim.cmd([[ hi @variable.builtin guifg=#C586C0 ]])
 		vim.cmd([[ hi @error guifg=NONE ]])
 	end
+
+	--hi Visual cterm=reverse gui=reverse guibg=#665c54 -- work on this
 end
 
 --set_colors("gruvbox")

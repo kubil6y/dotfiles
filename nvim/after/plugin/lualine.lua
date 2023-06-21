@@ -1,5 +1,5 @@
 local function custom_theme(theme)
-    theme = theme or "rose-pine"
+	theme = theme or "rose-pine"
 	local fg = ""
 	if theme == "gruvbox" then
 		fg = "#ebdbb2"
@@ -10,6 +10,7 @@ local function custom_theme(theme)
 	elseif theme == "gruvbuddy" then
 		fg = "#e0e0e0"
 	end
+
 	local colors = {
 		fg = fg,
 		bg = "#ffffff00",
@@ -31,7 +32,6 @@ local function custom_theme(theme)
 		insert = ab,
 	}
 end
-
 
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then

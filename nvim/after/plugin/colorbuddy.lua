@@ -52,6 +52,7 @@ vim.cmd([[
   hi link @lsp.type.variable.rust variable
   hi link @lsp.type.variable.typescriptreact variable
   hi link @lsp.type.variable.typescript variable
+  hi link @lsp.type.variable.javascript variable
   hi link @lsp.type.namespace @namespace
   hi link @punctuation.bracket.rapper @text.literal
   hi link @normal Normal
