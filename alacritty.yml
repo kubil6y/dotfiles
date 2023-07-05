@@ -4,7 +4,7 @@ env:
 cursor:
     style:
         shape: Block
-        blinking: Always
+        blinking: always
     blink_interval: 330
 
 window:
@@ -106,7 +106,7 @@ colors:
   # Default colors
   primary:
     #bg: '#101421'
-    background: '#1f1f1f'
+    background: '#111111'
     foreground: '#fffbf6'
  # Normal colors
   normal:

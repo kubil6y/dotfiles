@@ -10,6 +10,19 @@ require("rose-pine").setup({
 	},
 })
 
+local vscodeColors = require("vscode.colors").get_colors()
+require("vscode").setup({
+	transparent = true,
+
+	disable_nvimtree_bg = true,
+	color_overrides = {
+		vscLightBlue = "#FFF1F1",
+	},
+	group_overrides = {
+		Cursor = { fg = vscodeColors.vscDarkBlue, bg = vscodeColors.vscLightGreen, bold = true },
+	},
+})
+
 local gruvbox_colors = require("gruvbox.palette").get_base_colors(vim.o.background, "")
 require("gruvbox").setup({
 	undercurl = true,
@@ -30,34 +43,21 @@ require("gruvbox").setup({
 	contrast = "", -- can be "hard", "soft" or empty string
 	palette_overrides = {},
 	overrides = {
-		SignColumn = { bg = "NONE" },
-		GruvboxRedSign = { bg = "NONE" },
-		GruvboxYellowSign = { bg = "NONE" },
-		GruvboxBlueSign = { bg = "NONE" },
-		GruvboxAquaSign = { bg = "NONE" },
-		Todo = { fg = gruvbox_colors.fg0, bg = "NONE" },
-		["@text.danger.comment"] = { fg = gruvbox_colors.red, bg = "NONE" },
-		["@type.qualifier"] = { fg = "#fb4934" },
+        SignColumn = { bg = "NONE" },
+        GruvboxRedSign = { bg = "NONE" },
+        GruvboxYellowSign = { bg = "NONE" },
+        GruvboxBlueSign = { bg = "NONE" },
+        GruvboxAquaSign = { bg = "NONE" },
+        Todo = { fg = gruvbox_colors.fg0, bg = "NONE" },
+        ["@text.danger.comment"] = { fg = gruvbox_colors.red, bg = "NONE" },
+        ["@type.qualifier"] = { fg = "#fb4934" },
 	},
 	dim_inactive = false,
 	transparent_mode = true,
 })
 
-local vscodeColors = require("vscode.colors").get_colors()
-require("vscode").setup({
-	transparent = true,
-	italic_comments = false,
-	disable_nvimtree_bg = true,
-	color_overrides = {
-		vscLightBlue = "#FFF1F1",
-	},
-	group_overrides = {
-		Cursor = { fg = vscodeColors.vscDarkBlue, bg = vscodeColors.vscLightGreen, bold = true },
-	},
-})
-
 function _G.set_colors(color)
-	color = color or "rose-pine"
+	color = color or "gruvbox"
 
 	vim.cmd.colorscheme(color)
 
@@ -73,4 +73,4 @@ function _G.set_colors(color)
 	--hi Visual cterm=reverse gui=reverse guibg=#665c54 -- work on this
 end
 
---set_colors("gruvbox")
+--set_colors()

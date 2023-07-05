@@ -8,6 +8,7 @@ require("colorbuddy").colorscheme("gruvbuddy")
 
 local c = require("colorbuddy.color").colors
 local Group = require("colorbuddy.group").Group
+local Color = require("colorbuddy.color").Color
 local g = require("colorbuddy.group").groups
 local s = require("colorbuddy.style").styles
 
@@ -39,11 +40,11 @@ Group.new("@punctuation.bracket.rapper", c.gray3, nil, s.none)
 Group.new("@rapper_argument", c.red, nil, s.italic)
 Group.new("@rapper_return", c.orange:light(), nil, s.italic)
 
--- my settings
+-- region my settings
 Group.new("Todo", c.superwhite, nil, s.bold)
 Group.new("@text.danger.comment", c.superwhite, nil, s.bold)
 Group.new("@text.note.comment", c.superwhite, nil, s.bold)
--- my settings
+-- endregion settings
 
 vim.cmd([[highlight link @function.call.lua LuaFunctionCall]])
 vim.cmd([[
