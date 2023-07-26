@@ -42,7 +42,7 @@ local options = {
 	signcolumn = "yes",
 	scrolloff = 7, -- is one of my fav
 	foldenable = false, -- disable folding at start
-	foldnestmax = 2,
+	foldnestmax = 4,
 	foldmethod = "expr",
 	foldexpr = "nvim_treesitter#foldexpr()",
 }

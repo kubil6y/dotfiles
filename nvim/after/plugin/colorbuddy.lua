@@ -40,11 +40,11 @@ Group.new("@punctuation.bracket.rapper", c.gray3, nil, s.none)
 Group.new("@rapper_argument", c.red, nil, s.italic)
 Group.new("@rapper_return", c.orange:light(), nil, s.italic)
 
--- region my settings
+-- region custom_settings
 Group.new("Todo", c.superwhite, nil, s.bold)
 Group.new("@text.danger.comment", c.superwhite, nil, s.bold)
 Group.new("@text.note.comment", c.superwhite, nil, s.bold)
--- endregion settings
+-- endregion custom_settings
 
 vim.cmd([[highlight link @function.call.lua LuaFunctionCall]])
 vim.cmd([[
