@@ -16,10 +16,27 @@ require("vscode").setup({
 
 	disable_nvimtree_bg = true,
 	color_overrides = {
-		vscLightBlue = "#FFF1F1",
+		vscLightBlue = "#fff1f1",
 	},
 	group_overrides = {
-		Cursor = { fg = vscodeColors.vscDarkBlue, bg = vscodeColors.vscLightGreen, bold = true },
+		-- remove autocomplete menu highlights
+		CmpItemKindVariable = { fg = "", bg = "" },
+		CmpItemKindInterface = { fg = "", bg = "" },
+		CmpItemKindText = { fg = "", bg = "" },
+		CmpItemKindFunction = { fg = "", bg = "" },
+		CmpItemKindMethod = { fg = "", bg = "" },
+		CmpItemKindKeyword = { fg = "", bg = "" },
+		CmpItemKindProperty = { fg = "", bg = "" },
+		CmpItemKindUnit = { fg = "", bg = "" },
+		CmpItemKindConstructor = { fg = "", bg = "" },
+		CmpItemMenu = { fg = "", bg = "" },
+		CmpItemAbbr = { fg = "", bg = "" },
+		CmpItemAbbrDeprecated = { fg = "", bg = "" },
+		CmpItemAbbrMatch = { fg = "", bg = "" },
+		CmpItemAbbrMatchFuzzy = { fg = "", bg = "" },
+
+		PmenuSel = { fg = "#fff1f1", bg = "#303030" },
+		Pmenu = { fg = "#bbbbbb", bg = "#212121" },
 	},
 })
 
@@ -43,14 +60,33 @@ require("gruvbox").setup({
 	contrast = "", -- can be "hard", "soft" or empty string
 	palette_overrides = {},
 	overrides = {
-        SignColumn = { bg = "NONE" },
-        GruvboxRedSign = { bg = "NONE" },
-        GruvboxYellowSign = { bg = "NONE" },
-        GruvboxBlueSign = { bg = "NONE" },
-        GruvboxAquaSign = { bg = "NONE" },
-        Todo = { fg = gruvbox_colors.fg0, bg = "NONE" },
-        ["@text.danger.comment"] = { fg = gruvbox_colors.red, bg = "NONE" },
-        ["@type.qualifier"] = { fg = "#fb4934" },
+		SignColumn = { bg = "NONE" },
+		GruvboxRedSign = { bg = "NONE" },
+		GruvboxYellowSign = { bg = "NONE" },
+		GruvboxBlueSign = { bg = "NONE" },
+		GruvboxAquaSign = { bg = "NONE" },
+		Todo = { fg = gruvbox_colors.fg0, bg = "NONE" },
+		["@text.danger.comment"] = { fg = gruvbox_colors.red, bg = "NONE" },
+		["@type.qualifier"] = { fg = "#fb4934" },
+		--["@namespace"] = { fg = "#fb4934" },
+
+		-- autocomplete cleanup
+		CmpItemKindVariable = { fg = "", bg = "" },
+		CmpItemKindInterface = { fg = "", bg = "" },
+		CmpItemKindText = { fg = "", bg = "" },
+		CmpItemKindFunction = { fg = "", bg = "" },
+		CmpItemKindMethod = { fg = "", bg = "" },
+		CmpItemKindKeyword = { fg = "", bg = "" },
+		CmpItemKindProperty = { fg = "", bg = "" },
+		CmpItemKindUnit = { fg = "", bg = "" },
+		CmpItemKindConstructor = { fg = "", bg = "" },
+		CmpItemMenu = { fg = "", bg = "" },
+		CmpItemAbbr = { fg = "", bg = "" },
+		CmpItemAbbrDeprecated = { fg = "", bg = "" },
+		CmpItemAbbrMatch = { fg = "", bg = "" },
+		CmpItemAbbrMatchFuzzy = { fg = "", bg = "" },
+		--CursorLine = { bg = "NONE" },
+		--CursorLineNr = { fg = "#83a598", bg = "NONE", bold = true },
 	},
 	dim_inactive = false,
 	transparent_mode = true,
@@ -73,4 +109,4 @@ function _G.set_colors(color)
 	--hi Visual cterm=reverse gui=reverse guibg=#665c54 -- work on this
 end
 
---set_colors()
+set_colors()

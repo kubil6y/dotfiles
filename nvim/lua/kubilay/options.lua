@@ -2,7 +2,7 @@
 -- See `:help vim.o`
 local options = {
 	guicursor = "",
-    background = "dark",
+	background = "dark",
 	cmdheight = 1, -- more space in the neovim command line for displaying messages
 	--completeopt = { "menuone", "noselect" }, -- mostly just for cmp
 	conceallevel = 0, -- so that `` is visible in markdown files
@@ -42,7 +42,7 @@ local options = {
 	signcolumn = "yes",
 	scrolloff = 7, -- is one of my fav
 	foldenable = false, -- disable folding at start
-	foldnestmax = 4,
+	foldnestmax = 3,
 	foldmethod = "expr",
 	foldexpr = "nvim_treesitter#foldexpr()",
 }
@@ -67,3 +67,4 @@ vim.cmd("set clipboard+=unnamed") -- clipboard + nvim
 vim.cmd("command! -nargs=* W w") -- save with :W
 vim.cmd("command! Wq wq")
 vim.cmd("command! Wa wa")
+--vim.cmd([[ set list listchars=eol:↲ ]])

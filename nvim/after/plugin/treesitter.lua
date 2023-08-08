@@ -1,42 +1,45 @@
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup({
-	-- Add languages to be installed here that you want installed for treesitter
-	ensure_installed = { "html", "javascript", "typescript", "c", "lua", "rust" },
-	ignore_install = { "vimdoc", "help" },
-	highlight = { enable = true },
-	autotag = { enable = true },
-	indent = { enable = true, disable = { "python" } }, -- fucking shit
-	textobjects = {
-		select = {
-			enable = true,
-			disable = { "html", "css" },
-			lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-			keymaps = {
-				-- You can use the capture groups defined in textobjects.scm
-				["aa"] = "@parameter.outer",
-				["ia"] = "@parameter.inner",
-				["af"] = "@function.outer",
-				["if"] = "@function.inner",
-				-- 'at'and 'it' conflict with dom element selections
-				--['at'] = '@class.outer',
-				--['it'] = '@class.inner',
-			},
-		},
-		move = {
-			enable = true,
-			disable = { "html", "css" },
-			set_jumps = true, -- whether to set jumps in the jumplist
-			goto_next_start = {
-				["]f"] = "@function.outer",
-				["]t"] = "@class.outer",
-			},
-			goto_previous_start = {
-				["[f"] = "@function.outer",
-				["[t"] = "@class.outer",
-			},
-		},
-	},
+    -- Add languages to be installed here that you want installed for treesitter
+    ensure_installed = { "html", "javascript", "typescript", "c", "lua", "rust" },
+    ignore_install = { "vimdoc", "help" },
+    highlight = { enable = true },
+    autotag = {
+        enable = true,
+        enable_close_on_slash = false,
+    },
+    indent = { enable = true, disable = { "python" } }, -- fucking shit
+    textobjects = {
+        select = {
+            enable = true,
+            disable = { "html", "css" },
+            lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
+            keymaps = {
+                -- You can use the capture groups defined in textobjects.scm
+                ["aa"] = "@parameter.outer",
+                ["ia"] = "@parameter.inner",
+                ["af"] = "@function.outer",
+                ["if"] = "@function.inner",
+                -- 'at'and 'it' conflict with dom element selections
+                --['at'] = '@class.outer',
+                --['it'] = '@class.inner',
+            },
+        },
+        move = {
+            enable = true,
+            disable = { "html", "css" },
+            set_jumps = true, -- whether to set jumps in the jumplist
+            goto_next_start = {
+                ["]f"] = "@function.outer",
+                ["]t"] = "@class.outer",
+            },
+            goto_previous_start = {
+                ["[f"] = "@function.outer",
+                ["[t"] = "@class.outer",
+            },
+        },
+    },
 })
 
 local context_ok, context = pcall(require, "treesitter-context")
