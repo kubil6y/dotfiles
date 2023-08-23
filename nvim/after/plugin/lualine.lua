@@ -1,5 +1,5 @@
 local function custom_theme(theme)
-	theme = theme or "rose-pine"
+	theme = theme or "gruvbox"
 	local fg = ""
 	if theme == "gruvbox" then
 		fg = "#ebdbb2"
@@ -61,7 +61,7 @@ lualine.setup({
 	options = {
 		globalstatus = true,
 		icons_enabled = true,
-		theme = custom_theme("gruvbox"),
+		theme = custom_theme(),
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard" },

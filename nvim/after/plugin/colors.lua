@@ -1,12 +1,18 @@
 require("colorizer").setup()
 
 require("rose-pine").setup({
+	dark_variant = "main",
 	disable_background = true,
 	disable_float_background = true,
 	disable_italics = true,
 	highlight_groups = {
+		-- pine = '#3e8fb0', rose = '#ebb0ad'
+		["@type.qualifier"] = { fg = "pine" },
+		["@type.builtin"] = { fg = "pine" },
 		TelescopeMatching = { fg = "text", bold = true },
-		["@type.qualifier"] = { fg = "#31748f" },
+		CmpItemAbbrMatch = { fg = "subtle", bold = false },
+		CmpItemAbbrMatchFuzzy = { fg = "text", bold = false },
+		PmenuSel = { fg = "#e0def4", bg = "#393552" },
 	},
 })
 
@@ -19,23 +25,9 @@ require("vscode").setup({
 		vscLightBlue = "#fff1f1",
 	},
 	group_overrides = {
-		-- remove autocomplete menu highlights
-		CmpItemKindVariable = { fg = "", bg = "" },
-		CmpItemKindInterface = { fg = "", bg = "" },
-		CmpItemKindText = { fg = "", bg = "" },
-		CmpItemKindFunction = { fg = "", bg = "" },
-		CmpItemKindMethod = { fg = "", bg = "" },
-		CmpItemKindKeyword = { fg = "", bg = "" },
-		CmpItemKindProperty = { fg = "", bg = "" },
-		CmpItemKindUnit = { fg = "", bg = "" },
-		CmpItemKindConstructor = { fg = "", bg = "" },
-		CmpItemMenu = { fg = "", bg = "" },
-		CmpItemAbbr = { fg = "", bg = "" },
-		CmpItemAbbrDeprecated = { fg = "", bg = "" },
 		CmpItemAbbrMatch = { fg = "", bg = "" },
 		CmpItemAbbrMatchFuzzy = { fg = "", bg = "" },
-
-		PmenuSel = { fg = "#fff1f1", bg = "#303030" },
+		PmenuSel = { fg = "#fff1f1", bg = "#343b41" },
 		Pmenu = { fg = "#bbbbbb", bg = "#212121" },
 	},
 })
@@ -56,45 +48,24 @@ require("gruvbox").setup({
 	invert_signs = false,
 	invert_tabline = false,
 	invert_intend_guides = false,
-	inverse = true, -- invert background for search, diffs, statuslines and errors
+	inverse = true,
 	contrast = "", -- can be "hard", "soft" or empty string
-	palette_overrides = {},
-	overrides = {
-		SignColumn = { bg = "NONE" },
-		GruvboxRedSign = { bg = "NONE" },
-		GruvboxYellowSign = { bg = "NONE" },
-		GruvboxBlueSign = { bg = "NONE" },
-		GruvboxAquaSign = { bg = "NONE" },
-		Todo = { fg = gruvbox_colors.fg0, bg = "NONE" },
-		["@text.danger.comment"] = { fg = gruvbox_colors.red, bg = "NONE" },
-		["@type.qualifier"] = { fg = "#fb4934" },
-		--["@namespace"] = { fg = "#fb4934" },
-
-		-- autocomplete cleanup
-		CmpItemKindVariable = { fg = "", bg = "" },
-		CmpItemKindInterface = { fg = "", bg = "" },
-		CmpItemKindText = { fg = "", bg = "" },
-		CmpItemKindFunction = { fg = "", bg = "" },
-		CmpItemKindMethod = { fg = "", bg = "" },
-		CmpItemKindKeyword = { fg = "", bg = "" },
-		CmpItemKindProperty = { fg = "", bg = "" },
-		CmpItemKindUnit = { fg = "", bg = "" },
-		CmpItemKindConstructor = { fg = "", bg = "" },
-		CmpItemMenu = { fg = "", bg = "" },
-		CmpItemAbbr = { fg = "", bg = "" },
-		CmpItemAbbrDeprecated = { fg = "", bg = "" },
-		CmpItemAbbrMatch = { fg = "", bg = "" },
-		CmpItemAbbrMatchFuzzy = { fg = "", bg = "" },
-		--CursorLine = { bg = "NONE" },
-		--CursorLineNr = { fg = "#83a598", bg = "NONE", bold = true },
-	},
 	dim_inactive = false,
 	transparent_mode = true,
+	palette_overrides = {},
+	overrides = {
+		["@text.danger.comment"] = { fg = gruvbox_colors.red, bg = "NONE" },
+		["@type.qualifier"] = { fg = "#fb4934" },
+		SignColumn = { bg = "NONE" },
+		Todo = { fg = gruvbox_colors.fg0, bg = "NONE" },
+		CmpItemAbbrMatch = { fg = "", bold = false },
+		CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
+		--DiagnosticVirtualTextWarn = { fg = gruvbox_colors.neutral_blue },
+	},
 })
 
 function _G.set_colors(color)
 	color = color or "gruvbox"
-
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
