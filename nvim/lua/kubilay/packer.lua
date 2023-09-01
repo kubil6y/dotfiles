@@ -23,6 +23,7 @@ return require("packer").startup(function(use)
 	use("Mofiqul/vscode.nvim")
 	use("tjdevries/colorbuddy.nvim")
 	use("tjdevries/gruvbuddy.nvim")
+    use("folke/tokyonight.nvim")
 
 	use({
 		"folke/trouble.nvim",

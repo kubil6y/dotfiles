@@ -5,10 +5,10 @@ cursor:
     style:
         shape: Block
         blinking: always
-    blink_interval: 330
+    blink_interval: 500
 
 window:
-    opacity: 1
+    opacity: 0.93
     decorations: none
 
 font:
@@ -29,16 +29,13 @@ font:
 key_bindings:
     - { key: F11, action: ToggleFullscreen }
 
-   
 #colors:
     #name: gruvbox
     ##cursor:
         ##text: "0x000000"
         ##cursor: "0xe0def4"
     #primary:
-        ## gruvbox:32302f,282828,232425,1d2021,1f1f1f
-        ## fg: ebdbb2,e0e0e0
-        #background: "#1d2021"
+        #background: "#121212"
         #foreground: "#ebdbb2"
     #normal:
         #black: "0x282828"
@@ -59,58 +56,16 @@ key_bindings:
         #cyan: "0x8ec07c"
         #white: "0xebdbb2"
 
-#colors:
-  #primary:
-    #background: "0x191724"
-    #foreground: "0xe0def4"
- ##cursor:
-    ##text: "0xe0def4"
-    ##cursor: "0x524f67"
-  ##vi_mode_cursor:
-    ##text: "0xe0def4"
-    ##cursor: "0x524f67"
-  #line_indicator:
-    #foreground: None
-    #background: None
-  #selection:
-    #text: "0xe0def4"
-    #background: "0x403d52"
-  #normal:
-    #black: "0x26233a"
-    #red: "0xeb6f92"
-    #green: "0x98971a"
-    #yellow: "0xf6c177"
-    #blue: "0x31748f"
-    #magenta: "0xc4a7e7"
-    #cyan: "0xebbcba"
-    #white: "0xe0def4"
-  #bright:
-    #black: "0x6e6a86"
-    #red: "0xeb6f92"
-    #green: "0x98971a"
-    #yellow: "0xf6c177"
-    #blue: "0x9ccfd8"
-    #magenta: "0xc4a7e7"
-    #cyan: "0xebbcba"
-    #white: "0xe0def4"
-  #hints:
-    #start:
-      #foreground: "#908caa"
-      #background: "#1f1d2e"
-    #end:
-      #foreground: "#6e6a86"
-      #background: "#1f1d2e"
-
 # Colors (iTerm 2 default theme)
 colors:
   # Default colors
   primary:
-    #bg: '#101421'
-    background: '#111111'
+    background: '#121212'
+    #fg: fffbf6,ebdbb2,e0def4,e0e0e0,fff1f1
     foreground: '#fffbf6'
- # Normal colors
+    # Normal colors
   normal:
-    black:   '#1f1f1f'
+    black:   '#121212'
     red:     '#eb4129'
     green:   '#abe047'
     yellow:  '#f6c744'
@@ -118,7 +73,7 @@ colors:
     magenta: '#7b5cb0'
     cyan:    '#64dbed'
     white:   '#e5e9f0'
- # Bright colors
+    # Bright colors
   bright:
     black:   '#565656'
     red:     '#ec5357'
