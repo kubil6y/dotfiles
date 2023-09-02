@@ -72,7 +72,8 @@ require("tokyonight").setup({
 		hi.DiagnosticVirtualTextHint = { bg = "", fg = "#1abc9c" }
 		hi.DiagnosticVirtualTextInfo = { bg = "", fg = "#0db9d7" }
 		hi.DiagnosticVirtualTextWarn = { bg = "", fg = "#e0af68" }
-        hi.DiagnosticUnnecessary = { bg = "", fg = colors.comment }
+		hi.DiagnosticUnnecessary = { bg = "", fg = colors.comment }
+        hi.MsgArea = { bg = "", fg = "#fffbf6" }
 	end,
 })
 
@@ -117,8 +118,8 @@ function _G.set_colors(color)
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 
 	if color == "tokyonight" then
-        vim.cmd([[ hi @variable guifg=#73daca ]])
-        vim.cmd([[ hi @parameter guifg=#73daca ]])
+		vim.cmd([[ hi @variable guifg=#73daca ]])
+		vim.cmd([[ hi @parameter guifg=#73daca ]])
 		--vim.cmd([[ hi TelescopeSelection guibg=#283457 ]])
 		--vim.cmd([[ hi Visual cterm=reverse gui=reverse guibg=#665c54 ]])
 	end

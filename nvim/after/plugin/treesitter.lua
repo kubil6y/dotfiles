@@ -64,9 +64,9 @@ context.setup({
 			"method",
 			"for",
 			"while",
-			"if",
-			"switch",
-			"case",
+			--"if",
+			--"switch",
+			--"case",
 		},
 		-- Patterns for specific filetypes
 		-- If a pattern is missing, *open a PR* so everyone can benefit.

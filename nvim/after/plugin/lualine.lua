@@ -4,7 +4,7 @@ local function custom_theme(theme)
 	if theme == "gruvbox" then
 		fg = "#ebdbb2"
 	elseif theme == "tokyonight" then
-		fg = "#73daca"
+		fg = "#fffbf6"
 	elseif theme == "vscode" then
 		fg = "#d4d4d4"
 	elseif theme == "rose-pine" then

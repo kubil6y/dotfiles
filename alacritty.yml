@@ -8,7 +8,7 @@ cursor:
     blink_interval: 500
 
 window:
-    opacity: 0.93
+    opacity: 0.95
     decorations: none
 
 font:
