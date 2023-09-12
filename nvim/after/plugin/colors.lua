@@ -9,10 +9,11 @@ require("rose-pine").setup({
 		-- pine = '#3e8fb0', rose = '#ebb0ad'
 		["@type.qualifier"] = { fg = "pine" },
 		["@type.builtin"] = { fg = "pine" },
+		--MatchParen = { fg = "text", bg = "", bold = true },
 		TelescopeMatching = { fg = "text", bold = true },
 		CmpItemAbbrMatch = { fg = "subtle", bold = false },
 		CmpItemAbbrMatchFuzzy = { fg = "text", bold = false },
-		PmenuSel = { fg = "#e0def4", bg = "#393552" },
+		PmenuSel = { fg = "text", bg = "#393552" },
 	},
 })
 
@@ -36,7 +37,7 @@ require("tokyonight").setup({
 	style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
 	light_style = "day", -- The theme is used when the background is set to light
 	transparent = true, -- Enable this to disable setting the background color
-	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+	terminal_colors = false, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
 	styles = {
 		-- Style to be applied to different syntax groups
 		-- Value is any valid attr-list value for `:help nvim_set_hl`
@@ -66,14 +67,15 @@ require("tokyonight").setup({
 	on_highlights = function(hi, colors)
 		hi.CmpItemAbbrMatch = { fg = "", bold = false }
 		hi.CmpItemAbbrMatchFuzzy = { fg = "", bold = false }
-		hi.TelescopeMatching = { fg = "#6d76a3", bold = true }
+		hi.TelescopeNormal = { fg = "#908caa", bold = false }
+		hi.TelescopeMatching = { fg = "#e0def4", bold = true }
 
 		hi.DiagnosticVirtualTextError = { bg = "", fg = "#db4b4b" }
 		hi.DiagnosticVirtualTextHint = { bg = "", fg = "#1abc9c" }
 		hi.DiagnosticVirtualTextInfo = { bg = "", fg = "#0db9d7" }
 		hi.DiagnosticVirtualTextWarn = { bg = "", fg = "#e0af68" }
 		hi.DiagnosticUnnecessary = { bg = "", fg = colors.comment }
-        hi.MsgArea = { bg = "", fg = "#fffbf6" }
+		hi.MsgArea = { bg = "", fg = "#fffbf6" }
 	end,
 })
 
@@ -131,4 +133,4 @@ function _G.set_colors(color)
 	end
 end
 
-set_colors("tokyonight")
+--set_colors()
