@@ -9,7 +9,7 @@ require("nvim-treesitter.configs").setup({
         enable = true,
         enable_close_on_slash = false,
     },
-    indent = { enable = true, disable = { "python" } }, -- fucking shit
+    indent = { enable = true, disable = { "" } }, -- fucking shit
     textobjects = {
         select = {
             enable = true,

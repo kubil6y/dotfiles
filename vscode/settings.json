@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "MonoLisa Static-Script",
+    "editor.fontFamily": "MonoLisa",
     "editor.suggestSelection": "first",
     "editor.renderLineHighlight": "none",
     "editor.codeLens": false,
@@ -224,21 +224,6 @@
             "silent": true
         },
         {
-            "before": ["<leader>", "d", "a"],
-            "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "d", "t"],
-            "commands": [
-                "workbench.action.debug.stop",
-                // "workbench.action.toggleSidebarVisibility",
-                "workbench.debug.action.toggleRepl",
-                "workbench.debug.action.toggleRepl"
-            ],
-            "silent": true
-        },
-        {
             "before": ["<leader>", "t", "m"],
             "commands": ["editor.action.toggleMinimap"],
             "silent": true
@@ -248,16 +233,16 @@
             "commands": ["extension.matchitJumpItems"],
             "silent": true
         },
-        {
-            "before": ["<leader>", "s", "l"],
-            "commands": ["workbench.action.splitEditorRight"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "s", "j"],
-            "commands": ["workbench.action.splitEditorDown"],
-            "silent": true
-        },
+        // {
+        //     "before": ["<leader>", "s", "l"],
+        //     "commands": ["workbench.action.splitEditorRight"],
+        //     "silent": true
+        // },
+        // {
+        //     "before": ["<leader>", "s", "j"],
+        //     "commands": ["workbench.action.splitEditorDown"],
+        //     "silent": true
+        // },
         {
             "before": ["<leader>", "m", "l"],
             "commands": ["workbench.action.moveActiveEditorGroupRight"],
@@ -280,7 +265,7 @@
         },
 
         {
-            "before": ["<leader>", "r", "d"],
+            "before": ["<leader>", "d", "t"],
             "commands": ["editor.action.revealDeclaration"],
             "silent": true
         },
@@ -301,7 +286,8 @@
             "before": ["<leader>", "c", "e"],
             "commands": ["workbench.action.closeOtherEditors"],
             "silent": true
-        }
+        },
+        { "before": ["<C-p>"], "commands": ["workbench.action.quickOpen"] }
     ],
     "vim.commandLineModeKeyBindings": [
         {
@@ -355,7 +341,7 @@
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "editor.insertSpaces": false,
     "editor.cursorSurroundingLines": 8,
-    "terminal.integrated.fontSize": 17,
+    "terminal.integrated.fontSize": 14,
     "editor.fontSize": 14,
     "scm.diffDecorationsGutterPattern": {
         "added": true
@@ -392,5 +378,6 @@
     },
     "workbench.activityBar.visible": false,
     "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Gruvbox Dark (Hard)",
     "window.zoomLevel": 1
 }

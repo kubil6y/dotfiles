@@ -49,6 +49,7 @@ Group.new("@text.note.comment", c.superwhite, nil, s.bold)
 vim.cmd([[highlight link @function.call.lua LuaFunctionCall]])
 vim.cmd([[
   hi link @lsp.type.variable.lua variable
+  hi link @lsp.type.variable.python variable
   hi link @lsp.type.variable.go variable
   hi link @lsp.type.variable.rust variable
   hi link @lsp.type.variable.typescriptreact variable

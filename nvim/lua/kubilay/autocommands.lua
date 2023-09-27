@@ -29,6 +29,9 @@ vim.cmd("command! -nargs=* W w") -- save with :W
 vim.cmd("command! Wq wq")
 vim.cmd("command! Wa wa")
 
+-- .ejs files as html
+vim.cmd([[ au BufNewFile,BufRead *.ejs set filetype=html ]])
+
 -- tmux nvim-tree cwd https://github.com/neovim/neovim/issues/21771
 --vim.cmd [[ autocmd DirChanged * call chansend(v:stderr, printf("\033]7;%s\033", v:event.cwd)) ]]
 autocmd("DirChanged", {

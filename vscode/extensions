@@ -1,6 +1,7 @@
 be5invis.toml
 esbenp.prettier-vscode
 fernandoescolar.vscode-solution-explorer
+geequlim.godot-tools
 golang.go
 Gruntfuggly.todo-tree
 hoovercj.vscode-settings-cycler
@@ -18,6 +19,7 @@ mvllow.rose-pine
 patcx.vscode-nuget-gallery
 PKief.material-icon-theme
 Prisma.prisma
+Razoric.gdscript-toolkit-formatter
 redguardtoo.matchit
 rhalaly.scope-to-this
 rust-lang.rust-analyzer

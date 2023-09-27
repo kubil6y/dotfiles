@@ -1,5 +1,38 @@
 require("colorizer").setup()
 
+local gruvbox_colors = require("gruvbox.palette").get_base_colors(vim.o.background, "")
+require("gruvbox").setup({
+	undercurl = true,
+	underline = true,
+	bold = true,
+	italic = {
+		strings = false,
+		comments = false,
+		operators = false,
+		folds = false,
+	},
+	strikethrough = true,
+	invert_selection = true,
+	invert_signs = false,
+	invert_tabline = false,
+	invert_intend_guides = false,
+	inverse = true,
+	contrast = "", -- can be "hard", "soft" or empty string
+	dim_inactive = false,
+	transparent_mode = true,
+	palette_overrides = {},
+	overrides = {
+		["@text.danger.comment"] = { fg = gruvbox_colors.red, bg = "NONE" },
+		["@type.qualifier"] = { fg = "#fb4934" },
+		SignColumn = { bg = "NONE" },
+		Todo = { fg = gruvbox_colors.fg0, bg = "NONE" },
+		CmpItemAbbrMatch = { fg = "", bold = false },
+		CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
+		--MatchParen = { fg = "#83a598", bg = "", bold = true },
+        --DiagnosticVirtualTextWarn = { fg = gruvbox_colors.neutral_blue },
+	},
+})
+
 require("rose-pine").setup({
 	dark_variant = "main",
 	disable_background = true,
@@ -23,13 +56,15 @@ require("vscode").setup({
 
 	disable_nvimtree_bg = true,
 	color_overrides = {
-		vscLightBlue = "#fff1f1",
+		-- fff1f1
+		vscLightBlue = "#d4d4d4",
 	},
 	group_overrides = {
-		CmpItemAbbrMatch = { fg = "", bg = "" },
-		CmpItemAbbrMatchFuzzy = { fg = "", bg = "" },
-		PmenuSel = { fg = "#fff1f1", bg = "#343b41" },
-		Pmenu = { fg = "#bbbbbb", bg = "#212121" },
+        CmpItemAbbr = { fg = "#707070", bg = "" },
+        CmpItemAbbrMatch = { fg = "", bg = "" },
+        CmpItemAbbrMatchFuzzy = { fg = "", bg = "" },
+        PmenuSel = { fg = "#d4d4d4", bg = "#343b41" },
+        Pmenu = { fg = "#bbbbbb", bg = "#212121" },
 	},
 })
 
@@ -79,38 +114,6 @@ require("tokyonight").setup({
 	end,
 })
 
-local gruvbox_colors = require("gruvbox.palette").get_base_colors(vim.o.background, "")
-require("gruvbox").setup({
-	undercurl = true,
-	underline = true,
-	bold = true,
-	italic = {
-		strings = false,
-		comments = false,
-		operators = false,
-		folds = false,
-	},
-	strikethrough = true,
-	invert_selection = true,
-	invert_signs = false,
-	invert_tabline = false,
-	invert_intend_guides = false,
-	inverse = true,
-	contrast = "", -- can be "hard", "soft" or empty string
-	dim_inactive = false,
-	transparent_mode = true,
-	palette_overrides = {},
-	overrides = {
-		["@text.danger.comment"] = { fg = gruvbox_colors.red, bg = "NONE" },
-		["@type.qualifier"] = { fg = "#fb4934" },
-		SignColumn = { bg = "NONE" },
-		Todo = { fg = gruvbox_colors.fg0, bg = "NONE" },
-		CmpItemAbbrMatch = { fg = "", bold = false },
-		CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
-		--DiagnosticVirtualTextWarn = { fg = gruvbox_colors.neutral_blue },
-	},
-})
-
 function _G.set_colors(color)
 	color = color or "gruvbox"
 
@@ -120,8 +123,8 @@ function _G.set_colors(color)
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 
 	if color == "tokyonight" then
-		vim.cmd([[ hi @variable guifg=#73daca ]])
-		vim.cmd([[ hi @parameter guifg=#73daca ]])
+        vim.cmd([[ hi @variable guifg=#73daca ]])
+        vim.cmd([[ hi @parameter guifg=#73daca ]])
 		--vim.cmd([[ hi TelescopeSelection guibg=#283457 ]])
 		--vim.cmd([[ hi Visual cterm=reverse gui=reverse guibg=#665c54 ]])
 	end
