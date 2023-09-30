@@ -24,7 +24,7 @@
     },
     "go.toolsManagement.autoUpdate": true,
     // "omnisharp.enableImportCompletion": true,
-    // "omnisharp.useEditorFormattingSettings": true,
+    "omnisharp.useEditorFormattingSettings": false,
     "omnisharp.organizeImportsOnFormat": true,
     // .net:true, unity:false
     "omnisharp.useModernNet": false,
@@ -140,10 +140,10 @@
             "editorSuggestWidget.selectedBackground": "#505050"
         },
         "[Rosé Pine (no italics)]": {
-            "list.highlightForeground": "#e0def4",
-            "list.focusHighlightForeground": "#e0def4",
-            "editorSuggestWidget.focusHighlightForeground": "#e0def4",
-            "editorSuggestWidget.highlightForeground": "#e0def4",
+            // "list.highlightForeground": "#e0def4",
+            // "list.focusHighlightForeground": "#e0def4",
+            // "editorSuggestWidget.focusHighlightForeground": "#e0def4",
+            // "editorSuggestWidget.highlightForeground": "#e0def4",
             "editorLineNumber.activeForeground": "#908caa",
             "editorCursor.background": "#191724",
             "editorCursor.foreground": "#e0def4",
@@ -211,6 +211,11 @@
         {
             "before": ["<leader>", "d", "s"],
             "commands": [":nohl"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "d", "a"],
+            "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"],
             "silent": true
         },
         {
@@ -287,7 +292,16 @@
             "commands": ["workbench.action.closeOtherEditors"],
             "silent": true
         },
-        { "before": ["<C-p>"], "commands": ["workbench.action.quickOpen"] }
+        {
+            "before": ["<C-p>"],
+            "commands": ["workbench.action.quickOpen"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "d", "n"],
+            "commands": ["notifications.clearAll"],
+            "silent": true
+        }
     ],
     "vim.commandLineModeKeyBindings": [
         {
@@ -300,10 +314,10 @@
         }
     ],
     "csharpextensions.privateMemberPrefix": "_",
-    "[csharp]": {
-        "editor.defaultFormatter": "ms-dotnettools.csharp"
-        // "editor.defaultFormatter": "csharpier.csharpier-vscode"
-    },
+    // "[csharp]": {
+    //     "editor.defaultFormatter": "ms-dotnettools.csharp"
+    //     // "editor.defaultFormatter": "csharpier.csharpier-vscode"
+    // },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -367,17 +381,13 @@
     // "gdscript_formatter.line_size": 80,
     // "godot_tools.gdscript_lsp_server_port": 6005,
     "errorLens.onSave": true,
-    "omnisharp.enableEditorConfigSupport": false,
+    // "omnisharp.enableEditorConfigSupport": true,
     "editor.occurrencesHighlight": false,
-    // "[markdown]": {
-    //     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    // },
-    "editor.cursorBlinking": "solid",
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.activityBar.visible": false,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Gruvbox Dark (Hard)",
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Gruvbox Dark (Hard)"
 }
