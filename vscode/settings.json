@@ -140,18 +140,23 @@
             "editorSuggestWidget.selectedBackground": "#505050"
         },
         "[Rosé Pine (no italics)]": {
-            // "list.highlightForeground": "#e0def4",
-            // "list.focusHighlightForeground": "#e0def4",
-            // "editorSuggestWidget.focusHighlightForeground": "#e0def4",
-            // "editorSuggestWidget.highlightForeground": "#e0def4",
-            "editorLineNumber.activeForeground": "#908caa",
+            "list.highlightForeground": "#e0def4",
+            "list.focusHighlightForeground": "#e0def4",
+            "editorSuggestWidget.focusHighlightForeground": "#e0def4",
+            "editorSuggestWidget.highlightForeground": "#908caa",
+
             "editorCursor.background": "#191724",
             "editorCursor.foreground": "#e0def4",
+            "terminalCursor.background": "#191724",
+            "terminalCursor.foreground": "#e0def4",
+
+            "tab.activeBorderTop": "#31748f",
+            "editorLineNumber.activeForeground": "#908caa",
             "terminal.ansiBrightBlue": "#31748f",
-            "tab.activeBorderTop": "#31748f"
         },
         "[Gruvbox Dark (Hard)]": {
             // "editorError.foreground": "#d79921",
+            // "editorCursor.foreground": "#ebdbb2",
             "editorInlayHint.foreground": "#868686f0",
             "editorInlayHint.background": "#18181800",
 
@@ -159,10 +164,15 @@
             "editorInlayHint.typeForeground": "#486148f0",
             "editorInlayHint.parameterForeground": "#486148f0",
 
+            "editor.background": "#1d2021",
             "activityBar.background": "#1d2021",
-            "statusBar.background": "#1d2021", //282828,1d2021
+            "statusBar.background": "#1d2021",
+            "sideBar.background": "#1d2021",
+            "sideBar.border": "#3c3836",
+            "sideBarSectionHeader.background": "#282828",
+
             "statusBar.foreground": "#858585",
-            "tab.activeBorderTop": "#d79921",
+            "tab.activeBorderTop": "#858585",
             "tab.inactiveBackground": "#252526",
             "editorOverviewRuler.border": "#252526",
             "editor.inactiveSelectionBackground": "#689d6a20",
@@ -386,8 +396,8 @@
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.activityBar.visible": false,
     "editor.minimap.enabled": false,
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Gruvbox Dark (Hard)"
+    "workbench.colorTheme": "Gruvbox Dark (Hard)",
+    "workbench.activityBar.visible": false
 }
