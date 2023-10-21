@@ -39,41 +39,7 @@
     "workbench.tree.indent": 12,
     "workbench.editor.restoreViewState": false,
     "workbench.startupEditor": "none",
-    "workbench.iconTheme": "material-icon-theme",
     "editor.tokenColorCustomizations": {
-        "[Default Dark Modern]": {
-            "variables": "#FFF1F1F1",
-            "textMateRules": [
-                {
-                    "scope": [
-                        "variable.other.constant.object.ts",
-                        "variable.other.constant.object.js",
-                        "variable.other.constant.ts",
-                        "meta.definition.variable.ts",
-                        "meta.var-single-variable.expr.ts",
-                        "meta.var.expr.ts",
-                        "source.ts",
-                        "support.type.property-name",
-                        "variable.other.enummember"
-                    ],
-                    "settings": {
-                        "foreground": "#FFF1F1F1"
-                    }
-                },
-                {
-                    "scope": "emphasis",
-                    "settings": {
-                        "fontStyle": ""
-                    }
-                },
-                {
-                    "scope": "keyword.preprocessor.cs",
-                    "settings": {
-                        "foreground": "#808080"
-                    }
-                }
-            ]
-        },
         "[Monokai Pro (Filter Ristretto)]": {
             "textMateRules": [
                 {
@@ -95,9 +61,8 @@
                 }
             ]
         },
-        "[Gruvbox Dark (Hard)]": {
+        "[Dark Rock]": {
             "variables": "#ebdbb2",
-
             "textMateRules": [
                 {
                     "scope": [
@@ -105,27 +70,102 @@
                         "entity.name.function"
                     ],
                     "settings": {
-                        "fontStyle": "bold"
+                        "fontStyle": "bold",
+                        "foreground": "#fabd2f"
                     }
                 },
                 {
-                    "scope": ["comment", "punctuation.definition.comment"],
+                    "scope": [
+                        "keyword.type",
+                        "keyword.control",
+                        "keyword.operator.expression",
+                        "keyword.other",
+                        "storage.modifier",
+                        "storage.type.class",
+                        "storage.type.accessor",
+                        "storage.type.enum"
+                    ],
+                    "settings": {
+                        "foreground": "#FB4934"
+                    }
+                },
+                {
+                    "scope": [
+                        "entity.name.type",
+                        "entity.name.type.class",
+                        "storage.type"
+                    ],
+                    "settings": {
+                        "foreground": "#8EC07C"
+                    }
+                }
+            ]
+        },
+        "[Default Dark Modern]": {
+            "variables": "#d4d4d4",
+            "textMateRules": [
+                {
+                    "scope": [
+                        "variable.other.constant.object.ts",
+                        "variable.other.constant.object.js",
+                        "variable.other.constant.ts",
+                        "meta.definition.variable.ts",
+                        "meta.var-single-variable.expr.ts",
+                        "meta.var.expr.ts",
+                        "source.ts",
+                        "support.type.property-name",
+                        "variable.other.enummember"
+                    ],
+                    "settings": {
+                        "foreground": "#d4d4d4"
+                    }
+                },
+                {
+                    "scope": "emphasis",
                     "settings": {
                         "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": "keyword.preprocessor.cs",
+                    "settings": {
+                        "foreground": "#808080"
                     }
                 }
             ]
         }
     },
     "workbench.colorCustomizations": {
+        "[Quiet Light]": {
+            "statusBar.foreground": "#705697",
+            "statusBar.background": "#f5f5f5",
+            "statusBar.noFolderBackground": "#f5f5f5",
+
+            "editorCursor.foreground": "#121212",
+            "editorCursor.background": "#f5f5f5",
+
+            "editorLineNumber.activeForeground": "#AAAAAA",
+            "editorLineNumber.foreground": "#AAAAAA"
+        },
+        "[Dark Rock]": {
+            "editor.background": "#1d2021",
+            "statusBar.background": "#1d2021",
+            "statusBar.border": "#1d2021",
+
+            "editorLineNumber.activeForeground": "#504945",
+            "editorLineNumber.foreground": "#504945",
+
+            "list.highlightForeground": "#ebdbb2"
+        },
+
         "[Default Dark Modern]": {
             "statusBar.background": "#1f1f1f",
             "statusBar.border": "#1f1f1f",
-            "editorLineNumber.foreground": "#6e7681",
             "editorLineNumber.activeForeground": "#6e7681"
         },
         "[Monokai Pro (Filter Ristretto)]": {
             "statusBar.background": "#2c2525",
+            "statusBar.border": "#2c2525",
             "editorGroup.emptyBackground": "#2c2525",
             "activityBar.background": "#2c2525",
 
@@ -135,9 +175,7 @@
             "tab.unfocusedActiveBorderTop": "#948a8b",
 
             "editorHoverWidget.highlightForeground": "#ffd866",
-            "editorLineNumber.activeForeground": "#5b5353",
-
-            "editorSuggestWidget.selectedBackground": "#505050"
+            "editorLineNumber.activeForeground": "#5b5353"
         },
         "[Rosé Pine (no italics)]": {
             "list.highlightForeground": "#e0def4",
@@ -152,45 +190,7 @@
 
             "tab.activeBorderTop": "#31748f",
             "editorLineNumber.activeForeground": "#908caa",
-            "terminal.ansiBrightBlue": "#31748f",
-        },
-        "[Gruvbox Dark (Hard)]": {
-            // "editorError.foreground": "#d79921",
-            // "editorCursor.foreground": "#ebdbb2",
-            "editorInlayHint.foreground": "#868686f0",
-            "editorInlayHint.background": "#18181800",
-
-            // Overrides for specific kinds of inlay hints
-            "editorInlayHint.typeForeground": "#486148f0",
-            "editorInlayHint.parameterForeground": "#486148f0",
-
-            "editor.background": "#1d2021",
-            "activityBar.background": "#1d2021",
-            "statusBar.background": "#1d2021",
-            "sideBar.background": "#1d2021",
-            "sideBar.border": "#3c3836",
-            "sideBarSectionHeader.background": "#282828",
-
-            "statusBar.foreground": "#858585",
-            "tab.activeBorderTop": "#858585",
-            "tab.inactiveBackground": "#252526",
-            "editorOverviewRuler.border": "#252526",
-            "editor.inactiveSelectionBackground": "#689d6a20",
-            "editor.selectionBackground": "#689d6a40",
-            "editor.selectionHighlightBackground": "#fabd2f40",
-
-            "editorLineNumber.foreground": "#858585",
-            "editorLineNumber.activeForeground": "#858585",
-
-            "editorHoverWidget.highlightForeground": "#d79921",
-
-            "editorSuggestWidget.foreground": "#ebdbb2",
-            "editorSuggestWidget.background": "#1d2021",
-            "editorSuggestWidget.border": "#3c3836",
-            "editorSuggestWidget.highlightForeground": "#689d6a",
-            "editorSuggestWidget.focusHighlightForeground": "#689d6a",
-            "editorSuggestWidget.selectedForeground": "#ebdbb2",
-            "editorSuggestWidget.selectedBackground": "#3c383660"
+            "terminal.ansiBrightBlue": "#31748f"
         }
     },
     "vim.leader": ",",
@@ -248,37 +248,6 @@
             "commands": ["extension.matchitJumpItems"],
             "silent": true
         },
-        // {
-        //     "before": ["<leader>", "s", "l"],
-        //     "commands": ["workbench.action.splitEditorRight"],
-        //     "silent": true
-        // },
-        // {
-        //     "before": ["<leader>", "s", "j"],
-        //     "commands": ["workbench.action.splitEditorDown"],
-        //     "silent": true
-        // },
-        {
-            "before": ["<leader>", "m", "l"],
-            "commands": ["workbench.action.moveActiveEditorGroupRight"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "m", "h"],
-            "commands": ["workbench.action.moveActiveEditorGroupLeft"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "m", "j"],
-            "commands": ["workbench.action.moveActiveEditorGroupDown"],
-            "silent": true
-        },
-        {
-            "before": ["<leader>", "m", "k"],
-            "commands": ["workbench.action.moveActiveEditorGroupUp"],
-            "silent": true
-        },
-
         {
             "before": ["<leader>", "d", "t"],
             "commands": ["editor.action.revealDeclaration"],
@@ -391,13 +360,13 @@
     // "gdscript_formatter.line_size": 80,
     // "godot_tools.gdscript_lsp_server_port": 6005,
     "errorLens.onSave": true,
-    // "omnisharp.enableEditorConfigSupport": true,
-    "editor.occurrencesHighlight": false,
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.minimap.enabled": false,
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Gruvbox Dark (Hard)",
-    "workbench.activityBar.visible": false
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.activityBar.visible": false,
+    "editor.occurrencesHighlight": false,
+    "workbench.colorTheme": "Dark Rock"
 }

@@ -8,13 +8,10 @@ Gruntfuggly.todo-tree
 hoovercj.vscode-settings-cycler
 kleber-swf.unity-code-snippets
 kreativ-software.csharpextensions
+lukeomalley.dark-rock-theme
 monokai.theme-monokai-pro-vscode
 ms-dotnettools.csharp
 ms-dotnettools.vscode-dotnet-runtime
-ms-vscode.cmake-tools
-ms-vscode.cpptools
-ms-vscode.cpptools-extension-pack
-ms-vscode.cpptools-themes
 ms-vscode.live-server
 mvllow.rose-pine
 patcx.vscode-nuget-gallery
@@ -24,8 +21,6 @@ Razoric.gdscript-toolkit-formatter
 redguardtoo.matchit
 rhalaly.scope-to-this
 rust-lang.rust-analyzer
-tomphilbin.gruvbox-themes
-twxs.cmake
 usernamehw.errorlens
 vscodevim.vim
 Zignd.html-css-class-completion
