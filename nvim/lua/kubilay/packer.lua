@@ -14,16 +14,16 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-    -- colorschemes
-    use({
-        "rose-pine/neovim",
-        as = "rose-pine",
-    })
-    use("ellisonleao/gruvbox.nvim")
-    use("Mofiqul/vscode.nvim")
-    use("tjdevries/colorbuddy.nvim")
-    use("tjdevries/gruvbuddy.nvim")
-    use("folke/tokyonight.nvim")
+	-- colorschemes
+	use({
+		"rose-pine/neovim",
+		as = "rose-pine",
+	})
+	use("ellisonleao/gruvbox.nvim")
+	use("Mofiqul/vscode.nvim")
+	use("tjdevries/colorbuddy.nvim")
+	use("tjdevries/gruvbuddy.nvim")
+	use("folke/tokyonight.nvim")
 
 	use({
 		"folke/trouble.nvim",
@@ -77,7 +77,7 @@ return require("packer").startup(function(use)
 			{ "hrsh7th/cmp-nvim-lsp" },
 			{ "hrsh7th/cmp-nvim-lua" },
 			-- Snippets
-            { "L3MON4D3/LuaSnip" },
+			{ "L3MON4D3/LuaSnip" },
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
