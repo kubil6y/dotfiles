@@ -1,37 +1,7 @@
 require("colorizer").setup()
 
-local gruvbox_colors = require("gruvbox.palette").get_base_colors(vim.o.background, "")
-require("gruvbox").setup({
-	undercurl = true,
-	underline = true,
-	bold = true,
-	italic = {
-		strings = false,
-		comments = true,
-		operators = false,
-		folds = false,
-	},
-	strikethrough = true,
-	invert_selection = true,
-	invert_signs = false,
-	invert_tabline = false,
-	invert_intend_guides = false,
-	inverse = true,
-	contrast = "", -- can be "hard", "soft" or empty string
-	dim_inactive = false,
-	transparent_mode = true,
-	palette_overrides = {},
-	overrides = {
-		--["@type.qualifier"] = { fg = "#fb4934" },
-		--Todo = { fg = gruvbox_colors.fg0, bg = "NONE" },
-		--["@text.danger.comment"] = { fg = gruvbox_colors.red, bg = "NONE" },
-		--CmpItemAbbrMatch = { fg = "", bold = false },
-		--CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
-	},
-})
-
 require("rose-pine").setup({
-	dark_variant = "main",
+	dark_variant = "moon",
 	disable_background = true,
 	disable_float_background = true,
 	disable_italics = true,
@@ -111,6 +81,35 @@ require("tokyonight").setup({
 	end,
 })
 
+require("gruvbox").setup({
+	undercurl = true,
+	underline = true,
+	bold = true,
+	italic = {
+		strings = false,
+		comments = true,
+		operators = false,
+		folds = false,
+	},
+	strikethrough = true,
+	invert_selection = true,
+	invert_signs = false,
+	invert_tabline = false,
+	invert_intend_guides = false,
+	inverse = true,
+	contrast = "", -- can be "hard", "soft" or empty string
+	dim_inactive = false,
+	transparent_mode = true,
+	palette_overrides = {},
+	overrides = {
+		["@type.qualifier"] = { fg = "#fb4934" },
+		Todo = { fg = "#ebdbb2", bg = "NONE" },
+		["@text.danger.comment"] = { fg = "#fb4934", bg = "NONE" },
+		CmpItemAbbrMatch = { fg = "", bold = false },
+		CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
+	},
+})
+
 function _G.set_colors(color)
 	color = color or "gruvbox"
 
@@ -133,4 +132,4 @@ function _G.set_colors(color)
 	end
 end
 
-set_colors()
+--set_colors()
