@@ -1,7 +1,7 @@
 require("colorizer").setup()
 
 require("rose-pine").setup({
-	dark_variant = "moon",
+	dark_variant = "main",
 	disable_background = true,
 	disable_float_background = true,
 	disable_italics = true,
@@ -9,11 +9,13 @@ require("rose-pine").setup({
 		-- pine = '#3e8fb0', rose = '#ebb0ad'
 		["@type.qualifier"] = { fg = "pine" },
 		["@type.builtin"] = { fg = "pine" },
-		--MatchParen = { fg = "text", bg = "", bold = true },
-		TelescopeMatching = { fg = "text", bold = true },
-		CmpItemAbbrMatch = { fg = "subtle", bold = false },
-		CmpItemAbbrMatchFuzzy = { fg = "text", bold = false },
-		PmenuSel = { fg = "text", bg = "#393552" },
+        --MatchParen = { fg = "text", bg = "", bold = true },
+        TelescopeMatching = { fg = "text" },
+        TelescopeSelection = { fg = "text", bold = true },
+        CmpItemAbbrMatch = { fg = "subtle", bold = false },
+        CmpItemAbbrMatchFuzzy = { fg = "text", bold = false },
+        --PmenuSel = { fg = "text", bg = "#393552" },
+        Comment = {fg = "#6e6a86", italic = true }
 	},
 })
 
@@ -102,9 +104,9 @@ require("gruvbox").setup({
 	transparent_mode = true,
 	palette_overrides = {},
 	overrides = {
-		["@type.qualifier"] = { fg = "#fb4934" },
-		Todo = { fg = "#ebdbb2", bg = "NONE" },
-		["@text.danger.comment"] = { fg = "#fb4934", bg = "NONE" },
+        ["@type.qualifier"] = { fg = "#fb4934" },
+        ["@text.danger.comment"] = { fg = "#fb4934", bg = "NONE" },
+        Todo = { fg = "#ebdbb2", bg = "NONE" },
 		CmpItemAbbrMatch = { fg = "", bold = false },
 		CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
 	},
@@ -112,9 +114,7 @@ require("gruvbox").setup({
 
 function _G.set_colors(color)
 	color = color or "gruvbox"
-
 	vim.cmd.colorscheme(color)
-
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 

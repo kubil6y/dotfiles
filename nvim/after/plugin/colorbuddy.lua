@@ -63,4 +63,6 @@ vim.cmd([[
   hi LineNr guibg=NONE
   hi Normal guibg=NONE
   hi NormalFloat guibg=NONE
+  hi Comment gui=italic
+  hi TelescopeSelection guibg=#333842
 ]])
