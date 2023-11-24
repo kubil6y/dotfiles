@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "MonoLisa",
+    "editor.fontFamily": "MonoLisa Static",
     "editor.suggestSelection": "first",
     "editor.renderLineHighlight": "none",
     "editor.codeLens": false,
@@ -334,8 +334,8 @@
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "editor.insertSpaces": false,
     "editor.cursorSurroundingLines": 8,
-    "terminal.integrated.fontSize": 14,
-    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 16,
+    "editor.fontSize": 16,
     "scm.diffDecorationsGutterPattern": {
         "added": true
     },
@@ -364,9 +364,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.minimap.enabled": false,
-    "window.zoomLevel": 1,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.activityBar.visible": false,
     "editor.occurrencesHighlight": false,
-    "workbench.colorTheme": "Dark Rock"
+    "workbench.colorTheme": "Rosé Pine (no italics)"
 }

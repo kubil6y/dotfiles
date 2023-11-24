@@ -3,8 +3,6 @@ local function custom_theme(theme)
 	local fg = ""
 	if theme == "gruvbox" then
 		fg = "#ebdbb2"
-	elseif theme == "tokyonight" then
-		fg = "#fffbf6"
 	elseif theme == "vscode" then
 		fg = "#d4d4d4"
 	elseif theme == "rose-pine" then
@@ -63,7 +61,7 @@ lualine.setup({
 	options = {
 		globalstatus = true,
 		icons_enabled = true,
-		theme = custom_theme("gruvbuddy"),
+		theme = custom_theme("rose-pine"),
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard" },

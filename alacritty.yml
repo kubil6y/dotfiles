@@ -3,24 +3,24 @@ env:
 cursor:
     style:
         shape: Block
-        blinking: always
+        blinking: never #always,never
     blink_interval: 500
 window:
     opacity: 1
     decorations: none
 font:
-    size: 13
+    size: 14
     normal:
-        family: MonoLisa
+        family: MonoLisa Static
         style: Regular
     bold:
-        family: MonoLisa
+        family: MonoLisa Static
         style: Bold
     italic:
-        family: MonoLisa
+        family: MonoLisa Static
         style: Italic
     bold_italic:
-        family: MonoLisa
+        family: MonoLisa Static
         style: Bold Italic
 key_bindings:
     - { key: F11, action: ToggleFullscreen }
@@ -28,7 +28,7 @@ key_bindings:
 #colors:
     #name: gruvbox
     #primary:
-        #background: "#1d2021"
+        #background: "#121212"
         #foreground: "#ebdbb2"
     #normal:
         #black: "0x282828"
@@ -49,14 +49,16 @@ key_bindings:
         #cyan: "0x8ec07c"
         #white: "0xebdbb2"
 
-# Colors (iTerm 2 default theme)
 colors:
-  # Default colors
+  cursor:
+    text: "#191724"
+    # e0def4,f6c177
+    cursor: "#e0def4" 
   primary:
-    background: '#121212'
-    #fg: fffbf6,ebdbb2,e0def4,e0e0e0,fff1f1
-    foreground: '#fffbf6'
-    # Normal colors
+    #bg:191724,16141f
+    background: "#191724"
+    #fg:fffbf6,e0def4,e0e0e0
+    foreground: '#e0def4'
   normal:
     black:   '#121212'
     red:     '#eb4129'

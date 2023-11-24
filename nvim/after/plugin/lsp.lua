@@ -97,10 +97,10 @@ local cmp_sources = {
 }
 
 lsp.setup_nvim_cmp({
-	preselect = "none",
-	completion = {
-		completeopt = "menu,menuone,noinsert,noselect",
-	},
+	--preselect = "none",
+	--completion = {
+	--completeopt = "menu,menuone,noinsert,noselect",
+	--},
 	mapping = cmp_mappings,
 	formatting = cmp_formatting,
 	sources = cmp_sources,
@@ -157,6 +157,19 @@ null_ls.setup({
 
 lsp.setup()
 
+local show_virtual_text = true
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = show_virtual_text,
 })
+
+function toggle_virtual_text()
+	show_virtual_text = not show_virtual_text
+	vim.diagnostic.config({
+		virtual_text = show_virtual_text,
+	})
+end
+
+local diagnostics_active = true
+vim.keymap.set("n", "<leader>tt", function()
+    toggle_virtual_text()
+end)

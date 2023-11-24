@@ -64,5 +64,5 @@ vim.cmd([[
   hi Normal guibg=NONE
   hi NormalFloat guibg=NONE
   hi Comment gui=italic
-  hi TelescopeSelection guibg=#333842
 ]])
+  --hi TelescopeSelection guibg=#333842
