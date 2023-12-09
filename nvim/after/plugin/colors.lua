@@ -7,13 +7,15 @@ require("rose-pine").setup({
 		--["@type.builtin"] = { fg = "pine" },
 		--CmpItemAbbrMatch = { fg = "subtle", bold = false },
 		--CmpItemAbbrMatchFuzzy = { fg = "text", bold = false },
-        ["@type.qualifier"] = { fg = "pine" },
-
-		TelescopeMatching = { fg = "text", bold = true },
-		TelescopeSelection = { fg = "text" },
+		["@type.qualifier"] = { fg = "pine" },
+		TreesitterContext = { bg = "#2b2842" },
+		NvimTreeCursorLine = { bg = "#2b2842" },
+		QuickFixLine = { bg = "#2b2842", fg = "text" },
+		qfLineNr = { fg = "text" },
+		PmenuSel = { bg = "#27243c" },
+		TelescopeMatching = { fg = "#f6c177", bold = false }, -- f6c177,9c6cd7
+		TelescopeSelection = { fg = "text", bold = true },
 		TelescopeSelectionCaret = { fg = "text" },
-		TreesitterContext = { bg = "#26233a" },
-		NvimTreeCursorLine = { bg = "#26233a" },
 	},
 })
 
@@ -42,7 +44,6 @@ require("gruvbox").setup({
 		["@text.danger.comment"] = { fg = "#fb4934", bg = "NONE" },
 		Todo = { fg = "#ebdbb2", bg = "NONE" },
 		TreesitterContext = { bg = "#3c3836" },
-
 		-- autocomplete
 		--Pmenu = { bg = "" },
 		--PmenuSel = { fg = "#ebdbb2", bg = "#504945", bold = false },
@@ -57,6 +58,7 @@ function _G.set_colors(color)
 	vim.cmd.colorscheme(color)
 	--vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+	vim.api.nvim_set_hl(0, "hl_inlay_hints", { fg = "#59566d" })
 end
 
 set_colors("rose-pine")

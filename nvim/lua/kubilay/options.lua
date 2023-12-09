@@ -45,6 +45,7 @@ local options = {
 	foldnestmax = 3,
 	foldmethod = "expr",
 	foldexpr = "nvim_treesitter#foldexpr()",
+	-- NOTE: %foldc fold only top level
 }
 
 -- Disable netrw

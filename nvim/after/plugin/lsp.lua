@@ -97,13 +97,13 @@ local cmp_sources = {
 }
 
 lsp.setup_nvim_cmp({
-	--preselect = "none",
-	--completion = {
-	--completeopt = "menu,menuone,noinsert,noselect",
-	--},
-	mapping = cmp_mappings,
-	formatting = cmp_formatting,
-	sources = cmp_sources,
+    preselect = "none",
+    completion = {
+        completeopt = "menu,menuone,noinsert,noselect",
+    },
+    mapping = cmp_mappings,
+    formatting = cmp_formatting,
+    sources = cmp_sources,
 })
 
 lsp.set_preferences({
@@ -155,7 +155,41 @@ null_ls.setup({
 	},
 })
 
+local rust_lsp = lsp.build_options('rust_analyzer', {})
+local rust_opts = {
+	tools = {
+		inlay_hints = {
+			-- automatically set inlay hints (type hints)
+			-- default: true
+			auto = true,
+			-- Only show inlay hints for the current line
+			only_current_line = false,
+			-- whether to show parameter hints with the inlay hints or not
+			-- default: true
+			show_parameter_hints = false,
+			-- prefix for parameter hints
+			-- default: "<-"
+			parameter_hints_prefix = "<- ",
+			-- prefix for all the other hints (type, chaining)
+			-- default: "=>"
+			other_hints_prefix = "=> ",
+			-- whether to align to the length of the longest line in the file
+			max_len_align = false,
+			-- padding from the left if max_len_align is true
+			max_len_align_padding = 1,
+			-- whether to align to the extreme right or not
+			right_align = false,
+			-- padding from the right if right_align is true
+			right_align_padding = 7,
+			-- The color of the hints (Comment,hl_inlay_hints)
+			highlight = "hl_inlay_hints",
+		},
+	},
+	server = rust_lsp, -- rust-analyzer options
+}
+
 lsp.setup()
+require("rust-tools").setup(rust_opts)
 
 local show_virtual_text = true
 vim.diagnostic.config({
@@ -171,5 +205,5 @@ end
 
 local diagnostics_active = true
 vim.keymap.set("n", "<leader>tt", function()
-    toggle_virtual_text()
+	toggle_virtual_text()
 end)

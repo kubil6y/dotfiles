@@ -9,7 +9,7 @@ return require("packer").startup(function(use)
 
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+		tag = "0.1.5",
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
@@ -20,8 +20,8 @@ return require("packer").startup(function(use)
 		as = "rose-pine",
 	})
 	use("ellisonleao/gruvbox.nvim")
-	use("tjdevries/colorbuddy.nvim")
-	use("tjdevries/gruvbuddy.nvim")
+	--use("tjdevries/colorbuddy.nvim")
+	--use("tjdevries/gruvbuddy.nvim")
 
 	use({
 		"folke/trouble.nvim",
@@ -44,7 +44,7 @@ return require("packer").startup(function(use)
 		after = "nvim-treesitter",
 	})
 	use("hrsh7th/cmp-nvim-lsp-signature-help")
-	use("windwp/nvim-autopairs")
+    --use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 	use("theprimeagen/harpoon")
 	use("mbbill/undotree")
@@ -52,6 +52,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-surround")
 	use({ "j-hui/fidget.nvim", commit = "0ba1e16d07627532b6cae915cc992ecac249fb97" })
 	use("jose-elias-alvarez/null-ls.nvim")
+    use("simrat39/rust-tools.nvim")
 
 	use("nvim-lualine/lualine.nvim") -- Fancier statusline
 	use("preservim/nerdcommenter") -- Commenting

@@ -3,15 +3,18 @@ local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup("HighlightYank", {})
 
+-- https://github.com/nvim-telescope/telescope.nvim/issues/699
+--autocmd({ "BufEnter" }, { pattern = { "*" }, command = "normal zx zR" })
+
 autocmd("TextYankPost", {
-    group = yank_group,
-    pattern = "*",
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = "IncSearch",
-            timeout = 80,
-        })
-    end,
+	group = yank_group,
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = "IncSearch",
+			timeout = 80,
+		})
+	end,
 })
 
 -- dunno what is this
@@ -19,9 +22,9 @@ autocmd("TextYankPost", {
 
 -- Fixes Autocomment
 autocmd({ "BufWinEnter" }, {
-    callback = function()
-        vim.cmd("set formatoptions-=cro")
-    end,
+	callback = function()
+		vim.cmd("set formatoptions-=cro")
+	end,
 })
 
 -- Terminal 'W' to 'w'
@@ -35,8 +38,8 @@ vim.cmd([[ au BufNewFile,BufRead *.ejs set filetype=html ]])
 -- tmux nvim-tree cwd https://github.com/neovim/neovim/issues/21771
 --vim.cmd [[ autocmd DirChanged * call chansend(v:stderr, printf("\033]7;%s\033", v:event.cwd)) ]]
 autocmd("DirChanged", {
-    pattern = "*",
-    callback = function()
-        vim.cmd [[ call chansend(v:stderr, printf("\033]7;%s\033", v:event.cwd)) ]]
-    end
+	pattern = "*",
+	callback = function()
+		vim.cmd([[ call chansend(v:stderr, printf("\033]7;%s\033", v:event.cwd)) ]])
+	end,
 })
