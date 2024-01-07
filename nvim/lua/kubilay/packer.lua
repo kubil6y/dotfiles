@@ -44,7 +44,7 @@ return require("packer").startup(function(use)
 		after = "nvim-treesitter",
 	})
 	use("hrsh7th/cmp-nvim-lsp-signature-help")
-    --use("windwp/nvim-autopairs")
+    use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 	use("theprimeagen/harpoon")
 	use("mbbill/undotree")

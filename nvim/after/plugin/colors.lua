@@ -12,8 +12,8 @@ require("rose-pine").setup({
 		NvimTreeCursorLine = { bg = "#2b2842" },
 		QuickFixLine = { bg = "#2b2842", fg = "text" },
 		qfLineNr = { fg = "text" },
-		PmenuSel = { bg = "#27243c" },
-		TelescopeMatching = { fg = "#f6c177", bold = false }, -- f6c177,9c6cd7
+		PmenuSel = { bg = "#2b2842" },
+		TelescopeMatching = { fg = "#f5bc6d", bold = false }, -- f6c177,9c6cd7
 		TelescopeSelection = { fg = "text", bold = true },
 		TelescopeSelectionCaret = { fg = "text" },
 	},

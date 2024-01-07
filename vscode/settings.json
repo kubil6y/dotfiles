@@ -10,6 +10,7 @@
     "editor.guides.indentation": false,
     "editor.renderWhitespace": "none",
     "editor.matchBrackets": "near",
+    "editor.cursorStyle": "block",
     "explorer.compactFolders": false,
     "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
     "files.restoreUndoStack": false,
@@ -21,6 +22,9 @@
         "**/*.meta": true,
         "**/*.o": true,
         "**/obj": true
+    },
+    "search.exclude": {
+        "**/*.anim": true
     },
     "go.toolsManagement.autoUpdate": true,
     // "omnisharp.enableImportCompletion": true,
@@ -100,40 +104,40 @@
                     }
                 }
             ]
-        },
-        "[Default Dark Modern]": {
-            "variables": "#d4d4d4",
-            "textMateRules": [
-                {
-                    "scope": [
-                        "variable.other.constant.object.ts",
-                        "variable.other.constant.object.js",
-                        "variable.other.constant.ts",
-                        "meta.definition.variable.ts",
-                        "meta.var-single-variable.expr.ts",
-                        "meta.var.expr.ts",
-                        "source.ts",
-                        "support.type.property-name",
-                        "variable.other.enummember"
-                    ],
-                    "settings": {
-                        "foreground": "#d4d4d4"
-                    }
-                },
-                {
-                    "scope": "emphasis",
-                    "settings": {
-                        "fontStyle": ""
-                    }
-                },
-                {
-                    "scope": "keyword.preprocessor.cs",
-                    "settings": {
-                        "foreground": "#808080"
-                    }
-                }
-            ]
         }
+        // "[Default Dark Modern]": {
+        //     "variables": "#d4d4d4",
+        //     "textMateRules": [
+        //         {
+        //             "scope": [
+        //                 "variable.other.constant.object.ts",
+        //                 "variable.other.constant.object.js",
+        //                 "variable.other.constant.ts",
+        //                 "meta.definition.variable.ts",
+        //                 "meta.var-single-variable.expr.ts",
+        //                 "meta.var.expr.ts",
+        //                 "source.ts",
+        //                 "support.type.property-name",
+        //                 "variable.other.enummember"
+        //             ],
+        //             "settings": {
+        //                 "foreground": "#d4d4d4"
+        //             }
+        //         },
+        //         {
+        //             "scope": "emphasis",
+        //             "settings": {
+        //                 "fontStyle": ""
+        //             }
+        //         },
+        //         {
+        //             "scope": "keyword.preprocessor.cs",
+        //             "settings": {
+        //                 "foreground": "#808080"
+        //             }
+        //         }
+        //     ]
+        // },
     },
     "workbench.colorCustomizations": {
         "[Quiet Light]": {
@@ -173,21 +177,20 @@
             "tab.activeBorder": "#2c2525",
             "tab.unfocusedActiveBorder": "#2c2525",
             "tab.unfocusedActiveBorderTop": "#948a8b",
-
             "editorHoverWidget.highlightForeground": "#ffd866",
-            "editorLineNumber.activeForeground": "#5b5353"
+            "editorLineNumber.activeForeground": "#5b5353",
+            "editorSuggestWidget.selectedForeground": "#FFF1F3"
         },
         "[Rosé Pine (no italics)]": {
+            // F6C177
             "list.highlightForeground": "#e0def4",
             "list.focusHighlightForeground": "#e0def4",
             "editorSuggestWidget.focusHighlightForeground": "#e0def4",
-            "editorSuggestWidget.highlightForeground": "#908caa",
-
+            "editorSuggestWidget.highlightForeground": "#e0def4",
             "editorCursor.background": "#191724",
             "editorCursor.foreground": "#e0def4",
             "terminalCursor.background": "#191724",
             "terminalCursor.foreground": "#e0def4",
-
             "tab.activeBorderTop": "#31748f",
             "editorLineNumber.activeForeground": "#908caa",
             "terminal.ansiBrightBlue": "#31748f"
@@ -333,7 +336,7 @@
     "editor.wordWrap": "on",
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "editor.insertSpaces": false,
-    "editor.cursorSurroundingLines": 8,
+    "editor.cursorSurroundingLines": 7,
     "terminal.integrated.fontSize": 16,
     "editor.fontSize": 16,
     "scm.diffDecorationsGutterPattern": {
@@ -363,8 +366,11 @@
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.minimap.enabled": false,
     "workbench.iconTheme": "material-icon-theme",
-    "editor.occurrencesHighlight": false,
-    "workbench.colorTheme": "Rosé Pine (no italics)"
+    "editor.occurrencesHighlight": "off",
+    "extensions.ignoreRecommendations": true,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Rosé Pine (no italics)",
+    "workbench.activityBar.location": "hidden",
+    "editor.minimap.enabled": false
 }

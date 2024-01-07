@@ -57,6 +57,11 @@ local location = {
 	padding = 1,
 }
 
+local filename = {
+	"filename",
+	path = 4,
+}
+
 lualine.setup({
 	options = {
 		globalstatus = true,
@@ -70,7 +75,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", diagnostics },
-		lualine_c = { "filename" },
+		lualine_c = { filename },
 		lualine_x = { filetype },
 		lualine_y = { location },
 		lualine_z = { "progress" },
