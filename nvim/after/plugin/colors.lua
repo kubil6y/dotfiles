@@ -56,9 +56,16 @@ require("gruvbox").setup({
 function _G.set_colors(color)
 	color = color or "gruvbox"
 	vim.cmd.colorscheme(color)
+    if color == "vscode" then
+        vim.cmd([[ hi @text.uri guifg=#6a9955 gui=underline ]])
+        vim.cmd([[ hi PmenuSel guibg=#04395e guifg=#NONE ]])
+        vim.cmd([[ hi NvimTreeNormal guibg=#1f1f1f ]])
+        vim.cmd([[ hi Normal guibg=#1f1f1f ]])
+        vim.cmd([[ hi markdownBoldItalic guifg=#18a2fe gui=bold ]])
+    end
 	--vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 	vim.api.nvim_set_hl(0, "hl_inlay_hints", { fg = "#59566d" })
 end
 
-set_colors("rose-pine")
+set_colors("vscode")

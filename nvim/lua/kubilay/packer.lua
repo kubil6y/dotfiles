@@ -22,6 +22,7 @@ return require("packer").startup(function(use)
 	use("ellisonleao/gruvbox.nvim")
 	--use("tjdevries/colorbuddy.nvim")
 	--use("tjdevries/gruvbuddy.nvim")
+	use("Mofiqul/vscode.nvim")
 
 	use({
 		"folke/trouble.nvim",
@@ -44,7 +45,7 @@ return require("packer").startup(function(use)
 		after = "nvim-treesitter",
 	})
 	use("hrsh7th/cmp-nvim-lsp-signature-help")
-    use("windwp/nvim-autopairs")
+	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 	use("theprimeagen/harpoon")
 	use("mbbill/undotree")
@@ -52,7 +53,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-surround")
 	use({ "j-hui/fidget.nvim", commit = "0ba1e16d07627532b6cae915cc992ecac249fb97" })
 	use("jose-elias-alvarez/null-ls.nvim")
-    use("simrat39/rust-tools.nvim")
+	use("simrat39/rust-tools.nvim")
 
 	use("nvim-lualine/lualine.nvim") -- Fancier statusline
 	use("preservim/nerdcommenter") -- Commenting

@@ -155,34 +155,36 @@
             "editor.background": "#1d2021",
             "statusBar.background": "#1d2021",
             "statusBar.border": "#1d2021",
-
             "editorLineNumber.activeForeground": "#504945",
             "editorLineNumber.foreground": "#504945",
-
             "list.highlightForeground": "#ebdbb2"
         },
 
         "[Default Dark Modern]": {
-            "statusBar.background": "#1f1f1f",
-            "statusBar.border": "#1f1f1f",
-            "editorLineNumber.activeForeground": "#6e7681"
+            // "statusBar.background": "#1f1f1f",
+            // "statusBar.border": "#1f1f1f",
+            "editorLineNumber.activeForeground": "#6e7681",
+            "editorOverviewRuler.border": "#1f1f1f",
         },
         "[Monokai Pro (Filter Ristretto)]": {
             "statusBar.background": "#2c2525",
             "statusBar.border": "#2c2525",
             "editorGroup.emptyBackground": "#2c2525",
-            "activityBar.background": "#2c2525",
+            "editor.lineHighlightBorder": "#2c2525",
 
             "tab.activeBorderTop": "#f9cc6c",
             "tab.activeBorder": "#2c2525",
             "tab.unfocusedActiveBorder": "#2c2525",
             "tab.unfocusedActiveBorderTop": "#948a8b",
             "editorHoverWidget.highlightForeground": "#ffd866",
-            "editorLineNumber.activeForeground": "#5b5353",
-            "editorSuggestWidget.selectedForeground": "#FFF1F3"
+            "editorLineNumber.activeForeground": "#5b5353"
+            // "editorSuggestWidget.selectedForeground": "#FFF1F3"
+        },
+        "[Visual Studio 2019 Light]": {
+            "statusBar.background": "#ffffff",
+            "statusBar.foreground": "#000000"
         },
         "[Rosé Pine (no italics)]": {
-            // F6C177
             "list.highlightForeground": "#e0def4",
             "list.focusHighlightForeground": "#e0def4",
             "editorSuggestWidget.focusHighlightForeground": "#e0def4",
@@ -333,7 +335,6 @@
     "csharpextensions.useFileScopedNamespace": true,
     "prettier.tabWidth": 4,
     "editor.inlineSuggest.enabled": false,
-    "editor.wordWrap": "on",
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "editor.insertSpaces": false,
     "editor.cursorSurroundingLines": 7,
@@ -369,8 +370,9 @@
     "workbench.iconTheme": "material-icon-theme",
     "editor.occurrencesHighlight": "off",
     "extensions.ignoreRecommendations": true,
-    "window.zoomLevel": 1,
-    "workbench.colorTheme": "Rosé Pine (no italics)",
+    "editor.cursorBlinking": "solid",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
     "workbench.activityBar.location": "hidden",
-    "editor.minimap.enabled": false
+    "window.zoomLevel": 1,
 }
