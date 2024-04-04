@@ -27,13 +27,6 @@ vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
--- Normal --
--- Better window navigation
--- keymap("n", "<C-h>", "<C-w>h", opts)
--- keymap("n", "<C-j>", "<C-w>j", opts)
--- keymap("n", "<C-k>", "<C-w>k", opts)
--- keymap("n", "<C-l>", "<C-w>l", opts)
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -47,15 +40,18 @@ keymap("n", "<leader>fc", ":%foldc<CR>")
 -- select all file
 keymap("n", "<leader>va", "ggVG", opts)
 
+-- tailwind sorter
+keymap("n", "<leader>tw", ":TailwindSort<CR>", opts)
+
 -- Navigate buffers
 -- Keyboard Shortcuts Switch windows of an application = Disabled (Ubuntu 20.04)
 keymap("n", "<A-`>", ":b#<CR>", opts)
 
 -- MISC
-keymap("n", "<leader>ds", ":nohl<CR>", opts)           -- remove highlights
+keymap("n", "<leader>ds", ":nohl<CR>", opts) -- remove highlights
 keymap("n", "<leader>ut", ":UndotreeToggle<CR>", opts) -- remove highlights
-keymap("n", "q", "<nop>", opts)                        -- remove q for disabling recording macros
-keymap("n", "Q", "<nop>", opts)                        -- remove Q
+keymap("n", "q", "<nop>", opts) -- remove q for disabling recording macros
+keymap("n", "Q", "<nop>", opts) -- remove Q
 
 -- Gitsigns
 -- keymap("n", "]h", ":Gitsigns next_hunk<CR>", opts)

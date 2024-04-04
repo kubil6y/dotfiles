@@ -4,18 +4,19 @@ require("rose-pine").setup({
 	disable_float_background = true,
 	disable_italics = true,
 	highlight_groups = {
-		--["@type.builtin"] = { fg = "pine" },
-		--CmpItemAbbrMatch = { fg = "subtle", bold = false },
-		--CmpItemAbbrMatchFuzzy = { fg = "text", bold = false },
-		["@type.qualifier"] = { fg = "pine" },
-		TreesitterContext = { bg = "#2b2842" },
-		NvimTreeCursorLine = { bg = "#2b2842" },
-		QuickFixLine = { bg = "#2b2842", fg = "text" },
-		qfLineNr = { fg = "text" },
-		PmenuSel = { bg = "#2b2842" },
-		TelescopeMatching = { fg = "#f5bc6d", bold = false }, -- f6c177,9c6cd7
-		TelescopeSelection = { fg = "text", bold = true },
-		TelescopeSelectionCaret = { fg = "text" },
+        TreesitterContext = { bg = "#2b2842" },
+        NvimTreeCursorLine = { bg = "#2b2842" },
+        QuickFixLine = { bg = "#2b2842", fg = "text" },
+        qfLineNr = { fg = "text" },
+        PmenuSel = { bg = "#2b2842" },
+
+        ["@comment.todo"] = { fg = "text", bg = "NONE", bold = true },
+        ["@comment.note"] = { fg = "text", bg = "NONE", bold = true },
+        ["@comment.error"] = { fg = "love", bg = "NONE", bold = true },
+        ["@comment.warning"] = { fg = "gold", bg = "NONE", bold = true },
+
+        TelescopeSelection = { fg = "#e0def4", bg = "#26233a", bold = true },
+        TelescopeSelectionCaret = { fg = "#e0def4", bg = "#26233a" },
 	},
 })
 
@@ -54,18 +55,11 @@ require("gruvbox").setup({
 })
 
 function _G.set_colors(color)
-	color = color or "gruvbox"
+	color = color or "rose-pine"
 	vim.cmd.colorscheme(color)
-    if color == "vscode" then
-        vim.cmd([[ hi @text.uri guifg=#6a9955 gui=underline ]])
-        vim.cmd([[ hi PmenuSel guibg=#04395e guifg=#NONE ]])
-        vim.cmd([[ hi NvimTreeNormal guibg=#1f1f1f ]])
-        vim.cmd([[ hi Normal guibg=#1f1f1f ]])
-        vim.cmd([[ hi markdownBoldItalic guifg=#18a2fe gui=bold ]])
-    end
 	--vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 	vim.api.nvim_set_hl(0, "hl_inlay_hints", { fg = "#59566d" })
 end
 
-set_colors("vscode")
+set_colors()

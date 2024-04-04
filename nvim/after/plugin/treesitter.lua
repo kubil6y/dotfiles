@@ -8,6 +8,7 @@ require("nvim-treesitter.configs").setup({
     autotag = {
         enable = true,
         enable_close_on_slash = false,
+        enable_rename = false,
     },
     indent = { enable = true, disable = { "" } }, -- fucking shit
     textobjects = {

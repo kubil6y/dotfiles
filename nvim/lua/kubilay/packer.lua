@@ -20,9 +20,6 @@ return require("packer").startup(function(use)
 		as = "rose-pine",
 	})
 	use("ellisonleao/gruvbox.nvim")
-	--use("tjdevries/colorbuddy.nvim")
-	--use("tjdevries/gruvbuddy.nvim")
-	use("Mofiqul/vscode.nvim")
 
 	use({
 		"folke/trouble.nvim",
@@ -60,6 +57,8 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	use({ "kyazdani42/nvim-tree.lua", commit = "904f95cd9db31d1800998fa428e78e418a50181d" })
 	use("norcalli/nvim-colorizer.lua")
+    -- requires npm ci && npm run build
+    use("laytan/tailwind-sorter.nvim")
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
