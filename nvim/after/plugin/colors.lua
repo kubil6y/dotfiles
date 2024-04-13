@@ -4,11 +4,12 @@ require("rose-pine").setup({
 	disable_float_background = true,
 	disable_italics = true,
 	highlight_groups = {
-        TreesitterContext = { bg = "#2b2842" },
-        NvimTreeCursorLine = { bg = "#2b2842" },
-        QuickFixLine = { bg = "#2b2842", fg = "text" },
+        -- 2b2842,26233a
+        TreesitterContext = { bg = "#26233a" },
+        NvimTreeCursorLine = { bg = "#26233a" },
+        QuickFixLine = { bg = "#26233a", fg = "text" },
         qfLineNr = { fg = "text" },
-        PmenuSel = { bg = "#2b2842" },
+        PmenuSel = { bg = "#26233a" },
 
         ["@comment.todo"] = { fg = "text", bg = "NONE", bold = true },
         ["@comment.note"] = { fg = "text", bg = "NONE", bold = true },
@@ -60,6 +61,11 @@ function _G.set_colors(color)
 	--vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 	vim.api.nvim_set_hl(0, "hl_inlay_hints", { fg = "#59566d" })
+
+    if color == "gruvbuddy"  then
+        vim.cmd([[ hi LineNr guifg=#383b40 ]])
+        vim.cmd([[ hi TelescopeSelection guibg=#383b40 ]])
+    end
 end
 
 set_colors()
