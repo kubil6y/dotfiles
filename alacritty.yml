@@ -3,7 +3,7 @@ env:
 cursor:
     style:
         shape: Block
-        blinking: always #always,never
+        blinking: never #always,never
     blink_interval: 450
 window:
     opacity: 1
@@ -32,8 +32,8 @@ colors:
         text: "#121212"
         cursor: "#e0def4" 
     primary:
-        #191724,161520,13121c
-        background: "#191724"
+        #191724,181622,1a1b26
+        background: "#1a1b26"
         #fg:fffbf6,e0def4,e0e0e0
         foreground: "#e0def4"
     normal:
