@@ -8,7 +8,7 @@ vim.keymap.set("n", "<C-F>", builtin.lsp_document_symbols, {})
 local actions = require("telescope.actions")
 require("telescope").setup({
 	defaults = {
-		prompt_prefix = " ",
+		prompt_prefix = "  ",
 		selection_caret = " ",
 		path_display = { "smart" },
 		file_ignore_patterns = {},
@@ -22,7 +22,7 @@ require("telescope").setup({
             vertical = {
                 mirror = false,
             },
-            width = 0.87,
+            width = 0.88,
             height = 0.80,
             preview_cutoff = 120,
         },

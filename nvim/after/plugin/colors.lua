@@ -4,6 +4,8 @@ require("rose-pine").setup({
 	disable_float_background = true,
 	disable_italics = true,
 	highlight_groups = {
+        --Comment = { italic = true },
+
 		-- 2b2842,26233a
 		TreesitterContext = { bg = "#26233a" },
 		NvimTreeCursorLine = { bg = "#26233a" },
@@ -105,4 +107,4 @@ function _G.set_colors(color)
 	end
 end
 
-set_colors("tokyonight-night")
+set_colors()

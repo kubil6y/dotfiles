@@ -9,31 +9,31 @@ window:
     opacity: 1
     decorations: none
 font:
-    size: 15.5
+    #size: 15.5
+    size: 17.5
     normal:
-        family: MonoLisa Static
+        ## MonoLisa,JetBrainsMono,Berkeley Mono
+        family: Berkeley Mono
         style: Regular
     bold:
-        family: MonoLisa Static
+        family: Berkeley Mono
         style: Bold
     italic:
-        family: MonoLisa Static
+        family: Berkeley Mono
         style: Italic
     bold_italic:
-        family: MonoLisa Static
+        family: Berkeley Mono
         style: Bold Italic
 key_bindings:
     - { key: F11, action: ToggleFullscreen }
 
-   
-
 colors:
     cursor:
         text: "#121212"
-        cursor: "#e0def4" 
+        cursor: "#e0def4"
     primary:
         #191724,181622,1a1b26
-        background: "#1a1b26"
+        background: "#191724"
         #fg:fffbf6,e0def4,e0e0e0
         foreground: "#e0def4"
     normal:
@@ -55,6 +55,7 @@ colors:
         magenta: "#a47de9"
         cyan: "#99faf2"
         white: "#ffffff"
+
 
 
 #colors:

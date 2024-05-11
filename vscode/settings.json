@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "MonoLisa Static",
+    "editor.fontFamily": "MonoLisa",
     "editor.suggestSelection": "first",
     "editor.renderLineHighlight": "none",
     "editor.codeLens": false,
@@ -185,6 +185,7 @@
             "statusBar.foreground": "#000000"
         },
         "[Rosé Pine (no italics)]": {
+            // "editorOverviewRuler.border": "#191724",
             "list.highlightForeground": "#e0def4",
             "list.focusHighlightForeground": "#e0def4",
             "editorSuggestWidget.focusHighlightForeground": "#e0def4",
@@ -338,8 +339,8 @@
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "editor.insertSpaces": false,
     "editor.cursorSurroundingLines": 7,
-    "terminal.integrated.fontSize": 16,
-    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 17,
+    "editor.fontSize": 17,
     "scm.diffDecorationsGutterPattern": {
         "added": true
     },
@@ -375,4 +376,5 @@
     "editor.minimap.enabled": false,
     "workbench.activityBar.location": "hidden",
     "window.zoomLevel": 1,
+    "workbench.colorTheme": "Rosé Pine (no italics)",
 }
