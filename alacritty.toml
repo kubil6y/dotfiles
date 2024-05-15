@@ -1,5 +1,65 @@
+## iTerm Default ####################
+[colors.primary]
+background = "#101421"
+foreground = "#fffbf6"
+
+[colors.normal]
+black = "#2e2e2e"
+red = "#eb4129"
+green = "#abe047"
+yellow = "#f6c744"
+blue = "#47a0f3"
+magenta = "#7b5cb0"
+cyan = "#64dbed"
+white = "#e5e9f0"
+
+[colors.bright]
+black = "#565656"
+red = "#ec5357"
+green = "#c0e17d"
+yellow = "#f9da6a"
+blue = "#49a4f8"
+magenta = "#a47de9"
+cyan = "#99faf2"
+white = "#ffffff"
+
+
+## ROSE PINE ####################
+#[colors.primary]
+## 191724,181622
+#background = "#181622"
+#foreground = "#e0def4"
+
+#[colors.bright]
+#black = "#565656"
+#blue = "#49a4f8"
+#cyan = "#99faf2"
+#green = "#c0e17d"
+#magenta = "#a47de9"
+#red = "#ec5357"
+#white = "#ffffff"
+#yellow = "#f9da6a"
+
+#[colors.cursor]
+#cursor = "#e0def4"
+#text = "#121212"
+
+#[colors.normal]
+#black = "#121212"
+#blue = "#47a0f3"
+#cyan = "#64dbed"
+#green = "#abe047"
+#magenta = "#7b5cb0"
+#red = "#eb4129"
+#white = "#e5e9f0"
+#yellow = "#f6c744"
+
+
+########################################
+# SETTINGS
+########################################
 [cursor]
-blink_interval = 450
+blink_interval = 500
 
 [cursor.style]
 blinking = "never"
@@ -36,34 +96,3 @@ key = "F11"
 [window]
 decorations = "none"
 opacity = 1
-
-## ROSE PINE
-
-[colors.primary]
-# 191724,181622
-background = "#181622"
-foreground = "#e0def4"
-
-[colors.bright]
-black = "#565656"
-blue = "#49a4f8"
-cyan = "#99faf2"
-green = "#c0e17d"
-magenta = "#a47de9"
-red = "#ec5357"
-white = "#ffffff"
-yellow = "#f9da6a"
-
-[colors.cursor]
-cursor = "#e0def4"
-text = "#121212"
-
-[colors.normal]
-black = "#121212"
-blue = "#47a0f3"
-cyan = "#64dbed"
-green = "#abe047"
-magenta = "#7b5cb0"
-red = "#eb4129"
-white = "#e5e9f0"
-yellow = "#f6c744"

@@ -9,8 +9,8 @@ local function custom_theme(theme)
 		fg = "#e0def4"
 	elseif theme == "gruvbuddy" then
 		fg = "#e0e0e0"
-	elseif theme == "vscode" then
-		fg = "#d4d4d4"
+	elseif theme == "iterm" then
+		fg = "#fffbf6"
 	end
 
 	local colors = {
@@ -68,7 +68,7 @@ lualine.setup({
 	options = {
 		globalstatus = true,
 		icons_enabled = true,
-		theme = custom_theme(),
+		theme = custom_theme("iterm"),
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard" },

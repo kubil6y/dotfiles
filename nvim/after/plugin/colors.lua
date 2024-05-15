@@ -101,6 +101,7 @@ function _G.set_colors(color)
 	vim.api.nvim_set_hl(0, "hl_inlay_hints", { fg = "#59566d" })
 
 	if color == "gruvbuddy" then
+        vim.cmd([[ hi Comment gui=none guifg=#b0b1b0 ]])
 		vim.cmd([[ hi LineNr guifg=#383b40 ]])
 		vim.cmd([[ hi TelescopeSelection guibg=#333951 ]])
 		vim.cmd([[hi @function.method.call gui=bold guifg=#f8fe7a ]])
