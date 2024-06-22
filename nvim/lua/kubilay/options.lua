@@ -69,3 +69,5 @@ vim.cmd("command! -nargs=* W w") -- save with :W
 vim.cmd("command! Wq wq")
 vim.cmd("command! Wa wa")
 --vim.cmd([[ set list listchars=eol:↲ ]])
+
+vim.cmd('autocmd BufNewFile,BufRead *.jet setfiletype html')
