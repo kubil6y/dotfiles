@@ -97,10 +97,10 @@ local cmp_sources = {
 }
 
 lsp.setup_nvim_cmp({
-    --preselect = "none",
-    --completion = {
-        --completeopt = "menu,menuone,noinsert,noselect",
-    --},
+    preselect = "none",
+    completion = {
+        completeopt = "menu,menuone,noinsert,noselect",
+    },
     mapping = cmp_mappings,
     formatting = cmp_formatting,
     sources = cmp_sources,

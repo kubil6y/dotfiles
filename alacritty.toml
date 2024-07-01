@@ -1,7 +1,12 @@
 ## iTerm Default ####################
 [colors.primary]
-background = "#101421"
+# 101421,121212,#0d1117
+background = "#121212"
 foreground = "#fffbf6"
+
+[colors.cursor]
+#cursor = "#fffbf6"
+#text = "#101421"
 
 [colors.normal]
 black = "#2e2e2e"
@@ -22,7 +27,6 @@ blue = "#49a4f8"
 magenta = "#a47de9"
 cyan = "#99faf2"
 white = "#ffffff"
-
 
 ## ROSE PINE ####################
 #[colors.primary]
@@ -69,7 +73,9 @@ shape = "Block"
 TERM = "xterm-256color"
 
 [font]
-size = 17.5
+# MonoLisa 18,19.5
+# Berkeley 18,19.5,20.2
+size = 19.5
 
 ## MonoLisa,JetBrainsMono,Berkeley Mono
 [font.normal]
@@ -87,7 +93,6 @@ style = "Bold Italic"
 [font.italic]
 family = "Berkeley Mono"
 style = "Italic"
-
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
