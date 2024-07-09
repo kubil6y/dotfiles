@@ -1,3 +1,33 @@
+require("nightfall").setup({
+	compile_path = vim.fn.stdpath("cache") .. "/nightfall",
+	transparent = false,
+	terminal_colors = true,
+	dim_inactive = false,
+	styles = {
+		comments = { italic = true },
+		keywords = { italic = false },
+		functions = {},
+		variables = {},
+		numbers = {},
+		conditionals = {},
+		constants = {},
+		operators = {},
+		strings = {},
+		types = {},
+		booleans = {},
+		loops = {},
+	},
+	default_integrations = true,
+	integrations = {
+		lazy = { enabled = true },
+		telescope = { enabled = true, style = "borderless" },
+		illuminate = { enabled = true },
+		treesitter = { enabled = true, context = true },
+		lspconfig = { enabled = true },
+		flash = { enabled = false },
+	},
+})
+
 require("tokyonight").setup({
 	-- your configuration comes here
 	-- or leave it empty to use the default settings
@@ -114,9 +144,33 @@ function _G.set_colors(color)
 		vim.cmd([[ hi @comment.note guifg=#e0e0e0 gui=bold ]])
 		vim.cmd([[ hi @comment.error guifg=#cc6666 gui=bold ]])
 		vim.cmd([[ hi @comment.warning guifg=#de935f gui=bold ]])
-	end
 
-	if color == "tokyonight" then
+        --vim.cmd([[
+        --augroup MyKeywordHighlight
+        --autocmd!
+        --autocmd FileType html,javascript,javascriptreact,typescriptreact hi @tag guifg=#a992cd gui=bold
+        --autocmd FileType html,javascript,javascriptreact,typescriptreact hi @tag.attribute guifg=#79b5ad gui=NONE
+        --augroup END
+        --]])
+    end
+
+    if color == "github_dark_default" then
+        --vim.cmd([[ hi String guifg=#f6c177 ]])
+        vim.cmd([[ hi @constant.builtin gui=bold guifg=#79c0ff ]])
+        vim.cmd ([[ hi CmpItemAbbrMatch guifg=none ]])
+        vim.cmd ([[ hi PmenuSel gui=none ]])
+        vim.cmd([[ hi TelescopeNormal guifg=#8b949e ]])
+        vim.cmd([[ hi TelescopeSelection guibg=#1b232f guifg=#e6edf3 gui=bold ]])
+        vim.cmd([[ hi TelescopeSelectionCaret guibg=#1b232f ]])
+        vim.cmd([[ hi TelescopeMatching guibg=none guifg=#d2a8ff ]])
+        vim.cmd([[ hi @comment.todo guifg=#e6edf3 guibg=NONE gui=bold ]])
+        vim.cmd([[ hi @comment.note guifg=#e6edf3 guibg=NONE gui=bold ]])
+        vim.cmd([[ hi @comment.error guifg=#cc6666 guibg=NONE gui=bold ]])
+        vim.cmd([[ hi @comment.warning guifg=#de935f guibg=NONE gui=bold ]])
+    end
+
+	if color == "nightfall" or color == "tokyonight" then
+        vim.cmd([[ hi Visual gui=NONE ]])
 		vim.cmd([[ hi DiagnosticVirtualTextError guibg=NONE ]])
 		vim.cmd([[ hi DiagnosticVirtualTextHint guibg=NONE ]])
 		vim.cmd([[ hi DiagnosticVirtualTextInfo guibg=NONE ]])
@@ -125,4 +179,4 @@ function _G.set_colors(color)
 	end
 end
 
-set_colors()
+set_colors("gruvbuddy")

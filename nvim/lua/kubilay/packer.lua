@@ -18,6 +18,8 @@ return require("packer").startup(function(use)
     use("tjdevries/colorbuddy.nvim")
     use("ellisonleao/gruvbox.nvim")
     use("folke/tokyonight.nvim")
+    use("2giosangmitom/nightfall.nvim")
+    use("projekt0n/github-nvim-theme")
 
     use({
         "folke/trouble.nvim",

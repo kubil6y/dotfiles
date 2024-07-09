@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
   },
+  ["nightfall.nvim"] = {
+    loaded = true,
+    path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/nightfall.nvim",
+    url = "https://github.com/2giosangmitom/nightfall.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -250,6 +255,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["trouble.nvim"] = {
     config = { "\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0" },
