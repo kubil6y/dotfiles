@@ -171,11 +171,11 @@ function _G.set_colors(color)
 
 	if color == "nightfall" or color == "tokyonight" then
         vim.cmd([[ hi Visual gui=NONE ]])
-		vim.cmd([[ hi DiagnosticVirtualTextError guibg=NONE ]])
-		vim.cmd([[ hi DiagnosticVirtualTextHint guibg=NONE ]])
-		vim.cmd([[ hi DiagnosticVirtualTextInfo guibg=NONE ]])
-		vim.cmd([[ hi DiagnosticVirtualTextOk guibg=NONE ]])
-		vim.cmd([[ hi DiagnosticVirtualTextWarn guibg=NONE ]])
+        vim.cmd([[ hi DiagnosticVirtualTextError guibg=NONE ]])
+        vim.cmd([[ hi DiagnosticVirtualTextHint guibg=NONE ]])
+        vim.cmd([[ hi DiagnosticVirtualTextInfo guibg=NONE ]])
+        vim.cmd([[ hi DiagnosticVirtualTextOk guibg=NONE ]])
+        vim.cmd([[ hi DiagnosticVirtualTextWarn guibg=NONE ]])
 	end
 end
 
