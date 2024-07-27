@@ -1,46 +1,46 @@
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup({
-    -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { "html", "javascript", "typescript", "c", "lua" },
-    ignore_install = { "vimdoc", "help" },
-    highlight = { enable = true },
-    autotag = {
-        enable = true,
-        enable_close_on_slash = false,
-        enable_rename = false,
-    },
-    indent = { enable = true, disable = { "" } }, -- fucking shit
-    textobjects = {
-        select = {
-            enable = true,
-            disable = { "html", "css", "typescriptreact" },
-            lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-            keymaps = {
-                -- You can use the capture groups defined in textobjects.scm
-                ["aa"] = "@parameter.outer",
-                ["ia"] = "@parameter.inner",
-                ["af"] = "@function.outer",
-                ["if"] = "@function.inner",
-                -- 'at'and 'it' conflict with dom element selections
-                --['at'] = '@class.outer',
-                --['it'] = '@class.inner',
-            },
-        },
-        move = {
-            enable = true,
-            disable = { "html", "css" },
-            set_jumps = true, -- whether to set jumps in the jumplist
-            goto_next_start = {
-                ["]f"] = "@function.outer",
-                ["]t"] = "@class.outer",
-            },
-            goto_previous_start = {
-                ["[f"] = "@function.outer",
-                ["[t"] = "@class.outer",
-            },
-        },
-    },
+	-- Add languages to be installed here that you want installed for treesitter
+	ensure_installed = { "html", "javascript", "typescript", "c", "lua" },
+	ignore_install = { "vimdoc", "help" },
+	highlight = { enable = true },
+	autotag = {
+		enable = true,
+		enable_close_on_slash = false,
+		enable_rename = false,
+	},
+	indent = { enable = true, disable = { "" } }, -- fucking shit
+	textobjects = {
+		select = {
+			enable = true,
+			disable = { "html", "css", "typescriptreact" },
+			lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
+			keymaps = {
+				-- You can use the capture groups defined in textobjects.scm
+				["aa"] = "@parameter.outer",
+				["ia"] = "@parameter.inner",
+				["af"] = "@function.outer",
+				["if"] = "@function.inner",
+				-- 'at'and 'it' conflict with dom element selections
+				--['at'] = '@class.outer',
+				--['it'] = '@class.inner',
+			},
+		},
+		move = {
+			enable = true,
+			disable = { "html", "css" },
+			set_jumps = true, -- whether to set jumps in the jumplist
+			goto_next_start = {
+				["]f"] = "@function.outer",
+				["]t"] = "@class.outer",
+			},
+			goto_previous_start = {
+				["[f"] = "@function.outer",
+				["[t"] = "@class.outer",
+			},
+		},
+	},
 })
 
 local context_ok, context = pcall(require, "treesitter-context")
@@ -50,7 +50,7 @@ end
 
 context.setup({
 	enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
-	max_lines = 1, -- How many lines the window should span. Values <= 0 mean no limit.
+	max_lines = 2, -- How many lines the window should span. Values <= 0 mean no limit.
 	trim_scope = "outer", -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
 	min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
 	patterns = {
