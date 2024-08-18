@@ -1,13 +1,13 @@
 # iTerm Default ####################
 [colors.primary]
-# 101421,#0d1117,#141523
-background = "#111111"
+# 101421,#0d1117,#141523,191724
+background = "#121212"
 foreground = "#fffbf6"
 
 [colors.cursor]
-#fffbf6,99cc99
-cursor = "#fffbf6" 
-text = "#101421"
+#fffbf6,99cc99,e0def4
+cursor = "#e0e0e0" 
+text = "#121212"
 
 [colors.normal]
 black = "#2e2e2e"
@@ -75,24 +75,24 @@ TERM = "xterm-256color"
 
 [font]
 # MonoLisa 18,19.5
-# Berkeley 18,18.2,19
-size = 18.8
+# Berkele 18,18.2,19
+size = 18.4
 
 ## MonoLisa,JetBrainsMono,Berkeley Mono
 [font.normal]
-family = "BerkeleyMono"
+family = "Berkeley Mono"
 style = "Regular"
 
 [font.bold]
-family = "BerkeleyMono"
+family = "Berkeley Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "BerkeleyMono"
+family = "Berkeley Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "BerkeleyMono"
+family = "Berkeley Mono"
 style = "Italic"
 
 [[keyboard.bindings]]
@@ -101,4 +101,4 @@ key = "F11"
 
 [window]
 decorations = "none"
-opacity = 0.95
+opacity = 1

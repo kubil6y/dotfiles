@@ -97,13 +97,13 @@ local cmp_sources = {
 }
 
 lsp.setup_nvim_cmp({
-    preselect = "none",
-    completion = {
-        completeopt = "menu,menuone,noinsert,noselect",
-    },
-    mapping = cmp_mappings,
-    formatting = cmp_formatting,
-    sources = cmp_sources,
+	preselect = "none",
+	completion = {
+		completeopt = "menu,menuone,noinsert,noselect",
+	},
+	mapping = cmp_mappings,
+	formatting = cmp_formatting,
+	sources = cmp_sources,
 })
 
 lsp.set_preferences({
@@ -146,16 +146,19 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.black,
 		--null_ls.builtins.diagnostics.eslint,
-		--null_ls.builtins.formatting.prismaFmt.with({
-			--extra_args = { "--tab-width", "2" },
-		--}),
 		null_ls.builtins.formatting.prettier.with({
-			extra_args = { "--tab-width", "4" },
+			extra_args = function(params)
+				if params.ft == "markdown" then
+					return { "--tab-width", "2" }
+				else
+					return { "--tab-width", "4" }
+				end
+			end,
 		}),
 	},
 })
 
-local rust_lsp = lsp.build_options('rust_analyzer', {})
+local rust_lsp = lsp.build_options("rust_analyzer", {})
 local rust_opts = {
 	tools = {
 		inlay_hints = {

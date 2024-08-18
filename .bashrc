@@ -121,10 +121,28 @@ fi
 # PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
 
 #PROMPT_DIRTRIM=1
+
 PS1="🦅:\[\033[01;34m\]\W\[\033[00m\]$ "
 alias open='xdg-open'
 alias vim='nvim'
 alias vi='nvim'
 
-# keyboard settings
+# Keyboard settings
 xset r rate 190 20
+
+# pnpm
+export PNPM_HOME="/home/kubilay/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+#export GREENLIGHT_DB_DSN='postgres://greenlight:pa55w0rd@localhost/greenlight'
+export GODOT="/usr/local/bin/Godot/Godot_v4.1.1-stable_mono_linux.x86_64"

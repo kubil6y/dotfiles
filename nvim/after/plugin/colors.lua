@@ -71,20 +71,20 @@ require("rose-pine").setup({
 	disable_italics = true,
 	highlight_groups = {
 		Comment = { italic = true },
-        TreesitterContext = { bg = "#26233a" },
+		TreesitterContext = { bg = "#26233a" },
 		["@comment.todo"] = { fg = "text", bg = "NONE", bold = true },
 		["@comment.note"] = { fg = "text", bg = "NONE", bold = true },
 		["@comment.error"] = { fg = "love", bg = "NONE", bold = true },
 		["@comment.warning"] = { fg = "gold", bg = "NONE", bold = true },
 
-        Pmenu = { bg = "#1f1d2e" },
-        --NvimTreeCursorLine = { bg = "#26233a" },
-        --QuickFixLine = { bg = "#26233a", fg = "text" },
-        --qfLineNr = { fg = "text" },
+		Pmenu = { bg = "#1d1b2a" }, -- 1d1b2a,232033,262439
+		--NvimTreeCursorLine = { bg = "#26233a" },
+		--QuickFixLine = { bg = "#26233a", fg = "text" },
+		--qfLineNr = { fg = "text" },
 
-        --TelescopeSelection = { fg = "#e0def4", bg = "#26233a", bold = true },
-        --TelescopeSelectionCaret = { fg = "#e0def4", bg = "#26233a" },
-        --TelescopeNormal = { fg = "#635e80" },
+		--TelescopeSelection = { fg = "#e0def4", bg = "#26233a", bold = true },
+		--TelescopeSelectionCaret = { fg = "#e0def4", bg = "#26233a" },
+		--TelescopeNormal = { fg = "#635e80" },
 		--PmenuSel = { bg = "#26233a" },
 	},
 })
@@ -131,12 +131,9 @@ function _G.set_colors(color)
 	vim.api.nvim_set_hl(0, "hl_inlay_hints", { fg = "#59566d" })
 
 	if color == "gruvbuddy" then
-		--vim.cmd([[ hi @function.method.call gui=bold guifg=#f8fe7a ]])
-		--vim.cmd([[ hi @function.call gui=bold guifg=#f8fe7a ]])
-		--vim.cmd([[ hi @function gui=bold guifg=#f8fe7a ]])
-
 		vim.cmd([[ hi LineNr guifg=#41454a ]])
 		vim.cmd([[ hi TreesitterContext guibg=#2b2b2b ]])
+		vim.cmd([[ hi TreesitterContextLineNumber guifg=#e0e0e0 ]])
 		vim.cmd([[ hi TelescopeSelection guifg=#e0e0e0 guibg=#333951 gui=bold ]])
 		vim.cmd([[ hi TelescopeMatching guifg=#e89155 gui=NONE ]])
 		vim.cmd([[ hi TelescopeNormal guifg=#b0b1b0 ]])
@@ -145,29 +142,20 @@ function _G.set_colors(color)
 		vim.cmd([[ hi @comment.note guifg=#e0e0e0 gui=bold ]])
 		vim.cmd([[ hi @comment.error guifg=#cc6666 gui=bold ]])
 		vim.cmd([[ hi @comment.warning guifg=#de935f gui=bold ]])
-
-		--vim.cmd([[
-		--augroup MyKeywordHighlight
-		--autocmd!
-		--autocmd FileType html,javascript,javascriptreact,typescriptreact hi @tag guifg=#a992cd gui=bold
-		--autocmd FileType html,javascript,javascriptreact,typescriptreact hi @tag.attribute guifg=#79b5ad gui=NONE
-		--augroup END
-		--]])
 	end
 
 	if color == "github_dark_default" then
+		vim.cmd([[ hi FloatBorder guifg=#2b2b2b ]])
 		vim.cmd([[ hi Comment guifg=#8b949e gui=italic ]])
 		vim.cmd([[ hi @constant.builtin gui=bold guifg=#79c0ff ]])
-		--vim.cmd([[ hi MatchParen guifg=#d2a8ff guibg=none gui=bold ]])
 		vim.cmd([[ hi WinSeparator guifg=#6e7681 ]])
 		vim.cmd([[ hi CmpItemAbbrMatch guifg=none ]])
-		vim.cmd([[ hi PmenuSel guibg=#212b3a ]])
-		--vim.cmd([[ hi Pmenu guibg=#212b3a ]])
-		vim.cmd([[ hi TreesitterContext guibg=#212b3a ]])
-		vim.cmd([[ hi NvimTreeCursorLine guibg=#212b3a ]])
+		vim.cmd([[ hi Pmenu guibg=#202937 ]])
+		vim.cmd([[ hi TreesitterContext guibg=#202937 ]])
+		vim.cmd([[ hi NvimTreeCursorLine guibg=#202937 ]])
 		vim.cmd([[ hi TelescopeNormal guifg=#8b949e ]])
-		vim.cmd([[ hi TelescopeSelection guibg=#212b3a guifg=#e6edf3 gui=bold ]])
-		vim.cmd([[ hi TelescopeSelectionCaret guibg=#212b3a ]])
+		vim.cmd([[ hi TelescopeSelection guibg=#202937 guifg=#e6edf3 gui=bold ]])
+		vim.cmd([[ hi TelescopeSelectionCaret guibg=#202937 ]])
 		vim.cmd([[ hi TelescopeMatching guibg=none guifg=#ffa657 ]])
 		vim.cmd([[ hi @comment.todo guifg=#e6edf3 guibg=NONE gui=bold ]])
 		vim.cmd([[ hi @comment.note guifg=#e6edf3 guibg=NONE gui=bold ]])
@@ -183,6 +171,21 @@ function _G.set_colors(color)
 		vim.cmd([[ hi DiagnosticVirtualTextOk guibg=NONE ]])
 		vim.cmd([[ hi DiagnosticVirtualTextWarn guibg=NONE ]])
 	end
+
+	if color == "nightfall" then
+		vim.cmd([[ hi Pmenu guibg=#202137 ]])
+		vim.cmd([[ hi @constant.builtin gui=bold guifg=#e9e9f4 ]])
+		vim.cmd([[ hi @comment.todo guifg=#f2fa95 guibg=#272736 ]])
+	end
+
+	-- For changing html tag colors
+	--vim.cmd([[
+	--augroup MyKeywordHighlight
+	--autocmd!
+	--autocmd FileType html,javascript,javascriptreact,typescriptreact hi @tag guifg=#a992cd gui=bold
+	--autocmd FileType html,javascript,javascriptreact,typescriptreact hi @tag.attribute guifg=#79b5ad gui=NONE
+	--augroup END
+	--]])
 end
 
-set_colors()
+set_colors("gruvbuddy")

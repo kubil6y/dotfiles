@@ -79,6 +79,10 @@ keymap("v", "<leader>p", '"_dP')
 keymap("x", "<leader>d", '"_d')
 keymap("v", "<leader>d", '"_d')
 
+-- vim figutive
+keymap("n", "gh", "<cmd>diffget //2<CR>")
+keymap("n", "gl", "<cmd>diffget //3<CR>")
+
 -- for easy formatting with prismaFmt
 keymap("n", "<leader>wn", ":set sw=2<CR>") -- width narrow
 keymap("n", "<leader>wl", ":set sw=4<CR>") -- width large
@@ -87,7 +91,8 @@ keymap("n", "<leader>wl", ":set sw=4<CR>") -- width large
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 
 --keymap("n", "<C-u>", "10k", opts)
-keymap("n", "<C-d>", "10j", opts)
+--keymap("n", "<C-d>", "10j", opts)
+
 --keymap("n", "n", "nzzzv")
 --keymap("n", "N", "Nzzzv")
 --keymap("i", "<C-u>", "<C-e><C-u>")

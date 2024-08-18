@@ -1,9 +1,9 @@
 {
-    "editor.fontFamily": "MonoLisa",
+    "editor.fontFamily": "Berkeley Mono",
     "editor.suggestSelection": "first",
     "editor.renderLineHighlight": "none",
     "editor.codeLens": false,
-    "editor.lightbulb.enabled": false,
+    "editor.lightbulb.enabled": "off",
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.scrollbar.vertical": "hidden",
@@ -186,6 +186,8 @@
         },
         "[Rosé Pine (no italics)]": {
             // "editorOverviewRuler.border": "#191724",
+            // "editor.background" : "#121212",
+            // "editorGutter.background" :"#121212",
             "list.highlightForeground": "#e0def4",
             "list.focusHighlightForeground": "#e0def4",
             "editorSuggestWidget.focusHighlightForeground": "#e0def4",
@@ -339,8 +341,8 @@
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "editor.insertSpaces": false,
     "editor.cursorSurroundingLines": 7,
-    "terminal.integrated.fontSize": 17,
-    "editor.fontSize": 17,
+    "editor.fontSize": 19.5,
+    "terminal.integrated.fontSize": 20,
     "scm.diffDecorationsGutterPattern": {
         "added": true
     },
@@ -376,5 +378,5 @@
     "editor.minimap.enabled": false,
     "workbench.activityBar.location": "hidden",
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Rosé Pine (no italics)",
+    "prisma.showPrismaDataPlatformNotification": false,
 }
