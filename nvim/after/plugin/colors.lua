@@ -77,7 +77,7 @@ require("rose-pine").setup({
 		["@comment.error"] = { fg = "love", bg = "NONE", bold = true },
 		["@comment.warning"] = { fg = "gold", bg = "NONE", bold = true },
 
-		Pmenu = { bg = "#1d1b2a" }, -- 1d1b2a,232033,262439
+		Pmenu = { bg = "#232033" }, -- 1d1b2a,232033,262439
 		--NvimTreeCursorLine = { bg = "#26233a" },
 		--QuickFixLine = { bg = "#26233a", fg = "text" },
 		--qfLineNr = { fg = "text" },
@@ -110,14 +110,10 @@ require("gruvbox").setup({
 	transparent_mode = true,
 	palette_overrides = {},
 	overrides = {
-		["@type.qualifier"] = { fg = "#fb4934" },
+		--["@type.qualifier"] = { fg = "#fb4934" },
 		["@text.danger.comment"] = { fg = "#fb4934", bg = "NONE" },
 		Todo = { fg = "#ebdbb2", bg = "NONE" },
 		TreesitterContext = { bg = "#3c3836" },
-		-- autocomplete
-		--Pmenu = { bg = "" },
-		--PmenuSel = { fg = "#ebdbb2", bg = "#504945", bold = false },
-		--CmpItemAbbr = { fg = "#928374" },
 		CmpItemAbbrMatch = { fg = "", bold = false },
 		CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
 	},
@@ -188,4 +184,4 @@ function _G.set_colors(color)
 	--]])
 end
 
-set_colors("gruvbuddy")
+set_colors()
