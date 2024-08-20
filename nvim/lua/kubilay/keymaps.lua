@@ -90,8 +90,8 @@ keymap("n", "<leader>wl", ":set sw=4<CR>") -- width large
 -- NvimTree
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 
---keymap("n", "<C-u>", "10k", opts)
---keymap("n", "<C-d>", "10j", opts)
+keymap("n", "<C-u>", "10k", opts)
+keymap("n", "<C-d>", "10j", opts)
 
 --keymap("n", "n", "nzzzv")
 --keymap("n", "N", "Nzzzv")

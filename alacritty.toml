@@ -6,7 +6,7 @@ foreground = "#fffbf6"
 
 [colors.cursor]
 #fffbf6,99cc99,e0def4
-cursor = "#e0e0e0" 
+cursor = "#fffbf6" 
 text = "#121212"
 
 [colors.normal]

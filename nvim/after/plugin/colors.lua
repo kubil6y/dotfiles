@@ -77,7 +77,7 @@ require("rose-pine").setup({
 		["@comment.error"] = { fg = "love", bg = "NONE", bold = true },
 		["@comment.warning"] = { fg = "gold", bg = "NONE", bold = true },
 
-		Pmenu = { bg = "#232033" }, -- 1d1b2a,232033,262439
+		Pmenu = { bg = "#262439" }, -- 1d1b2a,232033,262439
 		--NvimTreeCursorLine = { bg = "#26233a" },
 		--QuickFixLine = { bg = "#26233a", fg = "text" },
 		--qfLineNr = { fg = "text" },
