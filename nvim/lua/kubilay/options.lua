@@ -52,6 +52,7 @@ local options = {
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.nvim_tree_respect_buf_cwd = 1
+vim.g.editorconfig = true
 
 -- fixes press enter issues with long messages (ex: nvim-tree)
 -- for more information :h shortmess
@@ -60,6 +61,7 @@ vim.opt.shortmess:append("c")
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
 
 -- TODO
 vim.cmd("set clipboard+=unnamed") -- clipboard + nvim

@@ -13,6 +13,14 @@ return require("packer").startup(function(use)
         requires = { { "nvim-lua/plenary.nvim" } },
     })
 
+    -- install without yarn or npm
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function()
+            vim.fn["mkdp#util#install"]()
+        end,
+    })
+
     -- Colorschemes
     use({ "rose-pine/neovim", as = "rose-pine" })
     use("tjdevries/colorbuddy.nvim")
@@ -20,6 +28,7 @@ return require("packer").startup(function(use)
     use("folke/tokyonight.nvim")
     use("2giosangmitom/nightfall.nvim")
     use("projekt0n/github-nvim-theme")
+    use("Mofiqul/vscode.nvim")
 
     use({
         "folke/trouble.nvim",
@@ -50,10 +59,10 @@ return require("packer").startup(function(use)
     use("tpope/vim-surround")
     use({ "j-hui/fidget.nvim", commit = "0ba1e16d07627532b6cae915cc992ecac249fb97" })
     use("jose-elias-alvarez/null-ls.nvim")
-    use("simrat39/rust-tools.nvim")
+    --use("simrat39/rust-tools.nvim")
 
     use("nvim-lualine/lualine.nvim") -- Fancier statusline
-    use("preservim/nerdcommenter") -- Commenting
+    use("preservim/nerdcommenter")   -- Commenting
     use("kyazdani42/nvim-web-devicons")
     use({ "kyazdani42/nvim-tree.lua", commit = "904f95cd9db31d1800998fa428e78e418a50181d" })
     use("norcalli/nvim-colorizer.lua")
