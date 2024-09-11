@@ -1,12 +1,12 @@
-# iTerm Default ####################
+## iTerm Default ####################
 [colors.primary]
-# 101421,#0d1117,#141523,191724
-background = "#121212"
-foreground = "#fffbf6"
+# 071323,101421,0d1117,141523,191724,1f2430
+background = "#1f2430"
+foreground = "#fff7f7"
 
 [colors.cursor]
-#fffbf6,99cc99,e0def4
-cursor = "#fffbf6" 
+#fffbf6,99cc99,e6edf3,aeafad,f9c775
+cursor = "#f9c775" 
 text = "#121212"
 
 [colors.normal]
@@ -29,37 +29,6 @@ magenta = "#a47de9"
 cyan = "#99faf2"
 white = "#ffffff"
 
-## ROSE PINE ####################
-#[colors.primary]
-## 191724,181622
-#background = "#181622"
-#foreground = "#e0def4"
-
-#[colors.bright]
-#black = "#565656"
-#blue = "#49a4f8"
-#cyan = "#99faf2"
-#green = "#c0e17d"
-#magenta = "#a47de9"
-#red = "#ec5357"
-#white = "#ffffff"
-#yellow = "#f9da6a"
-
-#[colors.cursor]
-#cursor = "#e0def4"
-#text = "#121212"
-
-#[colors.normal]
-#black = "#121212"
-#blue = "#47a0f3"
-#cyan = "#64dbed"
-#green = "#abe047"
-#magenta = "#7b5cb0"
-#red = "#eb4129"
-#white = "#e5e9f0"
-#yellow = "#f6c744"
-
-
 ########################################
 # SETTINGS
 ########################################
@@ -74,9 +43,9 @@ shape = "Block"
 TERM = "xterm-256color"
 
 [font]
-# MonoLisa 18,19.5
-# Berkele 18,18.2,19
-size = 18.4
+# MonoLisa 16.6,18
+# Berkele 18,18.2
+size = 18
 
 ## MonoLisa,JetBrainsMono,Berkeley Mono
 [font.normal]

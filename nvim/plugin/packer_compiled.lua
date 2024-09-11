@@ -164,6 +164,11 @@ _G.packer_plugins = {
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["neovim-ayu"] = {
+    loaded = true,
+    path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/neovim-ayu",
+    url = "https://github.com/Shatur/neovim-ayu"
+  },
   nerdcommenter = {
     loaded = true,
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/nerdcommenter",
@@ -250,11 +255,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
-  },
-  ["rust-tools.nvim"] = {
-    loaded = true,
-    path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
-    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["tailwind-sorter.nvim"] = {
     loaded = true,

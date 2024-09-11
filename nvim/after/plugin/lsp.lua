@@ -3,7 +3,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    "tsserver",
+    --"tsserver",
 })
 
 -- Fix Undefined global 'vim'
@@ -115,7 +115,8 @@ lsp.set_preferences({
     },
 })
 
-local overridenFormattingSources = { "tsserver", "jsonls", "html", "prisma" }
+-- removed tsserver
+local overridenFormattingSources = { "jsonls", "html", "prisma" }
 
 lsp.on_attach(function(client, bufnr)
     for _, src in ipairs(overridenFormattingSources) do
