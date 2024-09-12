@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "Berkeley Mono",
+    "editor.fontFamily": "MonoLisa",
     "editor.suggestSelection": "first",
     "editor.renderLineHighlight": "none",
     "editor.codeLens": false,
@@ -31,11 +31,11 @@
     "omnisharp.useEditorFormattingSettings": false,
     "omnisharp.organizeImportsOnFormat": true,
     // .net:true, unity:false
-    "omnisharp.useModernNet": false,
+    "omnisharp.useModernNet": true,
     "omnisharp.monoPath": "/usr/bin/mono",
     "omnisharp.enableAsyncCompletion": true,
     "security.workspace.trust.enabled": false,
-    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.persistentSessionReviveProcess": "never",
     // "workbench.editor.enablePreview": false,
     "workbench.layoutControl.enabled": false,
@@ -163,8 +163,11 @@
         "[Default Dark Modern]": {
             // "statusBar.background": "#1f1f1f",
             // "statusBar.border": "#1f1f1f",
+            "editor.background": "#181818",
             "editorLineNumber.activeForeground": "#6e7681",
             "editorOverviewRuler.border": "#1f1f1f",
+            // "editorSuggestWidget.selectedBackground": "#3e3d1c",
+            "editorSuggestWidget.background": "#ff0000",
         },
         "[Monokai Pro (Filter Ristretto)]": {
             "statusBar.background": "#2c2525",
@@ -239,6 +242,11 @@
         {
             "before": ["<leader>", "t", "a"],
             "commands": ["workbench.action.toggleActivityBarVisibility"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "s", "l"],
+            "commands": ["workbench.view.extension.sln_explorer"],
             "silent": true
         },
         {
@@ -341,8 +349,10 @@
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "editor.insertSpaces": false,
     "editor.cursorSurroundingLines": 7,
-    "editor.fontSize": 19.5,
-    "terminal.integrated.fontSize": 20,
+    // berkeley mono 19.3/19
+    // MonoLisa 18.5/18.5
+    "editor.fontSize": 18.5,
+    "terminal.integrated.fontSize": 18.5,
     "scm.diffDecorationsGutterPattern": {
         "added": true
     },
@@ -376,7 +386,8 @@
     "editor.cursorBlinking": "solid",
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
-    "workbench.activityBar.location": "hidden",
     "window.zoomLevel": 1,
     "prisma.showPrismaDataPlatformNotification": false,
+    "workbench.colorTheme": "Rosé Pine (no italics)",
+    "workbench.activityBar.location": "hidden"
 }

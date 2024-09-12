@@ -168,5 +168,9 @@
         "key": "ctrl+.",
         "command": "-editor.action.quickFix",
         "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+e",
+        "command": "slnbrw.focus"
     }
 ]

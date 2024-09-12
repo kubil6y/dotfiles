@@ -52,7 +52,7 @@ require("vscode").setup({
 		TelescopeSelection = { bg = "#3c3850", fg = "#d4d4d4", bold = true },
 		CmpItemAbbrMatch = { fg = "", bold = false },
 		CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
-        LineNr = { fg = "#505050"},
+		LineNr = { fg = "#505050" },
 
 		["@comment.todo"] = { fg = "#cccccc", bg = "NONE", bold = true },
 		["@comment.note"] = { fg = "#cccccc", bg = "NONE", bold = true },
@@ -145,7 +145,7 @@ require("gruvbox").setup({
 	dim_inactive = false,
 	transparent_mode = true,
 	palette_overrides = {
-        --bright_red = "#b294bb",
+		--bright_red = "#b294bb",
 	},
 	overrides = {
 		--["@type.qualifier"] = { fg = "#fb4934" },
@@ -217,17 +217,20 @@ function _G.set_colors(color)
 		vim.cmd([[ hi @comment.todo guifg=#f2fa95 guibg=#272736 ]])
 	end
 
-    if color == "ayu-mirage" then
-        vim.cmd ([[ hi MatchParen gui=bold guifg=#73d0ff ]])
-        vim.cmd([[ hi CmpItemAbbrMatch guifg=NONE gui=NONE ]])
-        vim.cmd([[ hi CmpItemAbbrMatchFuzzy guifg=NONE gui=NONE ]])
+	if color == "ayu-mirage" then
+		vim.cmd([[ hi Normal guibg=NONE ]])
+		vim.cmd([[ hi MatchParen gui=bold guifg=#dfbfff ]])
+		vim.cmd([[ hi CmpItemAbbrMatch guifg=NONE gui=NONE ]])
+		vim.cmd([[ hi CmpItemAbbrMatchFuzzy guifg=NONE gui=NONE ]])
+		vim.cmd([[ hi TelescopeSelection gui=bold guibg=#23344b ]])
+		vim.cmd([[ hi @constant.builtin gui=bold guifg=#ffcc66 ]])
+		vim.cmd([[ hi @type.builtin guifg=#ffcc66 gui=bold ]])
 
-        -- afffd7
-        vim.cmd([[ hi Function gui=bold guifg=#cccac2 ]])
-        vim.cmd([[ hi Type gui=bold guifg=#cccac2 ]])
-        vim.cmd([[ hi @constant.builtin gui=bold ]])
-        vim.cmd([[ hi TelescopeSelection gui=bold guibg=#23344b ]])
-    end
+		-- fg CBCEBC
+		--ff6f61,38a89d
+        --vim.cmd([[ hi Keyword guifg=#ff6f61 ]])
+        --vim.cmd([[ hi @operator guifg=#ff6f61 ]])
+	end
 
 	-- For changing html tag colors
 	--vim.cmd([[
@@ -239,4 +242,4 @@ function _G.set_colors(color)
 	--]])
 end
 
-set_colors("ayu-mirage")
+set_colors()
