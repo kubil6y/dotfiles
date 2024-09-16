@@ -180,15 +180,11 @@ function _G.set_colors(color)
 	end
 
 	if color == "github_dark_default" then
-		-- 202937,242E3E,283344
-
 		vim.cmd([[ hi FloatBorder guifg=#2b2b2b ]])
 		vim.cmd([[ hi Comment guifg=#8b949e gui=italic ]])
 		vim.cmd([[ hi @constant.builtin gui=bold guifg=#79c0ff ]])
 		vim.cmd([[ hi WinSeparator guifg=#6e7681 ]])
 		vim.cmd([[ hi CmpItemAbbrMatch guifg=none ]])
-		vim.cmd([[ hi Pmenu guibg=#323232 ]])
-		--vim.cmd([[ hi PmenuSel guibg=#ffa657 guifg=#131313 ]])
 		vim.cmd([[ hi TreesitterContext guibg=#283344 ]])
 		vim.cmd([[ hi NvimTreeCursorLine guibg=#283344 ]])
 		vim.cmd([[ hi TelescopeNormal guifg=#8b949e ]])
@@ -199,7 +195,12 @@ function _G.set_colors(color)
 		vim.cmd([[ hi @comment.note guifg=#e6edf3 guibg=NONE gui=bold ]])
 		vim.cmd([[ hi @comment.error guifg=#cc6666 guibg=NONE gui=bold ]])
 		vim.cmd([[ hi @comment.warning guifg=#de935f guibg=NONE gui=bold ]])
-		vim.cmd([[ hi MatchParen guifg=#e6edf3 guibg=#1e4273 gui=NONE ]])
+		--vim.cmd([[ hi MatchParen guifg=#e6edf3 guibg=#1e4273 gui=NONE ]])
+        vim.cmd([[ hi MatchParen guibg=#003f5c gui=none ]])
+		vim.cmd([[ hi Pmenu      guibg=#2b2e34 guifg=#c9d1d9 ]])
+		vim.cmd([[ hi PmenuSel   guibg=#1c3d6a guifg=#ffffff ]])
+		vim.cmd([[ hi PmenuSbar  guibg=#2b313b ]])
+		vim.cmd([[ hi PmenuThumb guibg=#4b5563 ]])
 	end
 
 	if color == "nightfall" or color == "tokyonight" then
@@ -223,13 +224,17 @@ function _G.set_colors(color)
 		vim.cmd([[ hi CmpItemAbbrMatch guifg=NONE gui=NONE ]])
 		vim.cmd([[ hi CmpItemAbbrMatchFuzzy guifg=NONE gui=NONE ]])
 		vim.cmd([[ hi TelescopeSelection gui=bold guibg=#23344b ]])
-		vim.cmd([[ hi @constant.builtin gui=bold guifg=#ffcc66 ]])
-		vim.cmd([[ hi @type.builtin guifg=#ffcc66 gui=bold ]])
+		vim.cmd([[ hi @constant.builtin gui=bold guifg=#5ccfe6 ]])
 
-		-- fg CBCEBC
-		--ff6f61,38a89d
-        --vim.cmd([[ hi Keyword guifg=#ff6f61 ]])
-        --vim.cmd([[ hi @operator guifg=#ff6f61 ]])
+		vim.cmd([[ hi Type gui=bold guifg=#f9c775 ]])
+		--vim.cmd([[ hi @punctuation.bracket guifg=#f9c775 ]])
+		vim.cmd([[ hi Function  guifg=#5ccfe6 ]])
+		vim.cmd([[ hi @property  guifg=#f8f8f2 ]])
+		vim.cmd([[ hi @variable guifg=#f8f8f2 ]])
+		vim.cmd([[ hi @variable.parameter guifg=#f8f8f2 ]])
+		vim.cmd([[ hi @variable.member guifg=#f8f8f2 ]])
+		vim.cmd([[ hi Keyword guifg=#ff6966 ]])
+		vim.cmd([[ hi @type.builtin guifg=#5ccfe6 gui=NONE ]])
 	end
 
 	-- For changing html tag colors
@@ -242,4 +247,4 @@ function _G.set_colors(color)
 	--]])
 end
 
-set_colors()
+set_colors("github_dark_default")
