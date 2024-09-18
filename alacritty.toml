@@ -1,11 +1,11 @@
 ## iTerm Default ####################
 [colors.primary]
 # 071323,101421,0d1117,141523,191724,1f2430
-background = "#0d1117"
+background = "#101421"
 foreground = "#fffbf6"
 
 [colors.cursor]
-#fffbf6,99cc99,e0def4,f9c775,e6edf3
+#fffbf6,e6edf3,99cc99,e0def4,f9c775
 cursor = "#e6edf3" 
 text = "#131313"
 

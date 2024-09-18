@@ -1,5 +1,4 @@
 {
-    "editor.fontFamily": "MonoLisa",
     "editor.suggestSelection": "first",
     "editor.renderLineHighlight": "none",
     "editor.codeLens": false,
@@ -167,7 +166,7 @@
             "editorLineNumber.activeForeground": "#6e7681",
             "editorOverviewRuler.border": "#1f1f1f",
             // "editorSuggestWidget.selectedBackground": "#3e3d1c",
-            "editorSuggestWidget.background": "#ff0000",
+            "editorSuggestWidget.background": "#ff0000"
         },
         "[Monokai Pro (Filter Ristretto)]": {
             "statusBar.background": "#2c2525",
@@ -351,8 +350,9 @@
     "editor.cursorSurroundingLines": 7,
     // berkeley mono 19.3/19
     // MonoLisa 18.5/18.5
-    "editor.fontSize": 18.5,
-    "terminal.integrated.fontSize": 18.5,
+    "editor.fontFamily": "Berkeley Mono",
+    "editor.fontSize": 19.3,
+    "terminal.integrated.fontSize": 19,
     "scm.diffDecorationsGutterPattern": {
         "added": true
     },
@@ -388,6 +388,6 @@
     "editor.minimap.enabled": false,
     "window.zoomLevel": 1,
     "prisma.showPrismaDataPlatformNotification": false,
-    "workbench.colorTheme": "Rosé Pine (no italics)",
-    "workbench.activityBar.location": "hidden"
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Rosé Pine (no italics)"
 }

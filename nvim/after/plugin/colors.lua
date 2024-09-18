@@ -11,17 +11,11 @@ require("rose-pine").setup({
 		["@comment.error"] = { fg = "love", bg = "NONE", bold = true },
 		["@comment.warning"] = { fg = "gold", bg = "NONE", bold = true },
 
-		Pmenu = { bg = "#262439" }, -- 1d1b2a,232033,262439
-		--PmenuSel = { bg = "#454244" },
-		--PmenuSbar = { bg = "#454244" },
-		--NvimTreeCursorLine = { bg = "#26233a" },
-		--QuickFixLine = { bg = "#26233a", fg = "text" },
-		--qfLineNr = { fg = "text" },
-
-		--TelescopeSelection = { fg = "#e0def4", bg = "#26233a", bold = true },
-		--TelescopeSelectionCaret = { fg = "#e0def4", bg = "#26233a" },
-		--TelescopeNormal = { fg = "#635e80" },
-		--PmenuSel = { bg = "#26233a" },
+        Pmenu = { bg = "#262439" }, -- 232033,262439
+        --Pmenu = { bg = "#322f4b", fg = "#908caa" },
+        --PmenuSel = { bg = "#ea9a97", fg = "#191724" },
+        --CmpItemAbbrMatch = { fg = "", bold = false },
+        --CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
 	},
 })
 
@@ -195,12 +189,11 @@ function _G.set_colors(color)
 		vim.cmd([[ hi @comment.note guifg=#e6edf3 guibg=NONE gui=bold ]])
 		vim.cmd([[ hi @comment.error guifg=#cc6666 guibg=NONE gui=bold ]])
 		vim.cmd([[ hi @comment.warning guifg=#de935f guibg=NONE gui=bold ]])
-		--vim.cmd([[ hi MatchParen guifg=#e6edf3 guibg=#1e4273 gui=NONE ]])
-        vim.cmd([[ hi MatchParen guibg=#003f5c gui=none ]])
 		vim.cmd([[ hi Pmenu      guibg=#2b2e34 guifg=#c9d1d9 ]])
 		vim.cmd([[ hi PmenuSel   guibg=#1c3d6a guifg=#ffffff ]])
 		vim.cmd([[ hi PmenuSbar  guibg=#2b313b ]])
 		vim.cmd([[ hi PmenuThumb guibg=#4b5563 ]])
+		vim.cmd([[ hi MatchParen gui=none ]])
 	end
 
 	if color == "nightfall" or color == "tokyonight" then
@@ -247,4 +240,4 @@ function _G.set_colors(color)
 	--]])
 end
 
-set_colors("github_dark_default")
+set_colors()
