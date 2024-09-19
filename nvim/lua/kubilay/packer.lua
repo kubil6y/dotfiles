@@ -62,8 +62,8 @@ return require("packer").startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 	--use("simrat39/rust-tools.nvim")
 
-	use("nvim-lualine/lualine.nvim") -- Fancier statusline
 	use("preservim/nerdcommenter") -- Commenting
+	use("nvim-lualine/lualine.nvim") -- Fancier statusline
 	use("kyazdani42/nvim-web-devicons")
 	use({ "kyazdani42/nvim-tree.lua", commit = "904f95cd9db31d1800998fa428e78e418a50181d" })
 	use("norcalli/nvim-colorizer.lua")
