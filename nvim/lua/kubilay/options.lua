@@ -1,51 +1,51 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
 local options = {
-	guicursor = "",
-	background = "dark",
-	cmdheight = 1, -- more space in the neovim command line for displaying messages
-	--completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-	conceallevel = 0, -- so that `` is visible in markdown files
-	fileencoding = "utf-8", -- the encoding written to a file
-	hlsearch = true, -- highlight all matches on previous search pattern
-	incsearch = true,
-	ignorecase = true, -- ignore case in search patterns
-	mouse = "a", -- allow the mouse to be used in neovim
-	pumheight = 10, -- pop up menu height
-	showmode = false, -- we don't need to see things like -- INSERT -- anymore
-	-- showtabline = 2, -- always show tabs
-	smartcase = true, -- smart case
-	smartindent = true, -- make indenting smarter again
-	splitbelow = true, -- force all horizontal splits to go below current window
-	splitright = true, -- force all vertical splits to go to the right of current window
-	termguicolors = true, -- set term gui colors (most terminals support this)
-	timeoutlen = 300, -- time to wait for a mapped sequence to complete (in milliseconds)
+    guicursor = "",
+    background = "dark",
+    cmdheight = 1,       -- more space in the neovim command line for displaying messages
+    --completeopt = { "menuone", "noselect" }, -- mostly just for cmp
+    conceallevel = 0,    -- so that `` is visible in markdown files
+    fileencoding = "utf-8", -- the encoding written to a file
+    hlsearch = true,     -- highlight all matches on previous search pattern
+    incsearch = true,
+    ignorecase = true,   -- ignore case in search patterns
+    mouse = "a",         -- allow the mouse to be used in neovim
+    pumheight = 10,      -- pop up menu height
+    showmode = false,    -- we don't need to see things like -- INSERT -- anymore
+    -- showtabline = 2, -- always show tabs
+    smartcase = true,    -- smart case
+    smartindent = true,  -- make indenting smarter again
+    splitbelow = true,   -- force all horizontal splits to go below current window
+    splitright = true,   -- force all vertical splits to go to the right of current window
+    termguicolors = true, -- set term gui colors (most terminals support this)
+    timeoutlen = 300,    -- time to wait for a mapped sequence to complete (in milliseconds)
 
-	undofile = true, -- enable persistent undo
-	undodir = os.getenv("HOME") .. "/.vim/undodir",
-	swapfile = false, -- creates a swapfile
-	backup = false,
+    undofile = true,     -- enable persistent undo
+    undodir = os.getenv("HOME") .. "/.vim/undodir",
+    swapfile = false,    -- creates a swapfile
+    backup = false,
 
-	updatetime = 50, -- faster completion (4000ms default)
-	writebackup = false, -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+    updatetime = 50,  -- faster completion (4000ms default)
+    writebackup = false, -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 
-	-- indent options
-	expandtab = true, -- convert tabs to spaces
-	shiftwidth = 4, -- the number of spaces inserted for each indentation
-	tabstop = 4, -- insert 2 spaces for a tab
-	softtabstop = 4,
+    -- indent options
+    expandtab = true, -- convert tabs to spaces
+    shiftwidth = 4, -- the number of spaces inserted for each indentation
+    tabstop = 4,   -- insert 2 spaces for a tab
+    softtabstop = 4,
 
-	cursorline = false, -- highlight the current line
-	number = true, -- set numbered lines
-	relativenumber = true, -- set relative numbered lines
-	numberwidth = 4, -- set number column width to 2 {default 4}
-	signcolumn = "yes",
-	scrolloff = 7, -- is one of my fav
-	foldenable = false, -- disable folding at start
-	foldnestmax = 3,
-	foldmethod = "expr",
-	foldexpr = "nvim_treesitter#foldexpr()",
-	-- NOTE: %foldc fold only top level
+    cursorline = false, -- highlight the current line
+    number = true,      -- set numbered lines
+    relativenumber = true, -- set relative numbered lines
+    numberwidth = 4,    -- set number column width to 2 {default 4}
+    signcolumn = "yes",
+    scrolloff = 0,      -- is one of my fav
+    foldenable = false, -- disable folding at start
+    foldnestmax = 3,
+    foldmethod = "expr",
+    foldexpr = "nvim_treesitter#foldexpr()",
+    -- NOTE: %foldc fold only top level
 }
 
 -- Disable netrw
@@ -59,9 +59,8 @@ vim.g.editorconfig = true
 vim.opt.shortmess:append("c")
 
 for k, v in pairs(options) do
-	vim.opt[k] = v
+    vim.opt[k] = v
 end
-
 
 -- TODO
 vim.cmd("set clipboard+=unnamed") -- clipboard + nvim
@@ -72,4 +71,12 @@ vim.cmd("command! Wq wq")
 vim.cmd("command! Wa wa")
 --vim.cmd([[ set list listchars=eol:↲ ]])
 
-vim.cmd('autocmd BufNewFile,BufRead *.jet setfiletype html')
+vim.cmd("autocmd BufNewFile,BufRead *.jet setfiletype html")
+
+-- vim.keymap.set("n", "/", function()
+--     local current_pos = vim.fn.getpos(".") -- Save current cursor position
+--     vim.cmd("set incsearch")            -- Enable incremental search
+--     vim.cmd("set hlsearch")             -- Enable highlight search
+--     vim.fn.input("/")                   -- Start the search
+--     vim.fn.setpos(".", current_pos)     -- Restore the cursor position
+-- end, { noremap = true })

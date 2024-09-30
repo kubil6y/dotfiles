@@ -1,13 +1,13 @@
 ## iTerm Default ####################
 [colors.primary]
-# 071323,101421,0d1117,141523,191724,1f2430
-background = "#101421"
+# 0d1117,16141f,191724,1f2430
+background = "#191724"
 foreground = "#fffbf6"
 
 [colors.cursor]
-#fffbf6,e6edf3,99cc99,e0def4,f9c775
-cursor = "#e6edf3" 
-text = "#131313"
+#fffbf6,f8f8f2,e0def4,99cc99,f9c775,AEAFAD
+text = "#3e8fb0"
+cursor = "#f8f8f2"
 
 [colors.normal]
 black = "#2e2e2e"
@@ -36,15 +36,15 @@ white = "#ffffff"
 blink_interval = 500
 
 [cursor.style]
-blinking = "never"
+blinking = "always"
 shape = "Block"
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-# MonoLisa 15.5,16.6,18
-# Berkele 18,18.2
+# MonoLssa 15.5,16.6,18
+# Berkele 18,18.4
 size = 18
 
 ## MonoLisa,JetBrainsMono,Berkeley Mono

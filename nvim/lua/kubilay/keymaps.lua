@@ -48,10 +48,11 @@ keymap("n", "<leader>tw", ":TailwindSort<CR>", opts)
 keymap("n", "<A-`>", ":b#<CR>", opts)
 
 -- MISC
-keymap("n", "<leader>ds", ":nohl<CR>", opts) -- remove highlights
+--
+keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)      -- remove highlights
 keymap("n", "<leader>ut", ":UndotreeToggle<CR>", opts) -- remove highlights
-keymap("n", "q", "<nop>", opts) -- remove q for disabling recording macros
-keymap("n", "Q", "<nop>", opts) -- remove Q
+keymap("n", "q", "<nop>", opts)                        -- remove q for disabling recording macros
+keymap("n", "Q", "<nop>", opts)                        -- remove Q
 
 -- Gitsigns
 -- keymap("n", "]h", ":Gitsigns next_hunk<CR>", opts)
@@ -61,10 +62,10 @@ keymap("n", "Q", "<nop>", opts) -- remove Q
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- remove empty lines in `visual_mode`
+-- Remove empty lines in `visual_mode`
 keymap("v", "<leader>el", ":g/^\\s*$/d<CR>:nohl<CR>", opts)
 
--- format document
+-- Format document
 keymap("n", "<leader>df", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
 
 -- Clipboard stuff
@@ -72,28 +73,29 @@ keymap("v", "<leader>y", '"+y', opts)
 keymap("n", "<leader>y", '"+y', opts)
 keymap("n", "<leader>ay", 'gg"+yG', opts) -- copy whole file to clipboard
 
--- greatest remap ever
+-- Greatest remap ever
 keymap("x", "<leader>p", '"_dP')
 keymap("v", "<leader>p", '"_dP')
--- delete without copying to clipboard (void register)
+-- Delete without copying to clipboard (void register)
 keymap("x", "<leader>d", '"_d')
 keymap("v", "<leader>d", '"_d')
 
--- vim figutive
+-- Comment like vscode
+--keymap("n", "<C-_>", ":call nerdcommenter#Comment('n', 'toggle')<CR>", { silent = true })
+--keymap("v", "<C-_>", ":call nerdcommenter#Comment('x', 'toggle')<CR>", { silent = true })
+keymap("n", "<C-_>", ":norm gcc<CR>")
+keymap("v", "<C-_>", "gc", { remap = true })
+
+-- Vim figutive
 keymap("n", "gh", "<cmd>diffget //2<CR>")
 keymap("n", "gl", "<cmd>diffget //3<CR>")
 
--- for easy formatting with prismaFmt
+-- For easy formatting with prismaFmt
 keymap("n", "<leader>wn", ":set sw=2<CR>") -- width narrow
 keymap("n", "<leader>wl", ":set sw=4<CR>") -- width large
 
 -- NvimTree
-keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
+keymap("n", "\\", ":NvimTreeToggle<cr>", opts)
 
-keymap("n", "<C-u>", "10k", opts)
-keymap("n", "<C-d>", "10j", opts)
-
---keymap("n", "n", "nzzzv")
---keymap("n", "N", "Nzzzv")
---keymap("i", "<C-u>", "<C-e><C-u>")
---keymap("n", "<C-u>", "<C-e><C-u>")
+-- keymap("n", "<C-u>", "10k", opts)
+-- keymap("n", "<C-d>", "10j", opts)
