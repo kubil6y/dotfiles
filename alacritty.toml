@@ -6,7 +6,7 @@ foreground = "#fffbf6"
 
 [colors.cursor]
 #fffbf6,f8f8f2,e0def4,99cc99,f9c775,AEAFAD
-text = "#3e8fb0"
+text = "#6e6a86"
 cursor = "#f8f8f2"
 
 [colors.normal]
@@ -45,7 +45,7 @@ TERM = "xterm-256color"
 [font]
 # MonoLssa 15.5,16.6,18
 # Berkele 18,18.4
-size = 18
+size = 18.4
 
 ## MonoLisa,JetBrainsMono,Berkeley Mono
 [font.normal]

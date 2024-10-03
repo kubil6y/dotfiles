@@ -1,41 +1,25 @@
 require("rose-pine").setup({
-    dark_variant = "moon",
+    dark_variant = "main",
     disable_background = true,
     disable_float_background = true,
     disable_italics = true,
+    palette = {
+        main = {
+            rose = "#ea9a97",
+        },
+    },
     highlight_groups = {
+        Pmenu = { fg = "subtle", bg = "surface" },
+        -- Pmenu = { fg = "subtle", bg = "#26233a" },
+        -- PmenuSel = { fg = "text", bg = "#34304f" },
         Comment = { italic = true },
+        CurSearch = { fg = "base", bg = "gold" },
         TreesitterContext = { bg = "#26233a" },
-        TreesitterContextLineNumber = { bg = "#26233a", fg = "muted" },
+        TreesitterContextLineNumber = { bg = "#26233a", fg = "rose" },
         ["@comment.todo"] = { fg = "text", bg = "NONE", bold = true },
         ["@comment.note"] = { fg = "text", bg = "NONE", bold = true },
         ["@comment.error"] = { fg = "love", bg = "NONE", bold = true },
         ["@comment.warning"] = { fg = "gold", bg = "NONE", bold = true },
-        Pmenu = { fg = "subtle", bg = "surface" },
-        PmenuSel = { fg = "text", bg = "overlay" },
-        CurSearch = { fg = "base", bg = "leaf", inherit = false },
-        Search = { fg = "text", bg = "leaf", blend = 20, inherit = false },
-    },
-})
-
-require("ayu").setup({
-    overrides = {
-        Normal = { bg = "" },
-        MatchParen = { fg = "#dfbfff", bold = true },
-        CmpItemAbbrMatch = { bg = "", fg = "" },
-        CmpItemAbbrMatchFuzzy = { bg = "", fg = "" },
-        TelescopeSelection = { bg = "#23344b", fg = "", bold = true },
-        ["@constant.builtin"] = { fg = "#5ccfe6", bold = true },
-
-        -- Keyword = { fg = "#ff6966" },
-        -- Type = { fg = "#f9c775", bold = true },
-        -- ["@type.builtin"] = { fg = "#5ccfe6", bold = true },
-        -- Function = { fg = "#5ccfe6" },
-        -- ["@function.builtin"] = { fg = "#ffcc66", bold = true },
-        -- ["@variable"] = { fg = "#f8f8f2" },
-        -- ["@property"] = { fg = "#f8f8f2" },
-        -- ["@variable.parameter"] = { fg = "#f8f8f2" },
-        -- ["@variable.member"] = { fg = "#f8f8f2" },
     },
 })
 
@@ -160,7 +144,7 @@ require("gruvbox").setup({
     dim_inactive = false,
     transparent_mode = true,
     palette_overrides = {
-        --bright_red = "#b294bb",
+        -- bright_red = "#b294bb",
     },
     overrides = {
         --["@type.qualifier"] = { fg = "#fb4934" },
@@ -193,8 +177,8 @@ function _G.set_colors(color)
         vim.cmd([[ hi @comment.note guifg=#e0e0e0 gui=bold ]])
         vim.cmd([[ hi @comment.error guifg=#cc6666 gui=bold ]])
         vim.cmd([[ hi @comment.warning guifg=#de935f gui=bold ]])
-        vim.cmd([[ hi MatchParen gui=bold guifg=#8abeb7 ]])
         vim.cmd([[ hi Search guifg=#e0e0e0 guibg=#49475c blend=20 ]])
+        vim.cmd([[ hi MatchParen gui=bold guifg=#8abeb7 ]]) --cc6666,8abeb7
     end
 
     if color == "github_dark_default" then

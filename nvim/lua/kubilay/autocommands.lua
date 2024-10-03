@@ -50,3 +50,15 @@ autocmd("FileType", {
         vim.bo.commentstring = "// %s"
     end,
 })
+
+-- Save and restore folds automatically
+vim.o.viewoptions = vim.o.viewoptions .. ',folds'
+vim.api.nvim_create_autocmd('BufWinLeave', {
+    pattern = '*',
+    command = 'silent! mkview'
+})
+
+vim.api.nvim_create_autocmd('BufWinEnter', {
+    pattern = '*',
+    command = 'silent! loadview'
+})

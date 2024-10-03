@@ -44,6 +44,7 @@ local options = {
     foldenable = false, -- disable folding at start
     foldnestmax = 3,
     foldmethod = "expr",
+    foldlevelstart = 99, -- optional:start all folds open
     foldexpr = "nvim_treesitter#foldexpr()",
     -- NOTE: %foldc fold only top level
 }

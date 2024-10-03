@@ -33,10 +33,6 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- copy file full path to system clipboard
-keymap("n", "<leader>fp", ":let @+ = expand('%:p')<CR>")
-keymap("n", "<leader>fc", ":%foldc<CR>")
-
 -- select all file
 keymap("n", "<leader>va", "ggVG", opts)
 
@@ -66,7 +62,7 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<leader>el", ":g/^\\s*$/d<CR>:nohl<CR>", opts)
 
 -- Format document
-keymap("n", "<leader>df", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
 
 -- Clipboard stuff
 keymap("v", "<leader>y", '"+y', opts)
@@ -99,3 +95,5 @@ keymap("n", "\\", ":NvimTreeToggle<cr>", opts)
 
 -- keymap("n", "<C-u>", "10k", opts)
 -- keymap("n", "<C-d>", "10j", opts)
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")

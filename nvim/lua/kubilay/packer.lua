@@ -29,7 +29,6 @@ return require("packer").startup(function(use)
     use("2giosangmitom/nightfall.nvim")
     use("projekt0n/github-nvim-theme")
     use("Mofiqul/vscode.nvim")
-    use("Shatur/neovim-ayu")
 
     -- use({
     -- 	"folke/trouble.nvim",

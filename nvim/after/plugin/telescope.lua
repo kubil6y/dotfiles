@@ -1,6 +1,6 @@
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-p>", builtin.git_files, { desc = "Search git files" })
-vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "[S]earch [S]elect Telescope" })
+vim.keymap.set("n", "<leader>o", builtin.lsp_document_symbols, { desc = "[S]earch [S]elect Telescope" })
 vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
 vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
