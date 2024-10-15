@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["base46-colors"] = {
+    loaded = true,
+    path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/base46-colors",
+    url = "https://github.com/notken12/base46-colors"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -163,11 +168,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["neovim-ayu"] = {
-    loaded = true,
-    path = "/home/kubilay/.local/share/nvim/site/pack/packer/start/neovim-ayu",
-    url = "https://github.com/Shatur/neovim-ayu"
   },
   nerdcommenter = {
     loaded = true,

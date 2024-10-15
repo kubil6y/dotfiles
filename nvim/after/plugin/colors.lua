@@ -1,25 +1,29 @@
 require("rose-pine").setup({
-    dark_variant = "main",
+    dark_variant = "moon",
     disable_background = true,
     disable_float_background = true,
     disable_italics = true,
     palette = {
         main = {
-            rose = "#ea9a97",
+            -- rose = "#ea9a97",
         },
     },
     highlight_groups = {
-        Pmenu = { fg = "subtle", bg = "surface" },
-        -- Pmenu = { fg = "subtle", bg = "#26233a" },
-        -- PmenuSel = { fg = "text", bg = "#34304f" },
-        Comment = { italic = true },
-        CurSearch = { fg = "base", bg = "gold" },
+        -- Comment = { italic = true },
+        -- CurSearch = { fg = "base", bg = "gold" },
         TreesitterContext = { bg = "#26233a" },
         TreesitterContextLineNumber = { bg = "#26233a", fg = "rose" },
         ["@comment.todo"] = { fg = "text", bg = "NONE", bold = true },
         ["@comment.note"] = { fg = "text", bg = "NONE", bold = true },
         ["@comment.error"] = { fg = "love", bg = "NONE", bold = true },
         ["@comment.warning"] = { fg = "gold", bg = "NONE", bold = true },
+        -- NvimTreeFolderIcon = { fg = "gold" },
+
+        -- PmenuSel = { fg = "text", bg = "#26233a" },
+        -- Pmenu = { fg = "#908caa", bg = "#1f1d2e" },
+        -- Pmenu = { fg = "subtle", bg = "surface" },
+        Pmenu = { fg = "subtle", bg = "#26233a" },
+        PmenuSel = { fg = "text", bg = "#34304f" },
     },
 })
 
@@ -29,7 +33,7 @@ require("vscode").setup({
     -- Enable transparent background
     transparent = true,
     -- Enable italic comment
-    italic_comments = true,
+    italic_comments = false,
     -- Underline `@markup.link.*` variants
     underline_links = true,
     -- Disable nvim-tree background color
@@ -42,15 +46,18 @@ require("vscode").setup({
     group_overrides = {
         TreesitterContext = { bg = "#303039" },
         NormalFloat = { bg = "" },
-        NvimTreeCursorLine = { bg = "#3c3850", fg = "" },
         MatchParen = { bg = "#3c3850", fg = "#d4d4d4" },
         Pmenu = { bg = "#323232" },
         PmenuSel = { bg = "#3c3850", fg = "#d4d4d4" },
         CmpItemAbbrMatch = { fg = "", bold = false },
         CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
         LineNr = { fg = "#505050" },
+        NvimTreeOpenedFolderName = { bg = "", fg = "#d4d4d4" },
+        NvimTreeCursorLine = { bg = "#3c3850", fg = "" },
 
         TelescopeNormal = { fg = "#808080" },
+        TelescopePromptNormal = { fg = "#d4d4d4" },
+        TelescopeMatching = { fg = "#c586c0", bold = false },
         TelescopeSelection = { bg = "", fg = "#d4d4d4", bold = true },
 
         ["@comment.todo"] = { fg = "#cccccc", bg = "NONE", bold = true },
@@ -182,13 +189,19 @@ function _G.set_colors(color)
     end
 
     if color == "github_dark_default" then
+        vim.cmd([[ hi CmpItemMenu gui=none ]])
+        vim.cmd([[ hi CmpItemAbbrMatch guifg=none ]])
+        vim.cmd([[ hi Pmenu      guibg=#2b2e34 guifg=#c9d1d9 ]])
+        vim.cmd([[ hi PmenuSel   guibg=#1c3d6a guifg=#ffffff ]])
+        vim.cmd([[ hi PmenuSbar  guibg=#2b313b ]])
+        vim.cmd([[ hi PmenuThumb guibg=#4b5563 ]])
         vim.cmd([[ hi FloatBorder guifg=#2b2b2b ]])
-        vim.cmd([[ hi Comment guifg=#8b949e gui=italic ]])
+        vim.cmd([[ hi Comment guifg=#8b949e gui=NONE ]])
         vim.cmd([[ hi @constant.builtin gui=bold guifg=#79c0ff ]])
         vim.cmd([[ hi WinSeparator guifg=#6e7681 ]])
-        vim.cmd([[ hi CmpItemAbbrMatch guifg=none ]])
         vim.cmd([[ hi TreesitterContext guibg=#283344 ]])
         vim.cmd([[ hi NvimTreeCursorLine guibg=#283344 ]])
+        vim.cmd([[ hi TelescopePromptNormal guifg=#e6edf3 ]])
         vim.cmd([[ hi TelescopeNormal guifg=#8b949e ]])
         vim.cmd([[ hi TelescopeSelection guibg=#283344 guifg=#e6edf3 gui=bold ]])
         vim.cmd([[ hi TelescopeSelectionCaret guibg=#283344 ]])
@@ -197,27 +210,30 @@ function _G.set_colors(color)
         vim.cmd([[ hi @comment.note guifg=#e6edf3 guibg=NONE gui=bold ]])
         vim.cmd([[ hi @comment.error guifg=#cc6666 guibg=NONE gui=bold ]])
         vim.cmd([[ hi @comment.warning guifg=#de935f guibg=NONE gui=bold ]])
-        vim.cmd([[ hi Pmenu      guibg=#2b2e34 guifg=#c9d1d9 ]])
-        vim.cmd([[ hi PmenuSel   guibg=#1c3d6a guifg=#ffffff ]])
-        vim.cmd([[ hi PmenuSbar  guibg=#2b313b ]])
-        vim.cmd([[ hi PmenuThumb guibg=#4b5563 ]])
         vim.cmd([[ hi MatchParen gui=bold guifg=#ff9e64 guibg=none ]])
     end
 
-    if color == "nightfall" or color == "tokyonight" then
-        vim.cmd([[ hi Visual gui=NONE ]])
-        vim.cmd([[ hi DiagnosticVirtualTextError guibg=NONE ]])
-        vim.cmd([[ hi DiagnosticVirtualTextHint guibg=NONE ]])
-        vim.cmd([[ hi DiagnosticVirtualTextInfo guibg=NONE ]])
-        vim.cmd([[ hi DiagnosticVirtualTextOk guibg=NONE ]])
-        vim.cmd([[ hi DiagnosticVirtualTextWarn guibg=NONE ]])
-    end
-
-    if color == "nightfall" then
-        vim.cmd([[ hi Pmenu guibg=#202137 ]])
-        vim.cmd([[ hi @constant.builtin gui=bold guifg=#e9e9f4 ]])
-        vim.cmd([[ hi @comment.todo guifg=#f2fa95 guibg=#272736 ]])
+    if color == "jellybeans" then
+        vim.cmd([[ hi CmpItemAbbrMatch guifg=NONE ]])
+        vim.cmd([[ hi CmpItemAbbrMatchFuzzy guifg=NONE ]])
+        vim.cmd([[ hi WinSeparator guifg=#474747 ]])
+        vim.cmd([[ hi FloatBorder guifg=#474747 ]])
+        vim.cmd([[ hi TreesitterContext guibg=#282b37 ]])
+        vim.cmd([[ hi TelescopeNormal guifg=#808080 ]])
+        vim.cmd([[ hi TelescopeMatching guifg=#e1b655 ]])
+        vim.cmd([[ hi TelescopeSelection guibg=#282b37 guifg=#d9d9c4 gui=bold ]])
+        vim.cmd([[ hi PmenuSel guibg=#ff9445 ]])
+        vim.cmd([[ hi @comment.todo guifg=#d9d9c4 guibg=NONE ]])
+        vim.cmd([[ hi @comment.note guifg=#d9d9c4 guibg=NONE ]])
+        vim.cmd([[ hi @comment.error guifg=#cc6666 guibg=NONE ]])
+        vim.cmd([[ hi @comment.warning guifg=#de935f guibg=NONE ]])
+        vim.cmd([[ hi TelescopePromptNormal guifg=#d9d9c4 ]])
+        vim.cmd([[ hi Pmenu guibg=#303030 ]])
+        vim.cmd([[ hi Search guifg=#d9d9c4 guibg=#3a3a3a ]])
+        vim.cmd([[ hi CurSearch guifg=#151515 guibg=#e1b655 ]])
+        vim.cmd([[ hi IncSearch guibg=#e1b655 ]])
+        vim.cmd([[ hi NvimTreeOpenedFolderName gui=NONE guifg=#8197bf ]])
     end
 end
 
-set_colors()
+set_colors("jellybeans")

@@ -44,6 +44,7 @@ local kind_icons = {
 }
 
 local cmp = require("cmp")
+
 local cmp_mappings = lsp.defaults.cmp_mappings({
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),

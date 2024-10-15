@@ -1,13 +1,13 @@
 ## iTerm Default ####################
 [colors.primary]
-# 0d1117,16141f,191724,1f2430
-background = "#191724"
+# 0d1117,171521,191724,0b0e14
+background = "#151515"
 foreground = "#fffbf6"
 
 [colors.cursor]
-#fffbf6,f8f8f2,e0def4,99cc99,f9c775,AEAFAD
+#fffbf6,f8f8f2,d9d9c4
 text = "#6e6a86"
-cursor = "#f8f8f2"
+cursor = "#d9d9c4"
 
 [colors.normal]
 black = "#2e2e2e"
@@ -43,9 +43,9 @@ shape = "Block"
 TERM = "xterm-256color"
 
 [font]
-# MonoLssa 15.5,16.6,18
+# MonoLssa 15.5,16.88,18
 # Berkele 18,18.4
-size = 18.4
+size = 18
 
 ## MonoLisa,JetBrainsMono,Berkeley Mono
 [font.normal]

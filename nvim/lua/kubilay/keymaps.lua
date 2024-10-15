@@ -28,10 +28,10 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
 -- select all file
 keymap("n", "<leader>va", "ggVG", opts)
@@ -93,7 +93,11 @@ keymap("n", "<leader>wl", ":set sw=4<CR>") -- width large
 -- NvimTree
 keymap("n", "\\", ":NvimTreeToggle<cr>", opts)
 
--- keymap("n", "<C-u>", "10k", opts)
--- keymap("n", "<C-d>", "10j", opts)
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- vim.keymap.set(
+--     "n",
+--     "<leader>ce",
+--     "oif err != nil {<CR>}<Esc>Oreturn err<Esc>j"
+-- )

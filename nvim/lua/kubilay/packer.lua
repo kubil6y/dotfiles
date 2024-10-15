@@ -22,6 +22,7 @@ return require("packer").startup(function(use)
     })
 
     -- Colorschemes
+    use("notken12/base46-colors")
     use({ "rose-pine/neovim", as = "rose-pine" })
     use("tjdevries/colorbuddy.nvim")
     use("ellisonleao/gruvbox.nvim")
