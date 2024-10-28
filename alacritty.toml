@@ -1,13 +1,14 @@
 ## iTerm Default ####################
 [colors.primary]
-# 0d1117,171521,191724,0b0e14
-background = "#151515"
+# 0b0e14,13121c,171521,191724,1f2430
+background = "#0b0e14"
 foreground = "#fffbf6"
 
 [colors.cursor]
-#fffbf6,f8f8f2,d9d9c4
+#6e6a86,2a2f3e
+#e6edf3,f8f8f2
 text = "#6e6a86"
-cursor = "#d9d9c4"
+cursor = "#e6edf3"
 
 [colors.normal]
 black = "#2e2e2e"
@@ -36,7 +37,7 @@ white = "#ffffff"
 blink_interval = 500
 
 [cursor.style]
-blinking = "always"
+blinking = "never"
 shape = "Block"
 
 [env]
