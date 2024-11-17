@@ -1,5 +1,4 @@
 {
-    "editor.suggestSelection": "first",
     "editor.renderLineHighlight": "none",
     "editor.codeLens": false,
     "editor.lightbulb.enabled": "off",
@@ -30,180 +29,120 @@
     "omnisharp.useEditorFormattingSettings": false,
     "omnisharp.organizeImportsOnFormat": true,
     // .net:true, unity:false
-    "omnisharp.useModernNet": true,
+    "omnisharp.useModernNet": false,
     "omnisharp.monoPath": "/usr/bin/mono",
     "omnisharp.enableAsyncCompletion": true,
     "security.workspace.trust.enabled": false,
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.persistentSessionReviveProcess": "never",
-    // "workbench.editor.enablePreview": false,
     "workbench.layoutControl.enabled": false,
     "workbench.sideBar.location": "left",
     "workbench.tree.indent": 12,
     "workbench.editor.restoreViewState": false,
     "workbench.startupEditor": "none",
     "editor.tokenColorCustomizations": {
-        "[Monokai Pro (Filter Ristretto)]": {
+        "[Rosé Pine (no italics)]": {
             "textMateRules": [
                 {
-                    "scope": [
-                        "storage.type",
-                        "variable.parameter",
-                        "parameters variable.function",
-                        "support.type",
-                        "storage.modifier",
-                        "entity.other.inherited-class",
-                        "entity.other.attribute-name",
-                        "comment",
-                        "punctuation.definition.comment",
-                        "invalid"
-                    ],
+                    "scope": ["entity.name.variable"],
                     "settings": {
-                        "fontStyle": ""
+                        "foreground": "#E0DEF4"
                     }
                 }
             ]
         },
-        "[Dark Rock]": {
-            "variables": "#ebdbb2",
+        "[Ayu Dark Bordered]": {
             "textMateRules": [
                 {
                     "scope": [
-                        "entity.name.class.static.function",
-                        "entity.name.function"
+                        "entity.name.function",
+                        "support.function",
+                        "meta.function-call",
+                        "variable.function",
+                        "meta.method",
+                        "entity.name.method"
                     ],
                     "settings": {
-                        "fontStyle": "bold",
-                        "foreground": "#fabd2f"
+                        // f07174,ffee99
+                        "foreground": "#f07174"
+                    }
+                },
+                {
+                    "scope": "comment",
+                    "settings": {
+                        "fontStyle": ""
                     }
                 },
                 {
                     "scope": [
-                        "keyword.type",
-                        "keyword.control",
-                        "keyword.operator.expression",
-                        "keyword.other",
-                        "storage.modifier",
-                        "storage.type.class",
-                        "storage.type.accessor",
-                        "storage.type.enum"
+                        "variable.parameter",
+                        "meta.parameter",
+                        "variable.other.member",
+                        "variable.other.property",
+                        "variable.other.member",
+                        "variable.other.property",
+                        "entity.name.variable.field.cs",
+                        "variable.other.readwrite.js",
+                        "variable.other.readwrite.ts",
+                        "variable.other.readwrite.go",
+                        "entity.name.variable.field.go"
                     ],
                     "settings": {
-                        "foreground": "#FB4934"
-                    }
-                },
-                {
-                    "scope": [
-                        "entity.name.type",
-                        "entity.name.type.class",
-                        "storage.type"
-                    ],
-                    "settings": {
-                        "foreground": "#8EC07C"
+                        "foreground": "#c9c7be"
                     }
                 }
             ]
         }
-        // "[Default Dark Modern]": {
-        //     "variables": "#d4d4d4",
-        //     "textMateRules": [
-        //         {
-        //             "scope": [
-        //                 "variable.other.constant.object.ts",
-        //                 "variable.other.constant.object.js",
-        //                 "variable.other.constant.ts",
-        //                 "meta.definition.variable.ts",
-        //                 "meta.var-single-variable.expr.ts",
-        //                 "meta.var.expr.ts",
-        //                 "source.ts",
-        //                 "support.type.property-name",
-        //                 "variable.other.enummember"
-        //             ],
-        //             "settings": {
-        //                 "foreground": "#d4d4d4"
-        //             }
-        //         },
-        //         {
-        //             "scope": "emphasis",
-        //             "settings": {
-        //                 "fontStyle": ""
-        //             }
-        //         },
-        //         {
-        //             "scope": "keyword.preprocessor.cs",
-        //             "settings": {
-        //                 "foreground": "#808080"
-        //             }
-        //         }
-        //     ]
-        // },
     },
     "workbench.colorCustomizations": {
-        "[Quiet Light]": {
-            "statusBar.foreground": "#705697",
-            "statusBar.background": "#f5f5f5",
-            "statusBar.noFolderBackground": "#f5f5f5",
-
-            "editorCursor.foreground": "#121212",
-            "editorCursor.background": "#f5f5f5",
-
-            "editorLineNumber.activeForeground": "#AAAAAA",
-            "editorLineNumber.foreground": "#AAAAAA"
-        },
-        "[Dark Rock]": {
-            "editor.background": "#1d2021",
-            "statusBar.background": "#1d2021",
-            "statusBar.border": "#1d2021",
-            "editorLineNumber.activeForeground": "#504945",
-            "editorLineNumber.foreground": "#504945",
-            "list.highlightForeground": "#ebdbb2"
-        },
-
-        "[Default Dark Modern]": {
-            // "statusBar.background": "#1f1f1f",
-            // "statusBar.border": "#1f1f1f",
-            "editor.background": "#181818",
-            "editorLineNumber.activeForeground": "#6e7681",
-            "editorOverviewRuler.border": "#1f1f1f",
-            // "editorSuggestWidget.selectedBackground": "#3e3d1c",
-            "editorSuggestWidget.background": "#ff0000"
-        },
-        "[Monokai Pro (Filter Ristretto)]": {
-            "statusBar.background": "#2c2525",
-            "statusBar.border": "#2c2525",
-            "editorGroup.emptyBackground": "#2c2525",
-            "editor.lineHighlightBorder": "#2c2525",
-
-            "tab.activeBorderTop": "#f9cc6c",
-            "tab.activeBorder": "#2c2525",
-            "tab.unfocusedActiveBorder": "#2c2525",
-            "tab.unfocusedActiveBorderTop": "#948a8b",
-            "editorHoverWidget.highlightForeground": "#ffd866",
-            "editorLineNumber.activeForeground": "#5b5353"
-            // "editorSuggestWidget.selectedForeground": "#FFF1F3"
-        },
-        "[Visual Studio 2019 Light]": {
-            "statusBar.background": "#ffffff",
-            "statusBar.foreground": "#000000"
-        },
         "[Rosé Pine (no italics)]": {
-            // "editorOverviewRuler.border": "#191724",
-            // "editor.background" : "#121212",
-            // "editorGutter.background" :"#121212",
+            "editor.background": "#0b0e14",
+            "sideBar.background": "#0b0e14",
+            "editorGutter.background": "#0b0e14",
+            "statusBar.background": "#0b0e14",
+            "welcomePage.background": "#0b0e14",
+            "editorStickyScroll.background": "#26233a",
+
+            "editor.selectionBackground": "#44415a",
+            "editorCursor.background": "#6e6a86",
+            "editorCursor.foreground": "#e6edf3",
+            "terminalCursor.background": "#6e6a86",
+            "terminalCursor.foreground": "#e6edf3",
             "list.highlightForeground": "#e0def4",
             "list.focusHighlightForeground": "#e0def4",
             "editorSuggestWidget.focusHighlightForeground": "#e0def4",
             "editorSuggestWidget.highlightForeground": "#e0def4",
-            "editorCursor.background": "#191724",
-            "editorCursor.foreground": "#e0def4",
-            "terminalCursor.background": "#191724",
-            "terminalCursor.foreground": "#e0def4",
             "tab.activeBorderTop": "#31748f",
-            "editorLineNumber.activeForeground": "#908caa",
-            "terminal.ansiBrightBlue": "#31748f"
+            "editorLineNumber.activeForeground": "#5c5877",
+            "editorLineNumber.foreground": "#5c5877"
+        },
+        "[Ayu Dark Bordered]": {
+            // "editor.background": "#1f2430",
+            "editorCursor.background": "#6e6a86",
+            "editorCursor.foreground": "#e6edf3",
+            "editorSuggestWidget.selectedBackground": "#47526699",
+            "list.activeSelectionBackground": "#47526699"
+        },
+        "[Visual Studio 2019 Dark]": {
+            "tab.activeBorderTop": "#0078d4",
+            "tab.activeBackground": "#1f1f1f",
+            "tab.inactiveBackground": "#1f1f1f",
+            "editorGroupHeader.tabsBackground": "#1f1f1f",
+            "statusBar.border": "#1f1f1f",
+            "statusBar.background": "#1f1f1f",
+            "editorLineNumber.activeForeground": "#6e7681",
+            "editorLineNumber.foreground": "#6e7681"
+        },
+        "[Default Dark Modern]": {
+            // "editor.background": "#181818",
+            // "editorOverviewRuler.border": "#181818",
+            // "statusBar.border": "#181818",
+            // "statusBar.background": "#181818",
+            "editorLineNumber.activeForeground": "#6e7681",
+            "editorLineNumber.foreground": "#6e7681"
         }
     },
-    "vim.leader": ",",
+    "vim.leader": " ",
     "vim.statusBarColorControl": false,
     "vim.hlsearch": true,
     "vim.cursorStylePerMode.visualblock": "block",
@@ -214,17 +153,17 @@
     "vim.cursorStylePerMode.visualline": "block",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["]", "g"],
+            "before": ["]", "d"],
             "commands": ["editor.action.marker.nextInFiles"],
             "silent": true
         },
         {
-            "before": ["[", "g"],
+            "before": ["[", "d"],
             "commands": ["editor.action.marker.prevInFiles"],
             "silent": true
         },
         {
-            "before": ["<leader>", "d", "f"],
+            "before": ["<leader>", "f"],
             "commands": ["editor.action.formatDocument"],
             "silent": true
         },
@@ -269,12 +208,12 @@
             "silent": true
         },
         {
-            "before": ["<C-u>"],
-            "after": ["1", "0", "k"]
+            "before": ["<C-d>"],
+            "after": ["<C-d>", "z", "z"]
         },
         {
-            "before": ["<C-d>"],
-            "after": ["1", "0", "j"]
+            "before": ["<C-u>"],
+            "after": ["<C-u>", "z", "z"]
         },
         {
             "before": ["<leader>", "c", "a"],
@@ -347,12 +286,6 @@
     "editor.inlineSuggest.enabled": false,
     "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
     "editor.insertSpaces": false,
-    "editor.cursorSurroundingLines": 7,
-    // berkeley mono 19.3/19
-    // MonoLisa 18.5/18.5
-    "editor.fontFamily": "Berkeley Mono",
-    "editor.fontSize": 19.3,
-    "terminal.integrated.fontSize": 19,
     "scm.diffDecorationsGutterPattern": {
         "added": true
     },
@@ -384,10 +317,26 @@
     "editor.occurrencesHighlight": "off",
     "extensions.ignoreRecommendations": true,
     "editor.cursorBlinking": "solid",
-    "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "window.zoomLevel": 1,
-    "prisma.showPrismaDataPlatformNotification": false,
-    "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Rosé Pine (no italics)"
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.stickyScroll.enabled": true,
+    "editor.stickyScroll.maxLineCount": 2,
+    "workbench.colorTheme": "Rosé Pine (no italics)",
+
+    // region monolisa
+    "editor.fontFamily": "MonoLisa",
+    "editor.fontLigatures": "'liga' on, 'ss01' on,'ss02' on, 'ss03' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss16'",
+    // "editor.fontFamily": "Berkeley Mono",
+    // "editor.fontLigatures": false,
+    "editor.fontSize": 17,
+    "editor.suggestFontSize": 17,
+    "terminal.integrated.fontSize": 17,
+    "editor.wordWrap": "on",
+    "editor.smoothScrolling": false,
+    "editor.suggestSelection": "first",
+    "workbench.activityBar.location": "hidden"
+    // endregion  monolisa
 }

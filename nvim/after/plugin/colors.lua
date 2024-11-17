@@ -1,5 +1,5 @@
 require("rose-pine").setup({
-    dark_variant = "moon",
+    dark_variant = "main",
     disable_background = true,
     disable_float_background = true,
     disable_italics = true,
@@ -8,18 +8,19 @@ require("rose-pine").setup({
         Comment = { fg = "#5c5877" },
         WinSeparator = { fg = "#5c5877" },
         TreesitterContext = { bg = "#26233a" },
-        TreesitterContextLineNumber = { bg = "#26233a", fg = "rose" },
+        TreesitterContextLineNumber = { bg = "#26233a", fg = "#5c5877" },
         ["@comment.todo"] = { fg = "text", bg = "NONE", bold = true },
         ["@comment.note"] = { fg = "text", bg = "NONE", bold = true },
         ["@comment.error"] = { fg = "love", bg = "NONE", bold = true },
         ["@comment.warning"] = { fg = "gold", bg = "NONE", bold = true },
-        NvimTreeFolderIcon = { fg = "gold" },
+        -- NvimTreeFolderIcon = { fg = "gold" },
 
         -- Pmenu = { fg = "#908caa", bg = "#1f1d2e" },
         -- PmenuSel = { fg = "text", bg = "#26233a" },
-        Pmenu = { fg = "subtle", bg = "surface" },
-        -- Pmenu = { fg = "subtle", bg = "#26233a" },
-        -- PmenuSel = { fg = "text", bg = "#34304f" },
+
+        -- Pmenu = { fg = "subtle", bg = "surface" },
+        Pmenu = { fg = "subtle", bg = "#26233a" },
+        PmenuSel = { fg = "text", bg = "#34304f" },
     },
 })
 
@@ -32,22 +33,19 @@ require("vscode").setup({
     group_overrides = {
         TreesitterContext = { bg = "#303039" },
         NormalFloat = { bg = "" },
-        LineNr = { fg = "#505050" },
+        LineNr = { fg = "#404040" },
         MatchParen = { bg = "#3c3850", fg = "#d4d4d4" },
         TelescopeNormal = { fg = "#808080" },
         TelescopePromptNormal = { fg = "#d4d4d4" },
-        TelescopeMatching = { fg = "#c586c0", bold = false },
-        TelescopeSelection = { bg = "", fg = "#d4d4d4", bold = true },
+        TelescopeMatching = { fg = "#2aaaff", bold = false },
+        TelescopeSelection = { bg = "#04395e", fg = "#d4d4d4", bold = true },
         ["@comment.todo"] = { fg = "#cccccc", bg = "NONE", bold = true },
         ["@comment.note"] = { fg = "#cccccc", bg = "NONE", bold = true },
         ["@comment.error"] = { fg = "#f85149", bg = "NONE", bold = true },
         ["@comment.warning"] = { fg = "#cca700", bg = "NONE", bold = true },
-        -- Pmenu = { bg = "#323232" },
-        PmenuSel = { bg = "#4ec9b0", fg = "#181818" },
+        PmenuSel = { bg = "#04395e", fg = "#d4d4d4" },
         CmpItemAbbrMatch = { fg = "", bold = false },
         CmpItemAbbrMatchFuzzy = { fg = "", bold = false },
-        -- NvimTreeOpenedFolderName = { bg = "", fg = "#d4d4d4" },
-        -- NvimTreeCursorLine = { bg = "#3c3850", fg = "" },
     },
 })
 
@@ -103,7 +101,6 @@ function _G.set_colors(color)
     end
 
     if color == "ayu_dark" then
-        -- vim.cmd([[ hi Comment guifg=#474552 ]])
         vim.cmd([[ hi DiagnosticVirtualTextError guifg=#F07178]])
         vim.cmd([[ hi DiagnosticVirtualTextWarn  guifg=#E6B673]])
         vim.cmd([[ hi DiagnosticVirtualTextInfo  guifg=#5CCFE6]])
@@ -121,15 +118,19 @@ function _G.set_colors(color)
         vim.cmd([[ hi NvimTreeOpenedFolderName gui=NONE guifg=#36a3d9 ]])
         vim.cmd([[ hi NvimTreeEmptyFolderName gui=NONE guifg=#36a3d9 ]])
         vim.cmd([[ hi TelescopeNormal guifg=#808080 ]])
-        vim.cmd([[ hi TelescopeSelection guibg=#282b37 guifg=#ced4df gui=bold ]]) -- 282b37,293349
+        vim.cmd([[ hi TelescopeSelection guibg=#282b37 guifg=#ced4df gui=bold ]])
         vim.cmd([[ hi TelescopePromptNormal guifg=#c9c7be ]])
-        vim.cmd([[ hi Pmenu guibg=#262a32 ]])
+        vim.cmd([[ hi Pmenu guibg=#253340 ]])
+        vim.cmd([[ hi PmenuSbar guibg=#253340 ]])
+        vim.cmd([[ hi PmenuThumb guibg=#808080 ]])
         vim.cmd([[ hi TreesitterContext guibg=#1c2433 ]])
-        vim.cmd([[ hi TreesitterContextLineNumber guibg=#1c2433 guifg=#40444b ]])
+        vim.cmd([[ hi TreesitterContextLineNumber guibg=#282b37 guifg=#40444b ]])
         vim.cmd([[ hi Visual guibg=#393748 ]])
         vim.cmd([[ hi WinSeparator guifg=#33363c ]])
-        -- 778899,8A9BAA,FF966C,BC8F8F,A78B82,FF6F61,F07174,FFB454
+        vim.cmd([[ hi Comment guifg=#474552 ]])
+        vim.cmd([[ hi LineNr guifg=#474552 ]])
+        -- vim.cmd([[ hi @function guifg=#FFD173 ]])
     end
 end
 
-set_colors("ayu_dark")
+set_colors()

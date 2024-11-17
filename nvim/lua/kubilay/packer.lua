@@ -27,6 +27,7 @@ return require("packer").startup(function(use)
     use("tjdevries/colorbuddy.nvim")
     use("projekt0n/github-nvim-theme")
     use("Mofiqul/vscode.nvim")
+    use("ayu-theme/ayu-vim")
 
     -- use({
     -- 	"folke/trouble.nvim",
