@@ -172,5 +172,5 @@
     {
         "key": "alt+e",
         "command": "slnbrw.focus"
-    },
+    }
 ]
