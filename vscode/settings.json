@@ -41,8 +41,174 @@
     "workbench.editor.restoreViewState": false,
     "workbench.startupEditor": "none",
     "editor.tokenColorCustomizations": {
+        "[ayu-owl]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "comment",
+                        "comment.block",
+                        "comment.block.documentation",
+                        "comment.line",
+                        "punctuation.definition.comment"
+                    ],
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        },
+        "[Andromeda Zed]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "constant.language.boolean",
+                        "keyword.other.boolean",
+                        "constant.language.null",
+                        "keyword.other.null",
+                        "constant.language"
+                    ],
+                    "settings": {
+                        "foreground": "#FEE56B" // Replace with your preferred color
+                    }
+                },
+                {
+                    "scope": [
+                        "entity.name.type",
+                        "entity.name.type.class",
+                        "entity.name.type.struct",
+                        "entity.name.type.enum",
+                        "entity.name.type.interface",
+                        "keyword.type"
+                    ],
+                    "settings": {
+                        "foreground": "#08e7c5ff" // Desired color
+                    }
+                },
+                {
+                    "scope": ["keyword.operator", "variable.language"],
+                    "settings": {
+                        "foreground": "#10A694" // Desired color
+                    }
+                },
+                {
+                    "scope": [
+                        "comment",
+                        "comment.block",
+                        "comment.block.documentation",
+                        "comment.line",
+                        "constant",
+                        "constant.character",
+                        "constant.character.escape",
+                        "constant.numeric",
+                        "constant.numeric.integer",
+                        "constant.numeric.float",
+                        "constant.numeric.hex",
+                        "constant.numeric.octal",
+                        "constant.other",
+                        "constant.regexp",
+                        "constant.rgb-value",
+                        "emphasis",
+                        "entity",
+                        "entity.name",
+                        "entity.name.class",
+                        "entity.name.function",
+                        "entity.name.method",
+                        "entity.name.section",
+                        "entity.name.selector",
+                        "entity.name.tag",
+                        "entity.name.type",
+                        "entity.other",
+                        "entity.other.attribute-name",
+                        "entity.other.inherited-class",
+                        "invalid",
+                        "invalid.deprecated",
+                        "invalid.illegal",
+                        "keyword",
+                        "keyword.control",
+                        "keyword.operator",
+                        "keyword.operator.new",
+                        "keyword.operator.assignment",
+                        "keyword.operator.arithmetic",
+                        "keyword.operator.logical",
+                        "keyword.other",
+                        "markup",
+                        "markup.bold",
+                        "markup.changed",
+                        "markup.deleted",
+                        "markup.heading",
+                        "markup.inline.raw",
+                        "markup.inserted",
+                        "markup.italic",
+                        "markup.list",
+                        "markup.list.numbered",
+                        "markup.list.unnumbered",
+                        "markup.other",
+                        "markup.quote",
+                        "markup.raw",
+                        "markup.underline",
+                        "markup.underline.link",
+                        "meta",
+                        "meta.block",
+                        "meta.cast",
+                        "meta.class",
+                        "meta.function",
+                        "meta.function-call",
+                        "meta.preprocessor",
+                        "meta.return-type",
+                        "meta.selector",
+                        "meta.tag",
+                        "meta.type.annotation",
+                        "meta.type",
+                        "punctuation.definition.string.begin",
+                        "punctuation.definition.string.end",
+                        "punctuation.separator",
+                        "punctuation.separator.continuation",
+                        "punctuation.terminator",
+                        "storage",
+                        "storage.modifier",
+                        "storage.type",
+                        "string",
+                        "string.interpolated",
+                        "string.other",
+                        "string.quoted",
+                        "string.quoted.double",
+                        "string.quoted.other",
+                        "string.quoted.single",
+                        "string.quoted.triple",
+                        "string.regexp",
+                        "string.unquoted",
+                        "strong",
+                        "support",
+                        "support.class",
+                        "support.constant",
+                        "support.function",
+                        "support.other",
+                        "support.type",
+                        "support.type.property-name",
+                        "support.variable",
+                        "variable",
+                        "variable.language",
+                        "variable.name",
+                        "variable.other",
+                        "variable.other.readwrite",
+                        "variable.parameter",
+                        "comment.line.double-slash",
+                        "punctuation.definition.comment"
+                    ],
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        },
         "[Monokai Pro (Filter Octagon)]": {
             "textMateRules": [
+                {
+                    "scope": ["entity.name.variable"],
+                    "settings": {
+                        "foreground": "#EAF2F1"
+                    }
+                },
                 {
                     "scope": [
                         "comment",
@@ -159,7 +325,13 @@
                     "settings": {
                         "foreground": "#E0DEF4"
                     }
-                },
+                }
+                // {
+                //     "scope": [ "keyword.type"],
+                //     "settings": {
+                //         "fontStyle": "bold"
+                //     }
+                // }
             ]
         },
         "[Ayu Dark Bordered]": {
@@ -207,11 +379,60 @@
     },
     "workbench.colorCustomizations": {
         "[Monokai Pro (Filter Octagon)]": {
+            "editor.background": "#1f2430",
+            "editorGutter.background": "#1f2430",
+            "terminal.background": "#282a3a",
+            "panel.background": "#282a3a",
+            // "tab.activeBackground": "#1f2430",
+            // "tab.inactiveBackground": "#1f2430",
+
             "tab.activeBorder": "#282a3a",
             "tab.activeBorderTop": "#ffd76d",
             "editorLineNumber.activeForeground": "#535763",
             "editorCursor.background": "#6e6a86",
+            "editorCursor.foreground": "#e6edf3"
+        },
+        "[Andromeda Zed]": {
+            "statusBar.background": "#1e2025",
+            "editorLineNumber.activeForeground": "#858585",
+            "editorLineNumber.foreground": "#858585",
+            "tab.activeBorderTop": "#858585",
+
+            "editorCursor.background": "#1e2025",
+            "editorCursor.foreground": "#08e7c5ff",
+            "terminalCursor.background": "#1e2025",
+            "terminalCursor.foreground": "#08e7c5ff",
+
+            // #region Autocomplete stuff
+            "list.highlightForeground": "#f7f7f8",
+            "list.focusHighlightForeground": "#f7f7f8",
+            "editorSuggestWidget.focusHighlightForeground": "#f7f7f8",
+            "editorSuggestWidget.highlightForeground": "#f7f7f8",
+            "quickInput.foreground": "#aaaaaa",
+            // "editorSuggestWidget.foreground": "#aaaaaa",
+
+            "editorSuggestWidget.selectedBackground": "#2b2e39",
+            "list.activeSelectionBackground": "#2b2e39",
+            "list.inactiveSelectionBackground": "#2b2e39",
+            "editor.selectionBackground": "#2b2e39",
+
+            "editorSuggestWidget.background": "#20252b",
+            "editorActionList.background": "#20252b",
+            "quickInput.background": "#20252b"
+            // #endregion Autocomplete stuff
+        },
+        "[Rosé Noctis]": {
+            "list.highlightForeground": "#e0def4",
+            "list.focusHighlightForeground": "#e0def4",
+            "editorSuggestWidget.focusHighlightForeground": "#e0def4",
+            "editorSuggestWidget.highlightForeground": "#e0def4",
+            "tab.activeBorderTop": "#31748f",
+            "editorLineNumber.activeForeground": "#5c5877",
+            "editorLineNumber.foreground": "#5c5877",
+            "editorCursor.background": "#6e6a86",
             "editorCursor.foreground": "#e6edf3",
+            "terminalCursor.background": "#6e6a86",
+            "terminalCursor.foreground": "#e6edf3"
         },
         "[Rosé Pine (no italics)]": {
             // 13121c,191724
@@ -220,6 +441,7 @@
             "editorGutter.background": "#191724",
             "statusBar.background": "#191724",
             "welcomePage.background": "#191724",
+            "activityBar.background": "#191724",
 
             "editorStickyScroll.background": "#26233a",
             "editor.selectionBackground": "#44415a",
@@ -235,8 +457,32 @@
             "editorLineNumber.activeForeground": "#5c5877",
             "editorLineNumber.foreground": "#5c5877"
         },
+        "[ayu-owl]": {
+            // Autocomplete settings
+            "editorSuggestWidget.background": "#1f1d2e",
+            "editorSuggestWidget.selectedBackground": "#6e6a8633",
+            "editorSuggestWidget.foreground": "#8695b7",
+            "editorSuggestWidget.selectedForeground": "#d7dce2",
+            "list.activeSelectionBackground": "#47526699",
+            "list.activeSelectionForeground": "#d7dce2",
+
+            "tab.activeBorder": "#1d2433",
+            "tab.activeBorderTop": "#C3A6FF",
+            "terminal.foreground": "#CBCCC6",
+            "editorCursor.background": "#6e6a86",
+            "editorCursor.foreground": "#e6edf3",
+            "terminalCursor.background": "#6e6a86",
+            "terminalCursor.foreground": "#e6edf3",
+            "editorLineNumber.activeForeground": "#8695b755",
+
+            // Search colors
+            "editor.rangeHighlightBorder": "#00000000",
+            "editor.findMatchHighlightBorder": "#00000000",
+            "editor.findMatchHighlightBackground": "#6e6a8666"
+        },
         "[Ayu Dark Bordered]": {
             // "editor.background": "#1f2430",
+            "tab.activeBorderTop": "#f07174",
             "editorCursor.background": "#6e6a86",
             "editorCursor.foreground": "#e6edf3",
             "editorSuggestWidget.selectedBackground": "#47526699",
@@ -248,8 +494,8 @@
             // "editorOverviewRuler.border": "#181818",
             // "statusBar.border": "#181818",
             // "statusBar.background": "#181818",
+
             "editorStickyScroll.background": "#303030",
-            // 6e7681,#4a4f56
             "editorLineNumber.activeForeground": "#4a4f56",
             "editorLineNumber.foreground": "#4a4f56"
         }
@@ -349,7 +595,7 @@
             "before": ["<leader>", "d", "n"],
             "commands": ["notifications.clearAll"],
             "silent": true
-        } //
+        }
     ],
     "vim.commandLineModeKeyBindings": [
         {
@@ -441,10 +687,9 @@
     "editor.stickyScroll.maxLineCount": 1,
 
     // region monolisa
-    "editor.fontFamily": "MonoLisa",
-    "editor.fontLigatures": "'liga' on, 'ss01' on,'ss02' on, 'ss03' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss16'",
-    // "editor.fontFamily": "Berkeley Mono",
-    // "editor.fontLigatures": false,
+    // "editor.fontFamily": "MonoLisa",
+    // "editor.fontLigatures": "'liga' on, 'ss01' on,'ss02' on, 'ss03' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss16'",
+    "editor.fontFamily": "Berkeley Mono",
     "editor.fontSize": 17,
     "editor.suggestFontSize": 17,
     "terminal.integrated.fontSize": 17,
@@ -452,6 +697,6 @@
     "editor.smoothScrolling": false,
     "editor.suggestSelection": "first",
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Monokai Pro (Filter Octagon)"
+    "workbench.colorTheme": "Andromeda Zed"
     // endregion  monolisa
 }
