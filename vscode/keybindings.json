@@ -22,7 +22,8 @@
     },
     {
         "key": "\\",
-        "command": "workbench.action.toggleSidebarVisibility"
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "vim.mode == 'Normal'"
     },
     {
         "key": "ctrl+b",
@@ -113,7 +114,7 @@
         "command": "cursorUp"
     },
     {
-        "key": "alt+shift+w",
+        "key": "alt+shift+m",
         "command": "settings.cycle.toggleMenuBar"
     },
     {

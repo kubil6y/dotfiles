@@ -1,13 +1,11 @@
 adrienleloup.andromeda-zed
 be5invis.toml
-dermohamad.ayu-owl
 editorconfig.editorconfig
 esbenp.prettier-vscode
 fernandoescolar.vscode-solution-explorer
 golang.go
 gruntfuggly.todo-tree
 hoovercj.vscode-settings-cycler
-ikenshu.rose-noctis
 johnnymorganz.stylua
 kleber-swf.unity-code-snippets
 kreativ-software.csharpextensions
@@ -19,9 +17,10 @@ mvllow.rose-pine
 patcx.vscode-nuget-gallery
 pkief.material-icon-theme
 prisma.prisma
+raunofreiberg.vesper
 redguardtoo.matchit
 rhalaly.scope-to-this
-teabyii.ayu
+tonsky.theme-alabaster
 usernamehw.errorlens
 visualstudiotoolsforunity.vstuc
 vscodevim.vim
