@@ -1,4 +1,3 @@
-adrienleloup.andromeda-zed
 be5invis.toml
 editorconfig.editorconfig
 esbenp.prettier-vscode
@@ -6,7 +5,6 @@ fernandoescolar.vscode-solution-explorer
 golang.go
 gruntfuggly.todo-tree
 hoovercj.vscode-settings-cycler
-johnnymorganz.stylua
 kleber-swf.unity-code-snippets
 kreativ-software.csharpextensions
 ms-dotnettools.csdevkit
@@ -16,12 +14,9 @@ ms-vscode.live-server
 mvllow.rose-pine
 patcx.vscode-nuget-gallery
 pkief.material-icon-theme
-prisma.prisma
 raunofreiberg.vesper
 redguardtoo.matchit
 rhalaly.scope-to-this
-tonsky.theme-alabaster
 usernamehw.errorlens
 visualstudiotoolsforunity.vstuc
 vscodevim.vim
-zignd.html-css-class-completion

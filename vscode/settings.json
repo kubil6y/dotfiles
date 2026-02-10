@@ -44,13 +44,13 @@
         // "[Vesper]": {
         //     "enabled": true,
         //     "rules": {
-        //         // "event": "#e0e0e0",
-        //         // "variable": "#e0e0e0",
-        //         // "property": "#e0e0e0",
-        //         // "parameter": "#e0e0e0",
-        //         // "type": "#e0e0e0",
-        //         // "enumMember": "#e0e0e0",
-        //         // "punctuation": "#a0a0a0",
+        //         "event": "#ff0000",
+        //         "variable": "#ff0000",
+        //         "property": "#ff0000",
+        //         "parameter": "#ff0000",
+        //         "type": "#ff0000",
+        //         "enumMember": "#ff0000",
+        //         "punctuation": "#a0a0a0",
         //     },
         // },
     },
@@ -74,12 +74,6 @@
                     "scope": ["punctuation"],
                     "settings": {
                         "foreground": "#a0a0a0",
-                    },
-                },
-                {
-                    "scope": ["keyword.type"],
-                    "settings": {
-                        "foreground": "#FFC799",
                     },
                 },
                 {
@@ -118,14 +112,14 @@
             "editorBracketMatch.background": "#101010",
 
             // CTRL+P
-            "widget.border": "#333333",
             "widget.shadow": "#0000005c",
+            "widget.border": "#80808059",
             "sideBar.border": "#80808059", // File tree
 
-            // "editorCursor.foreground": "#ffdd33",
-            "editorCursor.foreground": "#ffffff",
-            "editorCursor.background": "#505050",
-            // "terminalCursor.foreground": "#FFC799",
+            // FFD866,FFB000
+            "editorCursor.foreground": "#FFFFFF",
+            "editorCursor.background": "#4A4A4A",
+            "terminalCursor.foreground": "#FFFFFF",
         },
         "[Rosé Pine Moon (no italics)]": {
             // 13121c, 191724
@@ -373,12 +367,15 @@
     "editor.suggestFontSize": 16,
     "terminal.integrated.fontSize": 16,
     "editor.fontVariations": false,
-    // "editor.fontWeight": "450",
 
     // "editor.fontFamily": "Berkeley Mono Variable",
     // "editor.fontSize": 16,
     // "editor.suggestFontSize": 16,
     // "terminal.integrated.fontSize": 16,
+
+    // Editor cursor blinking settings
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "off",
 
     "editor.wordWrap": "on",
     "editor.suggestSelection": "first",
@@ -390,6 +387,7 @@
     "window.titleBarStyle": "custom",
     "chat.commandCenter.enabled": false,
     "window.commandCenter": false,
+    "workbench.secondarySideBar.defaultVisibility": "visible",
     "editor.minimap.enabled": false,
     "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "Vesper",
