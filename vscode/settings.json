@@ -1,20 +1,136 @@
 {
+    // =========================================================
+    // 🚀 #VSCODE CONFIG
+    // =========================================================
+    // #BEGIN: Vim-like navigation behavior:
+    // • Reuse tabs for definitions and file jumps
+    // • Avoid peek except for references
+    // • Keep jump history predictable
+    // • Preserve stable split/editor positioning
+    "editor.stablePeek": true,
+    // Reuse existing tab for navigation like Vim buffer jumps
+    "workbench.editor.enablePreview": true,
+    // Open definition inside editor instead of peek window (closer to Vim gd)
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    // When multiple results exist, stay in same tab instead of spawning new ones
+    "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToReferences",
+    // Allows Ctrl+o / Ctrl+i jump stack to behave correctly
+    "workbench.editor.navigationScope": "editorGroup",
+    // Prevents preview editors from locking when you start editing
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    // Keeps editors from moving around when opening files
+    "workbench.editor.openPositioning": "right",
+    // Make definition navigation respect splits
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "editor.gotoLocation.multipleReferences": "peek",
+    // #END
+
+    "workbench.iconTheme": "material-icon-theme",
+    "breadcrumbs.enabled": false,
+    "window.zoomLevel": 1,
+    "window.titleBarStyle": "custom",
+    "workbench.sideBar.location": "left",
+    "workbench.secondarySideBar.defaultVisibility": "visible",
+    // Removes layout control buttons in title bar
+    "workbench.layoutControl.enabled": false,
+    // Compact tabs
+    "window.density.editorTabHeight": "compact",
+    "workbench.editor.showIcons": false,
+    // Disable startup editor (welcome page etc.)
+    "workbench.startupEditor": "none",
+    // Restores scroll/cursor position when reopening files (disabled)
+    "workbench.editor.restoreViewState": false,
+    // Sidebar tree indentation width
+    "workbench.tree.indent": 12,
+    // Menu bar fully hidden
+    "window.menuBarVisibility": "hidden",
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    // Toggle menu bar cycle command
+    "settings.cycle": [
+        {
+            "id": "toggleMenuBar",
+            "values": [
+                { "window.menuBarVisibility": "hidden" },
+                { "window.menuBarVisibility": "visible" },
+            ],
+        },
+    ],
+
+    // =========================================================
+    // 🎭 #EDITOR VISUAL BEHAVIOR
+    // =========================================================
+    // No active line highlight (cursor position used instead)
     "editor.renderLineHighlight": "none",
-    "editor.codeLens": false,
-    "editor.lightbulb.enabled": "off",
-    "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.hideCursorInOverviewRuler": true,
+    "editor.lineNumbers": "relative",
+    // Hide scrollbar entirely
     "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    // Disable indentation guides
     "editor.guides.indentation": false,
     "editor.renderWhitespace": "none",
+    // Only highlights bracket near cursor
     "editor.matchBrackets": "near",
+    // Disable rainbow brackets
+    "editor.bracketPairColorization.enabled": false,
+    // Disable sticky scroll header
+    "editor.stickyScroll.enabled": false,
+    "editor.stickyScroll.maxLineCount": 1,
+    // Disable symbol occurrences highlighting
+    "editor.occurrencesHighlight": "off",
+    // Disable semantic highlighting (use theme TextMate rules only)
+    "editor.semanticHighlighting.enabled": false,
+
+    // =========================================================
+    // 🎮 #EDITOR INPUT / BEHAVIOR
+    // =========================================================
+    "editor.wordWrap": "off",
+    "editor.suggestSelection": "first",
+    // Prevent accepting suggestions when typing punctuation
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    // Disable inline AI suggestions
+    "editor.inlineSuggest.enabled": false,
+    // Disable auto closing
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    // Hide cursor in overview ruler
+    "editor.hideCursorInOverviewRuler": true,
+    // Disable CodeLens (reference counters etc.)
+    "editor.codeLens": false,
+    // Disable quick fix lightbulb
+    "editor.lightbulb.enabled": "off",
+    "editor.renderFinalNewline": "off",
+
+    // =========================================================
+    // 🖱️ #CURSOR
+    // =========================================================
     "editor.cursorStyle": "block",
-    "explorer.compactFolders": false,
-    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    // Cursor blink style (phase = fade in/out instead of hard blink)
+    "editor.cursorBlinking": "phase",
+    // Disable cursor glide animation
+    "editor.cursorSmoothCaretAnimation": "off",
+
+    // =========================================================
+    // 📜 #FONT
+    // =========================================================
+    "editor.fontFamily": "MonoLisa",
+    "editor.fontSize": 16,
+    "editor.suggestFontSize": 16,
+    "editor.fontVariations": false,
+    "editor.fontLigatures": "'zero', 'ss03' on,'ss07' on,'ss13' on,'ss14' on,'ss17' on,'ss18' on",
+    // "editor.fontFamily": "Berkeley Mono Variable",
+    // "editor.fontSize": 17,
+    // "editor.suggestFontSize": 17,
+    // "terminal.integrated.fontSize": 17,
+
+    // =========================================================
+    // 📂 #FILE / SEARCH / WORKSPACE
+    // =========================================================
+    // Prevent undo history from persisting across sessions
     "files.restoreUndoStack": false,
-    "files.associations": {
-        "*.html": "html",
-    },
+    "files.associations": { "*.html": "html" },
     "files.exclude": {
         ".godot/": true,
         "**/*.meta": true,
@@ -24,57 +140,85 @@
     "search.exclude": {
         "**/*.anim": true,
     },
+    // Disable workspace trust prompts
+    "security.workspace.trust.enabled": false,
+
+    // =========================================================
+    // 📟 #TERMINAL
+    // =========================================================
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.fontSize": 16,
+    // Prevents VSCode from restoring terminal processes
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.inheritEnv": true,
+
+    // =========================================================
+    // ⚙️ #LSP
+    // =========================================================
     "go.toolsManagement.autoUpdate": true,
-    // "omnisharp.enableImportCompletion": true,
-    "omnisharp.useEditorFormattingSettings": false,
-    // .net:true, unity:false
+    // Unity compatibility (modern .NET OmniSharp breaks Unity sometimes)
     "omnisharp.useModernNet": false,
     "omnisharp.monoPath": "/usr/bin/mono",
+    // Faster completion (runs async background analysis)
     "omnisharp.enableAsyncCompletion": true,
-    "security.workspace.trust.enabled": false,
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.persistentSessionReviveProcess": "never",
-    "workbench.layoutControl.enabled": false,
-    "workbench.sideBar.location": "left",
-    "workbench.tree.indent": 12,
-    "workbench.editor.restoreViewState": false,
-    "workbench.startupEditor": "none",
-    "editor.semanticHighlighting.enabled": false,
-    "editor.semanticTokenColorCustomizations": {
-        // "[Vesper]": {
-        //     "enabled": true,
-        //     "rules": {
-        //         "event": "#ff0000",
-        //         "variable": "#ff0000",
-        //         "property": "#ff0000",
-        //         "parameter": "#ff0000",
-        //         "type": "#ff0000",
-        //         "enumMember": "#ff0000",
-        //         "punctuation": "#a0a0a0",
-        //     },
-        // },
+    // Uses VSCode formatter settings instead of OmniSharp defaults
+    "omnisharp.useEditorFormattingSettings": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    // =========================================================
+    // ✨ #FORMATTERS
+    // =========================================================
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
+    "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "dotnet.formatting.organizeImportsOnFormat": true,
+
+    // =========================================================
+    // 🌿 #SOURCE CONTROL / DIFF
+    // =========================================================
+    // Removes inline diff decorations in editor
+    "scm.diffDecorations": "none",
+    // Keeps only gutter additions indicator
+    "scm.diffDecorationsGutterPattern": { "added": true },
+
+    // =========================================================
+    // 🧩 #EXTENSIONS
+    // =========================================================
+    "errorLens.scrollbarHackEnabled": true,
+    "errorLens.onSave": true,
+    "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX"],
+    // Solution explorer ignore folders
+    "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
+    // Ignore extension recommendations popup
+    "extensions.ignoreRecommendations": true,
+
+    // =========================================================
+    // 🎨 #THEME CUSTOMIZATION
+    // =========================================================
     "editor.tokenColorCustomizations": {
         "[Vesper]": {
             "textMateRules": [
                 {
-                    "scope": [
-                        "entity.name.variable",
-                        // Under these are used for e0e0e0
-                        // "text.html.markdown",
-                        // "meta.paragraph.markdown",
-                        // "markup.list.unnumbered.markdown",
-                        // "support.type.property-name.json.comments",
-                    ],
-                    "settings": {
-                        "foreground": "#ffffff",
-                    },
+                    "scope": ["entity.name.variable"],
+                    "settings": { "foreground": "#ffffff" },
                 },
                 {
                     "scope": ["punctuation"],
-                    "settings": {
-                        "foreground": "#a0a0a0",
-                    },
+                    "settings": { "foreground": "#a0a0a0" },
                 },
                 {
                     "scope": [
@@ -88,38 +232,42 @@
                 },
             ],
         },
-        "[Rosé Pine Moon (no italics)]": {
-            "textMateRules": [
-                {
-                    "scope": ["entity.name.variable"],
-                    "settings": {
-                        "foreground": "#E0DEF4",
-                    },
-                },
-            ],
-        },
+        // "[Rosé Pine Moon (no italics)]": {
+        //     "textMateRules": [
+        //         {
+        //             "scope": ["entity.name.variable"],
+        //             "settings": {
+        //                 "foreground": "#E0DEF4",
+        //             },
+        //         },
+        //     ],
+        // },
     },
     "workbench.colorCustomizations": {
         "[Vesper]": {
             "tab.activeBorderTop": "#FFC799",
             "editorSuggestWidget.foreground": "#cccccc",
-            "quickInput.foreground": "#cccccc",
             "editorSuggestWidget.selectedBackground": "#ffffff25",
+            "quickInput.foreground": "#cccccc",
+            "quickInputList.focusBackground": "#393939",
             "editorLineNumber.activeForeground": "#505050",
             "list.inactiveSelectionBackground": "#282828",
-            "quickInputList.focusBackground": "#393939",
+            // Effectively disables bracket match highlight
             "editorBracketMatch.border": "#101010",
             "editorBracketMatch.background": "#101010",
-
-            // CTRL+P
+            // Command palette / popup styling
             "widget.shadow": "#0000005c",
             "widget.border": "#80808059",
-            "sideBar.border": "#80808059", // File tree
-
-            // FFD866,FFB000
+            "sideBar.border": "#80808059",
+            // Cursor styling
             "editorCursor.foreground": "#FFFFFF",
             "editorCursor.background": "#4A4A4A",
             "terminalCursor.foreground": "#FFFFFF",
+        },
+        "[Default Dark Modern]": {
+            // "editorStickyScroll.background": "#303030",
+            "editorLineNumber.activeForeground": "#4a4f56",
+            "editorLineNumber.foreground": "#4a4f56",
         },
         "[Rosé Pine Moon (no italics)]": {
             // 13121c, 191724
@@ -131,11 +279,9 @@
             "activityBar.background": "#191724",
             "titleBar.activeBackground": "#191724",
             "titleBar.inactiveBackground": "#191724",
-
             "editorStickyScroll.background": "#26233a",
             "sideBar.border": "#393552",
             "editorGroup.border": "#393552",
-
             // popup backgrounds
             "editorSuggestWidget.background": "#1f1d2e",
             "editorSuggestWidget.selectedBackground": "#6e6a8633",
@@ -145,251 +291,175 @@
             "editorActionList.focusBackground": "#6e6a8633",
             "terminal.background": "#26233a",
             "panel.background": "#26233a",
-
             // tab theming (compact size)
             // "editorGroupHeader.tabsBackground": "#232033",
             "tab.activeBackground": "#191724",
             "tab.activeForeground": "#E0DEF4",
             "tab.inactiveForeground": "#6E6A86",
             "tab.activeBorderTop": "#6E6A86",
-
             // cursor
             "editorCursor.background": "#6e6a86",
             "editorCursor.foreground": "#e6edf3",
             "terminalCursor.background": "#6e6a86",
             "terminalCursor.foreground": "#e6edf3",
-
             // autocomplete stuff
             "list.highlightForeground": "#e0def4",
             "list.focusHighlightForeground": "#e0def4",
             "editorSuggestWidget.focusHighlightForeground": "#e0def4",
             "editorSuggestWidget.highlightForeground": "#e0def4",
-
             "editorLineNumber.activeForeground": "#5c5877",
             "editorLineNumber.foreground": "#5c5877",
-
             "editor.selectionBackground": "#3b3551",
         },
-        "[Default Dark Modern]": {
-            // "editorStickyScroll.background": "#303030",
-            "editorLineNumber.activeForeground": "#4a4f56",
-            "editorLineNumber.foreground": "#4a4f56",
-        },
     },
+
+    // =========================================================
+    // 🥋 #VIM CONFIG
+    // =========================================================
     "vim.leader": " ",
+    // Allows * and # to work with visual selections
+    "vim.visualstar": true,
+    // Prevents the peek view (like Go to References) from closing when clicking outside
+    // "editor.stablePeek": true,
+    // Prevents Vim from recoloring status bar
     "vim.statusBarColorControl": false,
+    // Keeps search matches highlighted
     "vim.hlsearch": true,
-    "vim.cursorStylePerMode.visualblock": "block",
-    "vim.cursorStylePerMode.insert": "block",
     "vim.cursorStylePerMode.normal": "block",
-    "vim.cursorStylePerMode.replace": "block",
+    "vim.cursorStylePerMode.insert": "block",
     "vim.cursorStylePerMode.visual": "block",
+    "vim.cursorStylePerMode.visualblock": "block",
     "vim.cursorStylePerMode.visualline": "block",
+    "vim.cursorStylePerMode.replace": "block",
+    // Allows VSCode to handle Esc key (important for command palette etc.)
+    "keyboard.dispatch": "keyCode",
     "vim.handleKeys": {
         "<Esc>": false,
     },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
+            // Jump to next diagnostic
             "before": ["]", "d"],
             "commands": ["editor.action.marker.nextInFiles"],
             "silent": true,
         },
         {
+            // Jump to previous diagnostic
             "before": ["[", "d"],
             "commands": ["editor.action.marker.prevInFiles"],
             "silent": true,
         },
         {
+            // Format document
             "before": ["<leader>", "f"],
             "commands": ["editor.action.formatDocument"],
             "silent": true,
         },
         {
+            // Clear search highlight
             "before": ["<leader>", "d", "s"],
             "commands": [":nohl"],
             "silent": true,
         },
         {
+            // Remove all debug breakpoints
             "before": ["<leader>", "d", "a"],
             "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"],
             "silent": true,
         },
         {
+            // Toggle activity bar
             "before": ["<leader>", "t", "a"],
             "commands": ["workbench.action.toggleActivityBarVisibility"],
             "silent": true,
         },
         {
-            "before": ["<leader>", "s", "l"],
-            "commands": ["workbench.view.extension.sln_explorer"],
-            "silent": true,
-        },
-        {
+            // Toggle TODO tree panel
             "before": ["<leader>", "t", "l"],
             "commands": ["workbench.view.extension.todo-tree-container"],
             "silent": true,
         },
         {
+            // Toggle minimap
             "before": ["<leader>", "t", "m"],
             "commands": ["editor.action.toggleMinimap"],
             "silent": true,
         },
         {
+            // Enhanced bracket / tag jumping
             "before": ["%"],
             "commands": ["extension.matchitJumpItems"],
             "silent": true,
         },
         {
+            // Go to declaration
             "before": ["<leader>", "d", "t"],
             "commands": ["editor.action.revealDeclaration"],
             "silent": true,
         },
         {
+            // Open solution explorer
+            "before": ["<leader>", "s", "l"],
+            "commands": ["workbench.view.extension.sln_explorer"],
+            "silent": true,
+        },
+        {
+            // Center screen after half page down
             "before": ["<C-d>"],
             "after": ["<C-d>", "z", "z"],
         },
         {
+            // Center screen after half page up
             "before": ["<C-u>"],
             "after": ["<C-u>", "z", "z"],
         },
         {
+            // Close all tabs in current group
             "before": ["<leader>", "c", "a"],
             "commands": ["workbench.action.closeEditorsInGroup"],
             "silent": true,
         },
         {
+            // Close other tabs
             "before": ["<leader>", "c", "e"],
             "commands": ["workbench.action.closeOtherEditors"],
             "silent": true,
         },
         {
+            // Quick open file search
             "before": ["<C-p>"],
             "commands": ["workbench.action.quickOpen"],
             "silent": true,
         },
         {
+            // Clear notifications
             "before": ["<leader>", "d", "n"],
             "commands": ["notifications.clearAll"],
+            "silent": true,
+        },
+        {
+            "before": ["<leader>", "g", "r"],
+            "commands": ["editor.action.goToReferences"],
             "silent": true,
         },
     ],
     "vim.commandLineModeKeyBindings": [
         {
+            // Fix accidental :W
             "before": ["W"],
             "after": ["w"],
         },
         {
+            // Fix accidental :Q
             "before": ["Q"],
             "after": ["q"],
         },
     ],
-    // "[csharp]": {
-    //     "editor.defaultFormatter": "ms-dotnettools.csharp"
-    //     // "editor.defaultFormatter": "csharpier.csharpier-vscode"
-    // },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "scm.diffDecorations": "none",
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "editor.renderFinalNewline": "off",
-    "keyboard.dispatch": "keyCode",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "breadcrumbs.enabled": false,
-    "editor.bracketPairColorization.enabled": false,
-    "csharpextensions.useThisForCtorAssignments": false,
-    "html.autoCreateQuotes": false,
-    "csharpextensions.useFileScopedNamespace": true,
-    "editor.inlineSuggest.enabled": false,
-    "vssolution.netcoreIgnore": ["node_modules", "obj", ".ds_store", ".vs"],
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4,
-    "prettier.tabWidth": 4,
-    "prettier.useTabs": false,
-    "scm.diffDecorationsGutterPattern": {
-        "added": true,
-    },
-    "editor.lineNumbers": "relative",
-    "window.customMenuBarAltFocus": false,
-    "window.enableMenuBarMnemonics": false,
-    "window.menuBarVisibility": "hidden",
-    "settings.cycle": [
-        {
-            "id": "toggleMenuBar",
-            "values": [
-                { "window.menuBarVisibility": "hidden" },
-                { "window.menuBarVisibility": "visible" },
-            ],
-        },
-    ],
-    "errorLens.scrollbarHackEnabled": true,
-    "terminal.integrated.inheritEnv": true,
-    // "gdscript_formatter.line_size": 80,
-    // "godot_tools.gdscript_lsp_server_port": 6005,
-    "errorLens.onSave": true,
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.occurrencesHighlight": "off",
-    "extensions.ignoreRecommendations": true,
-    "editor.autoClosingBrackets": "never",
-    "editor.autoClosingQuotes": "never",
-    "editor.scrollbar.verticalScrollbarSize": 0,
-    "editor.stickyScroll.enabled": false,
-    "editor.stickyScroll.maxLineCount": 1,
-    "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX"],
-    "window.zoomLevel": 1,
-
-    "editor.fontFamily": "MonoLisa",
-    "editor.fontLigatures": "'zero', 'ss03' on,'ss07' on, 'ss13' on, 'ss14' on, 'ss17' on,'ss18' on",
-    "editor.fontSize": 16,
-    "editor.suggestFontSize": 16,
-    "terminal.integrated.fontSize": 16,
-    "editor.fontVariations": false,
-
-    // "editor.fontFamily": "Berkeley Mono Variable",
-    // "editor.fontSize": 16,
-    // "editor.suggestFontSize": 16,
-    // "terminal.integrated.fontSize": 16,
-
-    // Editor cursor blinking settings
-    "editor.cursorBlinking": "phase",
-    "editor.cursorSmoothCaretAnimation": "off",
-
-    "editor.wordWrap": "on",
-    "editor.suggestSelection": "first",
-    "dotnet.formatting.organizeImportsOnFormat": true,
-    // tab sizing
-    "window.density.editorTabHeight": "compact",
-    "workbench.editor.showIcons": false,
-    "workbench.editor.enablePreview": false,
-    "window.titleBarStyle": "custom",
-    "chat.commandCenter.enabled": false,
-    "window.commandCenter": false,
-    "workbench.secondarySideBar.defaultVisibility": "visible",
-    "editor.minimap.enabled": false,
-    "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "Vesper",
-    // tab sizing
+    "workbench.activityBar.location": "hidden",
+    "editor.minimap.enabled": false,
+
+    // =========================================================
+    // 🧪 NEW THINGS ADDED AFTER THIS...
+    // =========================================================
 }
