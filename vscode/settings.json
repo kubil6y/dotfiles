@@ -98,7 +98,7 @@
     // =========================================================
     // 🎮 #EDITOR INPUT / BEHAVIOR
     // =========================================================
-    "editor.wordWrap": "off",
+    "editor.wordWrap": "on",
     "editor.suggestSelection": "first",
     // Prevent accepting suggestions when typing punctuation
     "editor.acceptSuggestionOnCommitCharacter": false,
@@ -466,12 +466,12 @@
         },
         {
             "before": ["H"],
-            "commands": ["workbench.action.previousEditor"],
+            "commands": ["extension.vim_ctrl+pageup"],
             "silent": true,
         },
         {
             "before": ["L"],
-            "commands": ["workbench.action.nextEditor"],
+            "commands": ["extension.vim_ctrl+pagedown"],
             "silent": true,
         },
         {
