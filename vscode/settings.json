@@ -91,7 +91,9 @@
     "editor.occurrencesHighlight": "off",
     // Disable semantic highlighting (use theme TextMate rules only)
     "editor.semanticHighlighting.enabled": false,
-    "editor.rulers": [{ "column": 80, "color": "#ffffff10" }],
+    "workbench.iconTheme": "material-icon-theme",
+    // Vim style ruler at 80
+    // "editor.rulers": [{ "column": 80, "color": "#FFC79925" }],
 
     // =========================================================
     // 🎮 #EDITOR INPUT / BEHAVIOR
@@ -256,6 +258,7 @@
     },
     "workbench.colorCustomizations": {
         "[Vesper]": {
+            "tab.activeModifiedBorder": "#a0a0a0",
             "tab.activeBorderTop": "#FFC799",
             "editorSuggestWidget.foreground": "#cccccc",
             "editorSuggestWidget.selectedBackground": "#ffffff25",
@@ -274,6 +277,9 @@
             "editorCursor.foreground": "#FFFFFF",
             "editorCursor.background": "#4A4A4A",
             "terminalCursor.foreground": "#FFFFFF",
+            // shift+K popup visuals
+            "editorHoverWidget.background": "#282828",
+            "editorHoverWidget.border": "#505050",
         },
         "[Default Dark Modern]": {
             // "editorStickyScroll.background": "#303030",
@@ -477,6 +483,11 @@
             "before": ["g", "h"],
             "commands": [],
         },
+        {
+            "before": ["<leader>", "v", "a"],
+            "after": ["G", "V", "g", "g"],
+            "silent": true,
+        },
     ],
     "vim.commandLineModeKeyBindings": [
         {
@@ -491,5 +502,6 @@
         },
     ], // ️⬇️ NEW THINGS ADDED AFTER THIS ⬇️
     "editor.minimap.enabled": false,
+    "workbench.editor.empty.hint": "hidden",
     "workbench.colorTheme": "Vesper",
 }
