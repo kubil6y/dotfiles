@@ -1,5 +1,5 @@
-// Place your key bindings in this file to override the defaults
 [
+    // --- SUGGESTIONS & QUICK FIX (Tab Navigation) ---
     {
         "key": "tab",
         "command": "selectNextQuickFix",
@@ -13,13 +13,15 @@
     {
         "key": "tab",
         "command": "selectNextSuggestion",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible && !inSnippetMode"
     },
     {
         "key": "shift+tab",
         "command": "selectPrevSuggestion",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible && !inSnippetMode"
     },
+
+    // --- EXPLORER & SIDEBAR ---
     {
         "key": "\\",
         "command": "workbench.action.toggleSidebarVisibility",
@@ -45,6 +47,12 @@
         "when": "explorerViewletFocus"
     },
     {
+        "key": "alt+e",
+        "command": "slnbrw.focus"
+    },
+
+    // --- GLOBAL NAVIGATION (HJKL) ---
+    {
         "key": "ctrl+h",
         "command": "workbench.action.navigateLeft"
     },
@@ -54,37 +62,33 @@
     },
     {
         "key": "ctrl+k",
-        "command": "workbench.action.navigateUp"
+        "command": "workbench.action.navigateUp",
+        "when": "!inQuickOpen && !terminalFocus"
     },
     {
         "key": "ctrl+j",
-        "command": "workbench.action.navigateDown"
+        "command": "workbench.action.navigateDown",
+        "when": "!inQuickOpen && !terminalFocus"
     },
-    {
-        "key": "ctrl+k ctrl+i",
-        "command": "-editor.action.showHover",
-        "when": "editorTextFocus"
-    },
+
+    // --- TERMINAL SPECIFIC ---
     {
         "key": "ctrl+k",
-        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
-        "when": "inFilesPicker && inQuickOpen"
+        "command": "workbench.action.navigateUp",
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+j",
-        "command": "workbench.action.quickOpenNavigateNextInFilePicker",
-        "when": "inFilesPicker && inQuickOpen"
+        "command": "workbench.action.navigateDown",
+        "when": "terminalFocus"
     },
     {
-        "key": "ctrl+k",
-        "when": "actionWidgetVisible",
-        "command": "selectPrevCodeAction"
+        "key": "ctrl+l",
+        "command": "workbench.action.terminal.clear",
+        "when": "terminalFocus"
     },
-    {
-        "key": "ctrl+j",
-        "when": "actionWidgetVisible",
-        "command": "selectNextCodeAction"
-    },
+
+    // --- QUICK OPEN / PICKER NAVIGATION ---
     {
         "key": "ctrl+j",
         "command": "workbench.action.quickOpenSelectNext",
@@ -95,28 +99,20 @@
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
     },
+
+    // --- CODE ACTIONS / QUICK FIX MENUS ---
     {
         "key": "ctrl+k",
-        "when": "codeActionMenuVisible",
-        "command": "selectPrevCodeAction"
+        "command": "selectPrevCodeAction",
+        "when": "actionWidgetVisible || codeActionMenuVisible"
     },
     {
         "key": "ctrl+j",
-        "when": "codeActionMenuVisible",
-        "command": "selectNextCodeAction"
+        "command": "selectNextCodeAction",
+        "when": "actionWidgetVisible || codeActionMenuVisible"
     },
-    {
-        "key": "alt+j",
-        "command": "cursorDown"
-    },
-    {
-        "key": "alt+k",
-        "command": "cursorUp"
-    },
-    {
-        "key": "alt+shift+m",
-        "command": "settings.cycle.toggleMenuBar"
-    },
+
+    // --- TAB & EDITOR GROUP MANAGEMENT ---
     {
         "key": "ctrl+tab",
         "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor"
@@ -135,15 +131,27 @@
         "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
         "when": "inEditorsPicker && inQuickOpen"
     },
+
+    // --- MISC / FIXES ---
     {
-        "key": "ctrl+l",
-        "command": "workbench.action.terminal.clear",
-        "when": "terminalFocus"
+        "key": "alt+j",
+        "command": "cursorDown"
     },
     {
-        "key": "ctrl+alt+h",
-        "command": "extension.vim_ctrl+pageup",
-        "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl"
+        "key": "alt+k",
+        "command": "cursorUp"
+    },
+    {
+        "key": "alt+shift+m",
+        "command": "settings.cycle.toggleMenuBar"
+    },
+    {
+        "key": "ctrl+k ctrl+i",
+        "command": "-editor.action.showHover"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "-workbench.action.closeWindow"
     },
     {
         "key": "ctrl+pageup",
@@ -151,31 +159,8 @@
         "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl"
     },
     {
-        "key": "ctrl+alt+l",
-        "command": "extension.vim_ctrl+pagedown",
-        "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
-    },
-    {
         "key": "ctrl+pagedown",
         "command": "-extension.vim_ctrl+pagedown",
         "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
-    },
-    {
-        "key": "alt+.",
-        "command": "editor.action.quickFix",
-        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+.",
-        "command": "-editor.action.quickFix",
-        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+e",
-        "command": "slnbrw.focus"
-    },
-    {
-        "key": "ctrl+shift+w",
-        "command": "-workbench.action.closeWindow"
     }
 ]

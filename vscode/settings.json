@@ -2,37 +2,16 @@
     // =========================================================
     // 🚀 #VSCODE CONFIG
     // =========================================================
-    // #BEGIN: Vim-like navigation behavior:
-    // • Reuse tabs for definitions and file jumps
-    // • Avoid peek except for references
-    // • Keep jump history predictable
-    // • Preserve stable split/editor positioning
-    "editor.stablePeek": true,
-    // Reuse existing tab for navigation like Vim buffer jumps
-    "workbench.editor.enablePreview": true,
-    // Open definition inside editor instead of peek window (closer to Vim gd)
-    "editor.gotoLocation.multipleDefinitions": "goto",
-    // When multiple results exist, stay in same tab instead of spawning new ones
-    "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToReferences",
-    // Allows Ctrl+o / Ctrl+i jump stack to behave correctly
-    "workbench.editor.navigationScope": "editorGroup",
-    // Prevents preview editors from locking when you start editing
-    "workbench.editor.enablePreviewFromQuickOpen": true,
-    // Keeps editors from moving around when opening files
-    "workbench.editor.openPositioning": "right",
-    // Make definition navigation respect splits
-    "editor.gotoLocation.multipleDeclarations": "goto",
-    "editor.gotoLocation.multipleImplementations": "goto",
-    "editor.gotoLocation.multipleTypeDefinitions": "goto",
-    "editor.gotoLocation.multipleReferences": "peek",
-    // #END
-
-    "workbench.iconTheme": "material-icon-theme",
+    "window.titleBarStyle": "custom",
+    "window.title": " ",
+    "window.commandCenter": false,
     "breadcrumbs.enabled": false,
     "window.zoomLevel": 1,
-    "window.titleBarStyle": "custom",
     "workbench.sideBar.location": "left",
     "workbench.secondarySideBar.defaultVisibility": "visible",
+    "workbench.editor.focusRecentEditorAfterClose": true,
+    // File tree highlights current file
+    "explorer.autoReveal": true,
     // Removes layout control buttons in title bar
     "workbench.layoutControl.enabled": false,
     // Compact tabs
@@ -44,10 +23,12 @@
     "workbench.editor.restoreViewState": false,
     // Sidebar tree indentation width
     "workbench.tree.indent": 12,
+    "workbench.activityBar.location": "hidden",
     // Menu bar fully hidden
     "window.menuBarVisibility": "hidden",
     "window.customMenuBarAltFocus": false,
     "window.enableMenuBarMnemonics": false,
+    "workbench.editor.highlightModifiedTabs": true,
     // Toggle menu bar cycle command
     "settings.cycle": [
         {
@@ -60,8 +41,36 @@
     ],
 
     // =========================================================
+    // 👀 #VSCODE PEEKING
+    // =========================================================
+    // Vim-like navigation behavior:
+    // • Avoid peek except for references
+    // • Keep jump history predictable
+    // • Preserve stable split/editor positioning
+    "editor.stablePeek": false,
+    "editor.peekWidgetDefaultFocus": "tree",
+    "workbench.editor.enablePreview": false,
+    // Prevents preview editors from locking when you start editing
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    // Open definition inside editor instead of peek window (closer to Vim gd)
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    // When multiple results exist, stay in same tab instead of spawning new ones
+    "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToReferences",
+    // Allows Ctrl+o / Ctrl+i jump stack to behave correctly
+    "workbench.editor.navigationScope": "editorGroup",
+    // Keeps editors from moving around when opening files
+    "workbench.editor.openPositioning": "right",
+    // Make definition navigation respect splits
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "editor.gotoLocation.multipleReferences": "peek",
+
+    // =========================================================
     // 🎭 #EDITOR VISUAL BEHAVIOR
     // =========================================================
+    // Removes gutter width
+    "editor.glyphMargin": false,
     // No active line highlight (cursor position used instead)
     "editor.renderLineHighlight": "none",
     "editor.lineNumbers": "relative",
@@ -82,6 +91,7 @@
     "editor.occurrencesHighlight": "off",
     // Disable semantic highlighting (use theme TextMate rules only)
     "editor.semanticHighlighting.enabled": false,
+    "editor.rulers": [{ "column": 80, "color": "#ffffff10" }],
 
     // =========================================================
     // 🎮 #EDITOR INPUT / BEHAVIOR
@@ -111,6 +121,7 @@
     "editor.cursorBlinking": "phase",
     // Disable cursor glide animation
     "editor.cursorSmoothCaretAnimation": "off",
+    "editor.smoothScrolling": false,
 
     // =========================================================
     // 📜 #FONT
@@ -357,7 +368,7 @@
         },
         {
             // Clear search highlight
-            "before": ["<leader>", "d", "s"],
+            "before": ["<leader>", "/"],
             "commands": [":nohl"],
             "silent": true,
         },
@@ -438,9 +449,33 @@
             "silent": true,
         },
         {
-            "before": ["<leader>", "g", "r"],
+            "before": ["g", "r"],
             "commands": ["editor.action.goToReferences"],
             "silent": true,
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"],
+            "silent": true,
+        },
+        {
+            "before": ["H"],
+            "commands": ["workbench.action.previousEditor"],
+            "silent": true,
+        },
+        {
+            "before": ["L"],
+            "commands": ["workbench.action.nextEditor"],
+            "silent": true,
+        },
+        {
+            "before": ["<leader>", "r", "n"],
+            "commands": ["editor.action.rename"],
+            "silent": true,
+        },
+        {
+            "before": ["g", "h"],
+            "commands": [],
         },
     ],
     "vim.commandLineModeKeyBindings": [
@@ -454,12 +489,7 @@
             "before": ["Q"],
             "after": ["q"],
         },
-    ],
-    "workbench.colorTheme": "Vesper",
-    "workbench.activityBar.location": "hidden",
+    ], // ️⬇️ NEW THINGS ADDED AFTER THIS ⬇️
     "editor.minimap.enabled": false,
-
-    // =========================================================
-    // 🧪 NEW THINGS ADDED AFTER THIS...
-    // =========================================================
+    "workbench.colorTheme": "Vesper",
 }
