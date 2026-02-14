@@ -23,7 +23,6 @@
     "workbench.editor.restoreViewState": false,
     // Sidebar tree indentation width
     "workbench.tree.indent": 12,
-    "workbench.activityBar.location": "hidden",
     // Menu bar fully hidden
     "window.menuBarVisibility": "hidden",
     "window.customMenuBarAltFocus": false,
@@ -36,6 +35,21 @@
             "values": [
                 { "window.menuBarVisibility": "hidden" },
                 { "window.menuBarVisibility": "visible" },
+            ],
+        },
+        {
+            "id": "toggleFontSize",
+            "values": [
+                {
+                    "editor.fontSize": 14,
+                    "editor.suggestFontSize": 14,
+                    "terminal.integrated.fontSize": 14,
+                },
+                {
+                    "editor.fontSize": 16,
+                    "editor.suggestFontSize": 16,
+                    "terminal.integrated.fontSize": 16,
+                },
             ],
         },
     ],
@@ -92,8 +106,8 @@
     // Disable semantic highlighting (use theme TextMate rules only)
     "editor.semanticHighlighting.enabled": false,
     "workbench.iconTheme": "material-icon-theme",
-    // Vim style ruler at 80
-    // "editor.rulers": [{ "column": 80, "color": "#FFC79925" }],
+    // Vim style ruler
+    // "editor.rulers": [{ "column": 90, "color": "#FFC79920" }],
 
     // =========================================================
     // 🎮 #EDITOR INPUT / BEHAVIOR
@@ -129,8 +143,9 @@
     // 📜 #FONT
     // =========================================================
     "editor.fontFamily": "MonoLisa",
-    "editor.fontSize": 16,
-    "editor.suggestFontSize": 16,
+    "editor.fontSize": 14,
+    "editor.suggestFontSize": 14,
+    "terminal.integrated.fontSize": 14,
     "editor.fontVariations": false,
     "editor.fontLigatures": "'zero', 'ss03' on,'ss07' on,'ss13' on,'ss14' on,'ss17' on,'ss18' on",
     // "editor.fontFamily": "Berkeley Mono Variable",
@@ -160,7 +175,6 @@
     // 📟 #TERMINAL
     // =========================================================
     "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.fontSize": 16,
     // Prevents VSCode from restoring terminal processes
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "terminal.integrated.inheritEnv": true,
@@ -261,25 +275,25 @@
             "tab.activeModifiedBorder": "#a0a0a0",
             "tab.activeBorderTop": "#FFC799",
             "editorSuggestWidget.foreground": "#cccccc",
-            "editorSuggestWidget.selectedBackground": "#ffffff25",
+            "editorSuggestWidget.selectedBackground": "#3c3c3c",
             "quickInput.foreground": "#cccccc",
-            "quickInputList.focusBackground": "#393939",
+            "quickInputList.focusBackground": "#3c3c3c",
             "editorLineNumber.activeForeground": "#505050",
             "list.inactiveSelectionBackground": "#282828",
             // Effectively disables bracket match highlight
             "editorBracketMatch.border": "#101010",
             "editorBracketMatch.background": "#101010",
+            // File tree seperator
+            "sideBar.border": "#80808059",
             // Command palette / popup styling
             "widget.shadow": "#0000005c",
             "widget.border": "#80808059",
-            "sideBar.border": "#80808059",
             // Cursor styling
             "editorCursor.foreground": "#FFFFFF",
             "editorCursor.background": "#4A4A4A",
             "terminalCursor.foreground": "#FFFFFF",
             // shift+K popup visuals
-            "editorHoverWidget.background": "#282828",
-            "editorHoverWidget.border": "#505050",
+            "editorHoverWidget.background": "#3c3c3c",
         },
         "[Default Dark Modern]": {
             // "editorStickyScroll.background": "#303030",
@@ -354,6 +368,15 @@
         "<Esc>": false,
     },
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "u"],
+            "commands": [
+                {
+                    "command": "settings.cycle.toggleFontSize",
+                },
+            ],
+            "silent": true,
+        },
         {
             // Jump to next diagnostic
             "before": ["]", "d"],
@@ -488,6 +511,11 @@
             "after": ["G", "V", "g", "g"],
             "silent": true,
         },
+        {
+            "before": ["<leader>", "d", "s"],
+            "commands": ["workbench.action.gotoSymbol"],
+            "silent": true,
+        },
     ],
     "vim.commandLineModeKeyBindings": [
         {
@@ -500,8 +528,9 @@
             "before": ["Q"],
             "after": ["q"],
         },
-    ], // ️⬇️ NEW THINGS ADDED AFTER THIS ⬇️
-    "editor.minimap.enabled": false,
+    ],
     "workbench.editor.empty.hint": "hidden",
     "workbench.colorTheme": "Vesper",
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.location": "hidden",
 }
