@@ -3,164 +3,164 @@
     {
         "key": "tab",
         "command": "selectNextQuickFix",
-        "when": "editorFocus && quickFixWidgetVisible"
+        "when": "editorFocus && quickFixWidgetVisible",
     },
     {
         "key": "shift+tab",
         "command": "selectPrevQuickFix",
-        "when": "editorFocus && quickFixWidgetVisible"
+        "when": "editorFocus && quickFixWidgetVisible",
     },
     {
         "key": "tab",
         "command": "selectNextSuggestion",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible && !inSnippetMode"
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible && !inSnippetMode",
     },
     {
         "key": "shift+tab",
         "command": "selectPrevSuggestion",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible && !inSnippetMode"
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible && !inSnippetMode",
     },
 
     // --- EXPLORER & SIDEBAR ---
     {
         "key": "\\",
         "command": "workbench.action.toggleSidebarVisibility",
-        "when": "vim.mode == 'Normal'"
+        "when": "vim.mode == 'Normal'",
     },
     {
         "key": "ctrl+b",
-        "command": "-workbench.action.toggleSidebarVisibility"
+        "command": "-workbench.action.toggleSidebarVisibility",
     },
     {
         "key": "ctrl+n",
         "command": "explorer.newFile",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus",
     },
     {
         "key": "ctrl+shift+n",
         "command": "explorer.newFolder",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus",
     },
     {
         "key": "ctrl+m",
         "command": "workbench.files.action.collapseExplorerFolders",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus",
     },
     {
         "key": "alt+e",
-        "command": "slnbrw.focus"
+        "command": "slnbrw.focus",
     },
 
     // --- GLOBAL NAVIGATION (HJKL) ---
     {
         "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft"
+        "command": "workbench.action.navigateLeft",
     },
     {
         "key": "ctrl+l",
-        "command": "workbench.action.navigateRight"
+        "command": "workbench.action.navigateRight",
     },
     {
         "key": "ctrl+k",
         "command": "workbench.action.navigateUp",
-        "when": "!inQuickOpen && !terminalFocus"
+        "when": "!inQuickOpen && !terminalFocus",
     },
     {
         "key": "ctrl+j",
         "command": "workbench.action.navigateDown",
-        "when": "!inQuickOpen && !terminalFocus"
+        "when": "!inQuickOpen && !terminalFocus",
     },
 
     // --- TERMINAL SPECIFIC ---
     {
         "key": "ctrl+k",
         "command": "workbench.action.navigateUp",
-        "when": "terminalFocus"
+        "when": "terminalFocus",
     },
     {
         "key": "ctrl+j",
         "command": "workbench.action.navigateDown",
-        "when": "terminalFocus"
+        "when": "terminalFocus",
     },
     {
         "key": "ctrl+l",
         "command": "workbench.action.terminal.clear",
-        "when": "terminalFocus"
+        "when": "terminalFocus",
     },
 
     // --- QUICK OPEN / PICKER NAVIGATION ---
     {
         "key": "ctrl+j",
         "command": "workbench.action.quickOpenSelectNext",
-        "when": "inQuickOpen"
+        "when": "inQuickOpen",
     },
     {
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "inQuickOpen"
+        "when": "inQuickOpen",
     },
 
     // --- CODE ACTIONS / QUICK FIX MENUS ---
     {
         "key": "ctrl+k",
         "command": "selectPrevCodeAction",
-        "when": "actionWidgetVisible || codeActionMenuVisible"
+        "when": "actionWidgetVisible || codeActionMenuVisible",
     },
     {
         "key": "ctrl+j",
         "command": "selectNextCodeAction",
-        "when": "actionWidgetVisible || codeActionMenuVisible"
+        "when": "actionWidgetVisible || codeActionMenuVisible",
     },
 
     // --- TAB & EDITOR GROUP MANAGEMENT ---
     {
         "key": "ctrl+tab",
-        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor"
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
     },
     {
         "key": "ctrl+shift+tab",
-        "command": "workbench.action.quickOpenLeastRecentlyUsedEditor"
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditor",
     },
     {
         "key": "ctrl+tab",
         "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
-        "when": "inEditorsPicker && inQuickOpen"
+        "when": "inEditorsPicker && inQuickOpen",
     },
     {
         "key": "ctrl+shift+tab",
         "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
-        "when": "inEditorsPicker && inQuickOpen"
+        "when": "inEditorsPicker && inQuickOpen",
     },
 
     // --- MISC / FIXES ---
     {
         "key": "alt+j",
-        "command": "cursorDown"
+        "command": "cursorDown",
     },
     {
         "key": "alt+k",
-        "command": "cursorUp"
+        "command": "cursorUp",
     },
     {
         "key": "alt+shift+m",
-        "command": "settings.cycle.toggleMenuBar"
+        "command": "settings.cycle.toggleMenuBar",
     },
     {
         "key": "ctrl+k ctrl+i",
-        "command": "-editor.action.showHover"
+        "command": "-editor.action.showHover",
     },
     {
         "key": "ctrl+shift+w",
-        "command": "-workbench.action.closeWindow"
+        "command": "-workbench.action.closeWindow",
     },
     {
         "key": "ctrl+pageup",
         "command": "-extension.vim_ctrl+pageup",
-        "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl"
+        "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl",
     },
     {
         "key": "ctrl+pagedown",
         "command": "-extension.vim_ctrl+pagedown",
-        "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
-    }
+        "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl",
+    },
 ]

@@ -133,8 +133,7 @@
     // 🖱️ #CURSOR
     // =========================================================
     "editor.cursorStyle": "block",
-    // Cursor blink style (phase = fade in/out instead of hard blink)
-    "editor.cursorBlinking": "phase",
+    "editor.cursorBlinking": "solid",
     // Disable cursor glide animation
     "editor.cursorSmoothCaretAnimation": "off",
     "editor.smoothScrolling": false,
@@ -143,9 +142,9 @@
     // 📜 #FONT
     // =========================================================
     "editor.fontFamily": "MonoLisa",
-    "editor.fontSize": 14,
-    "editor.suggestFontSize": 14,
-    "terminal.integrated.fontSize": 14,
+    "editor.fontSize": 16,
+    "editor.suggestFontSize": 16,
+    "terminal.integrated.fontSize": 16,
     "editor.fontVariations": false,
     "editor.fontLigatures": "'zero', 'ss03' on,'ss07' on,'ss13' on,'ss14' on,'ss17' on,'ss18' on",
     // "editor.fontFamily": "Berkeley Mono Variable",
@@ -160,6 +159,7 @@
     "files.restoreUndoStack": false,
     "files.associations": { "*.html": "html" },
     "files.exclude": {
+        "**/[Vv]endor/**": true,
         ".godot/": true,
         "**/*.meta": true,
         "**/*.o": true,
@@ -259,46 +259,71 @@
                 },
             ],
         },
-        // "[Rosé Pine Moon (no italics)]": {
-        //     "textMateRules": [
-        //         {
-        //             "scope": ["entity.name.variable"],
-        //             "settings": {
-        //                 "foreground": "#E0DEF4",
-        //             },
-        //         },
-        //     ],
-        // },
+        "[Rosé Pine Moon (no italics)]": {
+            "textMateRules": [
+                {
+                    "scope": ["entity.name.variable"],
+                    "settings": {
+                        "foreground": "#E0DEF4",
+                    },
+                },
+                {
+                    "scope": [
+                        "constant.language.null",
+                        "constant.language.undefined",
+                    ],
+                    "settings": {
+                        "foreground": "#f6c177",
+                        "fontStyle": "bold",
+                    },
+                },
+            ],
+        },
     },
     "workbench.colorCustomizations": {
         "[Vesper]": {
-            "tab.activeModifiedBorder": "#a0a0a0",
+            // Tabs
             "tab.activeBorderTop": "#FFC799",
-            "editorSuggestWidget.foreground": "#cccccc",
-            "editorSuggestWidget.selectedBackground": "#3c3c3c",
-            "quickInput.foreground": "#cccccc",
-            "quickInputList.focusBackground": "#3c3c3c",
-            "editorLineNumber.activeForeground": "#505050",
-            "list.inactiveSelectionBackground": "#282828",
-            // Effectively disables bracket match highlight
+            "tab.activeModifiedBorder": "#8a8a8a",
+            // Autocomplete
+            "editorSuggestWidget.foreground": "#a0a0a0",
+            "editorSuggestWidget.border": "#6a6a6a40",
+            "editorSuggestWidget.selectedBackground": "#2b303b",
+            "editorSuggestWidget.selectedForeground": "#FFC799",
+            "editorSuggestWidget.highlightForeground": "#FFC799",
+            // Command palette
+            "quickInputList.focusForeground": "#FFC799",
+            "quickInputList.focusBackground": "#2f353f",
+            // Selection
+            "editor.selectionBackground": "#2b303b",
+            // Cursor
+            "editorCursor.foreground": "#f0f0f0",
+            "editorCursor.background": "#505050",
+            "terminalCursor.foreground": "#f0f0f0",
+            // Line numbers
+            "editorLineNumber.foreground": "#3c3c3c",
+            "editorLineNumber.activeForeground": "#3c3c3c",
+            // Lists / selections
+            "list.activeSelectionBackground": "#2b303b",
+            // Bracket match (disabled visually)
             "editorBracketMatch.border": "#101010",
             "editorBracketMatch.background": "#101010",
-            // File tree seperator
-            "sideBar.border": "#80808059",
-            // Command palette / popup styling
-            "widget.shadow": "#0000005c",
-            "widget.border": "#80808059",
-            // Cursor styling
-            "editorCursor.foreground": "#FFFFFF",
-            "editorCursor.background": "#4A4A4A",
-            "terminalCursor.foreground": "#FFFFFF",
-            // shift+K popup visuals
-            "editorHoverWidget.background": "#3c3c3c",
+            // Sidebar
+            "sideBar.border": "#6a6a6a55",
+            "editorGroup.border": "#6a6a6a55",
+            // Widgets / popups
+            "widget.shadow": "#00000070",
+            "widget.border": "#6a6a6a40",
+            // Hover
+            "editorHoverWidget.background": "#353c46",
+            "editorHoverWidget.border": "#3b3f48",
         },
         "[Default Dark Modern]": {
             // "editorStickyScroll.background": "#303030",
             "editorLineNumber.activeForeground": "#4a4f56",
             "editorLineNumber.foreground": "#4a4f56",
+            "editorBracketMatch.border": "#1f1f1f",
+            "editorBracketMatch.background": "#1f1f1f",
         },
         "[Rosé Pine Moon (no italics)]": {
             // 13121c, 191724
@@ -316,6 +341,9 @@
             // popup backgrounds
             "editorSuggestWidget.background": "#1f1d2e",
             "editorSuggestWidget.selectedBackground": "#6e6a8633",
+            "editorSuggestWidget.border": "#6e6a8680",
+            "widget.shadow": "#0000005c",
+            "widget.border": "#6e6a8680",
             "quickInput.background": "#1f1d2e",
             "quickInputList.focusBackground": "#6e6a8633",
             "editorActionList.background": "#1f1d2e",
@@ -323,11 +351,11 @@
             "terminal.background": "#26233a",
             "panel.background": "#26233a",
             // tab theming (compact size)
-            // "editorGroupHeader.tabsBackground": "#232033",
             "tab.activeBackground": "#191724",
             "tab.activeForeground": "#E0DEF4",
-            "tab.inactiveForeground": "#6E6A86",
-            "tab.activeBorderTop": "#6E6A86",
+            // 6E6A86,9ccfd8
+            "tab.activeModifiedBorder": "#9ccfd8",
+            "tab.activeBorderTop": "#9ccfd8",
             // cursor
             "editorCursor.background": "#6e6a86",
             "editorCursor.foreground": "#e6edf3",
@@ -341,6 +369,9 @@
             "editorLineNumber.activeForeground": "#5c5877",
             "editorLineNumber.foreground": "#5c5877",
             "editor.selectionBackground": "#3b3551",
+            // matching brackets
+            "editorBracketMatch.border": "#191724",
+            "editorBracketMatch.background": "#191724",
         },
     },
 
@@ -367,7 +398,25 @@
     "vim.handleKeys": {
         "<Esc>": false,
     },
+    "vim.visualModeKeyBindings": [
+        // The "Greatest Remap Ever" (Paste over selection without losing your yank)
+        {
+            "before": ["<leader>", "p"],
+            "after": ["\"", "_", "d", "P"],
+        },
+        // Delete to void register
+        {
+            "before": ["<leader>", "d"],
+            "after": ["\"", "_", "d"],
+        },
+    ],
     "vim.normalModeKeyBindingsNonRecursive": [
+        // This allows you to do <leader>d followed by a motion (like iw or ap)
+        // to delete to the void register in Normal mode
+        {
+            "before": ["<leader>", "d"],
+            "after": ["\"", "_", "d"],
+        },
         {
             "before": ["<leader>", "u"],
             "commands": [
@@ -402,12 +451,6 @@
             "silent": true,
         },
         {
-            // Remove all debug breakpoints
-            "before": ["<leader>", "d", "a"],
-            "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"],
-            "silent": true,
-        },
-        {
             // Toggle activity bar
             "before": ["<leader>", "t", "a"],
             "commands": ["workbench.action.toggleActivityBarVisibility"],
@@ -429,12 +472,6 @@
             // Enhanced bracket / tag jumping
             "before": ["%"],
             "commands": ["extension.matchitJumpItems"],
-            "silent": true,
-        },
-        {
-            // Go to declaration
-            "before": ["<leader>", "d", "t"],
-            "commands": ["editor.action.revealDeclaration"],
             "silent": true,
         },
         {
@@ -466,15 +503,21 @@
             "silent": true,
         },
         {
-            // Quick open file search
-            "before": ["<C-p>"],
-            "commands": ["workbench.action.quickOpen"],
+            // Clear notifications
+            "before": ["<leader>", "c", "n"],
+            "commands": ["notifications.clearAll"],
             "silent": true,
         },
         {
-            // Clear notifications
-            "before": ["<leader>", "d", "n"],
-            "commands": ["notifications.clearAll"],
+            // Clear all debug breakpoints
+            "before": ["<leader>", "c", "b"],
+            "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"],
+            "silent": true,
+        },
+        {
+            // Quick open file search
+            "before": ["<C-p>"],
+            "commands": ["workbench.action.quickOpen"],
             "silent": true,
         },
         {
@@ -503,16 +546,12 @@
             "silent": true,
         },
         {
-            "before": ["g", "h"],
-            "commands": [],
-        },
-        {
             "before": ["<leader>", "v", "a"],
             "after": ["G", "V", "g", "g"],
             "silent": true,
         },
         {
-            "before": ["<leader>", "d", "s"],
+            "before": ["g", "s"],
             "commands": ["workbench.action.gotoSymbol"],
             "silent": true,
         },
@@ -530,7 +569,8 @@
         },
     ],
     "workbench.editor.empty.hint": "hidden",
-    "workbench.colorTheme": "Vesper",
-    "editor.minimap.enabled": false,
     "workbench.activityBar.location": "hidden",
+    "editor.minimap.enabled": false,
+    "terminal.integrated.initialHint": false,
+    "workbench.colorTheme": "Vesper",
 }
