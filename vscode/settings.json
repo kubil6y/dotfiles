@@ -142,9 +142,9 @@
     // 📜 #FONT
     // =========================================================
     "editor.fontFamily": "MonoLisa",
-    "editor.fontSize": 16,
-    "editor.suggestFontSize": 16,
-    "terminal.integrated.fontSize": 16,
+    "editor.fontSize": 14,
+    "editor.suggestFontSize": 14,
+    "terminal.integrated.fontSize": 14,
     "editor.fontVariations": false,
     "editor.fontLigatures": "'zero', 'ss03' on,'ss07' on,'ss13' on,'ss14' on,'ss17' on,'ss18' on",
     // "editor.fontFamily": "Berkeley Mono Variable",
@@ -288,23 +288,23 @@
             // Autocomplete
             "editorSuggestWidget.foreground": "#a0a0a0",
             "editorSuggestWidget.border": "#6a6a6a40",
-            "editorSuggestWidget.selectedBackground": "#2b303b",
+            "editorSuggestWidget.selectedBackground": "#2f3135",
             "editorSuggestWidget.selectedForeground": "#FFC799",
             "editorSuggestWidget.highlightForeground": "#FFC799",
             // Command palette
             "quickInputList.focusForeground": "#FFC799",
-            "quickInputList.focusBackground": "#2f353f",
+            "quickInputList.focusBackground": "#37393d",
             // Selection
-            "editor.selectionBackground": "#2b303b",
+            "editor.selectionBackground": "#2f3135",
             // Cursor
             "editorCursor.foreground": "#f0f0f0",
-            "editorCursor.background": "#505050",
+            "editorCursor.background": "#5a5a5a",
             "terminalCursor.foreground": "#f0f0f0",
             // Line numbers
-            "editorLineNumber.foreground": "#3c3c3c",
-            "editorLineNumber.activeForeground": "#3c3c3c",
+            "editorLineNumber.foreground": "#4a4a4a",
+            "editorLineNumber.activeForeground": "#4a4a4a",
             // Lists / selections
-            "list.activeSelectionBackground": "#2b303b",
+            "list.activeSelectionBackground": "#2f3135",
             // Bracket match (disabled visually)
             "editorBracketMatch.border": "#101010",
             "editorBracketMatch.background": "#101010",
@@ -315,8 +315,8 @@
             "widget.shadow": "#00000070",
             "widget.border": "#6a6a6a40",
             // Hover
-            "editorHoverWidget.background": "#353c46",
-            "editorHoverWidget.border": "#3b3f48",
+            "editorHoverWidget.background": "#37393d",
+            "editorHoverWidget.border": "#37393d",
         },
         "[Default Dark Modern]": {
             // "editorStickyScroll.background": "#303030",
