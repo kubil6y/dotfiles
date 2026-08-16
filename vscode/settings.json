@@ -8,7 +8,7 @@
     "breadcrumbs.enabled": false,
     "window.zoomLevel": 1,
     "workbench.sideBar.location": "left",
-    "workbench.secondarySideBar.defaultVisibility": "visible",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
     "workbench.editor.focusRecentEditorAfterClose": true,
     // File tree highlights current file
     "explorer.autoReveal": true,
@@ -38,7 +38,7 @@
             ],
         },
         {
-            "id": "toggleFontSize",
+            "id": "cycleFontSize",
             "values": [
                 {
                     "editor.fontSize": 14,
@@ -46,7 +46,7 @@
                     "terminal.integrated.fontSize": 14,
                 },
                 {
-                    "editor.fontSize": 16,
+                    "editor.fontSize": 15.5,
                     "editor.suggestFontSize": 16,
                     "terminal.integrated.fontSize": 16,
                 },
@@ -83,6 +83,8 @@
     // =========================================================
     // 🎭 #EDITOR VISUAL BEHAVIOR
     // =========================================================
+    // Remove params from methods
+    // "editor.parameterHints.enabled": false,
     // Removes gutter width
     "editor.glyphMargin": false,
     // No active line highlight (cursor position used instead)
@@ -118,9 +120,9 @@
     "editor.acceptSuggestionOnCommitCharacter": false,
     // Disable inline AI suggestions
     "editor.inlineSuggest.enabled": false,
-    // Disable auto closing
-    "editor.autoClosingBrackets": "never",
-    "editor.autoClosingQuotes": "never",
+    // Auto pair
+    // "editor.autoClosingBrackets": "never",
+    // "editor.autoClosingQuotes": "never",
     // Hide cursor in overview ruler
     "editor.hideCursorInOverviewRuler": true,
     // Disable CodeLens (reference counters etc.)
@@ -147,11 +149,13 @@
     "terminal.integrated.fontSize": 14,
     "editor.fontVariations": false,
     "editor.fontLigatures": "'zero', 'ss03' on,'ss07' on,'ss13' on,'ss14' on,'ss17' on,'ss18' on",
-    // "editor.fontFamily": "Berkeley Mono Variable",
-    // "editor.fontSize": 17,
-    // "editor.suggestFontSize": 17,
-    // "terminal.integrated.fontSize": 17,
 
+    // "editor.fontFamily": "Berkeley Mono Variable",
+    // "editor.fontSize": 15,
+    // "editor.suggestFontSize": 15,
+    // "terminal.integrated.fontSize": 15,
+
+    // "editor.fontWeight": 450,
     // =========================================================
     // 📂 #FILE / SEARCH / WORKSPACE
     // =========================================================
@@ -189,12 +193,13 @@
     // Faster completion (runs async background analysis)
     "omnisharp.enableAsyncCompletion": true,
     // Uses VSCode formatter settings instead of OmniSharp defaults
-    "omnisharp.useEditorFormattingSettings": false,
+    // "omnisharp.useEditorFormattingSettings": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
 
     // =========================================================
     // ✨ #FORMATTERS
     // =========================================================
+    "editor.formatOnType": false,
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
@@ -237,6 +242,39 @@
     // 🎨 #THEME CUSTOMIZATION
     // =========================================================
     "editor.tokenColorCustomizations": {
+        "[Ayu Mirage Bordered]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "entity.name.variable",
+                        "entity.name.variable.parameter",
+                    ],
+                    "settings": { "foreground": "#BFBDB6" },
+                },
+                {
+                    "scope": [
+                        "comment",
+                        "keyword",
+                        "storage.modifier",
+                        "storage.type",
+                        "variable.language",
+                        "entity.other.attribute-name",
+                        "punctuation.definition.comment",
+                    ],
+                    "settings": { "fontStyle": "" },
+                },
+                {
+                    "scope": [
+                        "constant.language.null",
+                        "constant.language.undefined",
+                    ],
+                    "settings": {
+                        "fontStyle": "bold",
+                        "foreground": "#D2A6FF",
+                    },
+                },
+            ],
+        },
         "[Vesper]": {
             "textMateRules": [
                 {
@@ -262,6 +300,12 @@
         "[Rosé Pine Moon (no italics)]": {
             "textMateRules": [
                 {
+                    "scope": ["entity.name.function"],
+                    "settings": {
+                        "foreground": "#EBBCBA",
+                    },
+                },
+                {
                     "scope": ["entity.name.variable"],
                     "settings": {
                         "foreground": "#E0DEF4",
@@ -281,39 +325,51 @@
         },
     },
     "workbench.colorCustomizations": {
+        "[Ayu Mirage Bordered]": {
+            // General
+            "foreground": "#CCCAC2",
+            "editor.background": "#1f2430",
+            "titleBar.activeBackground": "#1f2430",
+            "editorLineNumber.activeForeground": "#5a6378a6",
+            "tab.border": "#1f2430",
+            // Autocomplete
+            "editorSuggestWidget.background": "#1f2430",
+            "editorSuggestWidget.selectedBackground": "#63759940",
+            // Cursor
+            "editorCursor.foreground": "#CCCAC2",
+            "editorCursor.background": "#242936",
+            // Parens
+            "editorBracketMatch.border": "#1f2430",
+            "editorBracketMatch.background": "#1f2430",
+            // Command Palette
+            "quickInput.foreground": "#cccac2",
+            "quickInput.background": "#1f2430",
+            "quickInputList.focusBackground": "#63759950",
+        },
         "[Vesper]": {
+            // Auto Complete
+            "editorSuggestWidget.border": "#333333",
             // Tabs
+            "tab.activeBorder": "#101010",
             "tab.activeBorderTop": "#FFC799",
             "tab.activeModifiedBorder": "#8a8a8a",
-            // Autocomplete
-            "editorSuggestWidget.foreground": "#a0a0a0",
-            "editorSuggestWidget.border": "#6a6a6a40",
-            "editorSuggestWidget.selectedBackground": "#2f3135",
-            "editorSuggestWidget.selectedForeground": "#FFC799",
-            "editorSuggestWidget.highlightForeground": "#FFC799",
             // Command palette
-            "quickInputList.focusForeground": "#FFC799",
+            "quickInput.foreground": "#ffffff",
             "quickInputList.focusBackground": "#37393d",
             // Selection
-            "editor.selectionBackground": "#2f3135",
-            // Cursor
-            "editorCursor.foreground": "#f0f0f0",
-            "editorCursor.background": "#5a5a5a",
-            "terminalCursor.foreground": "#f0f0f0",
+            "editor.selectionBackground": "#37393d",
             // Line numbers
             "editorLineNumber.foreground": "#4a4a4a",
             "editorLineNumber.activeForeground": "#4a4a4a",
-            // Lists / selections
-            "list.activeSelectionBackground": "#2f3135",
             // Bracket match (disabled visually)
             "editorBracketMatch.border": "#101010",
             "editorBracketMatch.background": "#101010",
             // Sidebar
-            "sideBar.border": "#6a6a6a55",
-            "editorGroup.border": "#6a6a6a55",
+            "sideBar.border": "#3c3c3c",
+            "editorGroup.border": "#3c3c3c",
             // Widgets / popups
             "widget.shadow": "#00000070",
-            "widget.border": "#6a6a6a40",
+            "widget.border": "#3c3c3c99",
             // Hover
             "editorHoverWidget.background": "#37393d",
             "editorHoverWidget.border": "#37393d",
@@ -341,9 +397,9 @@
             // popup backgrounds
             "editorSuggestWidget.background": "#1f1d2e",
             "editorSuggestWidget.selectedBackground": "#6e6a8633",
-            "editorSuggestWidget.border": "#6e6a8680",
+            // "editorSuggestWidget.border": "#6e6a8680",
             "widget.shadow": "#0000005c",
-            "widget.border": "#6e6a8680",
+            // "widget.border": "#6e6a8680",
             "quickInput.background": "#1f1d2e",
             "quickInputList.focusBackground": "#6e6a8633",
             "editorActionList.background": "#1f1d2e",
@@ -421,7 +477,7 @@
             "before": ["<leader>", "u"],
             "commands": [
                 {
-                    "command": "settings.cycle.toggleFontSize",
+                    "command": "settings.cycle.cycleFontSize",
                 },
             ],
             "silent": true,
@@ -555,6 +611,12 @@
             "commands": ["workbench.action.gotoSymbol"],
             "silent": true,
         },
+        // Open claude in new tab as helper
+        {
+            "before": ["<leader>", "a", "t"],
+            "commands": ["claude-vscode.editor.open"],
+            "silent": true,
+        },
     ],
     "vim.commandLineModeKeyBindings": [
         {
@@ -570,7 +632,10 @@
     ],
     "workbench.editor.empty.hint": "hidden",
     "workbench.activityBar.location": "hidden",
-    "editor.minimap.enabled": false,
     "terminal.integrated.initialHint": false,
-    "workbench.colorTheme": "Vesper",
+    "chat.viewSessions.enabled": false,
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.useTerminal": true,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Ayu Mirage Bordered",
 }

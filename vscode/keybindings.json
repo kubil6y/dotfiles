@@ -1,4 +1,9 @@
 [
+    // DON'T CLOSE TABS LIKE A RETARD
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor",
+    },
     // --- SUGGESTIONS & QUICK FIX (Tab Navigation) ---
     {
         "key": "tab",
@@ -55,6 +60,7 @@
     {
         "key": "ctrl+h",
         "command": "workbench.action.navigateLeft",
+        "when": "!webviewFocus && !webviewActive && !sideBarFocus",
     },
     {
         "key": "ctrl+l",
