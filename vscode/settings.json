@@ -23,20 +23,18 @@
     "workbench.editor.restoreViewState": false,
     // Sidebar tree indentation width
     "workbench.tree.indent": 12,
-    // Menu bar fully hidden
-    "window.menuBarVisibility": "hidden",
     "window.customMenuBarAltFocus": false,
     "window.enableMenuBarMnemonics": false,
     "workbench.editor.highlightModifiedTabs": true,
     // Toggle menu bar cycle command
     "settings.cycle": [
-        {
-            "id": "toggleMenuBar",
-            "values": [
-                { "window.menuBarVisibility": "hidden" },
-                { "window.menuBarVisibility": "visible" },
-            ],
-        },
+        // {
+        //     "id": "toggleMenuBar",
+        //     "values": [
+        //         { "window.menuBarVisibility": "hidden" },
+        //         { "window.menuBarVisibility": "visible" },
+        //     ],
+        // },
         {
             "id": "cycleFontSize",
             "values": [
@@ -242,13 +240,14 @@
     // 🎨 #THEME CUSTOMIZATION
     // =========================================================
     "editor.tokenColorCustomizations": {
-        "[Ayu Mirage Bordered]": {
+        "[Ayu Dark Bordered]": {
             "textMateRules": [
                 {
                     "scope": [
                         "entity.name.variable",
                         "entity.name.variable.parameter",
                     ],
+                    // CCCAC2(mirage),BFBDB6(dark)
                     "settings": { "foreground": "#BFBDB6" },
                 },
                 {
@@ -299,12 +298,13 @@
         },
         "[Rosé Pine Moon (no italics)]": {
             "textMateRules": [
-                {
-                    "scope": ["entity.name.function"],
-                    "settings": {
-                        "foreground": "#EBBCBA",
-                    },
-                },
+                // {
+                //     "scope": ["entity.name.type"],
+                //     "settings": {
+                //         // #C4A7E7,EBBCBA,DFA0B9
+                //         "foreground": "#DFA0B9",
+                //     },
+                // },
                 {
                     "scope": ["entity.name.variable"],
                     "settings": {
@@ -325,26 +325,50 @@
         },
     },
     "workbench.colorCustomizations": {
-        "[Ayu Mirage Bordered]": {
-            // General
-            "foreground": "#CCCAC2",
-            "editor.background": "#1f2430",
-            "titleBar.activeBackground": "#1f2430",
+        "[Ayu Dark Bordered]": {
+            // Misc
+            "foreground": "#BFBDB6",
+            "editor.background": "#0d1017",
             "editorLineNumber.activeForeground": "#5a6378a6",
-            "tab.border": "#1f2430",
-            // Autocomplete
-            "editorSuggestWidget.background": "#1f2430",
-            "editorSuggestWidget.selectedBackground": "#63759940",
+            "editorHoverWidget.border": "#5a6378a6",
+            // Parens
+            "editorBracketMatch.border": "#0d1017",
+            "editorBracketMatch.background": "#0d1017",
+            // Selected backgrounds
+            "quickInputList.focusBackground": "#47526680",
+            "editorSuggestWidget.selectedBackground": "#47526670",
+            // Borders
+            "editorGroup.border": "#47526670",
+            "panel.border": "#47526670",
+            "sideBar.border": "#47526670",
             // Cursor
-            "editorCursor.foreground": "#CCCAC2",
+            "editorCursor.foreground": "#BFBDB6",
+            "editorCursor.background": "#0d1017",
+            "terminalCursor.foreground": "#BFBDB6",
+        },
+        "[Ayu Mirage Bordered]": {
+            // General (1F2430,242936)
+            "foreground": "#cccac2",
+            "editor.background": "#1f2430",
+            "editorLineNumber.activeForeground": "#5a6378a6",
+            // Borders
+            "editorGroup.border": "#5a6378a6",
+            "panel.border": "#5a6378a6",
+            "sideBar.border": "#5a6378a6",
+            // Autocomplete
+            "editorSuggestWidget.background": "#242936",
+            "editorSuggestWidget.selectedBackground": "#63759933",
+            // Cursor
+            "editorCursor.foreground": "#cccac2",
+            "terminalCursor.foreground": "#cccac2",
             "editorCursor.background": "#242936",
             // Parens
             "editorBracketMatch.border": "#1f2430",
             "editorBracketMatch.background": "#1f2430",
             // Command Palette
             "quickInput.foreground": "#cccac2",
-            "quickInput.background": "#1f2430",
-            "quickInputList.focusBackground": "#63759950",
+            "quickInputList.focusBackground": "#63759939",
+            "quickInput.background": "#242936",
         },
         "[Vesper]": {
             // Auto Complete
@@ -382,8 +406,9 @@
             "editorBracketMatch.background": "#1f1f1f",
         },
         "[Rosé Pine Moon (no italics)]": {
-            // 13121c, 191724
+            // General
             "editor.background": "#191724",
+            "terminal.background": "#191724",
             "sideBar.background": "#191724",
             "editorGutter.background": "#191724",
             "statusBar.background": "#191724",
@@ -391,41 +416,42 @@
             "activityBar.background": "#191724",
             "titleBar.activeBackground": "#191724",
             "titleBar.inactiveBackground": "#191724",
-            "editorStickyScroll.background": "#26233a",
+            "editor.selectionBackground": "#3b3551",
+            "input.background": "#232136",
+            "editorStickyScroll.background": "#232136",
+            "widget.shadow": "#0000005c", // Popup
+            // Borders
             "sideBar.border": "#393552",
             "editorGroup.border": "#393552",
-            // popup backgrounds
-            "editorSuggestWidget.background": "#1f1d2e",
-            "editorSuggestWidget.selectedBackground": "#6e6a8633",
-            // "editorSuggestWidget.border": "#6e6a8680",
-            "widget.shadow": "#0000005c",
-            // "widget.border": "#6e6a8680",
-            "quickInput.background": "#1f1d2e",
-            "quickInputList.focusBackground": "#6e6a8633",
-            "editorActionList.background": "#1f1d2e",
+            // Panels
+            "panel.background": "#191724",
+            "panel.border": "#47526670",
+            // // Autocomplete
+            "editorSuggestWidget.highlightForeground": "#EA9A97",
+            "editorSuggestWidget.focusHighlightForeground": "#EA9A97",
+            "editorSuggestWidget.background": "#232136",
+            "editorSuggestWidget.selectedBackground": "#6e6a8640",
+            // CTRL+P
+            "list.highlightForeground": "#EA9A97",
+            "list.focusHighlightForeground": "#EA9A97",
+            "quickInputList.focusBackground": "#6e6a8650",
             "editorActionList.focusBackground": "#6e6a8633",
-            "terminal.background": "#26233a",
-            "panel.background": "#26233a",
-            // tab theming (compact size)
+            "quickInput.background": "#232136",
+            "editorActionList.background": "#232136",
+            // Tabs
             "tab.activeBackground": "#191724",
             "tab.activeForeground": "#E0DEF4",
-            // 6E6A86,9ccfd8
             "tab.activeModifiedBorder": "#9ccfd8",
             "tab.activeBorderTop": "#9ccfd8",
-            // cursor
+            // Cursor
             "editorCursor.background": "#6e6a86",
-            "editorCursor.foreground": "#e6edf3",
+            "editorCursor.foreground": "#E0DEF4",
             "terminalCursor.background": "#6e6a86",
-            "terminalCursor.foreground": "#e6edf3",
-            // autocomplete stuff
-            "list.highlightForeground": "#e0def4",
-            "list.focusHighlightForeground": "#e0def4",
-            "editorSuggestWidget.focusHighlightForeground": "#e0def4",
-            "editorSuggestWidget.highlightForeground": "#e0def4",
+            "terminalCursor.foreground": "#E0DEF4",
+            // Linenumbers
             "editorLineNumber.activeForeground": "#5c5877",
             "editorLineNumber.foreground": "#5c5877",
-            "editor.selectionBackground": "#3b3551",
-            // matching brackets
+            // Bracket match
             "editorBracketMatch.border": "#191724",
             "editorBracketMatch.background": "#191724",
         },
@@ -636,6 +662,7 @@
     "chat.viewSessions.enabled": false,
     "claudeCode.preferredLocation": "panel",
     "claudeCode.useTerminal": true,
+    "window.menuBarVisibility": "compact",
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Ayu Mirage Bordered",
+    "workbench.colorTheme": "Rosé Pine Moon (no italics)",
 }
