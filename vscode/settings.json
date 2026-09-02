@@ -247,7 +247,7 @@
                         "entity.name.variable",
                         "entity.name.variable.parameter",
                     ],
-                    // CCCAC2(mirage),BFBDB6(dark)
+                    // BFBDB6(dark),CCCAC2(mirage)
                     "settings": { "foreground": "#BFBDB6" },
                 },
                 {
@@ -294,22 +294,20 @@
                         "fontStyle": "bold",
                     },
                 },
+                {
+                    "scope": ["entity.name.section.markdown"],
+                    "settings": {
+                        "foreground": "#FFC799",
+                        "fontStyle": "bold",
+                    },
+                },
             ],
         },
         "[Rosé Pine Moon (no italics)]": {
             "textMateRules": [
-                // {
-                //     "scope": ["entity.name.type"],
-                //     "settings": {
-                //         // #C4A7E7,EBBCBA,DFA0B9
-                //         "foreground": "#DFA0B9",
-                //     },
-                // },
                 {
                     "scope": ["entity.name.variable"],
-                    "settings": {
-                        "foreground": "#E0DEF4",
-                    },
+                    "settings": { "foreground": "#e0def4" },
                 },
                 {
                     "scope": [
@@ -325,10 +323,12 @@
         },
     },
     "workbench.colorCustomizations": {
+        // 0d1017,10141c,1f2430
         "[Ayu Dark Bordered]": {
             // Misc
             "foreground": "#BFBDB6",
             "editor.background": "#0d1017",
+            "input.background": "#1f2430",
             "editorLineNumber.activeForeground": "#5a6378a6",
             "editorHoverWidget.border": "#5a6378a6",
             // Parens
@@ -370,7 +370,11 @@
             "quickInputList.focusBackground": "#63759939",
             "quickInput.background": "#242936",
         },
+        // 333438,37393d
         "[Vesper]": {
+            // General
+            "foreground": "#ffffff",
+            "input.background": "#333539",
             // Auto Complete
             "editorSuggestWidget.border": "#333333",
             // Tabs
@@ -407,6 +411,7 @@
         },
         "[Rosé Pine Moon (no italics)]": {
             // General
+            "input.background": "#232136",
             "editor.background": "#191724",
             "terminal.background": "#191724",
             "sideBar.background": "#191724",
@@ -417,43 +422,47 @@
             "titleBar.activeBackground": "#191724",
             "titleBar.inactiveBackground": "#191724",
             "editor.selectionBackground": "#3b3551",
-            "input.background": "#232136",
             "editorStickyScroll.background": "#232136",
-            "widget.shadow": "#0000005c", // Popup
+            "focusBorder": "#00000000",
             // Borders
             "sideBar.border": "#393552",
             "editorGroup.border": "#393552",
+            "widget.border": "#39355290", // ctrl+p
             // Panels
             "panel.background": "#191724",
-            "panel.border": "#47526670",
-            // // Autocomplete
-            "editorSuggestWidget.highlightForeground": "#EA9A97",
-            "editorSuggestWidget.focusHighlightForeground": "#EA9A97",
-            "editorSuggestWidget.background": "#232136",
+            "panel.border": "#393552",
+            // Autocomplete
+            "editorSuggestWidget.background": "#191724",
+            "editorSuggestWidget.highlightForeground": "#e0def4",
+            "editorSuggestWidget.focusHighlightForeground": "#e0def4",
             "editorSuggestWidget.selectedBackground": "#6e6a8640",
+            "editorSuggestWidget.border": "#39355290",
             // CTRL+P
-            "list.highlightForeground": "#EA9A97",
-            "list.focusHighlightForeground": "#EA9A97",
+            "list.highlightForeground": "#e0def4",
+            "list.focusHighlightForeground": "#e0def4",
             "quickInputList.focusBackground": "#6e6a8650",
-            "editorActionList.focusBackground": "#6e6a8633",
-            "quickInput.background": "#232136",
+            "quickInput.background": "#191724", // 232136
             "editorActionList.background": "#232136",
+            "editorActionList.focusBackground": "#6e6a8633",
             // Tabs
             "tab.activeBackground": "#191724",
-            "tab.activeForeground": "#E0DEF4",
-            "tab.activeModifiedBorder": "#9ccfd8",
-            "tab.activeBorderTop": "#9ccfd8",
+            "tab.activeForeground": "#e0def4",
+            "tab.inactiveForeground": "#6e6a86",
+            "tab.activeModifiedBorder": "#e0def4",
+            "tab.activeBorderTop": "#e0def4",
             // Cursor
             "editorCursor.background": "#6e6a86",
-            "editorCursor.foreground": "#E0DEF4",
+            "editorCursor.foreground": "#e0def4",
             "terminalCursor.background": "#6e6a86",
-            "terminalCursor.foreground": "#E0DEF4",
+            "terminalCursor.foreground": "#e0def4",
             // Linenumbers
             "editorLineNumber.activeForeground": "#5c5877",
             "editorLineNumber.foreground": "#5c5877",
             // Bracket match
             "editorBracketMatch.border": "#191724",
             "editorBracketMatch.background": "#191724",
+            // Popups
+            "editorHoverWidget.background": "#232136",
         },
     },
 
