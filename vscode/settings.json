@@ -269,76 +269,6 @@
                 },
             ],
         },
-        "[Andromeda Zed]": {
-            "textMateRules": [
-                {
-                    // FEE56B
-                    "scope": [
-                        "constant.language",
-                        "constant.language.boolean",
-                        "keyword.other.boolean",
-                        "keyword.other.null",
-                    ],
-                    "settings": { "foreground": "#FEE56B" },
-                },
-                {
-                    "scope": [
-                        "constant.language.null",
-                        "constant.language.undefined",
-                    ],
-                    "settings": {
-                        "foreground": "#FEE56B",
-                        "fontStyle": "bold",
-                    },
-                },
-                {
-                    // 08E7C5
-                    "scope": [
-                        "entity.name.type",
-                        "entity.name.type.class",
-                        "entity.name.type.struct",
-                        "entity.name.type.enum",
-                        "entity.name.type.interface",
-                    ],
-                    "settings": { "foreground": "#08e7c5" },
-                },
-                {
-                    // 10A694
-                    "scope": ["keyword.operator", "variable.language"],
-                    "settings": { "foreground": "#10A694" },
-                },
-                {
-                    "scope": ["punctuation"],
-                    "settings": { "foreground": "#10A694" },
-                },
-                {
-                    "scope": [
-                        "comment",
-                        "comment.block",
-                        "comment.block.documentation",
-                        "comment.line",
-                    ],
-                    "settings": {
-                        "fontStyle": "",
-                        "foreground": "#666d77",
-                    },
-                },
-                {
-                    // Scopes the theme italicizes
-                    "scope": [
-                        "comment.line.double-slash",
-                        "punctuation.definition.comment",
-                        "variable.parameter",
-                        "variable.language.super",
-                        "entity.other.attribute-name.js",
-                        "entity.other.attribute-name.ts",
-                        "entity.other.attribute-name.jsx",
-                        "entity.other.attribute-name.tsx",
-                    ],
-                    "settings": { "fontStyle": "" },
-                },
-            ],
-        },
         "[Vesper]": {
             "textMateRules": [
                 {
@@ -446,39 +376,6 @@
             "quickInputList.focusBackground": "#63759939",
             "quickInput.background": "#242936",
         },
-        "[Andromeda Zed]": {
-            "editor.background": "#1e2025",
-            "editorGutter.background": "#1e2025",
-            "sideBar.background": "#1e2025",
-            "activityBar.background": "#1e2025",
-            "statusBar.background": "#1e2025",
-            "welcomePage.background": "#1e2025",
-            // Tabs
-            "tab.activeBorderTop": "#858585",
-            "tab.activeModifiedBorder": "#858585",
-            // Line numbers
-            "editorLineNumber.foreground": "#4a4f56",
-            "editorLineNumber.activeForeground": "#4a4f56",
-            // Autocomplete (f7f7f8)
-            "editorSuggestWidget.background": "#1e2025",
-            "editorSuggestWidget.foreground": "#aaaaaa",
-            "editorSuggestWidget.selectedBackground": "#2a2d34",
-            "editorSuggestWidget.highlightForeground": "#f7f7f8",
-            "editorSuggestWidget.focusHighlightForeground": "#f7f7f8",
-            // List (f7f7f8)
-            "list.highlightForeground": "#f7f7f8",
-            "list.focusHighlightForeground": "#f7f7f8",
-            "list.activeSelectionBackground": "#1c403f",
-            // Command palette (20252b)
-            "quickInput.foreground": "#aaaaaa",
-            "quickInput.background": "#20252b",
-            "editorActionList.background": "#20252b",
-            // Parens
-            "editorBracketMatch.border": "#20252b",
-            "editorBracketMatch.background": "#20252b",
-        },
-
-        // 333438,37393d
         "[Vesper]": {
             // General
             "foreground": "#ffffff",
@@ -761,5 +658,5 @@
     "window.menuBarVisibility": "compact",
     "editor.minimap.enabled": false,
     "claudeCode.hideOnboarding": true,
-    "workbench.colorTheme": "Andromeda Zed",
+    "workbench.colorTheme": "Vesper",
 }
