@@ -3,7 +3,6 @@ be5invis.toml
 editorconfig.editorconfig
 esbenp.prettier-vscode
 fernandoescolar.vscode-solution-explorer
-golang.go
 gruntfuggly.todo-tree
 hoovercj.vscode-settings-cycler
 kleber-swf.unity-code-snippets
@@ -11,9 +10,7 @@ kreativ-software.csharpextensions
 ms-dotnettools.csdevkit
 ms-dotnettools.csharp
 ms-dotnettools.vscode-dotnet-runtime
-ms-vscode.live-server
 mvllow.rose-pine
-patcx.vscode-nuget-gallery
 pkief.material-icon-theme
 raunofreiberg.vesper
 redguardtoo.matchit

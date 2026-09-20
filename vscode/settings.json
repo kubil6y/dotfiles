@@ -31,15 +31,20 @@
             "id": "cycleFontSize",
             "values": [
                 {
+                    "editor.fontSize": 13,
+                    "editor.suggestFontSize": 13,
+                    "terminal.integrated.fontSize": 13,
+                },
+                {
                     "editor.fontSize": 14,
                     "editor.suggestFontSize": 14,
                     "terminal.integrated.fontSize": 14,
                 },
-                {
-                    "editor.fontSize": 15.5,
-                    "editor.suggestFontSize": 16,
-                    "terminal.integrated.fontSize": 14,
-                },
+                // {
+                //     "editor.fontSize": 15.5,
+                //     "editor.suggestFontSize": 16,
+                //     "terminal.integrated.fontSize": 14,
+                // },
             ],
         },
     ],
@@ -86,8 +91,8 @@
     // Disable indentation guides
     "editor.guides.indentation": false,
     "editor.renderWhitespace": "none",
-    // Only highlights bracket near cursor
-    "editor.matchBrackets": "near",
+    // Dont highlight parens
+    "editor.matchBrackets": "never",
     // Disable rainbow brackets
     "editor.bracketPairColorization.enabled": false,
     // Disable sticky scroll header
@@ -136,16 +141,16 @@
     // 📜 #FONT
     // =========================================================
     "editor.fontFamily": "MonoLisa",
-    "editor.fontSize": 14,
-    "editor.suggestFontSize": 14,
-    "terminal.integrated.fontSize": 14,
+    "editor.fontSize": 13,
+    "editor.suggestFontSize": 13,
+    "terminal.integrated.fontSize": 13,
     "editor.fontVariations": false,
     "editor.fontLigatures": "'zero', 'ss03' on,'ss07' on,'ss13' on,'ss14' on,'ss17' on,'ss18' on",
 
     // "editor.fontFamily": "Berkeley Mono Variable",
-    // "editor.fontSize": 15,
-    // "editor.suggestFontSize": 15,
-    // "terminal.integrated.fontSize": 15,
+    // "editor.fontSize": 14,
+    // "editor.suggestFontSize": 14,
+    // "terminal.integrated.fontSize": 14,
 
     // "editor.fontWeight": 450,
     // =========================================================
@@ -178,7 +183,6 @@
     // =========================================================
     // ⚙️ #LSP
     // =========================================================
-    "go.toolsManagement.autoUpdate": true,
     // Unity compatibility (modern .NET OmniSharp breaks Unity sometimes)
     "omnisharp.useModernNet": false,
     "omnisharp.monoPath": "/usr/bin/mono",
@@ -337,9 +341,6 @@
             "input.background": "#1f2430",
             "editorLineNumber.activeForeground": "#5a6378a6",
             "editorHoverWidget.border": "#5a6378a6",
-            // Parens
-            "editorBracketMatch.border": "#0d1017",
-            "editorBracketMatch.background": "#0d1017",
             // Selected backgrounds
             "quickInputList.focusBackground": "#47526680",
             "editorSuggestWidget.selectedBackground": "#47526670",
@@ -368,9 +369,6 @@
             "editorCursor.foreground": "#cccac2",
             "terminalCursor.foreground": "#cccac2",
             "editorCursor.background": "#242936",
-            // Parens
-            "editorBracketMatch.border": "#1f2430",
-            "editorBracketMatch.background": "#1f2430",
             // Command Palette
             "quickInput.foreground": "#cccac2",
             "quickInputList.focusBackground": "#63759939",
@@ -378,41 +376,48 @@
         },
         "[Vesper]": {
             // General
-            "foreground": "#ffffff",
             "input.background": "#212327",
-            // Auto Complete
-            "editorSuggestWidget.border": "#333333",
-            "editorSuggestWidget.foreground": "#a0a0a0",
-            // Tabs
-            "tab.activeBorder": "#101010",
-            "tab.activeBorderTop": "#FFC799",
-            "tab.activeModifiedBorder": "#8a8a8a",
-            // Command palette
-            "quickInputList.focusBackground": "#37393d",
-            // Selection
+            "editor.background": "#111111",
             "editor.selectionBackground": "#37393d",
+            // Tabs
+            "tab.activeBorder": "#00000000",
+            "tab.activeBorderTop": "#aeafad",
+            "tab.activeModifiedBorder": "#aeafad",
             // Line numbers
             "editorLineNumber.foreground": "#4a4a4a",
             "editorLineNumber.activeForeground": "#4a4a4a",
-            // Bracket match (disabled visually)
-            "editorBracketMatch.border": "#101010",
-            "editorBracketMatch.background": "#101010",
             // Sidebar
-            "sideBar.border": "#3c3c3c",
-            "editorGroup.border": "#3c3c3c",
-            // Widgets / popups
-            "widget.shadow": "#0000005c",
-            "widget.border": "#303030",
+            "sideBar.border": "#80808059",
+            "editorGroup.border": "#80808059",
+            "panel.border": "#80808059", // Terminal
             // Hover
             "editorHoverWidget.background": "#37393d",
-            "editorHoverWidget.border": "#37393d",
+            "editorHoverWidget.border": "#111111",
+            // Command Palette
+            "quickInputList.focusBackground": "#37393d",
+            "widget.shadow": "#0000005c",
+            "widget.border": "#80808059",
+            // AUTOCOMPLETE
+            "editorSuggestWidget.border": "#80808059",
+            "editorSuggestWidget.foreground": "#cccccc",
+            "editorSuggestWidget.selectedBackground": "#2f3033",
+            // GIT DIFF EDITOR (Modern Dark Copy)
+            "diffEditor.border": "#80808059",
+            "diffEditor.diagonalFill": "#cccccc33",
+            "diffEditor.insertedLineBackground": "#9bb95533",
+            "diffEditor.insertedTextBackground": "#9ccc2c33",
+            "diffEditor.moveActive.border": "#ffa500",
+            "diffEditor.removedLineBackground": "#ff000033",
+            "diffEditor.removedTextBackground": "#ff000033",
+            "diffEditor.unchangedCodeBackground": "#74747429",
+            "diffEditor.unchangedRegionBackground": "#181818",
+            "diffEditor.unchangedRegionForeground": "#cccccc",
+            "diffEditor.unchangedRegionShadow": "#000000",
         },
         "[Default Dark Modern]": {
             // "editorStickyScroll.background": "#303030",
             "editorLineNumber.activeForeground": "#4a4f56",
             "editorLineNumber.foreground": "#4a4f56",
-            "editorBracketMatch.border": "#1f1f1f",
-            "editorBracketMatch.background": "#1f1f1f",
         },
         "[Rosé Pine (no italics)]": {
             // Cursor
@@ -435,9 +440,6 @@
             // Linenumbers
             "editorLineNumber.activeForeground": "#5c5877",
             "editorLineNumber.foreground": "#5c5877",
-            // Bracket match
-            "editorBracketMatch.border": "#191724",
-            "editorBracketMatch.background": "#191724",
             // Popups
             "editorHoverWidget.background": "#232136",
             // Borders
@@ -596,8 +598,13 @@
             "silent": true,
         },
         {
-            "before": ["g", "r"],
+            "before": ["l", "r"],
             "commands": ["editor.action.goToReferences"],
+            "silent": true,
+        },
+        {
+            "before": ["l", "s"],
+            "commands": ["workbench.action.gotoSymbol"],
             "silent": true,
         },
         {
@@ -623,11 +630,6 @@
         {
             "before": ["<leader>", "v", "a"],
             "after": ["G", "V", "g", "g"],
-            "silent": true,
-        },
-        {
-            "before": ["g", "s"],
-            "commands": ["workbench.action.gotoSymbol"],
             "silent": true,
         },
         // Open claude in new tab as helper
@@ -656,7 +658,7 @@
     "claudeCode.preferredLocation": "panel",
     "claudeCode.useTerminal": true,
     "window.menuBarVisibility": "compact",
-    "editor.minimap.enabled": false,
     "claudeCode.hideOnboarding": true,
+    "editor.minimap.enabled": false,
     "workbench.colorTheme": "Vesper",
 }
