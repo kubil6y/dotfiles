@@ -31,6 +31,11 @@
             "id": "cycleFontSize",
             "values": [
                 {
+                    "editor.fontSize": 12.5,
+                    "editor.suggestFontSize": 13,
+                    "terminal.integrated.fontSize": 13,
+                },
+                {
                     "editor.fontSize": 14,
                     "editor.suggestFontSize": 14,
                     "terminal.integrated.fontSize": 14,
@@ -136,9 +141,9 @@
     // 📜 #FONT
     // =========================================================
     "editor.fontFamily": "MonoLisa",
-    "editor.fontSize": 14,
-    "editor.suggestFontSize": 14,
-    "terminal.integrated.fontSize": 14,
+    "editor.fontSize": 12.5,
+    "editor.suggestFontSize": 13,
+    "terminal.integrated.fontSize": 13,
     "editor.fontVariations": false,
     "editor.fontLigatures": "'zero', 'ss03' on,'ss07' on,'ss13' on,'ss14' on,'ss17' on,'ss18' on",
 
@@ -371,33 +376,50 @@
         },
         "[Vesper]": {
             // General
-            "input.background": "#212327",
+            "input.background": "#20252d",
             "editor.background": "#111111",
-            "editor.selectionBackground": "#37393d",
+            "editor.selectionBackground": "#333d49",
             // Tabs
             "tab.activeBorder": "#00000000",
-            "tab.activeBorderTop": "#aeafad",
-            "tab.activeModifiedBorder": "#aeafad",
-            // Line numbers
+            "tab.activeBorderTop": "#9eabbb",
+            "tab.activeModifiedBorder": "#9eabbb",
+            // Linenumbers
             "editorLineNumber.foreground": "#4a4a4a",
             "editorLineNumber.activeForeground": "#4a4a4a",
             // Borders
+            "focusBorder": "#00000000",
             "sideBar.border": "#80808059",
             "editorGroup.border": "#80808059",
             "panel.border": "#80808059", // Terminal
-            "focusBorder": "#00000000",
             // Hover
-            "editorHoverWidget.background": "#37393d",
-            "editorHoverWidget.border": "#111111",
+            "editorHoverWidget.background": "#171717",
+            "editorHoverWidget.border": "#80808059",
+            // Autocomplete
+            "editorSuggestWidget.border": "#00000000", // 80808040
+            "editorSuggestWidget.foreground": "#a0a0a0",
+            "editorSuggestWidget.background": "#171717",
+            "editorSuggestWidget.selectedBackground": "#242a33",
+            "editorSuggestWidget.selectedForeground": "#f0f0f0",
+            "editorSuggestWidget.selectedIconForeground": "#f0f0f0",
+            "editorSuggestWidget.highlightForeground": "#FFC799",
+            "editorSuggestWidget.focusHighlightForeground": "#FFC799",
             // Command Palette
-            "quickInputList.focusBackground": "#37393d",
+            "quickInput.background": "#171717",
+            "quickInput.foreground": "#a0a0a0",
+            "quickInputList.focusBackground": "#2b333d",
+            "quickInputList.focusForeground": "#f0f0f0",
+            "list.highlightForeground": "#FFC799",
+            "list.focusHighlightForeground": "#FFC799",
+            "list.hoverBackground": "#29323d55",
             "widget.shadow": "#0000005c",
-            "widget.border": "#80808059",
-            // AUTOCOMPLETE
-            "editorSuggestWidget.border": "#80808059",
-            "editorSuggestWidget.foreground": "#cccccc",
-            "editorSuggestWidget.selectedBackground": "#2f3033",
-            // GIT DIFF EDITOR (Modern Dark Copy)
+            "widget.border": "#80808040",
+            // Code Actions
+            "menu.background": "#171717",
+            "menu.foreground": "#a0a0a0",
+            // "menu.border": "#80808040",
+            "list.activeSelectionBackground": "#242a33",
+            "list.activeSelectionForeground": "#f0f0f0",
+            // GIT DIFF EDITOR (Default Modern Dark Copy)
             "diffEditor.border": "#80808059",
             "diffEditor.diagonalFill": "#cccccc33",
             "diffEditor.insertedLineBackground": "#9bb95533",
@@ -594,12 +616,12 @@
             "silent": true,
         },
         {
-            "before": ["l", "r"],
+            "before": ["g", "r"],
             "commands": ["editor.action.goToReferences"],
             "silent": true,
         },
         {
-            "before": ["l", "s"],
+            "before": ["g", "s"],
             "commands": ["workbench.action.gotoSymbol"],
             "silent": true,
         },
