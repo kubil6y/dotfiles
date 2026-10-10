@@ -268,31 +268,6 @@
                 },
             ],
         },
-
-        "[Oscura Dusk]": {
-            "textMateRules": [
-                {
-                    "scope": ["entity.name.variable"],
-                    "settings": { "foreground": "#E6E6E6" },
-                },
-                {
-                    "scope": ["punctuation"],
-                    "settings": {
-                        "foreground": "#9099A1",
-                    },
-                },
-                {
-                    "scope": [
-                        "constant.language.null",
-                        "constant.language.undefined",
-                    ],
-                    "settings": {
-                        "foreground": "#E6E7A3",
-                        "fontStyle": "bold",
-                    },
-                },
-            ],
-        },
         "[Vesper]": {
             "textMateRules": [
                 {
@@ -395,48 +370,11 @@
             "quickInputList.focusBackground": "#63759939",
             "quickInput.background": "#242936",
         },
-        "[Oscura Dusk]": {
-            // General
-            "input.background": "#191a21",
-            "editor.background": "#131419",
-            "editor.selectionBackground": "#333643",
-            // Linenumber
-            "editorLineNumber.activeForeground": "#3f404a",
-            "editorLineNumber.foreground": "#3f404a",
-            // Tabs
-            "tab.activeBorder": "#00000000",
-            "tab.activeBorderTop": "#e6e6e670",
-            "tab.activeModifiedBorder": "#e6e6e670",
-            // Hover
-            "editorHoverWidget.highlightForeground": "#E6E7A3",
-            "editorHoverWidget.background": "#272933",
-            // AUTOCOMPLETE
-            "editorSuggestWidget.border": "#00000000",
-            "editorSuggestWidget.background": "#191a21",
-            "editorSuggestWidget.focusHighlightForeground": "#e6e6e6",
-            "editorSuggestWidget.foreground": "#868f97",
-            "editorSuggestWidget.highlightForeground": "#e6e6e6",
-            "editorSuggestWidget.selectedBackground": "#272933",
-            "editorSuggestWidget.selectedForeground": "#e6e6e6",
-            "editorSuggestWidgetStatus.foreground": "#bbbbbb80",
-            // Command Palette
-            "quickInput.background": "#191a21",
-            "quickInput.foreground": "#868f97",
-            "quickInputList.focusBackground": "#272933",
-            "quickInputList.focusForeground": "#e6e6e6",
-            "list.focusHighlightForeground": "#e6e6e6",
-            "list.highlightForeground": "#e6e6e6",
-            // Code Actions
-            "menu.background": "#191a21",
-            "menu.foreground": "#868f97",
-            "list.activeSelectionBackground": "#272933",
-            "list.activeSelectionForeground": "#e6e6e6",
-        },
         "[Vesper]": {
             // General
-            "input.background": "#20252d",
+            "input.background": "#191a21",
             "editor.background": "#111111",
-            "editor.selectionBackground": "#333d49",
+            "editor.selectionBackground": "#333643",
             "editorLineNumber.activeForeground": "#505050",
             // Tabs
             "tab.activeBorder": "#00000000",
@@ -451,7 +389,7 @@
             "editorHoverWidget.background": "#171717",
             "editorHoverWidget.border": "#80808059",
             // Autocomplete
-            "editorSuggestWidget.border": "#00000000", // 80808040
+            "editorSuggestWidget.border": "#00000000",
             "editorSuggestWidget.foreground": "#a0a0a0",
             "editorSuggestWidget.background": "#171717",
             "editorSuggestWidget.selectedBackground": "#242a33",
@@ -463,7 +401,7 @@
             "quickInput.background": "#171717",
             "quickInput.foreground": "#a0a0a0",
             "quickInputList.focusBackground": "#2b333d",
-            "quickInputList.focusForeground": "#f0f0f0",
+            "quickInputList.focusForeground": "#e6e6e6",
             "list.highlightForeground": "#FFC799",
             "list.focusHighlightForeground": "#FFC799",
             "list.hoverBackground": "#29323d55",
