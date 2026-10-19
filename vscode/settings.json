@@ -136,7 +136,7 @@
     // 📜 #FONT
     // =========================================================
     "editor.fontFamily": "MonoLisa",
-    "editor.fontSize": 12.5,
+    "editor.fontSize": 13,
     "editor.suggestFontSize": 13,
     "terminal.integrated.fontSize": 13,
     "editor.fontVariations": false,
@@ -268,22 +268,16 @@
                 },
             ],
         },
-        "[GitHub Dark Default]": {
-            "textMateRules": [
-                {
-                    "scope": ["entity.name.variable"],
-                    "settings": { "foreground": "#E6EDF3" },
-                },
-            ],
-        },
         "[Vesper]": {
             "textMateRules": [
                 {
                     "scope": [
-                        "entity.name.variable.property",
-                        "entity.name.variable.field",
-                        "entity.name.variable.local",
-                        "entity.name.variable.enum-member",
+                        // "entity.name.variable.property",
+                        // "entity.name.variable.parameter",
+                        // "entity.name.variable.field",
+                        // "entity.name.variable.local",
+                        // "entity.name.variable.enum-member",
+                        "entity.name.variable",
                     ],
                     "settings": { "foreground": "#ffffff" },
                 },
@@ -383,35 +377,6 @@
             "quickInputList.focusBackground": "#63759939",
             "quickInput.background": "#242936",
         },
-        "[GitHub Dark Default]": {
-            // General
-            "editorHoverWidget.highlightForeground": "#2f81f7", // Method params
-            "editorLineNumber.activeForeground": "#6e7681",
-            // Borders
-            "tab.border": "#0d1117",
-            "editorGroupHeader.border": "#0d1117",
-            "editorSuggestWidget.border": "#0d1117",
-            "statusBar.border": "#0d1117",
-            // Cursor
-            "editorCursor.foreground": "#E6EDF3",
-            "editorCursor.background": "#6e6a86",
-            // Autocomplete
-            "editorSuggestWidget.foreground": "#7da1c0",
-            "editorSuggestWidget.background": "#161b22",
-            "editorSuggestWidget.focusHighlightForeground": "#e6edf3",
-            "editorSuggestWidget.highlightForeground": "#e6edf3",
-            "editorSuggestWidget.selectedBackground": "#2d3746",
-            "editorSuggestWidget.selectedForeground": "#e6edf3",
-            "editorSuggestWidgetStatus.foreground": "#e6edf380",
-            // Command Palette
-            "quickInput.foreground": "#7da1c0",
-            "quickInput.background": "#161b22",
-            "quickInputList.focusBackground": "#2d3746",
-            "quickInputList.focusForeground": "#e6edf3",
-            "list.highlightForeground": "#e6edf3",
-            "list.focusHighlightForeground": "#e6edf3",
-            "list.hoverBackground": "#2d3746",
-        },
         "[Vesper]": {
             // General
             "input.background": "#191a21",
@@ -420,8 +385,8 @@
             "editorLineNumber.activeForeground": "#505050",
             // Tabs
             "tab.activeBorder": "#00000000",
-            "tab.activeBorderTop": "#a0a0a0",
-            "tab.activeModifiedBorder": "#a0a0a0",
+            "tab.activeBorderTop": "#FFC799",
+            "tab.activeModifiedBorder": "#FFC799",
             // Borders
             "sideBar.border": "#80808059",
             "editorGroup.border": "#80808059",
@@ -437,15 +402,15 @@
             "editorSuggestWidget.selectedBackground": "#242a33",
             "editorSuggestWidget.selectedForeground": "#f0f0f0",
             "editorSuggestWidget.selectedIconForeground": "#f0f0f0",
-            "editorSuggestWidget.highlightForeground": "#FFC799",
-            "editorSuggestWidget.focusHighlightForeground": "#FFC799",
+            "editorSuggestWidget.highlightForeground": "#f0f0f0",
+            "editorSuggestWidget.focusHighlightForeground": "#f0f0f0",
             // Command Palette
             "quickInput.background": "#171717",
             "quickInput.foreground": "#a0a0a0",
             "quickInputList.focusBackground": "#2b333d",
-            "quickInputList.focusForeground": "#e6e6e6",
-            "list.highlightForeground": "#FFC799",
-            "list.focusHighlightForeground": "#FFC799",
+            "quickInputList.focusForeground": "#f0f0f0",
+            "list.highlightForeground": "#f0f0f0",
+            "list.focusHighlightForeground": "#f0f0f0",
             "list.hoverBackground": "#29323d55",
             // "widget.shadow": "#0000005c",
             // "widget.border": "#80808059",
@@ -453,7 +418,7 @@
             "menu.background": "#171717",
             "menu.foreground": "#a0a0a0",
             "list.activeSelectionBackground": "#242a33",
-            "list.activeSelectionForeground": "#f0f0f0",
+            "list.activeSelectionForeground": "#ffffff",
             // GIT DIFF EDITOR (Default Modern Dark)
             "diffEditor.border": "#80808059",
             "diffEditor.diagonalFill": "#cccccc33",
@@ -712,5 +677,5 @@
     "window.menuBarVisibility": "compact",
     "claudeCode.hideOnboarding": true,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.colorTheme": "Vesper",
 }
