@@ -150,9 +150,9 @@
     "editor.fontLigatures": "'zero', 'ss03' on,'ss07' on,'ss13' on,'ss14' on,'ss17' on,'ss18' on",
 
     // "editor.fontFamily": "Berkeley Mono Variable",
-    // "editor.fontSize": 14,
-    // "editor.suggestFontSize": 14,
-    // "terminal.integrated.fontSize": 14,
+    // "editor.fontSize": 12,
+    // "editor.suggestFontSize": 12,
+    // "terminal.integrated.fontSize": 12,
 
     // "editor.fontWeight": 450,
     // =========================================================
@@ -275,6 +275,14 @@
                 },
             ],
         },
+        "[Default Dark Modern]": {
+            "textMateRules": [
+                {
+                    "scope": ["entity.name.variable", "variable"],
+                    "settings": { "foreground": "#d4d4d4" },
+                },
+            ],
+        },
         "[Vesper]": {
             "textMateRules": [
                 {
@@ -284,6 +292,11 @@
                         // "entity.name.variable.field",
                         // "entity.name.variable.local",
                         // "entity.name.variable.enum-member",
+                        "constant.numeric",
+                        "constant.language.boolean",
+                        "keyword.other",
+                        "entity.name.type",
+                        "entity.name.function",
                         "entity.name.variable",
                     ],
                     "settings": { "foreground": "#ffffff" },
@@ -298,7 +311,7 @@
                         "constant.language.undefined",
                     ],
                     "settings": {
-                        "foreground": "#FFC799",
+                        "foreground": "#ffffff", // FFC799
                         "fontStyle": "bold",
                     },
                 },
@@ -406,27 +419,27 @@
             "editorHoverWidget.border": "#80808059",
             // Autocomplete
             "editorSuggestWidget.border": "#80808030",
-            "editorSuggestWidget.foreground": "#f0f0f0",
+            "editorSuggestWidget.foreground": "#a0a0a0",
             "editorSuggestWidget.background": "#171717",
-            "editorSuggestWidget.selectedBackground": "#333333",
+            "editorSuggestWidget.selectedBackground": "#323232",
             "editorSuggestWidget.selectedForeground": "#f0f0f0",
             "editorSuggestWidget.selectedIconForeground": "#f0f0f0",
-            "editorSuggestWidget.highlightForeground": "#FFC799",
-            "editorSuggestWidget.focusHighlightForeground": "#FFC799",
+            "editorSuggestWidget.highlightForeground": "#f0f0f0", // FFC799
+            "editorSuggestWidget.focusHighlightForeground": "#f0f0f0", // FFC799
             // Command Palette
             "quickInput.background": "#171717",
-            "quickInput.foreground": "#f0f0f0",
-            "quickInputList.focusBackground": "#404040",
+            "quickInput.foreground": "#a0a0a0",
+            "quickInputList.focusBackground": "#383838",
             "quickInputList.focusForeground": "#f0f0f0",
-            "list.highlightForeground": "#FFC799",
-            "list.focusHighlightForeground": "#FFC799",
+            "list.highlightForeground": "#f0f0f0", // FFC799
+            "list.focusHighlightForeground": "#f0f0f0", // FFC799
             "list.hoverBackground": "#ffffff0d",
             "widget.shadow": "#0000005c",
             "widget.border": "#80808030",
             // Code Actions
             "menu.background": "#171717",
             "menu.foreground": "#a0a0a0",
-            "list.activeSelectionBackground": "#333333",
+            "list.activeSelectionBackground": "#323232",
             "list.activeSelectionForeground": "#f0f0f0",
             // GIT DIFF EDITOR (Default Modern Dark)
             "diffEditor.border": "#80808059",
@@ -442,9 +455,9 @@
             "diffEditor.unchangedRegionShadow": "#000000",
         },
         "[Default Dark Modern]": {
-            "tab.activeBorder": "#0078d4",
-            "tab.activeBorderTop": "#00000000",
-            "tab.activeModifiedBorder": "#00000000",
+            // "tab.activeBorder": "#0078d4",
+            // "tab.activeBorderTop": "#00000000",
+            // "tab.activeModifiedBorder": "#00000000",
             "editorLineNumber.activeForeground": "#6e7681",
         },
         "[Rosé Pine (no italics)]": {
