@@ -143,16 +143,16 @@
     // 📜 #FONT
     // =========================================================
     "editor.fontFamily": "MonoLisa",
-    "editor.fontSize": 12.5,
-    "editor.suggestFontSize": 13,
-    "terminal.integrated.fontSize": 13,
+    "editor.fontSize": 14,
+    "editor.suggestFontSize": 14,
+    "terminal.integrated.fontSize": 14,
     "editor.fontVariations": false,
     "editor.fontLigatures": "'zero', 'ss03' on,'ss07' on,'ss13' on,'ss14' on,'ss17' on,'ss18' on",
 
     // "editor.fontFamily": "Berkeley Mono Variable",
-    // "editor.fontSize": 12,
-    // "editor.suggestFontSize": 12,
-    // "terminal.integrated.fontSize": 12,
+    // "editor.fontSize": 14,
+    // "editor.suggestFontSize": 14,
+    // "terminal.integrated.fontSize": 14,
 
     // "editor.fontWeight": 450,
     // =========================================================
@@ -275,14 +275,6 @@
                 },
             ],
         },
-        "[Default Dark Modern]": {
-            "textMateRules": [
-                {
-                    "scope": ["entity.name.variable", "variable"],
-                    "settings": { "foreground": "#d4d4d4" },
-                },
-            ],
-        },
         "[Vesper]": {
             "textMateRules": [
                 {
@@ -292,17 +284,12 @@
                         // "entity.name.variable.field",
                         // "entity.name.variable.local",
                         // "entity.name.variable.enum-member",
-                        "constant.numeric",
-                        "constant.language.boolean",
-                        "keyword.other",
-                        "entity.name.type",
-                        "entity.name.function",
                         "entity.name.variable",
                     ],
                     "settings": { "foreground": "#ffffff" },
                 },
                 {
-                    "scope": ["punctuation"],
+                    "scope": ["punctuation", "keyword.other"],
                     "settings": { "foreground": "#a0a0a0" },
                 },
                 {
@@ -311,7 +298,7 @@
                         "constant.language.undefined",
                     ],
                     "settings": {
-                        "foreground": "#ffffff", // FFC799
+                        "foreground": "#FFC799",
                         "fontStyle": "bold",
                     },
                 },
@@ -404,9 +391,6 @@
             "editor.background": "#111111",
             "editor.selectionBackground": "#ffffff30",
             "editorLineNumber.activeForeground": "#505050",
-            // Tabs
-            "tab.activeBorder": "#a0a0a0",
-            "tab.activeBorderTop": "#00000000",
             "tab.activeModifiedBorder": "#00000000",
             // Borders
             "sideBar.border": "#80808059",
@@ -421,25 +405,25 @@
             "editorSuggestWidget.border": "#80808030",
             "editorSuggestWidget.foreground": "#a0a0a0",
             "editorSuggestWidget.background": "#171717",
-            "editorSuggestWidget.selectedBackground": "#323232",
+            "editorSuggestWidget.selectedBackground": "#282828",
             "editorSuggestWidget.selectedForeground": "#f0f0f0",
             "editorSuggestWidget.selectedIconForeground": "#f0f0f0",
-            "editorSuggestWidget.highlightForeground": "#f0f0f0", // FFC799
-            "editorSuggestWidget.focusHighlightForeground": "#f0f0f0", // FFC799
+            "editorSuggestWidget.highlightForeground": "#FFC799",
+            "editorSuggestWidget.focusHighlightForeground": "#FFC799",
             // Command Palette
             "quickInput.background": "#171717",
             "quickInput.foreground": "#a0a0a0",
-            "quickInputList.focusBackground": "#383838",
+            "quickInputList.focusBackground": "#363636",
             "quickInputList.focusForeground": "#f0f0f0",
-            "list.highlightForeground": "#f0f0f0", // FFC799
-            "list.focusHighlightForeground": "#f0f0f0", // FFC799
+            "list.highlightForeground": "#FFC799",
+            "list.focusHighlightForeground": "#FFC799",
             "list.hoverBackground": "#ffffff0d",
             "widget.shadow": "#0000005c",
             "widget.border": "#80808030",
             // Code Actions
             "menu.background": "#171717",
             "menu.foreground": "#a0a0a0",
-            "list.activeSelectionBackground": "#323232",
+            "list.activeSelectionBackground": "#282828",
             "list.activeSelectionForeground": "#f0f0f0",
             // GIT DIFF EDITOR (Default Modern Dark)
             "diffEditor.border": "#80808059",
@@ -455,9 +439,9 @@
             "diffEditor.unchangedRegionShadow": "#000000",
         },
         "[Default Dark Modern]": {
-            // "tab.activeBorder": "#0078d4",
-            // "tab.activeBorderTop": "#00000000",
-            // "tab.activeModifiedBorder": "#00000000",
+            "tab.activeBorder": "#0078d4",
+            "tab.activeBorderTop": "#00000000",
+            "tab.activeModifiedBorder": "#00000000",
             "editorLineNumber.activeForeground": "#6e7681",
         },
         "[Rosé Pine (no italics)]": {
@@ -474,11 +458,9 @@
             "list.focusHighlightForeground": "#e0def4",
             "quickInputList.focusBackground": "#6e6a8644",
             // Tabs
-            "tab.activeBackground": "#191724",
-            "tab.activeForeground": "#9CCFD8",
-            "tab.inactiveForeground": "#6e6a86",
-            "tab.activeModifiedBorder": "#9CCFD8",
-            "tab.activeBorderTop": "#9CCFD8",
+            "tab.activeBorder": "#9ccfd8",
+            "tab.activeModifiedBorder": "#000000",
+            "tab.inactiveModifiedBorder": "#00000000",
             // Linenumbers
             "editorLineNumber.activeForeground": "#5c5877",
             "editorLineNumber.foreground": "#5c5877",
@@ -687,6 +669,18 @@
                     "command": "settings.cycle.toggleGutter",
                 },
             ],
+            "silent": true,
+        },
+        {
+            // Pin tab
+            "before": ["<leader>", "t", "p"],
+            "commands": ["workbench.action.pinEditor"],
+            "silent": true,
+        },
+        {
+            // Unpin tab
+            "before": ["<leader>", "t", "u"],
+            "commands": ["workbench.action.unpinEditor"],
             "silent": true,
         },
     ],
